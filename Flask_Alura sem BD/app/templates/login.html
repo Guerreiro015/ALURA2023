@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+  {% block conteudo %}
+
+</head>
+<body> 
+      <form  method="post" action="{{url_for('autenticar')}}" >
+        <fieldset>
+          
+          <div class="form-group">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="text" id="senha" name="senha" class="form-control">
+          </div>          
+          <button type="submit" class="btn btn-primary btn-salvar">Logar</button>
+       
+        </fieldset>
+      </form>
+    </div>
+  {%endblock%}  
+</body>
+</html>

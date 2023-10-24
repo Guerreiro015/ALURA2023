@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+    {% block conteudo %}                    
+
+  
+  <body>    
+      
+         {% for jogo in jogos %}
+                
+          <tr>  
+            
+            <form action="{{url_for('alterar_jogos')}}" method="post"  enctype="multipart/form-data">
+
+              <figure class="img-thumbnail col-md-4">
+
+                <img class="img-fluid " src="/{{jogo[5]}}" >   
+              
+
+          </tr>       
+                              
+                <div class="form-group">
+                  <label for="exampleInputPassword1" class="link-success">Nome:</label>
+                  <h1> {{jogo[1]}} </h1>
+                </div></br>
+                
+                <div class="form-group">
+                  <label for="exampleInputPassword1" class="text-primary" >Detalhes:</label></br>
+                  <p> {{jogo[6]}} </p>
+                </div></br>          
+               
+
+                </br/>               
+                          
+            </form>
+              
+              
+              
+          {% endfor %}
+
+         
+      </div>           
+    </body>
+  {%endblock%}
+
+</html>

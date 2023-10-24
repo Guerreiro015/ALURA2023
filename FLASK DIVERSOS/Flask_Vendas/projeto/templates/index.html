@@ -1,0 +1,108 @@
+
+{% extends 'base.html'%}
+    {% block conteudo %}
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  
+    <link href="static/app.css" rel="stylesheet">
+    <link href="static/main.css"rel="stylesheet">
+    
+    
+       
+    <thead class="thead-default">
+
+
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-12 col-md-4 my-2">
+                    <div class="position-relative">
+                        <img class="w-100" src="static/imagem/IR1.jpg" alt="">                        
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 my-2">
+                    <div class="position-relative">
+                        <img class="w-100" src="static/imagem/tabelaINSS.png" alt="">                       
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 my-2">
+                    <div class="position-relative">
+                        <img class="w-100" src="static/imagem/tabela-irrf.jpg" alt="">
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <thead class="thead-default">
+
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-12 col-md-4 my-2">
+                    <div class="position-relative">
+                        <img class="w-100" src="static/imagem/inss.jpg" alt="">
+                        <div class="position-absolute dados">
+                            <h3 class="text-left text">  EMPREGADO  <br><br><br><br>Calcular:  INSS / FGTS e IRRF</h3>
+                            <a href="{{url_for('calculo')}}"><button class="btn btn-primary float-right">Calcular</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="{{url_for('calculo')}}">
+                    <input type="image" src="static/imagem/inss.jpg" title="CALCULAR" width="300" height="190">
+                 </form>
+
+
+                <div class="col-12 col-md-4 my-2">
+                    <div class="position-relative">
+                        <img class="w-100" src="static/imagem/inss.jpg" alt="">
+                        <div class="position-absolute dados">
+                            <h3 class="text-left text">  EMPREGADOR  <br><br><br><br>Calcular:  INSS / FGTS e IRRF</h3>
+                            <button class="btn btn-primary float-right">Calcular</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 my-2">
+                    <div class="position-relative">
+                        <img class="w-100" src="static/imagem/inss3.jpg" alt="">
+                        <div class="position-absolute dados">
+                            <h3 class="text-left text">Saiba mais<br>sobre<br>INSS-FGTS-IRRF</h3>
+                            <button class="btn btn-primary float-right">Ver um leão</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <tr>
+                    <th>ID {{dados.id}}</th>
+                    <th>NOME</th>
+                    <th>E-MAIL</th>
+                    <th>EMPRESA>
+                    <th>SENHA</th>                                   
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for dados in dados %}                
+
+                <tr> 
+                                    
+                  <td> {{dados.id}} </td>  
+                  <td> {{dados.nome}} </td>  
+                  <td> {{dados.email}} </td>  
+                  <td> {{dados.empresa}} </td>                      
+                  <td> {{dados.senha}} </td>                                                   
+
+                </tr>
+                
+                {% endfor %}     
+
+            </tbody>
+        </table>
+    
+    </body>
+</body> 
+  {%endblock%}
+  
+  
+</html>

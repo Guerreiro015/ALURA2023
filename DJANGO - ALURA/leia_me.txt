@@ -1,0 +1,328 @@
+Continuação do site 
+
+COLOCANDO NOMES NAS imagens
+no arquivo views dentro do objeto index
+
+    Vamos ums dicionários dentro de um dicionário
+
+    def index(request):
+        dados = {
+                1: {"nome":"Nebulosa de Carina",
+                    "legenda":"webbtelescope.org / NASA / James Webb"},
+                2: {"nome":"Galáxia NGC 1079",
+                    "legenda":"nasa.org / NASA / Hubble"}
+        }
+        return render(request, 'galeria/index.html', {"cards": dados})
+
+no arquivo index para chamar ( Abaixo do cards__lista)usammos o for especial
+    depois precisammos fechar o for
+
+    <ul class="cards__lista">
+    {% for foto_id, info in cards.items %}
+
+    para chamar coolchetes duplos
+                                    <span class="card__tag">Estrelas</span>
+                                    <div class="card__info">
+    {{info.nome}}                <p class="card__titulo">{{info.nome}}</p>
+                                    <div class="card__texto">
+    {{info.legenda}}             <p class="card__descricao">{{info.legenda}}</p>
+                                            <span>
+
+    {%endfor%}
+
+____tudo certo___________________________________________________________________________________
+
+Agora vamos trabalhar com banco de dados (Eba)
+
+dentra da pasta galeria o arquivo models
+    vamos criar o esqueleto do BAnco de dados
+
+    depois no terminal vamos executar o Comando 
+
+    python manage.py makemigrations
+
+    (venv) PS C:\Users\Luana\Documents\GitHub\ALURA\PYTHON\alura_space> python manage.py makemigrations
+    Migrations for 'galeria':
+    galeria\migrations\0001_initial.py
+        - Create model fotografia
+
+Agora, para criarmos a tabela efetivamente,
+    voltaremos ao terminal e rodaremos 
+
+    python manage.py migrate
+
+    "Explorador"  "Extensões". pesquisaremos por "sqlite" 
+    "Instalar" do "SQlite Viewer"
+
+    vai aparecer no aba arquivos
+    para abrir usareos botao direito e abrir com "SQlite Viewer"
+    vamos localizar nosso arquivo fotografia
+
+    Para adicionarmos um item, abriremos o terminal e rodaremos python manage.py shell.
+
+    python manage.py shell
+
+>>> from galeria.models import Fotografia    
+
+>>> foto = Fotografia(nome="Nebulosa de Carina", legenda="webbtelescope.org / NASA / James Webb", foto="carina-nebula.png")
+foto = Fotografia(nome="Galáxia NGC 1079", legenda="nasa.org / NASA / Hubble",foto="hubble_ngc1079.jpg")
+>>> foto.save()
+
+>>> Fotografia.objects.all() 
+<QuerySet [<Fotografia: Fotografia [nome=Nebulosa de Carina]>]>
+>>> 
+
+na pasta settings vamos alterar o nome do aplicativo galeria para 'galeria.apps.GaleriaConfig',
+ INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'galeria.apps.GaleriaConfig',
+]
+
+VAMOS USAR O BANCO DE DADOS NO site
+Na pasta views vamos apagar o dicionário e usar comando Abaixo
+
+    from galeria.models import Fotografia
+
+    fotografia=Fotografia.objects.all()
+    return render(request, 'galeria/index.html', {"cards": fotografia})
+
+na pasta template/index vamos alterar {% for foto_id, info in cards.items %} para
+    antes {% if cards %} para garantir de subir cards quebrados ou erros
+    {% for fotografia in cards %}
+
+    {% endfor %} 
+    {% else %}
+    {% endif %} 
+
+    <img class="card__imagem" src="{% static '/assets/imagens/galeria/' %}{{fotografia.foto}}" alt="foto">
+
+    class="card__titulo">{{fotografia.nome}}</p>
+    class="card__descricao">{{fotografia.legenda}}</p>
+
+    vamos inserir mais informaçõesno no banco de dados
+    python manage.py shell
+    from galeria.models import Fotografia
+    foto = Fotografia(nome="Galáxia NGC 1079", legenda="nasa.org / NASA / Hubble", foto="hubble_ngc1079.jpg")
+    foto.save()
+
+no arquivo imagem
+    <a href="{% url 'imagem' fotografia.id %}">
+
+na pasta galeria/urls
+    path('imagem/<int:foto_id>', imagem, name='imagem'),
+
+na pasta views
+    from django.shortcuts import render, get_object_or_404
+    from galeria.models import Fotografia
+
+def index(request):
+    fotografias = Fotografia.objects.all()
+    return render(request, 'galeria/index.html', {"cards": fotografias})
+
+def imagem(request, foto_id):
+    fotografia = get_object_or_404(Fotografia, pk=foto_id)
+    return render(request, 'galeria/imagem.html', {"fotografia": fotografia})
+
+______________________________________________________________________________________
+______________________________________________________________________________________
+
+CADASTRAR ADMINISTRADOR USARIO ADMINISTRADOR
+
+No terminal digitaremos ----   python manager.py createsuperuser
+    antonio
+    1234
+
+
+Na  pasta/galeria/admin.py
+
+    from django.contrib import admin
+    from galeria.models import Fotografia
+
+    admin.site.register(Fotografia)
+
+    Podemos adicionar dados no bd aqui 
+
+
+    Vamos criar uma classe para organnizar os dados
+
+    from django.contrib import admin
+
+    from galeria.models import Fotografia
+
+    lass ListandoFotografias(admin.ModelAdmin):
+        list_display = ("id", "nome", "legenda")
+        list_display_links = ("id","nome") - Transforma os campos em links
+        search_fields = ("nome",) Adicionar um campo de busca
+
+        Porém, nesse parâmetro o campo "nome" não pode ser uma string e sim uma tupla.
+        Isto é, após o fechamento das aspas duplas do campo "nome" adicionamos uma vírgula.
+
+    admin.site.register(Fotografia, ListandoFotografias)
+
+----------------------------------------------------------------------------------------------
+Na pasta galeria/models - Vamos criar mais um campo (categoria) Diferente dos outros campos
+
+    Vamos criar uma lista com tuplas para escolhas
+    OPCOES_CATEGORIA = [
+            ("NEBULOSA","Nebulosa"),
+            ("ESTRELA","Estrela"),
+            ("GALÁXIA","Galáxia"),
+            ("PLANETA","Planeta"),
+        ]
+
+    categoria = models.CharField(max_length=100, choices=OPCOES_CATEGORIA, default='')
+
+    Mas ainda não acabamos, toda vez que alterarmos o model precisamos fazer uma migration. 
+    Por isso, rodamos novamente o comando makemigrations no terminal.
+
+    python manage.py makemigrations
+    python manage.py migrate
+
+na pasta admin  -   vamos criar um filtro por categoria
+    list_filter = ("categoria",) Podemos uma lista de filtro com qualqyer campo
+
+
+na pasta admin  -   vamos paginar a visualizaçao por paginar
+    list_per_page = 10  - exibira 10 itens por paginas
+
+______________________________________________________________________________________
+OPÇÃO DE PUBLICAR OU NAO
+
+na pasta models, adicionando um campo chamado publicar. 
+    Em frente, colocamos models.BooleanField e definimos o default como "False".
+    vamos no arquivo views e alterar de all para filter(publicar=True)
+    def index(request):
+        fotografias = Fotografia.objects.filter(publicar=True)
+
+
+_________________________________________________________________
+DATA DE CADASTRO
+na pasta models, adicionando um campo chamado data_fotografia
+
+    data_fotografia = models.DateTimeField(default=datetime.now, blank=False)
+    python manage.py makemigrations
+    python manage.py migrate
+
+
+_________________________________________________________________
+ORDENAR
+NA PASTA views
+    é adicionar novas ordenações à nossa página
+    def index(request):
+        fotografias = Fotografia.objects.order_by("data_fotografia").filter(publicaR=True)
+        para alterar a ordem ascendente/Descendente - usammosi sinal de - (-data_fotografia)
+
+______________________________________________________________________________________
+CARREGAR AS FOTOS DO SITE NO CADASTRO
+Na pasta settings
+
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+    MEDIA_URL = "/media/"
+
+
+Na pasta setup/urls  - importar o settings eo static e acrescentar 
+    + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) no final
+
+    from django.contrib import admin
+    from django.urls import path, include
+
+    from django.conf import settings
+    from django.conf.urls.static import static
+
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include('galeria.urls')),
+
+    ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+na pasta models  = Vamos alterar o campo foto
+    foto = models.ImageField(upload_to="fotos/%Y/%m/%d/", blank=True)
+
+_________________________________________________________________
+VAMOS MUDAR COMO AS FOTOS SÃO CARREGADAS
+
+No arquivo index - Faremos estas alterações
+
+    <a href="{% url 'imagem' fotografia.id %}">
+    {% if fotografia.foto == "" or fotografia.foto == null %}
+        <img class="imagem__imagem" src="{% static '/assets/imagens/galeria/not_found.png'%}">
+    {% else %}
+        <img class="imagem__imagem" src="{{fotografia.foto.url}}">
+    {% endif %}   
+    </a>
+
+No arquivo imagem - Faremos estas alterações
+    {% if fotografia.foto == "" or fotografia.foto == null %}
+    <img class="imagem__imagem" src="{% static '/assets/imagens/galeria/not-found.png'%}">
+    {% else %}
+    <img class="imagem__imagem" src="{{fotografia.foto.url}}">
+    {% endif %}
+
+________________________________________________________________________________________
+COLOCAR UMA FORMA DE BUSCA NO SITE
+Na pasta galeria/urls
+    from django.urls import path
+    from galeria.views import index, imagem, buscar
+    path("buscar", buscar, name="buscar"),
+
+
+
+Na pasta galeria/views
+    def buscar(request):
+        return render (request, "galeria\buscar.html")
+
+Na pasta template
+    Vamos criar um arquivo - buscar.html
+
+Na pasta partials/base.html
+    vamos alterar esta parte
+
+     <form action="{% url 'buscar' %}">
+        <input class="busca__input" type="text" name="buscar" placeholder="O que você procura?">
+        <button type="submit">
+        <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %}" alt="ícone de search">
+        </button>
+     </form>
+
+No arquivo template\buscar
+vamos copiar o conteudo do arquivo index e modificar
+    {% endfor %} 
+    {% else %}
+
+    <div class="imagem__texto">
+    <p> Fotografias não encontradas</p>   # Crinado esta div e colocando imagem__texto o texto fica formatado
+    </div>
+
+    {% endif %} 
+
+No arquivo views - vamos modificar   
+
+        from django.shortcuts import render, get_object_or_404
+
+        from galeria.models import Fotografia
+
+        def index(request):
+            fotografias = Fotografia.objects.order_by("data_fotografia").filter(publicar=True)
+            return render(request, 'galeria/index.html', {"cards": fotografias})
+
+        def imagem(request, foto_id):
+            fotografia = get_object_or_404(Fotografia, pk=foto_id)
+            return render(request, 'galeria/imagem.html', {"fotografia": fotografia})
+
+        def buscar(request):
+            fotografias = Fotografia.objects.order_by("data_fotografia").filter(publicar=True)
+
+            if "buscar" in request.GET:
+                nome_a_buscar = request.GET['buscar']
+                if nome_a_buscar: 
+                    fotografias = fotografias.filter(nome__icontains=nome_a_buscar)
+
+                return render (request, "galeria/buscar.html", {"cards": fotografias})
+

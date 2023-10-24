@@ -1,0 +1,54 @@
+
+{% extends 'base.html'%}
+    {% block conteudo %}
+
+    <thead class="thead-default">
+
+      <body>      
+                
+        <a href="/novo_jogo" class="link-success"> NOVO JOGO</a></br>
+        <a href="/" class="link-warning">FAZER LOGIN</a></br>  
+        <a href="/logout" class="link-danger">FAZER LOGOUT</a></br>
+        
+      </body>
+
+      
+    <form  method="post" action="{{url_for('buscar_jogos')}}" >
+      <fieldset>
+       <div class="form-group">
+          <input type="text" id="busca" name="busca" class="form-control" placeholder="Digite o nome de um jogo para procurar">
+       </div>
+       <button type="submit" class="btn btn-primary btn-salvar">Buscar</button>
+     </fieldset>
+    </form>    
+                <tr>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>CATEGORIA</th>
+                    <th>CONSOLE</th>
+                    <th>ANO</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for jogo in jogos %}                
+
+                <tr>                   
+                  <td> {{jogo[0]}} </td>  
+                  <td> {{jogo[1]}} </td>  
+                  <td> {{jogo[2]}} </td>  
+                  <td> {{jogo[3]}} </td>                      
+                  <td> {{jogo[4]}} </td>                      
+                </tr>
+                    
+                {% endfor %}           
+
+
+                
+            </tbody>
+        </table>
+    </div>
+  </body>
+  {%endblock%}
+  
+</html>

@@ -1,0 +1,60 @@
+{% extends 'base.html'%}
+    {% block conteudo %}
+
+                <tr>                    
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>CATEGORIA</th>
+                    <th>CONSOLE</th>
+                    <th>ANO</th>
+             
+           
+                  </tr>
+            </thead>
+            <tbody>
+
+                {% for jogo in jogos %}
+                
+          <tr>  
+                <form action="{{url_for('alterar_jogos')}}" method="post" >
+                
+                      <td> <input type="text" name="id" id="id" value="{{jogo[0]}}"> </td> 
+                      <td> <input type="text" name="nome" id="nome" value="{{jogo[1]}}"> </td> 
+                      <td> <input type="text" name="categoria" id="categoria" value="{{jogo[2]}}"> </td> 
+                      <td> <input type="text" name="console" id="console" value="{{jogo[3]}}"> </td> 
+                      <td> <input type="text" name="ano" id="ano" value="{{jogo[4]}}"> </td>                    
+                      
+                    </tr>
+                  </br/>               
+                  <button type="submit" class="btn btn-success">Alterar Jogos </button>             
+                </form>
+
+
+          <div>
+            <form  action="{{url_for('deletar_jogos')}}" method="post">
+             
+                  <td> <input type="text" name="id" id="id" value="{{jogo[0]}}"> </td> 
+                  <td> <input type="text" name="nome" id="nome" value="{{jogo[1]}}"> </td> 
+                  <td> <input type="text" name="categoria" id="categoria" value="{{jogo[2]}}"> </td> 
+                  <td> <input type="text" name="console" id="console" value="{{jogo[3]}}"> </td> 
+                  <td> <input type="text" name="ano" id="ano" value="{{jogo[4]}}"> </td>                    
+                  
+                
+              </br/>    
+
+              <button type="submit" class="btn btn-danger">Deletar Jogos</button>      
+                          
+            </form>
+          </div>
+          </tr>
+            
+
+            
+                {% endfor %}
+             
+            </tbody>
+        </table>
+    </div>
+  </body>
+  {%endblock%}
+</html>

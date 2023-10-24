@@ -1,0 +1,245 @@
+python.exe -m venv venv   (Criar ambiente virtual)
+venv/Scripts/activate  (Ativar ambiente virtual)
+deactivate  (Desativar ambiente virtual)
+
+
+1º passo no terminal
+django-admin startproject setup (Criar projeto)
+
+--------------------------------------------------------------------
+
+2º passo
+python manage.py runserver (abrir Site)  http://127.0.0.1:8000
+
+--------------------------------------------------------------------------
+
+3º passo
+ "setup > settings.py". 
+
+ Alterar data e linguagem
+ 
+ LANGUAGE_CODE = 'pt-br'
+
+TIME_ZONE = 'America/Sao_Paulo'
+
+USE_I18N = True
+
+USE_TZ = True
+
+----------------------------------------------------------------------------
+
+4º passo
+no arquivo settings.py
+ Criar uma varivel com o chave do projeto para se precisarmos 
+ passar o projeto para algum lugar náo ir com a chave
+
+ criar um arquivo (.env) com a chave e 
+______________________________________________________
+conteúdo do arquivo .env
+(SECRET_KEY = django-insecure-0wt8*5r%b(p!&u&t-3y5^gw#3tjcq)2g7ah)vo52@^)u4$$ow&) conteúdo co arquivo .env
+
+no lugar da chave colocaremos
+
+from pathlib import Path, os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+ SECRET_KEY = str(os.getenv('SECRET_KEY'))
+
+------------------------------------------------------------------
+
+5º passo:
+
+Vamos criar o primeiro app
+no terminal
+python manage.py startapp galeria
+vai criar o app galeria
+agora vamos colocar este aplicativo gale dentro do settings
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'galeria',]
+
+
+----------------------------------------------------------------------------------
+
+6º passo:
+dentro do app galeria vamos em views
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def index(request):
+        return HttpResponse('<h1>Bem vindo ao site teste</h1>')
+
+depois vamos em (urls.py)
+from django.contrib import admin
+from django.urls import path
+from galeria.views import index
+
+urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', index),
+]
+
+Já funciona mais ou menos
+
+-------------------------------------------------------------------------------
+
+7º passo: trabalhar com mais de uma urls
+Dentro de galeria vamos criar um arquivo urls
+
+from django.urls import path
+from galeria.views import index
+
+urlpatterns = [
+        path('', index)
+]
+
+Vanos alterar o arquivo urls da pasta setup
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include('galeria.urls')),
+]
+
+--------------------------------------------------------------------------------------
+
+8º passo: TEMPLATES 
+
+Dentro da raiz vamos criar um pasta chamada template
+
+na pasta setup - settings
+'DIRS': [os.path.join(BASE_DIR, 'templates')],
+
+dentro da pasta template vamos criar um arquivo chamado index.html
+digitar ! e enter e automaticamente vai criar um molde
+
+vamos alterar o arquivo views
+
+---------------------------------------------------------------------
+
+9º copiar os arquivos ja defidos da alura
+ da pasta index para nossa passa index 
+
+
+-----------------------------------------------------------------------------------------------
+
+10º COLOCAR STILO NO Site
+na pasta setup vamos criar uma pasta static
+
+
+na pasta setup/settings
+
+STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'setup/static')
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+_______________________________________________
+rodar o comando python manage.py collectstatic no terminal
+para reconhecer osarquivos estáticos
+_________________________________________
+vamos acessar "templates/galeria > index.html".
+Vamos adicionar o código {% load static %}
+
+linha 13 <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+
+----------------------------------------------------------------------------------
+
+11º carregar as imagens
+vamos acessar "templates/galeria > index.html".
+
+Onde tiver immgem vamos usar {% static (cod imagem) '%}
+
+----------------------------------------------------------------------------------------
+
+12º PASSO: Acessar imagem clicando numa imagem
+
+na pasta "templates/galeria" e criar um novo arquivo,
+ chamado "imagem.html". Vamos pegar o conteúdo de "imagem.html" do conteúdo disponibilizado pelo instrutor.
+
+ na primeira linha Vamos adicionar o código:   
+  {% load static %}
+
+ +ou- na linha 13 vamos alterar para:
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+
+    Onde tiver immgem vamos usar {% static (cod imagem) '%}
+
+ Vamos criando uma nova função em  views.py". 
+ def imagem(request):
+        return render(request, 'galeria/imagem.html')
+
+em galeria/views
+urlpatterns = [
+        path('', index),
+        path('imagem/', imagem)
+]
+
+no arquivo index 
+linha 55 alterar para
+<a href="{% url 'imagem' %}">
+
+---------------_____---------------------------------------
+---------------------------------------------------------------
+
+13º PASSSSSO: Base e DRY (Retirar os códigos repetidos)
+
+Na pasta template/galeria - vamos criar um arquivo chamado base.html
+
+vamos copiar a parte ate a linha 13 dos arquivos index e imagem e colar em base
+
+vamos apagar este conteúdo dos arquivos imagem e index e vamos colocar
+
+{% extends 'galeria/base.html' %}
+{% load static %}
+
+vamos colocar o arquivo base
+<body>
+    {% block content %}{% endblock %}
+</body>
+
+Nos arquivos imagem e index e vamos colocar
+
+no começo {% block content %}
+no final {% endblock %}
+
+14º PASSO:
+
+Dentro template\galeria
+criar uma pasta patials
+criar um arquivo .footer.html
+recortar o conteúdo footer das pastas imagem e index e locar nesta pasta _footer
+
+<footer class="rodape">
+        <div class="rodape__icones">
+            <a href="https://twitter.com/AluraOnline" target=”_blank” >
+                <img src="{% static '/assets/ícones/1x/twitter.png'  %}" alt="ícone twitter">
+            </a>
+            <a href="https://www.instagram.com/aluraonline/" target=”_blank” >
+                <img src="{% static '/assets/ícones/1x/instagram.png'  %}" alt="ícone instagram">
+            </a>
+        </div>
+        <p class="rodape__texto">Desenvolvido por Alura</p>
+    </footer>
+
+Na pasta base vamos chamar este arquivo -footer
+
+
+
+
+
+
+

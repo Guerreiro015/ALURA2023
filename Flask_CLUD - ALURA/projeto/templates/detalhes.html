@@ -1,0 +1,41 @@
+              
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="static/app.css" rel="stylesheet">
+<link href="static/main.css"rel="stylesheet">
+  
+  <body>    
+    <thead class="body">
+      
+         {% for jogo in jogos %}
+         <div class="img,p">   
+          
+          <table>
+            <tr>
+              <td><figure class="img-thumbnail">
+
+              <img class="img-fluid " src="/{{jogo.foto}}" width="600"height=300 >   </td>
+              
+              
+              <td> <font  color="black" size="15" > {{jogo.nome}} </font> </br></br>       
+                <font  color="blue" size="5"> {{jogo.obs}}</font> </td>
+            </tr>
+           
+          </table>
+          
+                
+          </div>   
+              <center> </br></br>
+                <a href="/index" class="p-3 mb-2 bg-success text-white"  text-align: center>VOLTAR</a><br/>   
+              </center>
+
+
+    </thead>     
+              
+          {% endfor %}
+
+         
+    </div>           
+    </body>
+  
+
+</html>

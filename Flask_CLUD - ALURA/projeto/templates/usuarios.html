@@ -1,0 +1,41 @@
+
+{% extends 'base.html'%}
+    {% block conteudo %}
+
+    <thead class="thead-default">
+
+   
+                <tr>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>nickname</th>
+                    <th>SENHA</th>
+                                     
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for usuario in usuarios %}                
+
+                <tr> 
+                                    
+                  <td> {{usuario.id}} </td>  
+                  <td> {{usuario.nome}} </td>  
+                  <td> {{usuario.nickname}} </td>  
+                  <td> {{usuario.senha}} </td>  
+                                    
+                  <td> <a href="{{url_for('detalhes',id=usuario.id)}}" class="text-primary"> Detalhes</a> </br>        
+                    <a href="{{url_for('detalhes',id=usuario.id)}}" class="link-success"> Editar</a>  </br>         
+                    <a href="{{url_for('detalhes',id=usuario.id)}}" class="link-danger"> Deletar</a> </td>                   
+
+                </tr>
+                
+                {% endfor %}     
+
+            </tbody>
+        </table>
+    
+    </body>
+  {%endblock%}
+  
+</html>

@@ -1,0 +1,108 @@
+
+{% extends 'mensagens.html'%}
+    {% block conteudo %}<thead class="thead-default">
+<html>
+  
+        
+    <div class="page" style="text-align:left ; ">
+    <h1></br></h1> 
+    <a href="#" style="text-decoration: none; border-radius: 5px;" class="p-2 mb-2 bg-secondary text-white"  style="text-align: center;"> RESULTADO DOS CALCULOS</a><br/>      
+
+    <table class="table table-bordered " style="color: aliceblue;">
+            
+        <tbody>  
+
+              <thead>
+                <tr>                 
+                  <th scope="col">Valor do Salario Bruto:</th>
+                  <td style="text-align:right ;">{{dados.salario}}</td>
+                  <th scope="col">Valor das HE 50%</th>
+                  <td style="text-align:right ;">{{dados.valorhe50}}</td>
+                </tr>
+              </thead>
+
+              <thead>
+                <tr>                 
+                  <th scope="col">Base INSS:</th>
+                  <td style="text-align:right ;">{{dados.baseinss}} </td>
+                  <th scope="col">Valor das HE 100%</th>
+                  <td style="text-align:right ;">{{dados.valorhe100}}</td>
+                </tr>
+              </thead>
+
+              <thead>
+                  <tr>
+                    <th scope="col">Valor de desconto INSS:</th>
+                    <td style="text-align:right ;"> {{dados.valorinss}}</td> 
+                    <th scope="col">valor Adic. Nortuno</th>
+                    <td style="text-align:right ;">{{dados.valoradcnot}}</td>                    
+                  </tr>
+              </thead>  
+
+              <thead> 
+                  <tr>
+                    <th scope="col"></th>
+                    <td style="text-align:right ;"></td>
+                    <th scope="col">valor dos Atrasos:</th>
+                    <td style="text-align:right ;">{{dados.Atrasos}}</td>                       
+                  </tr>
+              </thead>  
+
+              <thead>
+                  <tr>
+                    <th scope="col">Base FGTS:</th>
+                    <td style="text-align:right ;">{{dados.basefgts}} </td>
+                    <th scope="col">Valor das Faltas:</th>
+                    <td style="text-align:right ;">{{dados.Faltas}}</td>                   
+                  </tr>
+              </thead> 
+
+              <thead>
+                <tr>                  
+                  <th scope="col">Valor de deposito FGTS:</th>
+                  <td style="text-align:right ;"> {{dados.valorfgts}}</td>
+                  <th scope="col">valor dos DSR:</th>
+                  <td style="text-align:right ;">{{dados.valordsr}}</td>
+                </tr>
+              </thead>
+
+               <thead>
+                <tr>                  
+                  <th scope="col"></th>
+                  <td style="text-align:right ;"></td>                  
+                </tr>
+              </thead>
+              
+              <thead>
+                <tr>
+                  <th scope="col">Base Imposto de Renda:</th>
+                  <td style="text-align:right ;">{{dados.baseir}} </td>
+                  <th scope="col">Dependentes de IR:</th>
+                  <td style="text-align:right ;">{{dados.valordep}} </td>                   
+                </tr>
+              </thead>
+              
+              <thead>
+                <tr>                
+                  <th scope="col">Valor de desconto de IRRF:</th>
+                  <td style="text-align:right ;"> {{dados.valorir}}</td>
+                  <th scope="col">Valor descontado Pensao:</th>
+                  <td style="text-align:right ;">{{dados.pensao}}</td>
+                 </tr>
+              </thead>
+       </tbody>        
+
+
+      </table>            
+       
+       
+       <a href="/calculo"   style="text-decoration: none; border-radius: 5px;" class="p-2 mb+4 bg-primary text-white"  style="text-align: center;" > Voltar P/ Cálculo</a><br/>
+       <a href="/index"   style="text-decoration: none; border-radius: 5px;" class="p-2 mb-4 bg-success text-white"  style="text-align: center;" > Voltar P/ Página Inicial</a><br/>
+       
+    </div> 
+       
+            
+  {%endblock%}
+ 
+  
+</html>
