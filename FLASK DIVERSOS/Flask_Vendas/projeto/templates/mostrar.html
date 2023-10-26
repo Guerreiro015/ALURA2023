@@ -1,104 +1,143 @@
 
 {% extends 'mensagens.html'%}
-    {% block conteudo %}<thead class="thead-default">
+    {% block conteudo %}
+    
+    
 <html>
+
+  <link href="static/menu.css" rel="stylesheet">  
+   
+  <div id="menu">   
+    <ul>    
   
-        
-    <div class="page" style="text-align:left ; ">
-    <h1></br></h1> 
-    <a href="#" style="text-decoration: none; border-radius: 5px;" class="p-2 mb-2 bg-secondary text-white"  style="text-align: center;"> RESULTADO DOS CALCULOS</a><br/>      
+      <li> <a href="/index" > PAGINA INICIAL</a></li>
+      <li> <a href="/calculo" > Pagina de Calculo</a></li>
+      
+    </ul>    
+  <div>
 
-    <table class="table table-bordered " style="color: lightcoral;" aliceblue;">
-            
-        <tbody>  
 
-              <thead>
-                <tr>                 
-                  <th scope="col">Valor do Salario Bruto:</th>
-                  <td style="text-align:right ;">{{dados.salario}}</td>
-                  <th scope="col">Valor das HE 50%</th>
-                  <td style="text-align:right ;">{{dados.valorhe50}}</td>
-                </tr>
-              </thead>
+  <table>
+   
+    <tr>
+      <th scope="col">Proventos</th>
+      <th scope="col">Valor</th>
+      <th scope="col">Descontos</th>
+      <th scope="col">Valor</th>
+    </tr>
+    <tr>
+      <th scope="row">Salario</th>
+      <td scope="col">{{dados.salario}}</td>
+      <th scope="row">Faltas</th>
+      <td scope="col">{{dados.Faltas}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Salário Família</th>
+      <td scope="col">{{dados.valorsf}}</td>
+      <th scope="row">DSR</th>
+      <td scope="col">{{dados.valordsr}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Insalubridade</th>
+      <td scope="col">{{valor_insal}}</td>
+      <th scope="row">Atrasos</th>
+      <td scope="col">{{dados.Atrasos}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Periculosidade</th>
+      <td scope="col">{{valor_peric}}</td>
+      <th scope="row">xxxxx</th>
+      <td scope="col">0000</td>
+    </tr>
+    
+       
 
-              <thead>
-                <tr>                 
-                  <th scope="col">Base INSS:</th>
-                  <td style="text-align:right ;">{{dados.baseinss}} </td>
-                  <th scope="col">Valor das HE 100%</th>
-                  <td style="text-align:right ;">{{dados.valorhe100}}</td>
-                </tr>
-              </thead>
-
-              <thead>
-                  <tr>
-                    <th scope="col">Valor de desconto INSS:</th>
-                    <td style="text-align:right ;"> {{dados.valorinss}}</td> 
-                    <th scope="col">valor Adic. Nortuno</th>
-                    <td style="text-align:right ;">{{dados.valoradcnot}}</td>                    
-                  </tr>
-              </thead>  
-
-              <thead> 
-                  <tr>
-                    <th scope="col"></th>
-                    <td style="text-align:right ;"></td>
-                    <th scope="col">valor dos Atrasos:</th>
-                    <td style="text-align:right ;">{{dados.Atrasos}}</td>                       
-                  </tr>
-              </thead>  
-
-              <thead>
-                  <tr>
-                    <th scope="col">Base FGTS:</th>
-                    <td style="text-align:right ;">{{dados.basefgts}} </td>
-                    <th scope="col">Valor das Faltas:</th>
-                    <td style="text-align:right ;">{{dados.Faltas}}</td>                   
-                  </tr>
-              </thead> 
-
-              <thead>
+             
                 <tr>                  
-                  <th scope="col">Valor de deposito FGTS:</th>
-                  <td style="text-align:right ;"> {{dados.valorfgts}}</td>
-                  <th scope="col">valor dos DSR:</th>
-                  <td style="text-align:right ;">{{dados.valordsr}}</td>
+                  <th scope="row">Horas extras 50%</th>
+                  <td scope="col">{{dados.valorhe50}}</td>
+                  <th scope="row">xxxxxxx</th>
+                  <td scope="col">0000000</td>
                 </tr>
-              </thead>
+             
 
-               <thead>
-                <tr>                  
-                  <th scope="col"></th>
-                  <td style="text-align:right ;"></td>                  
+             
+                <tr>                 
+                  <th scope="row">Horas extras 100%</th>
+                  <td scope="col">{{dados.valorhe100}} </td>
+                  <th scope="row">xxxxxxxx</th>
+                  <td scope="col">0000000</td>
                 </tr>
-              </thead>
+             
+
+             
+                  <tr>
+                    <th scope="row">valor Adic. Nortuno:</th>
+                    <td scope="col"> {{dados.valoradcnot}}</td> 
+                    <th scope="row">xxxxxxxxx</th>
+                    <td scope="col">00000000000</td>                    
+                  </tr>
+               
+
               
-              <thead>
+                  <tr>
+                    <th scope="row">Valor DSR HE/Adc.Not:</th>
+                    <td scope="col"> {{dados.dsrhoad}}</td> 
+                    <th scope="row">valor dos Atrasos:</th>
+                    <td scope="col">{{dados.Atrasos}}</td>                       
+                  </tr>
+               
+
+             
+                  <tr>
+                    <th scope="row">Valor Salário Bruto:</th>
+                    <td scope="col"> {{dados.bruto}}</td> 
+                    <th scope="row">Valor das Faltas:</th>
+                    <td scope="col">{{dados.Faltas}}</td>                   
+                  </tr>
+              
+
+             
+                <tr>                  
+                  <th scope="row">Valor de deposito FGTS:</th>
+                  <td scope="col"> {{dados.valorfgts}}</td>
+                  <th scope="row">valor dos DSR:</th>
+                  <td scope="col">{{dados.valordsr}}</td>
+                </tr>
+             
+
+              
                 <tr>
-                  <th scope="col">Base Imposto de Renda:</th>
-                  <td style="text-align:right ;">{{dados.baseir}} </td>
-                  <th scope="col">Dependentes de IR:</th>
-                  <td style="text-align:right ;">{{dados.valordep}} </td>                   
+                  <th scope="row">valor dos Atrasos:</th>
+                  <td scope="col">{{dados.Atrasos}}</td>
+                  <th scope="row">valor dos Atrasos:</th>
+                  <td scope="col">{{dados.Atrasos}}</td>                       
                 </tr>
-              </thead>
+             
               
-              <thead>
+             
+                <tr>
+                  <th scope="row">Base Imposto de Renda:</th>
+                  <td scope="col">{{dados.baseir}} </td>
+                  <th scope="row">Dependentes de IR:</th>
+                  <td scope="col">{{dados.valordep}} </td>                   
+                </tr>
+             
+              
+             
                 <tr>                
-                  <th scope="col">Valor de desconto de IRRF:</th>
-                  <td style="text-align:right ;"> {{dados.valorir}}</td>
-                  <th scope="col">Valor descontado Pensao:</th>
-                  <td style="text-align:right ;">{{dados.pensao}}</td>
+                  <th scope="row">Valor de desconto de IRRF:</th>
+                  <td scope="col"> {{dados.valorir}}</td>
+                  <th scope="row">Valor descontado Pensao:</th>
+                  <td scope="col">{{dados.pensao}}</td>
                  </tr>
-              </thead>
-       </tbody>        
+             
+          
 
 
       </table>            
        
-       
-       <a href="/calculo"   style="text-decoration: none; border-radius: 5px;" class="p-2 mb+4 bg-primary text-white"  style="text-align: center;" > Voltar P/ Cálculo</a><br/>
-       <a href="/index"   style="text-decoration: none; border-radius: 5px;" class="p-2 mb-4 bg-success text-white"  style="text-align: center;" > Voltar P/ Página Inicial</a><br/>
-       
+             
     </div> 
        
             
