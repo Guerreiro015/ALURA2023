@@ -136,7 +136,7 @@ def index():
 #---------------------------------------------<>--------------------------------------------------   
 @app.route('/calcular', methods=['POST'])
 def calcular():
- try: 
+ 
     salbase=float(request.form['salbase'])
     diastrab=float(request.form['diastrab'])
     hr50=float(request.form['hr50'])
@@ -152,7 +152,9 @@ def calcular():
     insal=float(request.form['insal'])
     pensao=round(float(request.form['pensao']),2)
     salariominimo=1320
-    
+    salariofamilia=59.82
+    tetosalariofailia=1754.18
+    valorsalfam=round(depsf*salariofamilia,2)
     
     valordep=round(depir*189.59,2)
     deducaosimplificada=528
@@ -177,12 +179,16 @@ def calcular():
     horas50=round(hr50*valorhora50,2)
     horas100=round(hr100*valorhora100,2)
     adcnotur=round(adcnot*valoradcnot,2)
+    somahoad = (horas100+horas50+adcnot)
+    dsrhoad=round((somahoad)/25*5,2)
 
     valorfaltas=round(valordia*falta,2)
     valordsr=round(valordia*dsr,2)
     valoratrasos=round(valorhora*atrasos,2)
 
-    bruto=round(salario + horas50 + horas100 + adcnotur+valor_insal+valor_peric,2)
+    bruto=round(salario + horas50 + horas100 + adcnotur+valor_insal+valor_peric+dsrhoad ,2)
+    if bruto <= tetosalariofailia:       
+        bruto += valorsalfam
     descontos=round(valorfaltas+valordsr+valoratrasos,2)
 
     baseinss=round(bruto-descontos,2)
@@ -203,15 +209,11 @@ def calcular():
     valorfgts=baseinss*0.08
     valorfgts=round(valorfgts,2)
 
-    dados={'valorhe50': horas50, 'valorhe100': horas100,'valoradcnot': adcnotur, 'valordsr': valordsr, 'salario':bruto, 'Faltas': valorfaltas,'Atrasos':valoratrasos,'baseinss': baseinss,'valorinss':valorinss,'basefgts': basefgts,'valorfgts': valorfgts, 'baseir':baseir, 'valorir':valorirrf,'valordep':valordep, 'pensao': pensao}
+    dados={ 'dsrhoad': dsrhoad, 'salario':salario, 'bruto':bruto, 'insal': valor_insal, 'peric': valor_peric, 'valorsf': valorsalfam, 'valorhe50': horas50, 'valorhe100': horas100,'valoradcnot': adcnotur, 'valordsr': valordsr,'Faltas': valorfaltas,'Atrasos':valoratrasos,'baseinss': baseinss,'valorinss':valorinss,'basefgts': basefgts,'valorfgts': valorfgts, 'baseir':baseir, 'valorir':valorirrf,'valordep':valordep, 'pensao': pensao}
 
     print(valoratrasos)
     return render_template('mostrar.html',dados=dados)
 
- except:
-      flash('Não foi possível fazer os calculos verifique os numeros digitados!!')
-      return render_template('calculo.html')
-     
       
      
     
