@@ -160,7 +160,7 @@ def calcular():
     deducaosimplificada=528
     
     if opinsal == 'sim':
-        valor_insal=round((salariominimo*insal)/100)
+        valor_insal=round((salariominimo*insal)/100,2)
     else: valor_insal=0
 
     if opperic == "sim" and opinsal == "nao":
@@ -189,8 +189,11 @@ def calcular():
     bruto=round(salario + horas50 + horas100 + adcnotur+valor_insal+valor_peric+dsrhoad ,2)
     if bruto <= tetosalariofailia:       
         bruto += valorsalfam
+    else:
+        valorsalfam=0    
     descontos=round(valorfaltas+valordsr+valoratrasos,2)
-
+    desc=round(valorfaltas+valordsr+valoratrasos+pensao,2)
+    
     baseinss=round(bruto-descontos,2)
     basefgts=baseinss
 
@@ -209,7 +212,7 @@ def calcular():
     valorfgts=baseinss*0.08
     valorfgts=round(valorfgts,2)
 
-    dados={ 'dsrhoad': dsrhoad, 'salario':salario, 'bruto':bruto, 'insal': valor_insal, 'peric': valor_peric, 'valorsf': valorsalfam, 'valorhe50': horas50, 'valorhe100': horas100,'valoradcnot': adcnotur, 'valordsr': valordsr,'Faltas': valorfaltas,'Atrasos':valoratrasos,'baseinss': baseinss,'valorinss':valorinss,'basefgts': basefgts,'valorfgts': valorfgts, 'baseir':baseir, 'valorir':valorirrf,'valordep':valordep, 'pensao': pensao}
+    dados={ 'desc': desc, 'dsrhoad': dsrhoad, 'salario':salario, 'bruto': bruto, 'insal': valor_insal, 'peric': valor_peric, 'valorsf': valorsalfam, 'valorhe50': horas50, 'valorhe100': horas100,'valoradcnot': adcnotur, 'valordsr': valordsr,'Faltas': valorfaltas,'Atrasos':valoratrasos,'baseinss': baseinss,'valorinss':valorinss,'basefgts': basefgts,'valorfgts': valorfgts, 'baseir':baseir, 'valorir':valorirrf,'valordep':valordep, 'pensao': pensao}
 
     print(valoratrasos)
     return render_template('mostrar.html',dados=dados)
