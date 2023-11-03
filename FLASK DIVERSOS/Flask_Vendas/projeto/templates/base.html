@@ -4,31 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="static/menu.css" rel="stylesheet">   
+    <link href="static/style2.css" rel="stylesheet">   
  
-    <body>
-           
-      <div id="menu">   
-  
+    <body>     
             
         {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
-                <div class="banner_titulo" role="alert">{{ message }}</div>
+              {{ message }}
             {% endfor %}
         {% endif %}
         {% endwith %}
 
       
       <ul>     
-        <li> <a href="/index" > PAGINA INICIAL</a></li>
-        <li> <a href="/novo_jogo" > Cadastrar Novo Jogo</a></li>
-        <li> <a href="/">Trocar de Usuário</a>  </li>      
-        <li>  <a href="/">Sair da Biblioteca</a> </li>
-        <li>  <a href="/index" >Listar Usuarios</a> </li>
-      </ul>    
-  <div>
-                
+        <a href="/index" > PAGINA INICIAL</a>
+        <a href="/novo_jogo" > Cadastrar Novo Jogo</a>
+        <a href="/">Trocar de Usuário</a>        
+         <a href="/">Sair da Biblioteca</a> 
+         <a href="/index" >Listar Usuarios</a> 
+      </ul>          
 
   
 </body>
@@ -37,5 +32,5 @@
 
 {%endblock%}
 
-  </div>
+ 
 </html>

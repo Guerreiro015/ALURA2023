@@ -9,7 +9,7 @@ body{
    height: 100vh;
    box-sizing: border-box;
    width: 100%;
-   background-color: black;
+   background-color: rgb(101, 27, 192);
    color: aliceblue;
 }
 
@@ -38,15 +38,18 @@ span{
   .apresentacao{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 10%;
+    justify-content: space-between ;
+    margin: 3%;
 
 
   }
 
   .apresentacao_texto{
-    width: 615;
-    height: 507;
+    display: flex;
+    align-items: center;
+    padding-left: 30px ;
+    margin: 1%;
+    
 
   }
 
@@ -64,3 +67,14 @@ span{
 
 
   }
+
+  ul{
+
+    background-color: rgb(248, 246, 244);
+    color: #f6ecec;
+    border: 2px solid rgb(207, 225, 240);
+
+  }
+
+  
+  
