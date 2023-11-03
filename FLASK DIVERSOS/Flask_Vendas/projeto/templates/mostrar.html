@@ -7,140 +7,142 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="widp=device-widp, initial-scale=1">
 
 
-  <link href="static/menu.css" rel="stylesheet">  
+  <link href="static/style2.css" rel="stylesheet">  
+
+  <body>
+    
    
-  <div id="menu">   
-    <ul>    
+  <div class="indice" >          
   
-      <li> <a href="/index" > PAGINA INICIAL</a></li>
-      <li> <a href="/calculo" > Pagina de Calculo</a></li>
-      
-    </ul>    
-  <div>
+       <a href="/index" > PAGINA INICIAL</a>
+       <a href="/calculo" > Pagina de Calculo</a>
+            
+  </div>
 
-
-  <table>
+  <main class="apresentacao">
    
-    <tr>
-      <th scope="col">Proventos</th>
-      <th scope="col">Valor</th>
-      <th scope="col">Descontos</th>
-      <th scope="col">Valor</th>
-    </tr>
-
-    <tr>
-      <th scope="row">Salario</th>
-      <td scope="col">{{dados.salario}}</td>
-      <th scope="row">Faltas</th>
-      <td scope="col">{{dados.Faltas}}</td>
-    </tr>
-
-    <tr>
-      <th scope="row">Salário Família</th>
-      <td scope="col">{{dados.valorsf}}</td>
-      <th scope="row">DSR</th>
-      <td scope="col">{{dados.valordsr}}</td>
-    </tr>
-
-    <tr>
-      <th scope="row">Insalubridade</th>
-      <td scope="col">{{dados.insal}}</td>
-      <th scope="row">Atrasos</th>
-      <td scope="col">{{dados.Atrasos}}</td>
-    </tr>
-
-    <tr>
-      <th scope="row">Periculosidade</th>
-      <td scope="col">{{dados.peric}}</td>
-      <th scope="row">x</th>
-      <td scope="col">0</td>
-    </tr>   
-
-             
-      <tr>                  
-        <th scope="row">Horas extras 50%</th>
-        <td scope="col">{{dados.valorhe50}}</td>
-        <th scope="row">x</th>
-       <td scope="col">0</td>
-     </tr>
-              
-
-             
-      <tr>                 
-        <th scope="row">Horas extras 100%</th>
-        <td scope="col">{{dados.valorhe100}} </td>
-        <th scope="row">x</th>
-        <td scope="col">0</td>
-      </tr>
-             
-
-  
-      <tr>
-        <th scope="row">valor Adic. Nortuno:</th>
-        <td scope="col"> {{dados.valoradcnot}}</td> 
-        <th scope="row">x</th>
-        <td scope="col">0</td>              
-      </tr>
+    <section>
+      <p>Proventos</p>
+      <p>Valor</p>
+      <p>Descontos</p>
+      <p>Valor</p>
     
 
-  
-      <tr>
-        <th scope="row">Valor DSR HE/Adc.Not:</th>
-        <td scope="col"> {{dados.dsrhoad}}</td> 
-        <th scope="row">Pensao Alimentícia:</th>
-        <td scope="col">{{dados.pensao}}</td>                            
-      </tr>  
+    
+      <p>Salario</p>
+      <p>{{dados.salario}}</p>
+      <p>Faltas</p>
+      <p>{{dados.Faltas}}</p>
+    
 
-    <tr>
-      <th scope="col">Total Proventos</th>
-      <th scope="col"> {{dados.bruto}}</th>
-      <th scope="col">Total Descontos</th>
-      <th scope="col">{{dados.desc}}</th>
-    </tr>
+    
+      <p>Salário Família</p>
+      <p>{{dados.valorsf}}</p>
+      <p>DSR</p>
+      <p>{{dados.valordsr}}</p>
+    
 
-      <tr>
-        <th scope="row">Valor Salário Bruto:</th>
-        <td scope="col"> {{dados.bruto}}</td> 
-        <th scope="row">Valor das Faltas:</th>
-        <td scope="col">{{dados.Faltas}}</td>                   
-      </tr>
+    
+      <p>Insalubridade</p>
+      <p>{{dados.insal}}</p>
+      <p>Atrasos</p>
+      <p>{{dados.Atrasos}}</p>
+    
+
+    </section>
   
-    <tr>                  
-      <th scope="row">Valor de deposito FGTS:</th>
-      <td scope="col"> {{dados.valorfgts}}</td>
-      <th scope="row">valor dos DSR:</th>
-      <td scope="col">{{dados.valordsr}}</td>
-    </tr>
+    <section>
+    
+      <p>Periculosidade</p>
+      <p>{{dados.peric}}</p>
+      <p>x</p>
+      <p>0</p>             
+                        
+      <p>Horas extras 50%</p>
+      <p>{{dados.valorhe50}}</p>
+      <p>x</p>
+      <p>0</p>   
+            
+                      
+      <p>Horas extras 100%</p>
+      <p>{{dados.valorhe100}} </p>
+      <p>x</p>
+      <p>0</p>
+
+
+    
+      <p>valor Adic. Nortuno:</p>
+      <p> {{dados.valoradcnot}}</p> 
+      <p>x</p>
+      <p>0</p>              
+    
+  </section>
   
-    <tr>
-      <th scope="row">valor dos Atrasos:</th>
-      <td scope="col">{{dados.Atrasos}}</td>
-      <th scope="row">valor dos Atrasos:</th>
-      <td scope="col">{{dados.Atrasos}}</td>                       
-    </tr> 
+    <section>
+
+    
+      <p>Valor DSR HE/Adc.Not:</p>
+      <p> {{dados.dsrhoad}}</p> 
+      <p>Pensao Alimentícia:</p>
+      <p>{{dados.pensao}}</p>                            
+      
+
   
-    <tr>
-      <th scope="row">Base Imposto de Renda:</th>
-      <td scope="col">{{dados.baseir}} </td>
-      <th scope="row">Dependentes de IR:</th>
-      <td scope="col">{{dados.valordep}} </td>                   
-    </tr>  
+      <p>Total Proventos</p>
+      <p> {{dados.bruto}}</p>
+      <p>Total Descontos</p>
+      <p>{{dados.desc}}</p>
+    
+
+    
+      <p>Valor Salário Bruto:</p>
+      <p> {{dados.bruto}}</p> 
+      <p>Valor das Faltas:</p>
+      <p>{{dados.Faltas}}</p>                   
+      
   
-    <tr>                
-      <th scope="row">Valor de desconto de IRRF:</th>
-      <td scope="col"> {{dados.valorir}}</td>
-      <th scope="row">Valor descontado Pensao:</th>
-      <td scope="col">{{dados.pensao}}</td>
-    </tr>
+                      
+      <p>Valor de deposito FGTS:</p>
+      <p> {{dados.valorfgts}}</p>
+      <p>valor dos DSR:</p>
+      <p>{{dados.valordsr}}</p>
+    
+    </section>
   
-   
-  </table>            
+    <section>
+  
+    
+      <p>valor dos Atrasos:</p>
+      <p>{{dados.Atrasos}}</p>
+      <p>valor dos Atrasos:</p>
+      <p>{{dados.Atrasos}}</p>                       
+     
+  
+    
+      <p>Base Imposto de Renda:</p>
+      <p>{{dados.baseir}} </p>
+      <p>Dependentes de IR:</p>
+      <p>{{dados.valordep}} </p>                   
+      
+  
+                    
+      <p>Valor de desconto de IRRF:</p>
+      <p> {{dados.valorir}}</p>
+      <p>Valor descontado Pensao:</p>
+      <p>{{dados.pensao}}</p>
+    
+    </section>
+
+      
+    </main>    
+
+  </body>
        
              
-    </div> 
+    
        
             
   {%endblock%}

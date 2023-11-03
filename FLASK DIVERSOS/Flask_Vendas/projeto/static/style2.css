@@ -42,7 +42,7 @@ span{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 16%;
+    margin: 5%;
 
 
   }
@@ -99,6 +99,7 @@ span{
   }
 
   .indice{
+    margin: 0;
     display:flex ;
     align-items:center;
     text-decoration: none ;
@@ -106,8 +107,7 @@ span{
     padding: 10px;
     font-weight: 600;    
     font-family: 'Montserrat', sans-serif; 
-    font-size: 20px; 
-    
+    font-size: 20px;     
     gap: 40px;
 
   }
