@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="static/style2.css" rel="stylesheet">   
- 
+    
+    <header >     
+      <a href="/index" > PAGINA INICIAL</a>
+      <a href="/novo_jogo" > Cadastrar Novo Jogo</a>
+      <a href="/">Trocar de Usuário</a>        
+       <a href="/">Sair da Biblioteca</a> 
+       <a href="/index" >Listar Usuarios</a> 
+   </header>
+            
     <body>     
             
         {% with messages = get_flashed_messages() %}
@@ -16,21 +24,17 @@
         {% endif %}
         {% endwith %}
 
-      
-      <div class="indice">     
-        <a href="/index" > PAGINA INICIAL</a>
-        <a href="/novo_jogo" > Cadastrar Novo Jogo</a>
-        <a href="/">Trocar de Usuário</a>        
-         <a href="/">Sair da Biblioteca</a> 
-         <a href="/index" >Listar Usuarios</a> 
-      </div>          
-
-  
 </body>
-                     
+
+
 {%block conteudo%}
 
 {%endblock%}
 
+<footer>
+
+  <p class="rodape"> Produzido por Antonio Neto</p>
+
+</footer>
  
 </html>

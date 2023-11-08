@@ -12,136 +12,96 @@
 
   <link href="static/style2.css" rel="stylesheet">  
 
+  <header>          
+       <a href="/index" > Página Inicial</a>
+       <a href="/calculo" > Página de Calculo</a>
+            
+  </header> 
+
   <body>
     
    
-  <div class="indice" >          
-  
-       <a href="/index" > PAGINA INICIAL</a>
-       <a href="/calculo" > Pagina de Calculo</a>
-            
-  </div>
-
-  <main class="apresentacao">
+  <main class="mostrar">
    
-    <section>
-      <p>Proventos</p>
-      <p>Valor</p>
-      <p>Descontos</p>
-      <p>Valor</p>
-    
 
+    <section class="apresentacao_texto">
     
-      <p>Salario</p>
-      <p>{{dados.salario}}</p>
-      <p>Faltas</p>
-      <p>{{dados.Faltas}}</p>
-    
-
-    
-      <p>Salário Família</p>
-      <p>{{dados.valorsf}}</p>
-      <p>DSR</p>
-      <p>{{dados.valordsr}}</p>
-    
-
-    
+      <p>Salário</p>
       <p>Insalubridade</p>
-      <p>{{dados.insal}}</p>
-      <p>Atrasos</p>
-      <p>{{dados.Atrasos}}</p>
-    
-
-    </section>
-  
-    <section>
-    
       <p>Periculosidade</p>
-      <p>{{dados.peric}}</p>
-      <p>x</p>
-      <p>0</p>             
-                        
       <p>Horas extras 50%</p>
-      <p>{{dados.valorhe50}}</p>
-      <p>x</p>
-      <p>0</p>   
-            
-                      
       <p>Horas extras 100%</p>
-      <p>{{dados.valorhe100}} </p>
-      <p>x</p>
-      <p>0</p>
-
-
-    
       <p>valor Adic. Nortuno:</p>
-      <p> {{dados.valoradcnot}}</p> 
-      <p>x</p>
-      <p>0</p>              
-    
-  </section>
-  
-    <section>
-
-    
       <p>Valor DSR HE/Adc.Not:</p>
-      <p> {{dados.dsrhoad}}</p> 
-      <p>Pensao Alimentícia:</p>
-      <p>{{dados.pensao}}</p>                            
-      
+      <p  class="total">Total Proventos</p>
+      <p>Faltas</p>
+      <p>DSR</p>
+      <p>Atrasos</p> 
+      <p class="total">Total Descontos</p>
 
-  
-      <p>Total Proventos</p>
-      <p> {{dados.bruto}}</p>
-      <p>Total Descontos</p>
-      <p>{{dados.desc}}</p>
-    
-
-    
-      <p>Valor Salário Bruto:</p>
-      <p> {{dados.bruto}}</p> 
-      <p>Valor das Faltas:</p>
-      <p>{{dados.Faltas}}</p>                   
-      
-  
-                      
-      <p>Valor de deposito FGTS:</p>
-      <p> {{dados.valorfgts}}</p>
-      <p>valor dos DSR:</p>
-      <p>{{dados.valordsr}}</p>
-    
     </section>
   
-    <section>
-  
-    
-      <p>valor dos Atrasos:</p>
-      <p>{{dados.Atrasos}}</p>
-      <p>valor dos Atrasos:</p>
-      <p>{{dados.Atrasos}}</p>                       
-     
-  
-    
-      <p>Base Imposto de Renda:</p>
-      <p>{{dados.baseir}} </p>
-      <p>Dependentes de IR:</p>
-      <p>{{dados.valordep}} </p>                   
+    <section class="apresentacao_texto" class="texto">    
       
-  
-                    
-      <p>Valor de desconto de IRRF:</p>
-      <p> {{dados.valorir}}</p>
-      <p>Valor descontado Pensao:</p>
-      <p>{{dados.pensao}}</p>
-    
+      <p > {{dados.salario}}</p>
+      <p > {{dados.insal}}</p>
+      <p > {{dados.peric}}</p>
+      <p > {{dados.valorhe50}}</p>
+      <p > {{dados.valorhe100}} </p>
+      <p > {{dados.valoradcnot}}</p> 
+      <p > {{dados.dsrhoad}}</p> 
+      <p class="total"> {{dados.bruto}}</p>
+      <p > {{dados.Faltas}}</p>                   
+      <p > {{dados.valordsr}}</p>
+      <p > {{dados.Atrasos}}</p>
+      <p class="total"> {{dados.desc}}</p>
     </section>
+    
+    <section class="apresentacao_texto">           
+      
+      <p>Base de INSS:</p>
+      <p>Descontos INSS</p>
+      <p>-</p>
+      <p>Base FGTS</p>
+      <p>Valor FGTS</p>
+      <p>-</p>
+      <p>Base IRRF</p>
+      <p>Valor IRRF</p>
+      <p>-</p>
+      <p>-</p-></p>
+      <p>-</p>
+      <p>-</p>
+
+    </section>  
+
+    <section class="apresentacao_texto" class="texto"> 
+      
+      <p>{{dados.baseinss}}</p>             
+      <p class="total">{{dados.valorinss}}</p>   
+      <p>-</p>
+      <p>{{dados.basefgts}}</p>
+      <p class="total">{{dados.valorfgts}}</p>
+      <p>-</p>
+      <p>{{dados.baseir}}</p>
+      <p class="total">{{dados.valorir}}</p>
+      <p>-</p>                   
+      <p>-</p>   
+      <p>-</p>
+      <p>-</p>
+    
+    
+    </section >
 
       
     </main>    
 
   </body>
        
-             
+  <footer  class="rodape">
+
+    <p> Produzido por Antonio Neto</p>
+  
+  </footer>         
     
        
             

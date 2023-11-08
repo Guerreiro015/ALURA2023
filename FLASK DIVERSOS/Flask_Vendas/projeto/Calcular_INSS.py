@@ -175,7 +175,7 @@ def calcular():
 
     valordia=salbase/30
 
-    salario=round(valordia*diastrab,2)
+    salario=round(valordia*diastrab,2)    
     horas50=round(hr50*valorhora50,2)
     horas100=round(hr100*valorhora100,2)
     adcnotur=round(adcnot*valoradcnot,2)
@@ -211,8 +211,8 @@ def calcular():
        
     valorfgts=baseinss*0.08
     valorfgts=round(valorfgts,2)
-
-    dados={ 'desc': desc, 'dsrhoad': dsrhoad, 'salario':salario, 'bruto': bruto, 'insal': valor_insal, 'peric': valor_peric, 'valorsf': valorsalfam, 'valorhe50': horas50, 'valorhe100': horas100,'valoradcnot': adcnotur, 'valordsr': valordsr,'Faltas': valorfaltas,'Atrasos':valoratrasos,'baseinss': baseinss,'valorinss':valorinss,'basefgts': basefgts,'valorfgts': valorfgts, 'baseir':baseir, 'valorir':valorirrf,'valordep':valordep, 'pensao': pensao}
+    
+    dados={ 'desc': desc, 'dsrhoad': dsrhoad, 'salario': f'{salario: ,.2f}', 'bruto': f'{bruto: ,.2f}', 'insal': f'{valor_insal: ,.2f}', 'peric': f'{valor_peric: ,.2f}', 'valorsf': valorsalfam, 'valorhe50': horas50, 'valorhe100': horas100,'valoradcnot': adcnotur, 'valordsr': valordsr,'Faltas': valorfaltas,'Atrasos':valoratrasos,'baseinss': f'{baseinss: ,.2f}','valorinss':valorinss,'basefgts': f'{basefgts: ,.2f}','valorfgts': f'{valorfgts: .2f}', 'baseir':f'{baseir: ,.2f}', 'valorir':valorirrf,'valordep':valordep, 'pensao': pensao}
 
     print(valoratrasos)
     return render_template('mostrar.html',dados=dados)

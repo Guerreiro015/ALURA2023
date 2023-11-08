@@ -6,9 +6,14 @@
     <link href="static/style2.css" rel="stylesheet">    
     
     <body>        
-    
+     <div class="coluna">
+        <div>
 
+            <p>este é um paragrafo</p>
 
+        </div>
+
+<div>
         <section class="apresentacao">
             
             <img  src="static/imagem/IR1.jpg" alt=""  width="350" height="220">                        
@@ -23,17 +28,55 @@
 
         <section class="apresentacao">
             
-            <img  src="static/imagem/aranha.jpg" alt=""  width="350" height="220">                     
-
-            <a href="{{url_for('calculo')}}"><button >Calcular</button></a>                       
-
-            <input type="image" src="static/imagem/bannerIR.jpg" title="CALCULAR" width="350" height="220">
+           
+            <a href="{{url_for('calculo')}}" > <img src="static/imagem/bannerIR.jpg" title="CALCULAR" width="350" height="220">
+            <a href="{{url_for('calculo')}}" > <img src="static/imagem/bannernovo.jpg" title="CALCULAR" width="350" height="220">
                        
     
-
-        </section>     
+            </section>     
+</div>
+</div>
                         
-                     
+        <div class="tabela-02">
+            <div class="box-tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <em> <strong> BASE DE CÁLCULO </strong></em>
+                        <em>ALÍQUOTA</em>
+                        <em>PARCELA A DEDUZIR</em>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>At&eacute; R$2.112,00</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>De R$2.112,01 a R$2.826,65</td>
+                        <td>7,5%</td>
+                        <td>R$ 158,40</td>
+                    </tr>
+                    <tr>
+                        <td>De R$2.826,66 a R$3.751,05</td>
+                        <td>15%</td>
+                        <td>R$ 370,40</td>
+                    </tr>
+                    <tr>
+                        <td>De R$3.751,06 a R$4.664,68</td>
+                        <td>22,5%</td>
+                        <td>R$ 651,73</td>
+                    </tr>
+                    <tr>
+                        <td>A partir de R$4.664,69</td>
+                        <td>27,5%</td>
+                        <td>R$ 884,96</td>
+                    </tr>
+                    <tr>
+                        <td>Parcela por dependente</td>
+                        <td>&nbsp;</td>
+                        <td>R$ 189,59</td>           
            
 
      </body>
