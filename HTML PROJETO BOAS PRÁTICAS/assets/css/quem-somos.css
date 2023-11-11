@@ -1,0 +1,60 @@
+
+.somos{
+
+    text-align: center;
+
+}
+
+.somos_titulo{
+    color: #8d0606;
+    font-family: Pacifico, cursive;
+    font-size: 4vw;
+
+}
+
+.somos_descricao{
+    color: #605e5e;   
+    font-size: 2vw;
+    font-weight: 100px;       
+    text-align: center;      
+    width: 100%;
+
+}
+
+.pessoas{
+    display: flex;
+    
+    align-content: center;  
+    gap: 5rem;   
+    padding-left: 12%;
+    padding-right: 15%;
+    width: 100%;
+    
+}
+.pessoa{
+    display: flex;
+    flex-direction:column;
+    gap: 1vw;    
+}
+
+.pessoas_imagem{
+    width: 20vw;    
+    border: none;
+    border-radius: 150px;
+
+}
+
+.pessoas_nome{
+    color: #8d0606;
+    font-family: 'Pacifico', cursive;
+    font-size: 3vw;
+
+}
+
+.pessoas_funcao{
+    font-size: 2vw;
+    line-height: 1.5;
+    text-align: center;
+    color: rgb(50, 48, 48);
+
+}

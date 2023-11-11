@@ -1,0 +1,12 @@
+.contatos{
+    background-color: #e4dfdf;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 1rem;   
+}
+
+.desenvolvimento{
+font-size: 2vw;
+color: rgb(117, 118, 120);
+}

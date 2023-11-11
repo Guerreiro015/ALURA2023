@@ -1,0 +1,77 @@
+
+
+.banner{
+
+position: relative;
+
+}
+
+.banner_imagem{    
+    /* existem duas maneiras de fazer
+
+    background-image: url('../img/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: calc(100vh - 72px);
+    width: 100%;
+    */
+
+   background: url(../img/banner.jpg) no-repeat center / cover;
+   height: calc(100vh - 72px);
+   width: 100%;
+}
+
+.banner_titulo{
+    color: aliceblue;
+    font-family: 'Pacifico', cursive;
+   font-size: calc(5vw);
+    position: absolute;
+    
+    top: 40%;
+    text-align: center;
+    text-shadow: 0 6px 6px rgb(63, 62, 62);
+    transform: translate(-50% -50%);
+    width: 100%;
+}
+
+
+.sobre {
+    text-align: center;
+    padding: 2.5rem;
+}
+
+
+
+.sobre_titulo {
+    color: #8d0606;
+    font-family: Pacifico, cursive;
+    font-size: 3.1875rem;
+}
+
+
+
+.sobre_descricao{
+    color: #605e5e;   
+    font-size: 1.6rem;
+    font-weight: 100px;       
+    text-align: center;      
+    width: 100%;
+}
+
+.procura{
+    display: flex;
+    padding-right: 10rem;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;  
+    color: #8d0606;      
+}
+
+.procura2{
+   width: 200px;
+   border:solid 3px rgb(116, 113, 115);
+   border-radius: 5px;
+}

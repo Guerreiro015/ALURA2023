@@ -31,7 +31,9 @@ body{
    height: 100vh;
    box-sizing: border-box;
    width: 100%;
-   background-color: #B0A695;
+   background-image: url('./imagem/bannerinss.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
    color: aliceblue;
 }
 

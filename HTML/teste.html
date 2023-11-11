@@ -1,0 +1,132 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        #resultado {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo de Encargos na Folha de Pagamento</h1>
+    <p>Insira o salário bruto do funcionário:</p>
+    <input type="number" id="salario" value="2000" min="0" step="0.01">
+    <button onclick="calcular()">Calcular</button>
+    <table>
+        <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Percentual</th>
+        </tr>
+        <tr>
+            <td>Salário Bruto</td>
+            <td id="bruto">{{id.value}}</id></td>
+            <td>100%</td>
+        </tr>
+        <tr>
+            <td>INSS</td>
+            <td id="inss">R$ 150,00</td>
+            <td>7,5%</td>
+        </tr>
+        <tr>
+            <td>FGTS</td>
+            <td id="fgts">R$ 160,00</td>
+            <td>8%</td>
+        </tr>
+        <tr>
+            <td>Férias</td>
+            <td id="ferias">R$ 222,22</td>
+            <td>11,11%</td>
+        </tr>
+        <tr>
+            <td>13º Salário</td>
+            <td id="decimo">R$ 166,67</td>
+            <td>8,33%</td>
+        </tr>
+        <tr>
+            <td>DSR</td>
+            <td id="dsr">R$ 0,00</td>
+            <td>0%</td>
+        </tr>
+        <tr>
+            <td>Total de Encargos</td>
+            <td id="total">R$ 698,89</td>
+            <td>34,94%</td>
+        </tr>
+        <tr>
+            <td>Custo Total do Funcionário</td>
+            <td id="custo">R$ 2.698,89</td>
+            <td>134,94%</td>
+        </tr>
+    </table>
+    <p id="resultado">O custo total do funcionário é R$ 2.698,89</p>
+    <script>
+        function calcular() {
+            // Obtém o valor do salário bruto do input
+            var salario = document.getElementById("salario").value;
+            // Converte o valor para número
+            salario = Number(salario);
+            // Define as constantes dos percentuais dos encargos
+            const INSS = 0.075;
+            const FGTS = 0.08;
+            const FERIAS = 0.1111;
+            const DECIMO = 0.0833;
+            const DSR = 0;
+            // Calcula os valores dos encargos
+            var inss = salario * INSS;
+            var fgts = salario * FGTS;
+            var ferias = salario * FERIAS;
+            var decimo = salario * DECIMO;
+            var dsr = salario * DSR;
+            // Calcula o total de encargos e o custo total do funcionário
+            var total = inss + fgts + ferias + decimo + dsr;
+            var custo = salario + total;
+            // Formata os valores para duas casas decimais e com o símbolo de R$
+            salario = salario.toFixed(2).replace(".",",");
+            inss = inss.toFixed(2).replace(".",",");
+            fgts = fgts.toFixed(2).replace(".",",");
+            ferias = ferias.toFixed(2).replace(".",",");
+            decimo = decimo.toFixed(2).replace(".",",");
+            dsr = dsr.toFixed(2).replace(".",",");
+            total = total.toFixed(2).replace(".",",");
+            custo = custo.toFixed(2).replace(".",",");
+            // Exibe os valores nas células da tabela
+            document.getElementById("bruto").innerHTML = "R$ " + salario;
+            document.getElementById("inss").innerHTML = "R$ " + inss;
+            document.getElementById("fgts").innerHTML = "R$ " + fgts;
+            document.getElementById("ferias").innerHTML = "R$ " + ferias;
+            document.getElementById("decimo").innerHTML = "R$ " + decimo;
+            document.getElementById("dsr").innerHTML = "R$ " + dsr;
+            document.getElementById("total").innerHTML = "R$ " + total;
+            document.getElementById("custo").innerHTML = "R$ " + custo;
+            // Exibe o resultado no parágrafo
+            document.getElementById("resultado").innerHTML = "O custo"}
