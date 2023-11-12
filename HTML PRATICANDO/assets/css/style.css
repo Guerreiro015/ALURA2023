@@ -1,3 +1,6 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8,18 +11,238 @@
     --cinza-secundario: #c0c0c0;
     --botao-azul: #167df7;
     --cor-de-fundo: #00030C;
+    --fonte-principal:'Inter';
     }
 
     body{
         background-color: var(--cor-de-fundo);
-        color:var(--branco-principal)
+        color:var(--branco-principal);
+        font-family: var(--fonte-principal);
+        font-weight: 400;
+        font-size: 16px;
     }
 
     .principal{
         background: url(../img/Background.png) no-repeat;
+       
     }
 
     .container{
-
-        height: 100vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        text-align: center;
+        padding: 40px;
+       
     }
+
+    .container_titulo{
+        font-family: var(--fonte-principal);
+        font-size: 26px;
+        font-weight: 700;
+
+    }
+
+    .titulo{
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .container_botao{
+        display: block;
+        background-color: var(--botao-azul);
+        border: 2px solid var(--branco-principal);
+        color: var(--branco-principal);
+        
+        border-radius: 5px;
+        padding: 1rem;
+             
+        text-decoration: none;
+    }
+    .container_botao:hover{
+        
+        background-color: greenyellow;
+        border: 2px solid var(--branco-principal);
+
+    }
+
+    .container_botao-botao{
+        display: block;
+        background-color: transparent;
+        color: var(--branco-principal);
+        border: 2px solid var(--branco-principal);
+        padding: 1em;
+        border-radius: 5px;        
+        text-decoration: none;
+
+    }
+
+    .container_botao-botao:hover{
+        
+        background-color: greenyellow;
+
+    }
+
+
+    .aviso{
+        font-size: 12px;
+        color: var(--cinza-secundario);
+
+    }
+
+    .paginas{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .pagina2{
+        margin: 5%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 40px
+    }
+
+    .texto{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 588px;
+        text-align: left;
+        
+    } 
+    .texto1{
+        
+        font-family: var(--fonte-principal);
+        font-size: 2rem;
+              
+    } 
+
+    .texto2{
+        font-size: 1rem;
+        width: 580px;       
+    } 
+
+    .botao_secao-3{
+        width: 150px;
+        background-color: #167df7;
+        color: aliceblue;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        
+    }
+    .botao_secao-3:hover{
+        
+        background-color: rgb(228, 247, 22);
+        color: aliceblue;
+        
+        
+    }
+
+    .pagina3{
+        font-family: var(--fonte-principal);
+        font-weight: 100;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .pagina3_imagem{
+        display: flex;        
+        margin-left: 10%;
+    }
+
+    .pagina3_texto1{ 
+        margin-top: 40px;      
+        align-items: center;
+        text-align: center;
+    }
+
+    .pagina3_texto2{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;   
+        
+    }
+
+    .pagina3_texto2-1{
+        
+        padding-left: 280px;
+        
+    }
+    
+    .pagina3_texto2-2{
+        
+        padding-left: 130px;
+        
+        
+    }
+    
+    .pagina3_texto2-3{
+        
+        padding-left: 45px;
+       
+       
+    }
+
+    .pagina4{
+        font-family: var(--fonte-principal);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+                
+    }
+
+    .pagina4_imagem{
+        width: 102px;
+        height: 35.28px;
+        flex-shrink: 0;
+    }
+
+    .pagina4_texto{
+       
+        text-align: center;
+
+    }
+
+    .pagina4_texto1{
+        /* espaço emtre palavras (word-spacing) */
+        word-spacing: 1.2rem;
+        gap: 18px;
+              
+
+    }
+
+    .pagina4_texto2{
+        font-size: 0.8rem;
+        padding-top:  40px;
+        
+    }
+    
+    .pagina4_texto3{        
+        width: 1100px;
+        font-size: 0.8rem;
+        padding-top:  40px;
+
+
+    }
+
+    .pagina5{
+        display: flex;
+        text-align: center;
+        margin-left: 100px;
+    }
+    
+    .pagina6{
+           margin-left: 45%;    
+        width: 100px;
+        
+       
+        
+    }
+
+    
