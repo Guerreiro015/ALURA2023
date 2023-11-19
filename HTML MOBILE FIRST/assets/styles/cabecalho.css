@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:wght@300;400;500;700&display=swap');
+
+:root{
+    --cor-de-fundo: #EBECEE;
+    --cor-primaria: rgb(27, 13, 231);
+    --branco: white;
+    --laranja:  #EB9B00;
+    --gradiente: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --azul-degradee: linear-gradient(98deg, #002F52 35.49%, #326589 165.37%);;
+    --fonte-principal: 'Poppins';
+    --font-2: "Agbalumo";
+
+}
+
+
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-primaria);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-right: 20px;
+
+}
+
+
+.cabecalho_hamburguer{
+    width: 48px;
+    height: 48px;
+    background: url(../img/Menu.png);    
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+
+}
+
+
+
+.container{
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+
+       
+    }
+
+.container__imagem {
+    padding: 1em;
+   
+}
+
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: auto;
+    
+    } 
+    
+
+.container_botao{
+    display: none;
+}
+
+.container_botao:checked~.lista-menu {
+     display: block;
+   
+    
+} 
+
+.opcao{
+    display: none;
+}
+
+.opcao:checked~.lista-menu {
+    display: block;
+    
+   
+}
+
+.container_botao:checked~.botao_menu > .cabecalho_hamburguer {
+    
+    background: url(../img/menu_ativo.png);    
+    background-color: #002F52;
+    
+    
+} 
+
+.container_botao:checked~.botao_menu > .categoria {    
+    background-color: #002F52;
+    color: var(--branco);
+    padding: 0.5em;
+    
+    
+} 
+
+
+
+
+.menu_titulo{    
+    background-color: var(--branco);
+    color:var(--laranja);    
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+    padding: 20px;
+}
+
+.menu_item{
+   
+    background-color: var(--branco);
+    padding: 10px;
+    padding-right: 60px;
+    gap:10px;
+   
+}
+
+.menu_item-texto{   
+    text-decoration: none;
+    background: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.menu_item:hover{
+
+  background: rgb(3, 87, 87);
+     
+}
+
+.menu_item:hover> .menu_item-texto{
+ -webkit-text-fill-color: var(--branco);
+    
+    
+}
+
+
+
+.logo_titulo, .opcao_titulo{
+    display: none;
+} 
+
+
+
+@media screen and (min-width: 1024px){
+    
+.logo_titulo{
+    display: block;
+    color: black;
+    font-weight: 500;
+    font-family: 'Poppins';
+    padding: 1em 0;
+}
+
+.opcao_titulo{
+    width: 600px;
+    display: block;
+    display: flex;
+    gap: 2em;
+    color: black;
+    font-weight: 500;
+    font-family: 'Poppins';
+    padding: 1em 0 0 10em;
+}
+
+.negrito{
+    color: black;
+    font-weight: bold;
+}
+
+.cabecalho_hamburguer{
+    display: none;
+
+}
+
+.favorito{
+
+    display: none;
+}
+
+}
+
+.sacola_texto{
+    display: none;
+}
+
+@media screen and (min-width: 1300px){
+
+    .sacola_texto{
+        display: block;
+    }
+
+    .sacola_item{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: rgb(42, 38, 38);
+    }
+}
+
+

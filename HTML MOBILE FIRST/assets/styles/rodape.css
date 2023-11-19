@@ -1,0 +1,79 @@
+
+.rodape_alura{
+  background: var(--branco);
+  border-top: solid 2px #858585;
+  padding: 1em 0 1em 1em;
+  color: #000;
+  
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rodape{
+  display: none;
+  display: flex;
+  justify-content: center;
+  gap: 10em;
+  background: var(--branco);
+  border-top: solid 2px #858585;
+  color: #474646;
+  margin: 0em 0em 2em 0em;
+  
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  
+  
+}
+.lista_rodape{
+  margin: 0 0 2em 0;
+}
+
+.rodape_alura-rodape{
+  padding: 1.5em 1em 0 0 ;
+  
+  font-weight: 500;
+  font-size: 1.5em;
+  
+}
+.rodape_titulo-texto{
+  margin-top: 2em;
+  font-weight: 300;
+  padding-left: 1em;
+  border-left: solid #c6bdbd 2px;
+  
+  
+}
+
+
+.lista_rodape-texto{
+  display: flex;
+  padding: 1em 0em;
+  font-weight: 500;
+  font-size: 14px;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border-left: solid #c6bdbd 2px;
+}
+
+@media screen and (max-width: 1024px){
+  
+  .rodape_alura{
+    display: block;
+      }
+
+      .rodape{
+        display: block;
+      }
+
+      .lista_rodape-texto, .rodape_titulo-texto{
+        display: none;
+      }
+      
+}

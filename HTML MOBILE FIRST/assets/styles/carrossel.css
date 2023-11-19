@@ -1,0 +1,78 @@
+.carrossel{
+
+}
+.carrossel_titulo{
+    background-color: var(--branco);
+    color: var(--laranja);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;    
+    font-weight: 700;
+    padding: 1em 0 0.5em 0;
+   
+    
+
+}
+
+.carrossel{
+
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: auto;
+}
+
+.swiper {
+    width: 80%;
+   }
+
+
+.swiper-pagination {
+    position: initial;
+}
+
+.swiper-button-prev, .swiper-button-next {
+
+    display: none;
+}
+
+.painel_grande{
+    display:flex;
+    
+}
+
+@media screen and (min-width: 1024px){
+
+    .swiper {
+     width: 60%;
+    }
+
+
+
+    .swiper-button-prev, .swiper-button-next {
+
+        display: block;
+    }
+    
+
+}
+
+@media screen and (min-width: 1300px){
+
+    .carrossel_card{
+
+        display: flex;
+        
+        
+           }
+       
+           .swiper {
+               width: 550px;
+               margin-left: 1em;
+       }
+       
+       
+    }
+   
+
