@@ -1,0 +1,229 @@
+
+/* _______________________________________________________________________ */
+
+.cabecalho__container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.cabecalho__pesquisar__item{
+    display: none;
+}
+
+
+.menu__container{
+
+    position: fixed;
+    bottom: 0;
+   
+    
+}
+
+.superior__secao__container {    
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    overflow: scroll;
+    gap: 1em;
+}
+
+@media(min-width:600px){
+
+
+    .videos__container{
+
+        margin-left: 0px;
+    }
+    
+    .cabecalho__pesquisar__item{
+        display: block;
+    }
+
+
+}
+
+
+
+ /* MENU */
+
+
+    @media(max-width: 600px){        
+
+        .menu__lista:nth-child(2),
+        .menu__lista:nth-child(3),
+        .menu__lista:nth-child(4){
+            display: none;
+        }   
+
+
+    .menu__itens{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 0.5em;
+    }
+
+
+    }
+
+
+    .menu__container{
+
+        position: fixed;
+        bottom: 0;
+        height: 74px;
+        width: 100%;
+    }
+
+
+    .menu__lista{
+       display: flex;
+       justify-content: space-around;
+     
+
+    }
+   
+   
+
+    .rodape__container{        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    @media(min-width: 600px){
+
+        .rodape__container{
+            display: flex;
+                      
+        }        
+    }
+
+    @media(min-width: 600px){
+        .menu__container{
+            
+            position: fixed;
+            bottom: 0;
+            width: 120px;
+            height: 73%;
+           
+        }    
+
+
+        .menu__lista{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3em;
+            padding-top: 15px;
+            
+            }
+
+            .menu__lista li {
+                width: 100%;
+            }
+     
+         }
+        
+        .menu__itens{
+           
+            display: flex;
+            gap: 1em;
+            padding: 0.5em;
+            align-items: center;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: none;
+    }   
+    
+    
+    @media(min-width: 1024px){
+        
+        .menu__container{
+            width: 220px;
+            overflow: scroll;
+            
+        }
+
+        .menu__lista{
+            display: flex;           
+            height: auto;
+            padding-top: 12px;
+            gap: 0.5em;
+            border-bottom: solid 1px rgba(157, 203, 249, 0.888);
+            }
+        
+        .menu__lista:nth-child(2),
+        .menu__lista:nth-child(3),
+        .menu__lista:nth-child(4){
+            display: block;
+
+    }
+
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex; 
+        flex-direction: column-reverse;
+        
+        }
+
+    .rodape__container{
+        margin: 0 0 0 100px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.5em;
+                  
+    }     
+
+   
+    .jogos{
+        order: 3;
+    }
+
+    .filmes{
+        
+        order: 2;
+    }
+
+    .premiun{
+       
+        order: 1;
+    }
+
+
+    .menu__itens_maispagina{
+       
+        order: -1;
+    }
+
+    }
+
+    .videos__container{
+
+        margin-left: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+
+    /* flex-grow: 1;  os elementos se ajustam ao tamanho do espaço*/
+    .videos__item {
+        height: 303px;
+        width: 270px;
+        padding: 0.5em;
+        flex-grow: 1;
+    }
+
+
+
+/* _______________________________________________________________________ */
+
