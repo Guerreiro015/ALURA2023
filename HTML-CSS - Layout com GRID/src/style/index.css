@@ -19,3 +19,8 @@ body{
 .principal{
     grid-area: main;
 }
+
+.menu-lateral__link button {
+    display: flex;
+    align-items: center;
+}
