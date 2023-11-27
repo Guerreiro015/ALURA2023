@@ -40,7 +40,15 @@ app = Flask(__name__) #instanciando Flask
 app.secret_key = 'alura'
 
 
-@app.route('/')
+@app.route('/')   
+def index():
+    dados=session.query(usuarios).all()         
+
+    tit="imposto de renda"
+    return render_template('index.html',titulo=tit,dados=dados)
+
+
+@app.route('/login')
 def login():    
     return render_template('login.html')
 
@@ -121,12 +129,6 @@ def autenticar_cadastro():
     #---------------------------------------------<>--------------------------------------------------   
 
 
-@app.route('/index')   
-def index():
-    dados=session.query(usuarios).all()         
-
-    tit="imposto de renda"
-    return render_template('index.html',titulo=tit,dados=dados)
 
 
 

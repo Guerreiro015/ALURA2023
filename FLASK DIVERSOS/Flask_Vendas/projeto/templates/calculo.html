@@ -1,101 +1,99 @@
 {% extends 'mensagens.html'%}
 {% block conteudo %}
 
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULOS</title>
-    <link rel="stylesheet" href="static/main.css">
-</head>
+<link rel="stylesheet" href="../static/styles/calculo.css">
+
 <body>
-    <div class="page">
-        
-        <form action="{{url_for('calcular')}}" method="POST" class="formLogin">          
+    <div class="container">
+
+      <header class="cabecalho">
+        <a class="cabecalho_texto" href="/" > Voltar P/ Página Inicial</a><br/>
+        <h2 class="cabecalho_texto">TELA DE CÁLCULO</h2>
+
+      </header>
+      <img class="foto" src="../static/imagem/aranha.jpg" alt="">
+        <form action="{{url_for('calcular')}}" method="POST" class="formulario">          
             
                 <div class="row">
                   <div class="col">
                     <label for="salbase">Salario Base</label>
-                    <input input type="text" class="form-control" value="0" id="salbase" name="salbase" placeholder="valor Salario Base">
+                    <input input type="text" class="texto" value="0" id="salbase" name="salbase" placeholder="valor Salario Base">
                   </div>
                   <div class="col">
                     <label for="diastrab">Dias Trabalhados</label>
-                    <input input type="number" class="form-control" value="30" id="diastrab" name="diastrab" placeholder="Quantidadr de dias">
+                    <input input type="number" class="texto" value="30" id="diastrab" name="diastrab" placeholder="Quantidadr de dias">
                   </div>
                   <div class="col">
                     <label for="hr50">Horas Extras 50%</label>
-                    <input input type="text" class="form-control" value="0" id="hr50" name="hr50" placeholder="Quant. HE 50%">
+                    <input input type="text" class="texto" value="0" id="hr50" name="hr50" placeholder="Quant. HE 50%">
                   </div>
                 </div>
 
                 <div class="row">
                     <div class="col">
                       <label for="hr100">Horas Extras 100%</label>
-                      <input input type="text" class="form-control" value="0" id="hr100" name="hr100" placeholder="Quant. HE 100%">
+                      <input input type="text" class="texto" value="0" id="hr100" name="hr100" placeholder="Quant. HE 100%">
                     </div>
                     <div class="col">
                       <label for="adcnot">Adicional Noturno</label>
-                      <input input type="text" class="form-control"  value="0" id="adcnot" name="adcnot" placeholder="Quant.horas Noturnas">
+                      <input input type="text" class="texto"  value="0" id="adcnot" name="adcnot" placeholder="Quant.horas Noturnas">
                     </div>
                     <div class="col">
                       <label for="inputEmail4">...</label>
-                      <input input type="text" class="form-control" id="inputEmail4" name="inputEmail4" placeholder="...">
+                      <input input type="text" class="texto" id="inputEmail4" name="inputEmail4" placeholder="...">
                     </div>
                   </div>
 
                 <div class="row">
                     <div class="col">
                       <label for="falta">Faltas</label>
-                      <input input type="text" class="form-control" value="0" id="falta" name="falta" placeholder="Quant. Faltas">
+                      <input input type="text" class="texto" value="0" id="falta" name="falta" placeholder="Quant. Faltas">
                     </div>
                     <div class="col">
                       <label for="dsr">DSR</label>
-                      <input input type="text"  class="form-control" value="0" id="dsr" name="dsr" placeholder="Quant. DSR">
+                      <input input type="text"  class="texto" value="0" id="dsr" name="dsr" placeholder="Quant. DSR">
                     </div>
                     <div class="col">
                       <label for="atrasos">Atrasos</label>
-                      <input input type="text" class="form-control" value="0" id="atrasos" name="atrasos" placeholder="Quant. Atrasos">
+                      <input input type="text" class="texto" value="0" id="atrasos" name="atrasos" placeholder="Quant. Atrasos">
                     </div>
                   </div>
 
                 <div class="row">
                     <div class="col">
                       <label for="depsf">Dep. Salário Família</label>
-                      <input input type="text" class="form-control" value="0" id="depsf" name="depsf" placeholder="Quant. Dependentes">
+                      <input input type="text" class="texto" value="0" id="depsf" name="depsf" placeholder="Quant. Dependentes">
                     </div>
                     <div class="col">
                       <label for="depir">Dep. Imposto de Renda</label>
-                      <input input type="text" class="form-control" value="0" id="depir" name="depir" placeholder="Quant. Dependentes">
+                      <input input type="text" class="texto" value="0" id="depir" name="depir" placeholder="Quant. Dependentes">
                     </div>
                     <div class="col">
                       <label for="pensao">Pensao</label>
-                      <input input type="text" class="form-control" value="0" id="pensao" name="pensao" placeholder="Valor Pensao">
+                      <input input type="text" class="texto" value="0" id="pensao" name="pensao" placeholder="Valor Pensao">
                     </div>
                   </div>
               
                 <div class="row">
                     <div class="col">
-                        <label> Periculosidade?</a>
-                            <select name="opperic" id="opperic">
+                        <label> Periculosidade?</label>
+                            <select class="texto" name="opperic" id="opperic">
                                 <option value="sim">Sim</option>
                                 <option value="nao">Não</option>
                             </select>
                     </div>  
 
                     <div class="col">
-                        <label>Insalubridade?</a>
-                            <select name="opinsal" id="opinsal">
+                        <label>Insalubridade?</label>
+                            <select class="texto" name="opinsal" id="opinsal">
                                 <option value="sim">Sim</option>
                                 <option value="nao">Não</option>
                             </select>
-                    </div>
-
-                
+                    </div>                
                                              
                     <div class="col">  
-                      <label>% Insalubridade</a>
-                      <select name="insal" id="insal">                 
+                      <label>% Insalubridade</label>
+                      <select class="texto" name="insal" id="insal">                 
                         <option value="0">0 %</option>
                         <option value="10">10 %</option>
                         <option value="20">20 %</option>
@@ -103,12 +101,16 @@
                       </select>   
                     </div>
                     
-                </div></br></br>
-
-                <input type="submit" value="CALCULAR" class="btn">
-                <a href="/index"  style="text-decoration: none; border-radius: 5px; text-align: center;" class="p-2 mb-1 bg-primary text-white" > Voltar P/ Página Inicial</a><br/>
+                </div> 
+                   </br>
+                <div class="botoes">
+                   <input type="submit" value="Resultado do Cálculo" class="botao">
+                  
+                </div>
          </form>
+         <img class="foto" src="../static/imagem/assassino.jpg" alt="">
     </div>
+    
     
 </body>
 {%endblock%}
