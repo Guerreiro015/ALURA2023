@@ -70,8 +70,8 @@ console.log(`Neste caso o Valor da base de Imposto de Renda é..:  ${baserenda} 
 
 console.log(`O Valor do Imposto de Renda é.                   .:  ${impostoderenda} `)
 
-console.log(baseir[i])
-console.log(parceladeduzir[i])
-console.log(aliquotair[i])
+console.log('Base: ',baseir[i])
+console.log('Parcela a Deduzir: ', parceladeduzir[i])
+console.log('Alíquota: ', aliquotair[i])
 
 

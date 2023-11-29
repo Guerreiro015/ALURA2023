@@ -3,7 +3,7 @@
 
 
 //Expressão de função - colocamos a função variavel e valor da variavel na mesma linha.
-const soma = function (n1 = 1, n2 = 3) { return n1 + n2 }
+const soma = function (n1 = 2, n2 = 7) { return n1 + n2 }
 console.log(soma())
 console.log(soma(3, 5))
 
