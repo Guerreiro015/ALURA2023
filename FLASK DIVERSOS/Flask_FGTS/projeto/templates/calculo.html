@@ -11,68 +11,21 @@
         <h2 class="cabecalho_texto">TELA DE CÁLCULO</h2>
 
       </header>
+
+      <main class="container_2">
       <img class="foto" src="../static/imagem/aranha.jpg" alt="">
         <form action="{{url_for('calcular')}}" method="POST" class="formulario">          
             
                 <div class="row">
                   <div class="col">
-                    <label for="salbase">Salario Base</label>
+                    <label for="salbase">Mês do Cálculo</label>
                     <input input type="text" class="texto" value="0" id="salbase" name="salbase" placeholder="valor Salario Base">
                   </div>
                   <div class="col">
-                    <label for="diastrab">Dias Trabalhados</label>
+                    <label for="diastrab">Ano para Cálculo</label>
                     <input input type="number" class="texto" value="30" id="diastrab" name="diastrab" placeholder="Quantidadr de dias">
-                  </div>
-                  <div class="col">
-                    <label for="hr50">Horas Extras 50%</label>
-                    <input input type="text" class="texto" value="0" id="hr50" name="hr50" placeholder="Quant. HE 50%">
-                  </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                      <label for="hr100">Horas Extras 100%</label>
-                      <input input type="text" class="texto" value="0" id="hr100" name="hr100" placeholder="Quant. HE 100%">
-                    </div>
-                    <div class="col">
-                      <label for="adcnot">Adicional Noturno</label>
-                      <input input type="text" class="texto"  value="0" id="adcnot" name="adcnot" placeholder="Quant.horas Noturnas">
-                    </div>
-                    <div class="col">
-                      <label for="inputEmail4">...</label>
-                      <input input type="text" class="texto" id="inputEmail4" name="inputEmail4" placeholder="...">
-                    </div>
-                  </div>
-
-                <div class="row">
-                    <div class="col">
-                      <label for="falta">Faltas</label>
-                      <input input type="text" class="texto" value="0" id="falta" name="falta" placeholder="Quant. Faltas">
-                    </div>
-                    <div class="col">
-                      <label for="dsr">DSR</label>
-                      <input input type="text"  class="texto" value="0" id="dsr" name="dsr" placeholder="Quant. DSR">
-                    </div>
-                    <div class="col">
-                      <label for="atrasos">Atrasos</label>
-                      <input input type="text" class="texto" value="0" id="atrasos" name="atrasos" placeholder="Quant. Atrasos">
-                    </div>
-                  </div>
-
-                <div class="row">
-                    <div class="col">
-                      <label for="depsf">Dep. Salário Família</label>
-                      <input input type="text" class="texto" value="0" id="depsf" name="depsf" placeholder="Quant. Dependentes">
-                    </div>
-                    <div class="col">
-                      <label for="depir">Dep. Imposto de Renda</label>
-                      <input input type="text" class="texto" value="0" id="depir" name="depir" placeholder="Quant. Dependentes">
-                    </div>
-                    <div class="col">
-                      <label for="pensao">Pensao</label>
-                      <input input type="text" class="texto" value="0" id="pensao" name="pensao" placeholder="Valor Pensao">
-                    </div>
-                  </div>
+                 </div>
+                 
               
                 <div class="row">
                     <div class="col">
@@ -81,7 +34,7 @@
                                 <option value="sim">Sim</option>
                                 <option value="nao">Não</option>
                             </select>
-                    </div>  
+                </div>  
 
                     <div class="col">
                         <label>Insalubridade?</label>
@@ -101,14 +54,16 @@
                       </select>   
                     </div>
                     
-                </div> 
-                   </br>
+                 
+                 
                 <div class="botoes">
+                  
                    <input type="submit" value="Resultado do Cálculo" class="botao">
                   
                 </div>
          </form>
          <img class="foto" src="../static/imagem/assassino.jpg" alt="">
+        </main>
     </div>
     
     

@@ -30,6 +30,14 @@ body{
     gap: 2rem;
 }
 
+.container_2{
+
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
 .formulario{
     width: 800px;
     height: 450px;
