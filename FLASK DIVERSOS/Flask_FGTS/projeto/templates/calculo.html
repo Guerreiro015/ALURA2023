@@ -1,70 +1,51 @@
-{% extends 'mensagens.html'%}
-{% block conteudo %}
+{% extends 'base.html'%}
+    {% block conteudo %}
 
 <link rel="stylesheet" href="../static/styles/calculo.css">
 
 <body>
-    <div class="container">
+    
 
-      <header class="cabecalho">
-        <a class="cabecalho_texto" href="/" > Voltar P/ Página Inicial</a><br/>
-        <h2 class="cabecalho_texto">TELA DE CÁLCULO</h2>
 
-      </header>
+      <main class="container">
 
-      <main class="container_2">
-      <img class="foto" src="../static/imagem/aranha.jpg" alt="">
+        <img class="foto" src="../static/imagem/aranha.jpg" alt="">
+
         <form action="{{url_for('calcular')}}" method="POST" class="formulario">          
-            
-                <div class="row">
-                  <div class="col">
-                    <label for="salbase">Mês do Cálculo</label>
-                    <input input type="text" class="texto" value="0" id="salbase" name="salbase" placeholder="valor Salario Base">
-                  </div>
-                  <div class="col">
-                    <label for="diastrab">Ano para Cálculo</label>
-                    <input input type="number" class="texto" value="30" id="diastrab" name="diastrab" placeholder="Quantidadr de dias">
-                 </div>
                  
+          <div class="col">  
+            <label>Mês de Cálculo</label>
+            <select class="texto_mes" name="insal" id="insal">                 
+              <option value="01">01 </option>
+              <option value="02">02 </option>
+              <option value="03">03 </option>
+              <option value="04">04 </option>
+              <option value="05">05 </option>
+              <option value="06">06 </option>
+              <option value="07">07 </option>
+              <option value="08">08 </option>
+              <option value="09">09 </option>
+              <option value="10">10 </option>
+              <option value="11">11 </option>
+              <option value="12">12 </option>
+            </select>   
+          </div>
+          
+          <div class="col">
+            <label for="diastrab">Ano de Cálculo</label>
+            <input input type="number" class="texto_ano" value="2023" id="diastrab" name="diastrab" placeholder="Quantidadr de dias">
+          </div>             
               
-                <div class="row">
-                    <div class="col">
-                        <label> Periculosidade?</label>
-                            <select class="texto" name="opperic" id="opperic">
-                                <option value="sim">Sim</option>
-                                <option value="nao">Não</option>
-                            </select>
-                </div>  
+                 
+                  <div class="botoes">                    
+                    <input type="submit" value="Resultado do Cálculo" class="botao">                    
+                  </div>
 
-                    <div class="col">
-                        <label>Insalubridade?</label>
-                            <select class="texto" name="opinsal" id="opinsal">
-                                <option value="sim">Sim</option>
-                                <option value="nao">Não</option>
-                            </select>
-                    </div>                
-                                             
-                    <div class="col">  
-                      <label>% Insalubridade</label>
-                      <select class="texto" name="insal" id="insal">                 
-                        <option value="0">0 %</option>
-                        <option value="10">10 %</option>
-                        <option value="20">20 %</option>
-                        <option value="40">40 %</option>
-                      </select>   
-                    </div>
-                    
-                 
-                 
-                <div class="botoes">
-                  
-                   <input type="submit" value="Resultado do Cálculo" class="botao">
-                  
-                </div>
          </form>
          <img class="foto" src="../static/imagem/assassino.jpg" alt="">
-        </main>
-    </div>
+
+      </main>
+   
     
     
 </body>
