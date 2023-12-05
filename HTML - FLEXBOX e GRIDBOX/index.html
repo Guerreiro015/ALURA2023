@@ -12,6 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="./assets/img/Favicon2.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style/flex.css">
+    <link rel="stylesheet" href="./assets/style/grid.css">
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 
@@ -43,29 +44,35 @@
             <img src="./assets/img/banner4.png" alt="Banner cor laranja">
         </section>
 
+        <h2 class="categorias__titulo">Categorias</h2>
         <section class="categorias">
-            <h2 class="categorias__titulo">Categorias</h2>
-            <ul class="categorias__lista">
-                <li class="categorias__item">Shows</li>
-                <li class="categorias__item">Teatro</li>
-                <li class="categorias__item">Festivais</li>
-                <li class="categorias__item">Cinema</li>
-                <li class="categorias__item">Arte</li>
-                <li class="categorias__item">Fotografia</li>
-                <li class="categorias__item">Tecnologia</li>
-                <li class="categorias__item">Design</li>
-            </ul>
+           
+                <ul class="categorias__lista">
+                    <li class="categorias__item">Shows</li>
+                    <li class="categorias__item">Teatro</li>
+                    <li class="categorias__item">Festivais</li>
+                    <li class="categorias__item">Cinema</li>
+                    <li class="categorias__item">Arte</li>
+                    <li class="categorias__item">Fotografia</li>
+                    <li class="categorias__item">Tecnologia</li>
+                    <li class="categorias__item">Design</li>
+                </ul>
+           
             <div class="categorias__destaques">
-                <div class="destaques">
+                <div class="destaque">
                     <h3 class="destaques__titulo">Destaques:</h3>
                     <div class="destaques__barra"></div>
-                    <div>
-                        <img src="./assets/img/icone-seta-voltar.png">
-                        <img src="./assets/img/icone-seta-avancar.png">
-                    </div>
+               
+                    <img src="./assets/img/icone-seta-voltar.png">
+                    <img src="./assets/img/icone-seta-avancar.png">
+                </div>
+                    
+                
+                <div>
+                    <img src="./assets/img/apresentacao-720.png" alt="">
                 </div>
             </div>
-            <div class="categorias__imagem"></div>
+            
         </section>
 
         <section class="eventos">
@@ -76,59 +83,59 @@
                     <h3>Festival das Luzes</h3>
                     <h4>14/08/22</h4>
                     <h5>São Paulo | SP</h5>
-                    <button>Ver</button>
+                    <button class="button">Ver</button>
                 </li>
                 <li class="eventos__item">
                     <img src="./assets/img/evento-2.png" alt="Pessoas em uma festa">
                     <h3>Festa Latina</h3>
                     <h4>14/08/22</h4>
                     <h5>São Paulo | SP</h5>
-                    <button>Ver</button>
+                    <button class="button">Ver</button>
                 </li>
                 <li class="eventos__item">
                     <img src="./assets/img/evento-3.png" alt="Sala de cinema">
                     <h3>Festival de Cinema</h3>
                     <h4>14/08/22</h4>
                     <h5>São Paulo | SP</h5>
-                    <button>Ver</button>
+                    <button class="button">Ver</button>
                 </li>
                 <li class="eventos__item">
                     <img src="./assets/img/evento-4.png" alt="Corrida de bicicleta">
                     <h3>Corrida pela Saúde</h3>
                     <h4>14/08/22</h4>
                     <h5>São Paulo | SP</h5>
-                    <button>Ver</button>
+                    <button class="button">Ver</button>
                 </li>
                 <li class="eventos__item">
                     <img src="./assets/img/evento-5.png" alt="Pikachu gigante">
                     <h3>Feira de animes</h3>
                     <h4>14/08/22</h4>
                     <h5>São Paulo | SP</h5>
-                    <button>Ver</button>
+                    <button class="button">Ver</button>
                 </li>
                 <li class="eventos__item">
                     <img src="./assets/img/evento-6.png" alt="Show a céu aberto">
                     <h3>Festival Multicores</h3>
                     <h4>14/08/22</h4>
                     <h5>São Paulo | SP</h5>
-                    <button>Ver</button>
+                    <button class="button">Ver</button>
                 </li>
                 <li class="eventos__item">
                     <img src="./assets/img/evento-7.png" alt="Festival de balões">
                     <h3>Dia de Balonismo</h3>
                     <h4>14/08/22</h4>
                     <h5>São Paulo | SP</h5>
-                    <button>Ver</button>
+                    <button class="button">Ver</button>
                 </li>
                 <li class="eventos__item">
                     <img src="./assets/img/evento-8.png" alt="Sala de cinema">
                     <h3>Quinta 3D</h3>
                     <h4>14/08/22</h4>
                     <h5>São Paulo | SP</h5>
-                    <button>Ver</button>
+                    <button class="button">Ver</button>
                 </li>
-                <li class="eventos__botao"><button>Ver mais</button></li>
             </ul>
+            <li class="eventos__botao"><button class="texto__botao">Ver mais</button></li>
         </section>
         <section class="agenda">
             <h2 class="agenda__titulo">Coloque na sua agenda!</h2>
@@ -142,7 +149,7 @@
                     </div>
                     <div class="agenda__atracao">
                         <h6>Quinta 3D</h6>
-                        <button>Avise-me</button>
+                        <button class="button">Avise-me</button>
                     </div>
                 </li>
                 <li class="agenda__item">
@@ -154,7 +161,7 @@
                     </div>
                     <div class="agenda__atracao">
                         <h6>Festival de Cinema</h6>
-                        <button>Avise-me</button>
+                        <button class="button">Avise-me</button>
                     </div>
                 </li>
                 <li class="agenda__item">
@@ -166,7 +173,7 @@
                     </div>
                     <div class="agenda__atracao">
                         <h6>Dia de Balonismo</h6>
-                        <button>Avise-me</button>
+                        <button class="button">Avise-me</button>
                     </div>
                 </li>
                 <li class="agenda__item">
@@ -178,7 +185,7 @@
                     </div>
                     <div class="agenda__atracao">
                         <h6>Hard Rockers</h6>
-                        <button>Avise-me</button>
+                        <button class="button">Avise-me</button>
                     </div>
                 </li>
                 <li class="agenda__item">
@@ -190,7 +197,7 @@
                     </div>
                     <div class="agenda__atracao">
                         <h6>Balé Municipal</h6>
-                        <button>Avise-me</button>
+                        <button class="button">Avise-me</button>
                     </div>
                 </li>
                 <li class="agenda__item">
@@ -202,11 +209,11 @@
                     </div>
                     <div class="agenda__atracao">
                         <h6>Festival Multicores</h6>
-                        <button>Avise-me</button>
+                        <button class="button">Avise-me</button>
                     </div>
                 </li>
-                <li class="agenda__botao"><button>Ver mais</button></li>
             </ul>
+            <li class="agenda__botao"><button class="texto__botao">Ver mais</button></li>
         </section>
     </main>
     <footer class="rodape">

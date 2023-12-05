@@ -1,4 +1,6 @@
 .cabecalho{
+    display: flex;
+    align-items: center;
     background-color: darkslategray;
     color: aliceblue;
     display: flex;

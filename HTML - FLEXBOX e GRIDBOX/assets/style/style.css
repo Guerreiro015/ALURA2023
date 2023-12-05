@@ -147,7 +147,7 @@ img:hover {
     user-select: none;
     transition: 0.5s;
     opacity: 1;
-    min-width: 282px;
+    
 }
 
 .categorias__item:hover {
