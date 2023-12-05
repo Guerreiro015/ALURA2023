@@ -1,0 +1,46 @@
+{% extends 'mensagens.html'%}
+{% block conteudo %}
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./static/styles/login.css">   
+</head>
+<header class="cabecalho">
+    <a class="cabecalho_texto" href="/" >Página Inicial</a><br/>
+    <a class="cabecalho_texto" href="{{url_for('calculo')}}" >Página de Cálculo</a><br/>
+    <h2 class="cabecalho_texto">RESULTADO DO CÁLCULO</h2>
+
+  </header>
+<body>
+    <div class="container">
+        
+        <form action="{{url_for('autenticar')}}"method="POST" class="formLogin">
+            <h1 class="texto_login">Login</h1>
+            <div class="divlogin">
+              <p class="div_texto">Digite os seus dados de acesso no campo abaixo.</p>
+            </div>
+            <div class="divlogin">
+                <label class="div_texto" for="usuario">Nome de Usuário</label>            
+                <input class="input" type="text" id="nome" name="nome" placeholder="Digite o usuario" autofocus="true" />
+            </div>
+            <div class="divlogin">
+                <label class="div_texto" for="senha">Senha</label>
+                <input  class="input" type="password" id="senha" name="senha"  placeholder="Digite a senha" />
+            </div>
+            <div class="divlogin">
+                <button class="acesso">"Acessar"</button>
+            </div>
+            <div>
+                 <a class="novo" href="/cadastro_usuarios">Não é usuário / Fazer Cadastro</a>
+            </div>
+        </form>
+        
+    </div>
+    
+</body>
+{%endblock%}
+</html>
