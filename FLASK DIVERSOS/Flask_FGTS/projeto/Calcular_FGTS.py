@@ -15,7 +15,8 @@ from sqlalchemy import create_engine as ce
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column,String,Integer
-from pandas import pandas as pd
+
+
 
 
 engine = ce('mysql://root:lucas0108@localhost:3306/base')

@@ -16,11 +16,11 @@
 .cabecalho_texto{
     text-decoration: none;
     color: aliceblue;
-    margin-left: 1rem;
+    margin-left: 20px;
 }
 
 body{
-    margin-top: 5rem;
+    margin-top: 80px;
     background-color: rgb(247, 239, 246);
 }
 

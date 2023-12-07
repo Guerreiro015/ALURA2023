@@ -40,6 +40,9 @@ tabela['TOTAL'] = tabela["SALARIO"]*tabela["DIAS"]
 
 tabela['total3'] = tabela["SALARIO"]+tabela["DIAS"]
 
+ #MOSTRANDO OS VALORES
+print(tabela[['NOME','TOTAL','total3']])
+
 #INSERIR UMA COLUNA USANDO Parmetros .insert( nº coluna,nome coluna, valor da coluna)
 tabela.insert(8,  "soma",  tabela["DIAS"]+tabela["DIAS"])  
 
