@@ -31,14 +31,22 @@ import pandas as pd
 # tabela = pd.read_excel("QUADRO GERAL.xlsx",sheet_name="QUADRO",usecols=(0,1,2,3))
 # tabela.loc[tabela["Cargo"]=="BUEIRISTA","NOME"] = "Contratado para ser Bueirista"
 
-tabela = pd.read_excel("QUADRO GERAL.xlsx",sheet_name="QUADRO")
-print(tabela[["ID","NOME","SALARIO"]]) # para selecionar os campos para ver usas colchetes duplos
+verba1005=1005
+verba1010=1010
+verba1031=1031
+verba1039=1039
  
  
 
-tabela = pd.read_excel("BASE.xlsx")
+df = pd.read_excel("minha base.xlsx",sheet_name="base")
 
-fgts=tabela.loc[tabela['Verba']==1005, 'Valor da Verba'].sum()
+v1005=df.loc[df['Verba']==verba1005 & df['Cargo']=="MENOR/JOVEM APRENDIZ", 'Valor da Verba'].sum()
+v1010=df.loc[df['Verba']==verba1010, 'Valor da Verba'].sum()
+v1031=df.loc[df['Verba']==verba1031, 'Valor da Verba'].sum()
+v1039=df.loc[df['Verba']==verba1039, 'Valor da Verba'].sum()
 
-print(fgts)
+print(f'Valor da verba 1005: {v1005: ,.2f}')
+print(f'Valor da verba 1010: {v1010: .2f}')
+print(f'Valor da verba 1031: {v1031: .2f}')
+print(f'Valor da verba 1039: {v1039: .2f}')
 
