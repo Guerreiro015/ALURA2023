@@ -31,11 +31,10 @@ import pandas as pd
 # tabela = pd.read_excel("QUADRO GERAL.xlsx",sheet_name="QUADRO",usecols=(0,1,2,3))
 # tabela.loc[tabela["Cargo"]=="BUEIRISTA","NOME"] = "Contratado para ser Bueirista"
 
-verba1005=1005
-verba1010=1010
-verba1031=1031
-verba1039=1039
- 
+verba1005='Base do FGTS Normal'
+verba1010='Base do FGTS 13º Salário'
+verba1031='Base INSS/FGTS Férias do Mês'
+verba1039='Valor do FGTS - GRFF'
  
 
 tb = pd.read_excel("minha base.xlsx",sheet_name="base")
@@ -48,14 +47,18 @@ tb = pd.read_excel("minha base.xlsx",sheet_name="base")
 #     tb['Jovem']=
 
 
-v1005=tb['a1005'].sum()
-v1010=tb['1010'].sum()
-v1031=tb['1031'].sum()
-v1039=tb['1039'].sum()
+v1005=tb['Base do FGTS Normal'].sum()
+v1010=tb['Base do FGTS 13º Salário'].sum()
+v1031=tb['Base INSS/FGTS Férias do Mês'].sum()
+v1039=tb['Valor do FGTS - GRFF'].sum()
+
+menor=tb[["Cargo"] == 'MENOR/JOVEM APRENDIZ' ['Base do FGTS Normal']].sum()
+
 
 
 print(f'Valor da verba 1005: {v1005: ,.2f}')
 print(f'Valor da verba 1010: {v1010: ,.2f}')
 print(f'Valor da verba 1031: {v1031: ,.2f}')
 print(f'Valor da verba 1039: {v1039: ,.2f}')
+print(f'Valor da verba menor: {menor: ,.2f}')
 
