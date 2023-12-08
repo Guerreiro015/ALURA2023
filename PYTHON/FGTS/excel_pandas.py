@@ -38,15 +38,24 @@ verba1039=1039
  
  
 
-df = pd.read_excel("minha base.xlsx",sheet_name="base")
+tb = pd.read_excel("minha base.xlsx",sheet_name="base")
 
-v1005=df.loc[df['Verba']==verba1005 & df['Cargo']=="MENOR/JOVEM APRENDIZ", 'Valor da Verba'].sum()
-v1010=df.loc[df['Verba']==verba1010, 'Valor da Verba'].sum()
-v1031=df.loc[df['Verba']==verba1031, 'Valor da Verba'].sum()
-v1039=df.loc[df['Verba']==verba1039, 'Valor da Verba'].sum()
+# campos = tb.columns
+# if "1001Base INSS 13º Salário" not in campos:
+#     tb.insert(10,"Jovem", 0)
+
+# if tb['Cargo']=="MENOR/JOVEM APRENDIZ":
+#     tb['Jovem']=
+
+
+v1005=tb['a1005'].sum()
+v1010=tb['1010'].sum()
+v1031=tb['1031'].sum()
+v1039=tb['1039'].sum()
+
 
 print(f'Valor da verba 1005: {v1005: ,.2f}')
-print(f'Valor da verba 1010: {v1010: .2f}')
-print(f'Valor da verba 1031: {v1031: .2f}')
-print(f'Valor da verba 1039: {v1039: .2f}')
+print(f'Valor da verba 1010: {v1010: ,.2f}')
+print(f'Valor da verba 1031: {v1031: ,.2f}')
+print(f'Valor da verba 1039: {v1039: ,.2f}')
 
