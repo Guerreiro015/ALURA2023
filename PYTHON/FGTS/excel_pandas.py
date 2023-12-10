@@ -36,29 +36,35 @@ verba1010='Base do FGTS 13º Salário'
 verba1031='Base INSS/FGTS Férias do Mês'
 verba1039='Valor do FGTS - GRFF'
  
+tb = pd.read_excel("minha base.xlsx",sheet_name="11_2023")
 
-tb = pd.read_excel("minha base.xlsx",sheet_name="base")
-
-# campos = tb.columns
-# if "1001Base INSS 13º Salário" not in campos:
-#     tb.insert(10,"Jovem", 0)
-
-# if tb['Cargo']=="MENOR/JOVEM APRENDIZ":
-#     tb['Jovem']=
-
+campos = tb.columns
+if "fgts_normal_jovem" not in campos:
+    tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_normal_jovem"] = tb["Base do FGTS Normal"]
+if "fgts_normal_jovem" not in campos:
+    tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_13º_jovem"] = tb["Base do FGTS 13º Salário"]
+if "fgts_normal_jovem" not in campos:
+    tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_ferias_jovem"] = tb["Base INSS/FGTS Férias do Mês"]
+if "fgts_normal_jovem" not in campos:
+    tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_grrf_jovem"] = tb["Valor do FGTS - GRFF"]
 
 v1005=tb['Base do FGTS Normal'].sum()
 v1010=tb['Base do FGTS 13º Salário'].sum()
 v1031=tb['Base INSS/FGTS Férias do Mês'].sum()
 v1039=tb['Valor do FGTS - GRFF'].sum()
 
-menor=tb[["Cargo"] == 'MENOR/JOVEM APRENDIZ' ['Base do FGTS Normal']].sum()
-
-
+v1005j=tb['fgts_normal_jovem'].sum()
+v1010j=tb['fgts_13º_jovem'].sum()
+v1031j=tb['fgts_ferias_jovem'].sum()
+v1039j=tb['fgts_grrf_jovem'].sum()
 
 print(f'Valor da verba 1005: {v1005: ,.2f}')
 print(f'Valor da verba 1010: {v1010: ,.2f}')
 print(f'Valor da verba 1031: {v1031: ,.2f}')
 print(f'Valor da verba 1039: {v1039: ,.2f}')
-print(f'Valor da verba menor: {menor: ,.2f}')
+
+print(f'Valor da verba 1005 jovem: {v1005j: ,.2f}')
+print(f'Valor da verba 1010 jovem: {v1010j: ,.2f}')
+print(f'Valor da verba 1031 jovem: {v1031j: ,.2f}')
+print(f'Valor da verba 1039 jovem: {v1039j: ,.2f}')
 

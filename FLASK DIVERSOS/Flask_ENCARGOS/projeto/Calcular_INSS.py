@@ -61,9 +61,9 @@ def cadastro_usuarios():
 #---------------------------------------------<>--------------------------------------------------   
 #---------------------------------------------<>--------------------------------------------------   
 
-@app.route('/calculo')
-def calculo():    
-    return render_template('calculo.html')
+@app.route('/calculo_inss')
+def calculo_inss():    
+    return render_template('calculo_inss.html')
 
 #---------------------------------------------<>--------------------------------------------------   
 
@@ -136,8 +136,8 @@ def autenticar_cadastro():
 
 
 #---------------------------------------------<>--------------------------------------------------   
-@app.route('/calcular', methods=['POST'])
-def calcular():
+@app.route('/calcular_inss', methods=['POST'])
+def calcular_inss():
  
     salbase=float(request.form['salbase'])
     diastrab=float(request.form['diastrab'])
@@ -217,7 +217,7 @@ def calcular():
     dados={ 'desc': desc, 'dsrhoad': dsrhoad, 'salario': f'{salario: ,.2f}', 'bruto': f'{bruto: ,.2f}', 'insal': f'{valor_insal: ,.2f}', 'peric': f'{valor_peric: ,.2f}', 'valorsf': valorsalfam, 'valorhe50': horas50, 'valorhe100': horas100,'valoradcnot': adcnotur, 'valordsr': valordsr,'Faltas': valorfaltas,'Atrasos':valoratrasos,'baseinss': f'{baseinss: ,.2f}','valorinss':valorinss,'basefgts': f'{basefgts: ,.2f}','valorfgts': f'{valorfgts: .2f}', 'baseir':f'{baseir: ,.2f}', 'valorir':valorirrf,'valordep':valordep, 'pensao': pensao}
 
     print(valoratrasos)
-    return render_template('mostrar.html',dados=dados)
+    return render_template('mostrar_inss.html',dados=dados)
 
       
      

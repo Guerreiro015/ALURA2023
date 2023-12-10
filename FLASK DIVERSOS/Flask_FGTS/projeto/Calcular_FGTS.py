@@ -10,21 +10,13 @@ from werkzeug.utils import secure_filename
 from flask import Flask, url_for
 from flask_sqlalchemy import SQLAlchemy
 import mysql.connector
-import pyodbc
 from sqlalchemy import create_engine as ce
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column,String,Integer
+import pandas as pd
 
-
-
-
-engine = ce('mysql://root:lucas0108@localhost:3306/base')
-bases=declarative_base()
-session=sessionmaker(bind=engine)
-session=session()
-
-
+tb = pd.read_excel("minha base.xlsx")
 
 app = Flask(__name__) #instanciando Flask  
 app.secret_key = 'alura'
@@ -39,32 +31,59 @@ def index():
   
 @app.route('/calcular', methods=['POST'])
 def calcular():
- 
     mes=(request.form['mes'])
-    ano=(request.form['mes'])
+    ano=(request.form['ano'])    
 
-    tb = pd.read_excel("conferencia_fgts.xlsx")
+    tb = pd.read_excel("minha base.xlsx",sheet_name=f'{mes}_{ano}')
 
+    campos = tb.columns
+    if "fgts_normal_jovem" not in campos:
+        tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_normal_jovem"] = tb["Base do FGTS Normal"]
+    if "fgts_normal_jovem" not in campos:
+        tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_13º_jovem"] = tb["Base do FGTS 13º Salário"]
+    if "fgts_normal_jovem" not in campos:
+        tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_ferias_jovem"] = tb["Base INSS/FGTS Férias do Mês"]
+    if "fgts_normal_jovem" not in campos:
+        tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_grrf_jovem"] = tb["Valor do FGTS - GRFF"]
    
-    return render_template('mostrar.html',dados=dados)
+    v1005=tb['Base do FGTS Normal'].sum()
+    v1010=tb['Base do FGTS 13º Salário'].sum()
+    v1031=tb['Base INSS/FGTS Férias do Mês'].sum()
+    v1039=tb['Valor do FGTS - GRFF'].sum()
 
-      
+    v1005j=tb['fgts_normal_jovem'].sum()
+    v1010j=tb['fgts_13º_jovem'].sum()
+    v1031j=tb['fgts_ferias_jovem'].sum()
+    v1039j=tb['fgts_grrf_jovem'].sum()
+    brutofgtsj=(v1005j+v1010j+v1031j)
+    subtotalfgtsj=(brutofgtsj*2)/100
+    totalfgtsj=subtotalfgtsj-v1039j
+
+    v1005=v1005-v1005j
+    v1010=v1010-v1010j
+    v1031=v1031-v1031j
+    v1039=v1039-v1039j
+    brutofgts=(v1005+v1010+v1031)
+    subtotalfgts=(brutofgts*8)/100
+    totalfgts=subtotalfgts-v1039
+
+    total_final=totalfgts+totalfgtsj
+
+
+
+    
+    dadosj={'verba1005j': f'{v1005j: ,.2f}', 'verba1010j': f'{v1010j: ,.2f}', 'verba1031j': f'{v1031j: ,.2f}', 'verba1039j': f'{v1039j: ,.2f}',
+           'brutfgtsj': f'{brutofgtsj: ,.2f}','subfgtsj': f'{subtotalfgtsj: ,.2f}', 'totfgtsj': f'{totalfgtsj: ,.2f}'}
+    
+    dados={'verba1005': f'{v1005: ,.2f}', 'verba1010': f'{v1010: ,.2f}', 'verba1031': f'{v1031: ,.2f}', 'verba1039': f'{v1039: ,.2f}',
+           'brutfgts': f'{brutofgts: ,.2f}','subfgts': f'{subtotalfgts: ,.2f}', 'totfgts': f'{totalfgts: ,.2f}', 'totfinal': f'{total_final: ,.2f}'}
+    
+
+
+#---------------------------------------------<>--------------------------------------------------   
+    comp=f'Cálculo de FGTS - Competência {mes} / {ano}'
+    return render_template('mostrar.html',dados=dados, comp=comp, dadosj=dadosj)    
      
-    
-    
-
-#---------------------------------------------<>--------------------------------------------------   
-#---------------------------------------------<>--------------------------------------------------   
-
-@app.route('/logout')
-def logout():    
-    flash('Usuário Desconectado')
-    return redirect(url_for('login'))
-
-#---------------------------------------------<>--------------------------------------------------   
-
-
-session.close()  
 
 app.run(debug=True)
 #app.run(host='0.0.0.0', port=8080)
