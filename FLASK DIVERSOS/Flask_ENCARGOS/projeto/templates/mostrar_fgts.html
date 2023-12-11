@@ -1,0 +1,105 @@
+    
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="widp=device-widp, initial-scale=1">
+
+
+  <link href="../static/styles/mostrar.css" rel="stylesheet">  
+
+  <header class="cabecalho">     
+    <a class="cabecalho_texto" href="/" > PAGINA INICIAL</a>
+    <a  class="cabecalho_texto" href="./encargos_trabalhista.html" > Cálculos Trabalhistas</a>
+    <a  class="cabecalho_texto" href="/login">Trocar de Usuário</a>        
+     <a  class="cabecalho_texto" href="/login">Sair da Biblioteca</a> 
+     <a  class="cabecalho_texto" href="/" >Listar Usuarios</a> 
+  </header>
+
+  <body>
+    
+    <img class="foto" src="/static/imagem/detroit.jpg" alt="">
+   
+  <main class="formulario">  
+    <div>
+    
+      <h1>{{comp}}</h1>
+   
+  </div>
+
+  <div class="container_lista">
+    <ul class="lista">
+      <li class="lista_texto">
+        <h4>Base do FGTS Normal</h4>
+        <h4 > {{dados.verba1005}}</h4>
+      </li>
+      <li class="lista_texto">
+        <h4>Base do FGTS 13º Salário</h4>
+        <h4 > {{dados.verba1010}}</h4>
+      </li>
+      <li class="lista_texto">
+        <h4>Base FGTS Férias do Mês</h4>
+        <h4 > {{dados.verba1031}}</h4>
+      </li>
+      <li class="lista_texto">
+        <h4>TOTAL BASE FGTS</h4>
+        <h4 > {{dados.brutfgts}}</h4>
+      </li>    
+      <li class="lista_texto">
+        <h4>Valor do FGTS 8%</h4>
+        <h4 > {{dados.subfgts}}</h4>
+      <li class="lista_texto">
+        <h4>Valor do FGTS - GRFF - Já Recolhido</h4>
+        <h4 > {{dados.verba1039}}</h4>
+      </li>
+      <li class="lista_texto">
+        <h4>Total da Guia 8% Normal </h4>
+        <h4 > {{dados.totfgts}}</h4>
+      </li>      
+  </ul>    
+  <ul class="lista">
+      <li class="lista_texto">
+        <h4>Base Normal - Jovem Aprendiz</h4>
+        <h4 > {{dadosj.verba1005j}}</h4>
+      </li>
+      <li class="lista_texto">
+        <h4>Base do FGTS 13º - Jovem Aprendiz</h4>
+        <h4 > {{dadosj.verba1010j}}</h4>
+      </li>
+      <li class="lista_texto">
+        <h4>Base FGTS Férias - Jovem Aprendiz</h4>
+        <h4 > {{dadosj.verba1031j}}</h4>
+      </li>
+      <li class="lista_texto">
+        <h4>TOTAL BASE FGTS - Jovem Aprendiz</h4>
+        <h4 > {{dadosj.brutfgtsj}}</h4>
+      </li>    
+      <li class="lista_texto">
+        <h4>Valor do FGTS - Jovem Aprendiz 2%</h4>
+        <h4 > {{dadosj.subfgtsj}}</h4>
+      <li class="lista_texto">
+        <h4>FGTS - GRFF - Já Recolhido Jovem Aprendiz</h4>
+        <h4 > {{dadosj.verba1039j}}</h4>
+      </li>
+      <li class="lista_texto">
+        <h4>Total da Guia 2% - Jovem Aprendiz</h4>
+        <h4 > {{dadosj.totfgtsj}}</h4>
+      </li>      
+  </ul>    
+
+      
+</div>
+
+<div>
+    
+  <h1> Valor Total do FGTS Para Recolher ...: {{dados.totfinal}}</h1>
+
+</div>
+    </main>    
+
+    <img class="foto" src="../static/imagem/gran_turismo.jpg" alt="">
+  </body>
+       
+ 
+  
+</html>

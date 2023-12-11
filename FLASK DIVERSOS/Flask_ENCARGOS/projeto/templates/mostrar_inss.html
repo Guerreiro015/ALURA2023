@@ -12,12 +12,13 @@
 
   <link href="../static/styles_inss/mostrar.css" rel="stylesheet">  
 
-  <header class="cabecalho">
-    <a class="cabecalho_texto" href="/" >Página Inicial</a><br/>
-    <a class="cabecalho_texto" href="{{url_for('calculo_inss')}}" >Página de Cálculo</a><br/>
-    <h2 class="cabecalho_texto">RESULTADO DO CÁLCULO</h2>
-
-  </header>
+  <header class="cabecalho">     
+    <a class="texto" href="/" > PAGINA INICIAL</a>
+    <a  class="texto" href="/encargos" > Encargos Trabalhistas</a>
+    <a  class="texto" href="/login">Trocar de Usuário</a>        
+     <a  class="texto" href="/login">Sair da Biblioteca</a> 
+     <a  class="texto" href="/" >Listar Usuarios</a> 
+ </header>
 
   <body>
     
@@ -25,7 +26,7 @@
    
   <main class="formulario">   
 
-    <ul class="lista">
+    <div class="lista">
       <li class="lista_texto">
         <h4>Salário</h4>
         <h4 > {{dados.salario}}</h4>
@@ -75,11 +76,10 @@
         <h4 class="total"> {{dados.desc}}</h4>
       </li>      
 
-    </ul>
-  
+    </div> 
     
     
-  <ul class="lista">         
+  <div class="lista">         
     <li class="lista_texto">
       <h4>Base de INSS:</h4>
       <h4>{{dados.baseinss}}</h4>  
@@ -129,7 +129,7 @@
       <h4>-</h4>
     </li>    
    
-  </ul>    
+  </div>    
 
       
     </main>    

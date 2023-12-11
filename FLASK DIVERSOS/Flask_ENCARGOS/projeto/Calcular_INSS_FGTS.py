@@ -123,16 +123,7 @@ def autenticar_cadastro():
         session.commit() # gravando
         flash('Jogo adcionado com Sucesso!!')      
         return redirect(url_for('login',usuario=usuario))
-
     
-
-    #---------------------------------------------<>--------------------------------------------------   
-
-
-
-
-
-
 
 
 #---------------------------------------------<>--------------------------------------------------   
@@ -217,12 +208,16 @@ def calcular_inss():
     dados={ 'desc': desc, 'dsrhoad': dsrhoad, 'salario': f'{salario: ,.2f}', 'bruto': f'{bruto: ,.2f}', 'insal': f'{valor_insal: ,.2f}', 'peric': f'{valor_peric: ,.2f}', 'valorsf': valorsalfam, 'valorhe50': horas50, 'valorhe100': horas100,'valoradcnot': adcnotur, 'valordsr': valordsr,'Faltas': valorfaltas,'Atrasos':valoratrasos,'baseinss': f'{baseinss: ,.2f}','valorinss':valorinss,'basefgts': f'{basefgts: ,.2f}','valorfgts': f'{valorfgts: .2f}', 'baseir':f'{baseir: ,.2f}', 'valorir':valorirrf,'valordep':valordep, 'pensao': pensao}
 
     print(valoratrasos)
-    return render_template('mostrar_inss.html',dados=dados)
+    return render_template('mostrar_inss.html',dados=dados)       
 
-      
-     
-    
-    
+#---------------------------------------------<>--------------------------------------------------   
+#---------------------------------------------<>--------------------------------------------------   
+@app.route('/encargos')
+def encargos():
+   return render_template('encargos_trabalhista.html')  
+
+
+
 
 #---------------------------------------------<>--------------------------------------------------   
 #---------------------------------------------<>--------------------------------------------------   

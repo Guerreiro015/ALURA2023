@@ -6,11 +6,14 @@
 <body>
     <div class="container">
 
-      <header class="cabecalho">
-        <a class="cabecalho_texto" href="/" > Voltar P/ Página Inicial</a><br/>
-        <h2 class="cabecalho_texto">TELA DE CÁLCULO</h2>
+      <header class="cabecalho">     
+        <a class="texto" href="/" > PAGINA INICIAL</a>
+        <a  class="texto" href="/encargos" > Encargos Trabalhistas</a>
+        <a  class="texto" href="/login">Trocar de Usuário</a>        
+         <a  class="texto" href="/login">Sair da Biblioteca</a> 
+         <a  class="texto" href="/" >Listar Usuarios</a> 
+     </header>
 
-      </header>
       <img class="foto" src="../static/imagem/aranha.jpg" alt="">
         <form action="{{url_for('calcular_inss')}}" method="POST" class="formulario">          
             
