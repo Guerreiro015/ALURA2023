@@ -12,11 +12,11 @@
 
 
 <header class="cabecalho">     
-      <a class="texto" href="/" > PAGINA INICIAL</a>
-      <a  class="texto" href="./encargos_trabalhista.html" > Cálculos Trabalhistas</a>
-      <a  class="texto" href="/login">Trocar de Usuário</a>        
-       <a  class="texto" href="/login">Sair da Biblioteca</a> 
-       <a  class="texto" href="/" >Listar Usuarios</a> 
+  <a class="texto" href="/" > PAGINA INICIAL</a>
+  <a  class="texto" href="/encargos" > Encargos Trabalhistas</a>
+  <a  class="texto" href="{{url_for('calculo_inss')}}">Encargos holerite</a>        
+   <a  class="texto" href="/login">Sair da Biblioteca</a> 
+   <a  class="texto" href="/" >Listar Usuarios</a> 
 </header>
 
 <body>
@@ -27,7 +27,7 @@
 
         <img class="foto" src="../static/imagem/aranha.jpg" alt="">
 
-        <form action="{{url_for('calcular')}}" method="POST" class="formulario">          
+        <form action="{{url_for('calcular_fgts')}}" method="POST" class="formulario">          
                  
           <div class="col">  
             <label>Mês de Cálculo</label>

@@ -1,4 +1,6 @@
 
+
+
 from flask import Flask, render_template, request, redirect, session,flash,send_from_directory
 import mysql
 from datetime import *
@@ -16,7 +18,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column,String,Integer
 from bases_2023 import *
-#pip install PyMySQL
+# pip install PyMySQL
 
 
 engine = ce('mysql://root:lucas0108@localhost:3306/base')
@@ -216,10 +218,6 @@ def calcular_inss():
 def encargos():
    return render_template('encargos_trabalhista.html')  
 
-
-
-
-#---------------------------------------------<>--------------------------------------------------   
 #---------------------------------------------<>--------------------------------------------------   
 
 @app.route('/logout')
@@ -228,6 +226,10 @@ def logout():
     return redirect(url_for('login'))
 
 #---------------------------------------------<>--------------------------------------------------   
+#---------------------------------------------<>--------------------------------------------------   
+#---------------------------------------------<>--------------------------------------------------   
+
+
 
 
 session.close()  

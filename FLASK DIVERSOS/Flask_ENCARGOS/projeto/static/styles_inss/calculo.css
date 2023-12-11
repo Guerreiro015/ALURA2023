@@ -58,7 +58,7 @@ body{
     display: flex;
 }
 
-.texto{
+.textos{
     width: 200px;
     border: solid 2px rgba(243, 246, 204, 0.092);
     border-radius: 5px;
