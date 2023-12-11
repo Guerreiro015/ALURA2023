@@ -23,14 +23,14 @@ app.secret_key = 'alura'
 
 
 @app.route('/')   
-def index():
+def calculo_fgts():
     
-    return render_template('index.html')
+    return render_template('calculo_fgts.html')
 
 
   
-@app.route('/calcular', methods=['POST'])
-def calcular():
+@app.route('/calcular_fgts', methods=['POST'])
+def calcular_fgts():
     mes=(request.form['mes'])
     ano=(request.form['ano'])    
 
@@ -88,8 +88,8 @@ def calcular():
 
 #---------------------------------------------<>--------------------------------------------------   
     comp=f'Cálculo de FGTS - Competência {mes} / {ano}'
-    return render_template('mostrar.html',dados=dados, comp=comp, dadosj=dadosj)    
-     
+    return render_template('mostrar_fgts.html',dados=dados, comp=comp, dadosj=dadosj)    
+
 
 app.run(debug=True)
 #app.run(host='0.0.0.0', port=8080)

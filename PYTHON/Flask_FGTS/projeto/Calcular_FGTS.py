@@ -44,12 +44,18 @@ def calcular():
     if "fgts_normal_jovem" not in campos:
         tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_ferias_jovem"] = tb["Base INSS/FGTS Férias do Mês"]
     if "fgts_normal_jovem" not in campos:
-        tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_grrf_jovem"] = tb["Valor do FGTS - GRFF"]
-   
+         if "Valor do FGTS - GRFF" not in campos:
+            tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_grrf_jovem"] = 0    
+         else:
+            tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_grrf_jovem"] = tb["Valor do FGTS - GRFF"]
+    
     v1005=tb['Base do FGTS Normal'].sum()
     v1010=tb['Base do FGTS 13º Salário'].sum()
     v1031=tb['Base INSS/FGTS Férias do Mês'].sum()
-    v1039=tb['Valor do FGTS - GRFF'].sum()
+    if "Valor do FGTS - GRFF" not in campos:
+        v1039=0
+    else:    
+        v1039=tb['Valor do FGTS - GRFF'].sum()
 
     v1005j=tb['fgts_normal_jovem'].sum()
     v1010j=tb['fgts_13º_jovem'].sum()
@@ -83,7 +89,7 @@ def calcular():
 #---------------------------------------------<>--------------------------------------------------   
     comp=f'Cálculo de FGTS - Competência {mes} / {ano}'
     return render_template('mostrar.html',dados=dados, comp=comp, dadosj=dadosj)    
-     
+
 
 app.run(debug=True)
 #app.run(host='0.0.0.0', port=8080)
