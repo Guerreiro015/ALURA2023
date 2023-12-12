@@ -42,7 +42,7 @@ app = Flask(__name__) #instanciando Flask
 app.secret_key = 'alura'
 
 
-@app.route('/')   
+@app.route('/')
 def index():
     dados=session.query(usuarios).all()         
 
