@@ -1,10 +1,10 @@
+
+
 .cabecalho{
-    display: flex;
-    align-items: center;
     background-color: darkslategray;
-    color: aliceblue;
     display: flex;
-    gap: 10rem;
+    justify-content: space-around;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,36 +13,26 @@
     
 }
 
-.cabecalho_texto{
-    text-decoration: none;
-    color: aliceblue;
-    margin-left: 20px;
-}
-
 body{
-    margin-top: 80px;
+    margin-top: 5rem;
     background-color: rgb(247, 239, 246);
 }
 
-
 .container{
-
-    display: flex;   
-    gap: 1rem;
-
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
 }
 
 .formulario{
-    width: 600px;
+    width: 800px;
     height: 450px;
     background-color:rgb(193, 226, 250);
     display: flex;
+    border-radius: 15px;
     flex-direction: column;
-    padding:  2rem;
-    row-gap: 2rem;
-    border-radius: 15px;    
     align-items: center;    
-    
+    gap: 2rem;
     
 }
 
@@ -68,22 +58,12 @@ body{
     display: flex;
 }
 
-.texto_mes{
+.textos{
     width: 200px;
     border: solid 2px rgba(243, 246, 204, 0.092);
     border-radius: 5px;
-    padding: 5px;
     
 }
-
-.texto_ano{
-    width: 185px;
-    border: solid 2px rgba(243, 246, 204, 0.092);   
-    border-radius: 5px;
-    padding: 5px;
-    
-}
-
 
 .botoes{
 

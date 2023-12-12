@@ -11,6 +11,7 @@
     
 }
 
+
 .texto{
     color: white;
     text-decoration: none;
@@ -20,6 +21,7 @@
   body{
     background-color: rgb(131, 131, 159);
     color: aliceblue;
+    margin-top: 55px;
    
   }
   
