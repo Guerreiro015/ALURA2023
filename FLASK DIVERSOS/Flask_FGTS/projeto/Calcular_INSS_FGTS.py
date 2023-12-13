@@ -226,9 +226,5 @@ def calcular_fgts():
     return render_template('mostrar_fgts.html',dados=dados, comp=comp, dadosj=dadosj)    
 
 
-
-
-session.close()  
-
 app.run(debug=True)
 #app.run(host='0.0.0.0', port=8080)
