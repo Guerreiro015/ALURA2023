@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculo-FGTS</title>
-  <link href="../static/styles/style.css" rel="stylesheet">   
+{% extends 'base.html'%}
+    {% block conteudo %}
+
   <link rel="stylesheet" href="../static/styles_fgts/calculo.css">
 
-</head> 
+</html> 
 
-<header class="cabecalho">     
-  <a class="texto" href="/" > PAGINA INICIAL</a>
-  <a  class="texto" href="{{url_for('calculo_inss')}}">Encargos holerites</a>        
-  <a  class="texto"  href="{{url_for('calculo_fgts')}}" >Cálculos FGTS</a> 
-  <a  class="texto" href="/encargos" > Sobre Encargos Trabalhistas</a>
-  <a  class="texto" href="/login">Sair da Biblioteca</a> 
-</header>
 
 <body>
     
@@ -63,5 +52,7 @@
     
     
 </body>
+
+{%endblock%}
 
 </html>

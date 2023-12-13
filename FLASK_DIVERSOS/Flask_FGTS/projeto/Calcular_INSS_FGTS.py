@@ -226,11 +226,5 @@ def calcular_fgts():
     return render_template('mostrar_fgts.html',dados=dados, comp=comp, dadosj=dadosj)    
 
 
-<<<<<<< HEAD:FLASK DIVERSOS/Flask_FGTS/projeto/Calcular_INSS_FGTS.py
-=======
-
-
-
->>>>>>> cbc76c5487fe20f8186245fbda6a8a1415a08424:FLASK_DIVERSOS/Flask_FGTS/projeto/Calcular_INSS_FGTS.py
 app.run(debug=True)
 #app.run(host='0.0.0.0', port=8080)

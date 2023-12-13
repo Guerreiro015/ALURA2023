@@ -1,8 +1,10 @@
 .cabecalho{
-    background-color: darkslategray;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    background-color: darkslategray;
+    color: aliceblue;
+    display: flex;
+    gap: 10rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,12 +13,12 @@
     
 }
 
-
-.texto{
-    color: white;
+.cabecalho_texto{
     text-decoration: none;
-        
-    }
+    color: aliceblue;
+    margin-left: 20px;
+}
+
   
   body{
     background-color: rgb(131, 131, 159);

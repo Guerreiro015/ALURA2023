@@ -1,23 +1,4 @@
-.cabecalho{
-    display: flex;
-    align-items: center;
-    background-color: darkslategray;
-    color: aliceblue;
-    display: flex;
-    gap: 10rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    
-}
 
-.cabecalho_texto{
-    text-decoration: none;
-    color: aliceblue;
-    margin-left: 20px;
-}
 
 body{
     margin-top: 80px;
