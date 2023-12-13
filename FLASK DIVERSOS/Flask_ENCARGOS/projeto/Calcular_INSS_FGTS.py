@@ -1,6 +1,4 @@
 
-
-
 from flask import Flask, render_template, request, redirect, session,flash,send_from_directory
 import mysql
 from datetime import *

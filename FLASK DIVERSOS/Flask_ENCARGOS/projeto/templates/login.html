@@ -9,12 +9,13 @@
     <title>Login</title>
     <link rel="stylesheet" href="./static/styles_inss/login.css">   
 </head>
-<header class="cabecalho">
-    <a class="cabecalho_texto" href="/" >Página Inicial</a><br/>
-    <a class="cabecalho_texto" href="{{url_for('calculo')}}" >Página de Cálculo</a><br/>
-    <h2 class="cabecalho_texto">RESULTADO DO CÁLCULO</h2>
-
-  </header>
+<header class="cabecalho">     
+    <a class="texto" href="/" > PAGINA INICIAL</a>
+    <a  class="texto" href="/encargos" > Encargos Trabalhistas</a>
+    <a  class="texto" href="{{url_for('calculo_inss')}}">Encargos holerite</a>        
+     <a  class="texto" href="/login">Sair da Biblioteca</a> 
+     <a  class="texto" href="/" >Listar Usuarios</a> 
+ </header>
 <body>
     <div class="container">
         
