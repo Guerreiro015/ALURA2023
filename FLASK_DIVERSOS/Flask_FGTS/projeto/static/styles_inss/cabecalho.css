@@ -1,0 +1,43 @@
+.cabecalho{
+    display: flex;
+    align-items: center;
+    background-color: darkslategray;
+    color: aliceblue;
+    display: flex;
+    gap: 10rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    
+}
+
+.cabecalho_texto{
+    text-decoration: none;
+    color: aliceblue;
+    margin-left: 20px;
+}
+
+.rodape{
+    display: flex;
+    position: fixed;
+    bottom: 0;   
+    left: 0; 
+    width: 100%;
+    height: 1.5rem;  
+    background-color: dimgrey;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.rodape_texto{   
+    display: flex;
+    color: white;
+    padding-right: 2rem;
+    font-size: .8rem;
+    
+    
+        
+}
