@@ -52,8 +52,10 @@ body{
 
 .texto{
     width: 200px;
+    height: 30px;
     border: solid 2px rgba(243, 246, 204, 0.092);
     border-radius: 5px;
+    font-size: 15px;
     
 }
 
