@@ -172,6 +172,14 @@ def calcular_fgts():
     tb = pd.read_excel("minha base.xlsx",sheet_name=f'{mes}_{ano}')
 
     campos = tb.columns
+
+    if 'Base do FGTS Normal' not in campos:
+        tb.insert(4,"Base do FGTS Normal", 0)
+    if 'Base do FGTS 13º Salário' not in campos:
+        tb.insert(4,"Base do FGTS 13º Salário", 0)
+    if 'Base INSS/FGTS Férias do Mês' not in campos:
+        tb.insert(4,"Base INSS/FGTS Férias do Mês", 0)
+    
     if "fgts_normal_jovem" not in campos:
         tb.loc[tb["Cargo"] == "MENOR/JOVEM APRENDIZ","fgts_normal_jovem"] = tb["Base do FGTS Normal"]
     if "fgts_normal_jovem" not in campos:
