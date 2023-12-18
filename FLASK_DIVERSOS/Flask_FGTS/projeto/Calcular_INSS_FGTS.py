@@ -166,10 +166,14 @@ def calculo_fgts():
   
 @app.route('/calcular_fgts', methods=['POST'])
 def calcular_fgts():
-    mes=(request.form['mes'])
-    ano=(request.form['ano'])    
+    try:
+        mes=(request.form['mes'])
+        ano=(request.form['ano'])    
 
-    tb = pd.read_excel("minha base.xlsx",sheet_name=f'{mes}_{ano}')
+        tb = pd.read_excel("minha base.xlsx",sheet_name=f'{mes}_{ano}')
+    except:
+        flash("Não existe dados para este mês")
+        return render_template('calculo_fgts.html')
 
     campos = tb.columns
 
