@@ -31,7 +31,7 @@ def escolher_opcao():
         if opcao_escolhida == 1:
            Cadastrar()
         elif opcao_escolhida == 2:
-            print(lista_restaurante)
+           listar_restaurante()
         elif opcao_escolhida == 3:
             print('Ativar restaurantes')
         elif opcao_escolhida == 4:
@@ -46,7 +46,7 @@ def opcao_invalida():
     input('''Esta opção não é válida''')
         
     main()
-lista_restaurante=[]
+lista_restaurante=["SUSHI",'SASHIMI']
 def Cadastrar():
     os.system('cls')
     print( 'Cadastro de Restaurante')
@@ -56,6 +56,13 @@ def Cadastrar():
     input ('Digite uma tecla para voltar ao menu principal.')
     main()
 
+def listar_restaurante():
+    print("LISTA DE RESTAURANTES ")
+
+    for i in lista_restaurante:
+        print(f'Restaurante {i} ')
+    input ('Digite uma tecla para voltar ao menu principal.')
+    main()
 
 
 def main():
