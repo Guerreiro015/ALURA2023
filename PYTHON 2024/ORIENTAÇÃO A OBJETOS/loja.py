@@ -15,18 +15,9 @@ class lojas():
     
     def mostrar():
         for i in lojas.lista_restaurante:
-            print(f'\nNome: {i._nome.ljust(15)}\nCategoria: {i._categoria.ljust(15)}\nSituação: {i.ativo}\nAvaliacao: {lojas.media_avaliacoes}\n')
+            print(f'\nNome: {i._nome.ljust(15)}\nCategoria: {i._categoria.ljust(15)}\nSituação: {i.ativo}\nAvaliacao: {i.media_avaliacoes}\n')
 
-
-
-    @classmethod
-    def listar_restaurantes(cls):
-        
-        for restaurante in cls.lista_restaurante:
-            print(f'\n{restaurante._nome.ljust(25)} | \n{restaurante._categoria.ljust(25)} | \n{str(lojas.media_avaliacoes).ljust(25)} |\n{restaurante.ativo}')
-
-
-        
+            
     @property
     def ativo(self):
         return ' ⊙  Ativado ✔️ 🤪' if self._ativo==True else " ⊗  Desativado 🚫🤪"
@@ -63,18 +54,6 @@ class lojas():
 
 # for i in rest:
 #     print(f'Nome do Restaurante: {japones.nome} \nCategoria do Restaurante {japones.categoria}\nSituação do Restaurante {japones.ativo}\n')
-
-portugal=lojas('Delicia','bacalhau')
-portugal.alternar()
-
-portugal.receber_avaliacao('Gui', 10)
-portugal.receber_avaliacao('Lais', 10)
-portugal.receber_avaliacao('Emy', 10)
-portugal.receber_avaliacao('Fran', 10)
-
-
-lojas.listar_restaurantes()
-lojas.mostrar()
 
 # print(chines)
 # print(italiano)
