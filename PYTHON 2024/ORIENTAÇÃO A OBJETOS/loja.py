@@ -15,9 +15,17 @@ class lojas():
     
     def mostrar():
         for i in lojas.lista_restaurante:
-            print(f'Nome: {i._nome.ljust(15)}Categoria: {i._categoria.ljust(15)}Situação: {i.ativo}\n Avaliacao: {lojas.media_avaliacoes}')
+            print(f'\nNome: {i._nome.ljust(15)}\nCategoria: {i._categoria.ljust(15)}\nSituação: {i.ativo}\nAvaliacao: {lojas.media_avaliacoes}\n')
 
+
+
+    @classmethod
+    def listar_restaurantes(cls):
         
+        for restaurante in cls.lista_restaurante:
+            print(f'\n{restaurante._nome.ljust(25)} | \n{restaurante._categoria.ljust(25)} | \n{str(lojas.media_avaliacoes).ljust(25)} |\n{restaurante.ativo}')
+
+
         
     @property
     def ativo(self):
@@ -27,20 +35,21 @@ class lojas():
         self._ativo = not self._ativo
 
 
-
     def receber_avaliacao(self, cliente, nota):
         avaliacao = Avaliacao(cliente, nota)
         self._avaliacao.append(avaliacao)
 
+    
     @property
-    def media_avaliacoes(self): 
+    def media_avaliacoes(self):
         if not self._avaliacao:
-          return 0
+            return 0
         soma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)
         quantidade_de_notas = len(self._avaliacao)
         media = round(soma_das_notas / quantidade_de_notas, 1)
         return media
-
+    
+    
 # japones=lojas('Plaza','novo')
 # chines=lojas('SUSHI','Peixe')
 # italiano=lojas('MONALIZA','Pizza')
@@ -55,6 +64,16 @@ class lojas():
 # for i in rest:
 #     print(f'Nome do Restaurante: {japones.nome} \nCategoria do Restaurante {japones.categoria}\nSituação do Restaurante {japones.ativo}\n')
 
+portugal=lojas('Delicia','bacalhau')
+portugal.alternar()
+
+portugal.receber_avaliacao('Gui', 10)
+portugal.receber_avaliacao('Lais', 10)
+portugal.receber_avaliacao('Emy', 10)
+portugal.receber_avaliacao('Fran', 10)
+
+
+lojas.listar_restaurantes()
 lojas.mostrar()
 
 # print(chines)
