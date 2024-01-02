@@ -1,5 +1,5 @@
 
-{% extends 'mensagens.html'%}
+{% extends 'base.html'%}
     {% block conteudo %}
     
     
@@ -12,15 +12,7 @@
 
   <link href="../static/styles_inss/mostrar.css" rel="stylesheet">  
 
-  <header class="cabecalho">     
-    <a class="texto" href="/" > PAGINA INICIAL</a>
-    <a  class="texto" href="/encargos" > Encargos Trabalhistas</a>
-    <a  class="texto" href="{{url_for('calculo_inss')}}">Encargos holerite</a>        
-     <a  class="texto" href="/login">Sair da Biblioteca</a> 
-     <a  class="texto" href="/" >Listar Usuarios</a> 
- </header>
-
-
+  
   <body>
     
     <img class="foto" src="/static/imagem/detroit.jpg" alt="">
@@ -34,26 +26,31 @@
       </li>
       <li class="lista_texto">
         <h4>Insalubridade</h4>
+        <h4 > {{dados.ins}}</h4>
         <h4 > {{dados.insal}}</h4>
       </li>
       <li class="lista_texto">
         <h4>Periculosidade</h4>
+        <h4>30%</h4>
         <h4 > {{dados.peric}}</h4>
       </li>
       <li class="lista_texto">
         <h4>Horas extras 50%</h4>
+        <h4 > {{dados.hr50}}</h4>
         <h4 > {{dados.valorhe50}}</h4>
       </li>
       <li class="lista_texto">
         <h4>Horas extras 100%</h4>
+        <h4 > {{dados.hr100}}</h4>
         <h4 > {{dados.valorhe100}} </h4>
       </li>
       <li class="lista_texto">
         <h4>Adic. Nortuno:</h4>
+        <h4 > {{dados.adn}}</h4>
         <h4 > {{dados.valoradcnot}}</h4> 
       </li>
       <li class="lista_texto">
-        <h4>DSR HE/Adc.Not:</h4>
+        <h4>DSR HE/Adc.Not:</h4>       
         <h4 > {{dados.dsrhoad}}</h4> 
       </li>
       <li class="lista_texto">

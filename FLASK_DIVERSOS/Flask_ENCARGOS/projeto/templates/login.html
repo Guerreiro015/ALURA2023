@@ -1,4 +1,4 @@
-{% extends 'mensagens.html'%}
+{% extends 'base.html'%}
 {% block conteudo %}
 
 <html lang="pt-BR">
@@ -9,13 +9,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="./static/styles_inss/login.css">   
 </head>
-<header class="cabecalho">     
-    <a class="texto" href="/" > PAGINA INICIAL</a>
-    <a  class="texto" href="/encargos" > Encargos Trabalhistas</a>
-    <a  class="texto" href="{{url_for('calculo_inss')}}">Encargos holerite</a>        
-     <a  class="texto" href="/login">Sair da Biblioteca</a> 
-     <a  class="texto" href="/" >Listar Usuarios</a> 
- </header>
+
 <body>
     <div class="container">
         

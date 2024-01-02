@@ -383,7 +383,7 @@ def mostrar():
         tree.heading(col, text=col.title(), anchor=CENTER)
         # ajusta a largura da coluna para a string do cabeçalho
         tree.column(col, width=h[n],anchor=hd[n])
-        n+=1
+        n += 1
 
 
     # inserindo os itens dentro da tabela

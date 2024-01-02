@@ -51,72 +51,72 @@ frame.pack()
 style = ttk.Style(janela)
 style.theme_use('clam')
 
-frame1 = tkinter.LabelFrame(frame, text = 'Informações do Cliente',font=' ivy 10 bold')
-frame1.grid(row=0,column=0,padx=10,pady=5)
+janela1 = tkinter.LabelFrame(frame, text = 'Informações do Cliente',font=' ivy 10 bold')
+janela1.grid(row=0,column=0,padx=10,pady=5)
 
 
-nome_label = tkinter.Label(frame1,text='Nome do Cliente')
+nome_label = tkinter.Label(janela1,text='Nome do Cliente')
 nome_label.grid(row=0,column=0,pady=0)
-nome_entry = tkinter.Entry(frame1,width=25)
+nome_entry = tkinter.Entry(janela1,width=25)
 nome_entry.grid(row=1,column=0,)
 
-cpf_label = tkinter.Label(frame1,text='CPF: ')
+cpf_label = tkinter.Label(janela1,text='CPF: ')
 cpf_label.grid(row=0,column=1)
-cpf_entry = tkinter.Entry(frame1)
+cpf_entry = tkinter.Entry(janela1)
 cpf_entry.grid(row=1,column=1)
 
-tel_label = tkinter.Label(frame1,text='Telefone')
+tel_label = tkinter.Label(janela1,text='Telefone')
 tel_label.grid(row=0,column=2)
-tel_entry = tkinter.Entry(frame1)
+tel_entry = tkinter.Entry(janela1)
 tel_entry.grid(row=1,column=2)
 
-email_label=tkinter.Label(frame1,text='Email')
+email_label=tkinter.Label(janela1,text='Email')
 email_label.grid(row=0,column=3)
-email_entry=tkinter.Entry(frame1,width=25)
+email_entry=tkinter.Entry(janela1,width=25)
 email_entry.grid(row=1,column=3)
 
-cad_label=tkinter.Label(frame1,text='Data do Cadastro')
+cad_label=tkinter.Label(janela1,text='Data do Cadastro')
 cad_label.grid(row=0,column=4)
-cad_entry=DateEntry(frame1)
+cad_entry=DateEntry(janela1)
 cad_entry.grid(row=1,column=4)
 
 
-cep_label=tkinter.Label(frame1,text='Número do CEP:')
+cep_label=tkinter.Label(janela1,text='Número do CEP:')
 cep_label.grid(row=0,column=4)
-cep_entry=tkinter.Entry(frame1,bg='#F0F8FF')
+cep_entry=tkinter.Entry(janela1,bg='#F0F8FF')
 cep_entry.grid(row=1,column=4)
 
 
 
-rua_label = tkinter.Label(frame1,text='Rua:')
+rua_label = tkinter.Label(janela1,text='Rua:')
 rua_label.grid(row=3,column=0)
-rua_entry = tkinter.Entry(frame1,width=28)
+rua_entry = tkinter.Entry(janela1,width=28)
 rua_entry.grid(row=4, column=0)
 
 
-numero_label = tkinter.Label(frame1,text='Número:')
+numero_label = tkinter.Label(janela1,text='Número:')
 numero_label.grid(row=3,column=1)
-numero_entry = tkinter.Entry(frame1,width=10)
+numero_entry = tkinter.Entry(janela1,width=10)
 numero_entry.grid(row=4, column=1)
 
-bairro_label = tkinter.Label(frame1,text='Bairro:')
+bairro_label = tkinter.Label(janela1,text='Bairro:')
 bairro_label.grid(row=3,column=2)
-bairro_entry = tkinter.Entry(frame1)
+bairro_entry = tkinter.Entry(janela1)
 bairro_entry.grid(row=4, column=2)
 
-cidade_label = tkinter.Label(frame1,text='Cidade:')
+cidade_label = tkinter.Label(janela1,text='Cidade:')
 cidade_label.grid(row=3,column=3)
-cidade_entry = tkinter.Entry(frame1)
+cidade_entry = tkinter.Entry(janela1)
 cidade_entry.grid(row=4, column=3)
 
-estado_label = tkinter.Label(frame1,text='Estado:')
+estado_label = tkinter.Label(janela1,text='Estado:')
 estado_label.grid(row=3,column=4)
-estado_entry = tkinter.Entry(frame1,border=5,justify=CENTER)
+estado_entry = tkinter.Entry(janela1,border=5,justify=CENTER)
 estado_entry.grid(row=4, column=4)
 
-ddd_label = tkinter.Label(frame1,text='DDD:')
+ddd_label = tkinter.Label(janela1,text='DDD:')
 ddd_label.grid(row=3,column=5)
-ddd_entry = tkinter.Entry(frame1,width=10,border=5,justify=CENTER) # Justify(center,left,right)
+ddd_entry = tkinter.Entry(janela1,width=10,border=5,justify=CENTER) # Justify(center,left,right)
 ddd_entry.grid(row=4, column=5)
 
 
@@ -147,50 +147,50 @@ def cep():
         messagebox.showerror('CEP NÃO EXISTE','O Cep Digitado não é Valido')
         
 
-xxx4=tkinter.Button(frame1,text='Consultar CEP:',bg='#F0F8FF',command=cep,border=4)
+xxx4=tkinter.Button(janela1,text='Consultar CEP:',bg='#F0F8FF',command=cep,border=4)
 xxx4.grid(row=0,column=5)
 
-for widget in frame1.winfo_children():
+for widget in janela1.winfo_children():
     widget.grid_configure(padx=10,pady=5)
 
     #-------------------------------------------------------------------
 
-frame2 = tkinter.LabelFrame(frame,text='Dados do Serviço',font=' ivy 10 bold')
-frame2.grid(row=2,column=0,padx=10,pady=5)
+janela2 = tkinter.LabelFrame(frame,text='Dados do Serviço',font=' ivy 10 bold')
+janela2.grid(row=2,column=0,padx=10,pady=5)
 
-servico_label = tkinter.Label(frame2,text='Servico Executado')
+servico_label = tkinter.Label(janela2,text='Servico Executado')
 servico_label.grid(row=0,column=0)
-servico_entry=tkinter.Entry(frame2,width=30)
+servico_entry=tkinter.Entry(janela2,width=30)
 servico_entry.grid(row=1,column=0)
 
-data_servico_label = tkinter.Label(frame2,text='Data do Servico')
+data_servico_label = tkinter.Label(janela2,text='Data do Servico')
 data_servico_label.grid(row=0,column=1)
-data_servico_entry = DateEntry(frame2)
+data_servico_entry = DateEntry(janela2)
 data_servico_entry.grid(row=1,column=1)
 
-atendente_label = tkinter.Label(frame2,text='Atendente: ')
+atendente_label = tkinter.Label(janela2,text='Atendente: ')
 atendente_label.grid(row=0,column=2)
-atendente_entry = tkinter.Entry(frame2,width=23)
+atendente_entry = tkinter.Entry(janela2,width=23)
 atendente_entry.grid(row=1,column=2)
 
-comissao_percentual_label = tkinter.Label(frame2,text='% Comissão: ')
+comissao_percentual_label = tkinter.Label(janela2,text='% Comissão: ')
 comissao_percentual_label.grid(row=0,column=3)
-comissao_percentual_entry = tkinter.Entry(frame2)
+comissao_percentual_entry = tkinter.Entry(janela2)
 comissao_percentual_entry.grid(row=1,column=3)
 
-comissao_label=tkinter.Label(frame2,text='Valor Comissão:')
+comissao_label=tkinter.Label(janela2,text='Valor Comissão:')
 comissao_label.grid(row=0,column=4)
-comissao_entry=tkinter.Entry(frame2)
+comissao_entry=tkinter.Entry(janela2)
 comissao_entry.grid(row=1,column=4)
 
-valor_label = tkinter.Label(frame2,text='Valor do Servico')
+valor_label = tkinter.Label(janela2,text='Valor do Servico')
 valor_label.grid(row=2,column=0)
-valor_entry = tkinter.Entry(frame2)
+valor_entry = tkinter.Entry(janela2)
 valor_entry.grid(row=3,column=0)
 
-parcela_label=tkinter.Label(frame2,text='Quant. Parcelas')
+parcela_label=tkinter.Label(janela2,text='Quant. Parcelas')
 parcela_label.grid(row=2,column=1)
-parcelas_spinbox=tkinter.Spinbox(frame2,from_=1,to='infinity',width=5)
+parcelas_spinbox=tkinter.Spinbox(janela2,from_=1,to='infinity',width=5)
 parcelas_spinbox.grid(row=3,column=1)
 
 
@@ -220,20 +220,20 @@ def valor_parcela():
  except:  
      messagebox.showerror(' É sério? você digitou letra ?', 'Os valores tem que ser números')
 
-valor_parcela_label=tkinter.Button(frame2,text='Valor das parcela',command=valor_parcela,border=4,)
+valor_parcela_label=tkinter.Button(janela2,text='Valor das parcela',command=valor_parcela,border=4,)
 valor_parcela_label.grid(row=2,column=2)
-valor_parcela_entry=tkinter.Entry(frame2)
+valor_parcela_entry=tkinter.Entry(janela2)
 valor_parcela_entry.grid(row=3,column=2)
 
-entrada_label=tkinter.Label(frame2,text='ENTRADA')
+entrada_label=tkinter.Label(janela2,text='ENTRADA')
 entrada_label.grid(row=2,column=3)
 var_entrada=tkinter.StringVar(value='Sem entrada')
-entrada_entry=tkinter.Checkbutton(frame2,text='Com entrada',variable=var_entrada,onvalue='Com Entrada',offvalue='Sem Entrada')
+entrada_entry=tkinter.Checkbutton(janela2,text='Com entrada',variable=var_entrada,onvalue='Com Entrada',offvalue='Sem Entrada')
 entrada_entry.grid(row=3,column=3)
 
-forma_pag_label=tkinter.Label(frame2,text='Forma de Pagamento')
+forma_pag_label=tkinter.Label(janela2,text='Forma de Pagamento')
 forma_pag_label.grid(row=2,column=4)
-forma_pag_entry=ttk.Combobox(frame2,values=['Pix','Dinheiro','Débito','Crédito','Fiado','Cortesia da casa'])
+forma_pag_entry=ttk.Combobox(janela2,values=['Pix','Dinheiro','Débito','Crédito','Fiado','Cortesia da casa'])
 forma_pag_entry.grid(row=3,column=4)
 
 def dados_tabela():
@@ -380,7 +380,7 @@ def limpar():
      forma_pag_entry.delete(0,'end')
 
 
-for widget in frame2.winfo_children():
+for widget in janela2.winfo_children():
     widget.grid_configure(padx=10,pady=3)
 
 #---------------------------------------------------------
@@ -400,8 +400,8 @@ def visualizar():
      
 #----------------------------------------------------------------------
 
-frame3 = tkinter.LabelFrame(frame,bg='bisque',fg='green',font='ivy 8 ')
-frame3.grid(row=3,column=0,padx=10,pady=5)
+janela3 = tkinter.LabelFrame(frame,bg='bisque',fg='green',font='ivy 8 ')
+janela3.grid(row=3,column=0,padx=10,pady=5)
 
 def mostrar():
     global tree
@@ -409,7 +409,7 @@ def mostrar():
     tabela_head = ['INDICE','NOME','CPF','TELEFONE','E-MAIL','CADASTRO','CEP','RUA','NÚMERO','BAIRRO','CIDADE','UF',
                    'DDD','SERVIÇO','DATA SERVIÇO', 'Vlr. SERVICO','Quant. PARCELAS','Vlr. PARCELAS','% COMISSÃO','Vlr. COMISSÃO','FORMA DE PG']
     
-    tree = ttk.Treeview(frame3, selectmode='extended',columns=tabela_head, show="headings",height=10)
+    tree = ttk.Treeview(janela3, selectmode='extended',columns=tabela_head, show="headings",height=10)
     # ( tree é o nome da tabela) --------------------------
 
     # ajusta a largura da coluna para a string do cabeçalho
@@ -418,17 +418,17 @@ def mostrar():
         tree.heading(i, text= i)
 
     # vertical scrollbar -- Barra de rolagem
-    vsb = ttk.Scrollbar(frame3, orient="vertical", command=tree.yview)
+    vsb = ttk.Scrollbar(janela3, orient="vertical", command=tree.yview)
 
     # horizontal scrollbar -- Barra de rolagem
-    hsb = ttk.Scrollbar(frame3, orient="horizontal", command=tree.xview)
+    hsb = ttk.Scrollbar(janela3, orient="horizontal", command=tree.xview)
 
     tree.configure(yscrollcommand=vsb.set, xscrollcommand=hsb.set)
     tree.grid(column=0, row=0, sticky='nsew')
     vsb.grid(row=0,column=1, sticky='ns')
     hsb.grid(row=1,column=0, sticky='ew')
-    frame3.grid_rowconfigure(0, weight=5)
-    frame3.grid_columnconfigure(0, weight=5)
+    janela3.grid_rowconfigure(0, weight=5)
+    janela3.grid_columnconfigure(0, weight=5)
     
     
     
@@ -503,20 +503,20 @@ def deletar_dados():
     messagebox.showerror('ERRRO!!!','Selecione um registro apagar')
 
 
-botao_verificar=tkinter.Button(frame2,text='Ver  Dados'.upper(),anchor='center',font='ivy 8 bold',bg='blue',fg=co1,border=4,command=verificar,width=25)
+botao_verificar=tkinter.Button(janela2,text='Ver  Dados'.upper(),anchor='center',font='ivy 8 bold',bg='blue',fg=co1,border=4,command=verificar,width=25)
 botao_verificar.grid(row=4,column=0)
 
-limpar_botao=tkinter.Button(frame2,command=limpar,text='Limpar Dados'.upper(),anchor='center',font='ivy 8 bold',fg='Blue',border=4,width=22)
+limpar_botao=tkinter.Button(janela2,command=limpar,text='Limpar Dados'.upper(),anchor='center',font='ivy 8 bold',fg='Blue',border=4,width=22)
 limpar_botao.grid(row=4,column=1,pady=10)
 
-botao_verificar=tkinter.Button(frame2,text='ALTERAR DADOS'.upper(),font='ivy 8 bold',bg=co12,fg=co1,border=4,command=atualizar_dados,width=25)
+botao_verificar=tkinter.Button(janela2,text='ALTERAR DADOS'.upper(),font='ivy 8 bold',bg=co12,fg=co1,border=4,command=atualizar_dados,width=25)
 botao_verificar.grid(row=4,column=2)
 
 
-salvar_botao=tkinter.Button(frame2,command=cadastro,text='Salvar Dados'.upper(),anchor='center',font='Ivy 8 bold',bg='BLUE',fg=co9,width=25,border=4)
+salvar_botao=tkinter.Button(janela2,command=cadastro,text='Salvar Dados'.upper(),anchor='center',font='Ivy 8 bold',bg='BLUE',fg=co9,width=25,border=4)
 salvar_botao.grid(row=4,column=4,pady=10)
 
-salvar_botao=tkinter.Button(frame2,command=deletar_dados,text='Apagar Dados'.upper(),anchor='center',font='Ivy 8 bold',bg=co11,fg=co9,width=22,border=4)
+salvar_botao=tkinter.Button(janela2,command=deletar_dados,text='Apagar Dados'.upper(),anchor='center',font='Ivy 8 bold',bg=co11,fg=co9,width=22,border=4)
 salvar_botao.grid(row=4,column=3,pady=10)
 
 

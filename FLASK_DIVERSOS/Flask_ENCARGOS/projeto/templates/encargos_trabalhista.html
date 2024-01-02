@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../static/styles_inss/index.css">
-</head>
+{% extends 'base.html'%}
+    {% block conteudo %}
+    
+    <link rel="stylesheet" href="../static/styles_inss/calculo.css">
 
-
-<header class="cabecalho">     
-  <a class="texto" href="/" > PAGINA INICIAL</a>
-  <a  class="texto" href="{{url_for('calculo_inss')}}">Encargos holerites</a>        
-  <a  class="texto"  href="{{url_for('calculo_fgts')}}" >Cálculos FGTS</a> 
-  <a  class="texto" href="/encargos" > Sobre Encargos Trabalhistas</a>
-  <a  class="texto" href="/login">Sair da Biblioteca</a> 
-</header>
         
     <body>
       <h1> Encargos trabalhistas: o que são e por que é importante conhecê-los?</h2>
@@ -118,6 +106,6 @@
       <h2></h2>
 
     </body>  
-
+    {%endblock%}
 
 </html>

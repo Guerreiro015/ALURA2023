@@ -150,7 +150,7 @@ def calcular_inss():
     valorsalfam=round(depsf*salariofamilia,2)
     
     valordep=round(depir*189.59,2)
-    deducaosimplificada=528
+    deducaosimplificada=528.00
     
     if opinsal == 'sim':
         valor_insal=round((salariominimo*insal)/100,2)
@@ -205,7 +205,7 @@ def calcular_inss():
     valorfgts=baseinss*0.08
     valorfgts=round(valorfgts,2)
     
-    dados={ 'desc': desc, 'dsrhoad': dsrhoad, 'salario': f'{salario: ,.2f}', 'bruto': f'{bruto: ,.2f}', 'insal': f'{valor_insal: ,.2f}', 'peric': f'{valor_peric: ,.2f}', 'valorsf': valorsalfam, 'valorhe50': horas50, 'valorhe100': horas100,'valoradcnot': adcnotur, 'valordsr': valordsr,'Faltas': valorfaltas,'Atrasos':valoratrasos,'baseinss': f'{baseinss: ,.2f}','valorinss':valorinss,'basefgts': f'{basefgts: ,.2f}','valorfgts': f'{valorfgts: .2f}', 'baseir':f'{baseir: ,.2f}', 'valorir':valorirrf,'valordep':valordep, 'pensao': pensao}
+    dados={ 'desc': desc, 'dsrhoad': dsrhoad, 'salario': f'{salario: ,.2f}', 'bruto': f'{bruto: ,.2f}', 'insal': f'{valor_insal: ,.2f}', 'peric': f'{valor_peric: ,.2f}', 'valorsf': valorsalfam, 'valorhe50': horas50, 'valorhe100': horas100,'valoradcnot': adcnotur, 'valordsr': valordsr,'Faltas': valorfaltas,'Atrasos':valoratrasos,'baseinss': f'{baseinss: ,.2f}','valorinss':valorinss,'basefgts': f'{basefgts: ,.2f}','valorfgts': f'{valorfgts: .2f}', 'baseir':f'{baseir: ,.2f}', 'valorir':valorirrf,'valordep':valordep, 'pensao': pensao, 'hr50': f'{hr50}','hr100': f'{hr100}','adn': f'{adcnot}','ins': f'{insal}'}
 
     print(valoratrasos)
     return render_template('mostrar_inss.html',dados=dados)       

@@ -15,7 +15,7 @@ class lojas():
     
     def mostrar():
         for i in lojas.lista_restaurante:
-            print(f'\nNome: {i._nome.ljust(15)}\nCategoria: {i._categoria.ljust(15)}\nSituação: {i.ativo}\nAvaliacao: {i.media_avaliacoes}\n')
+            print(f'\nNome: {i._nome.ljust(15)}\nCategoria: {i._categoria.ljust(15)}\nSituação: {i.ativo}\nAvaliacao: {i.media_avaliacoes} ✰ ✰ ✰ ✰ ✰\n')
 
             
     @property
@@ -34,10 +34,11 @@ class lojas():
     @property
     def media_avaliacoes(self):
         if not self._avaliacao:
-            return 0
+            return f'O Restaurante ainda não tem Avaliação '
         soma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)
         quantidade_de_notas = len(self._avaliacao)
         media = round(soma_das_notas / quantidade_de_notas, 1)
+        media=media/2
         return media
     
     

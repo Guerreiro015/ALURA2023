@@ -7,7 +7,7 @@ from datetime import datetime
 con = lite.connect('dados.db')
 
 # Inserir inventorio
-def inserir_form(i):
+def inserir_dados(i):
     with con:
         cur = con.cursor()
         query = "INSERT INTO Inventario (nome, local, descricao, marca, data_da_compra, valor_da_compra, serie, imagem) VALUES (?,?,?,?,?,?,?,?)"
@@ -32,7 +32,7 @@ def atualizar_form(i):
 
 
 # Ver Inventario
-def ver_form():
+def visualizar():
     lista_itens = []
     with con:
         cur = con.cursor()
