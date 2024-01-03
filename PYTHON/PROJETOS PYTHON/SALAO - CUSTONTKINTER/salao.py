@@ -224,7 +224,7 @@ entrada_entry.grid(row=1,column=5)
 
 forma_pag_label=ctk.CTkLabel(janela2,text='Forma de Pagamento')
 forma_pag_label.grid(row=2,column=0)
-forma_pag_entry=customtkinter.CTkComboBox(janela2,values=['Pix','Dinheiro','Débito','Crédito','Fiado','Cortesia da casa'])
+forma_pag_entry=customtkinter.CTkOptionMenu(janela2,values=['Pix','Dinheiro','Débito','Crédito','Fiado','Cortesia da casa'])
 forma_pag_entry.grid(row=3,column=0)
 
 atendente_label = ctk.CTkLabel(janela2,text='Atendente: ')
@@ -416,12 +416,15 @@ def mostrar():
                    'DDD','SERVIÇO','DATA SERVIÇO', 'Vlr. SERVICO','Quant. PARCELAS','Vlr. PARCELAS','% COMISSÃO','Vlr. COMISSÃO','FORMA DE PG']
     
     tree = ttk.Treeview(janela3, selectmode='extended',columns=tabela_head, show="headings",height=10)
+    tree = ttk.Treeview(janela3, selectmode='extended',columns=tabela_head, show="headings",height=10)
+
+    
     # ( tree é o nome da tabela) --------------------------
 
     # ajusta a largura da coluna para a string do cabeçalho
     for i in tabela_head:
-        tree.column(i,anchor='center', width=43)
-        tree.heading(i, text= i)
+        tree.column(i,anchor='center', width=60)
+        tree.heading(i, text = i)
 
     # vertical scrollbar -- Barra de rolagem
     vsb = ttk.Scrollbar(janela3, orient="vertical", command=tree.yview)
@@ -448,12 +451,12 @@ def mostrar():
 mostrar()
 
 def verificar():
-   try: 
+#    try: 
     global tree
    
     base=[nome_entry, cpf_entry, tel_entry, email_entry, cad_entry, cep_entry, rua_entry, numero_entry, bairro_entry, cidade_entry,
           estado_entry, ddd_entry,servico_entry, data_servico_entry, valor_entry, parcelas_spinbox, valor_parcela_entry,
-            comissao_percentual_entry, comissao_entry, forma_pag_entry]
+            comissao_percentual_entry, comissao_entry]
 
     for i in base:
         i.delete(0,'end')  
@@ -466,8 +469,8 @@ def verificar():
     for i in base:
         i.insert(0,treev_lista[x])
         x +=1
-   except:
-       messagebox.showerror('ERRO','Nenhum dado selecionado')
+#    except:
+#        messagebox.showerror('ERRO','Nenhum dado selecionado')
 
 
 def atualizar_dados():
