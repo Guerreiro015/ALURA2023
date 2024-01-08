@@ -48,7 +48,7 @@ janela = customtkinter.CTk()
 janela.title('EMPRESA FICTÍCIA')
 janela.geometry('1000x650')
 customtkinter.set_default_color_theme("dark-blue") 
-janela.resizable(width=FALSE, height=FALSE)
+# janela.resizable(width=FALSE, height=FALSE)
 frame = tkinter.Frame(janela)
 frame.pack()
 
@@ -423,7 +423,7 @@ def mostrar():
 
     # ajusta a largura da coluna para a string do cabeçalho
     for i in tabela_head:
-        tree.column(i,anchor='center', width=60)
+        tree.column(i,anchor='center', width=43)
         tree.heading(i, text = i)
 
     # vertical scrollbar -- Barra de rolagem
