@@ -24,4 +24,4 @@ const objeto = {
 }
 
 
-objeto.compra(45)
+objeto.compra(136)
