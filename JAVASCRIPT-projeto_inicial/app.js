@@ -5,7 +5,7 @@ const valor=200
 let numeroSecreto = parseInt(Math.random()*valor+1)
 let chute
 let tentativas=1
-while(chute!=numeroSecreto){
+while(chute != numeroSecreto){
 
     chute=prompt(`Escolha um número entre 1 e ${valor}`);
     
