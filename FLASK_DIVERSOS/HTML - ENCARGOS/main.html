@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Alura MIDI</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+
+  <div class="formulario">
+    <h2 class="titulo">Cálculos de dias de Férias</h2>
+
+    <label class="preencher" for="avos">Digite os Avos</label>
+    <input class="preencher" type="text" id="avos" nome="avos">
+
+    <label class="preencher" for="faltas">Digite as Faltas</label>
+    <input class="preencher" type="text" id="faltas" nome="faltas" value="0">
+
+    <label class="preencher" for="salario">Digite o Salário para Cálculo</label>
+    <input class="preencher" type="text" id="salario" nome="salario" value="1676.89">
+
+    <button class="botao" onclick="somar()">CALCULAR</button>
+
+    <p id='avosDia'></p>
+    <p id='totalDia'></p>
+    <p id='valorFerias'></p>
+    <p id='umTerco'></p>
+    <p id='totalFerias'></p>
+    <p id='inss'></p>
+    <p id='irrf'></p>
+    <p id='feriasLiquido'></p>
+
+    <div class="codigo">      
+      <script src="./calculoFerias.js"></script>
+    </div>
+
+
+  </div>
+
+  <div class="formulario2">
+    <div class="formulario3">
+      <div>
+        <h2>Proventos</h2>
+        <label class="preencher" for="Valor1">Valor1</label>
+        <input class="preencher" type="text" id="valor1" nome="valor1">
+        <label class="preencher" for="valor2">Valor2</label>
+        <input class="preencher" type="text" id="valor2" nome="valor2">
+        <label class="preencher" for="valor3">Valor3</label>
+        <input class="preencher" type="text" id="valor3" nome="valor3">
+        <label class="preencher" for="valor4">Valor4</label>
+        <input class="preencher" type="text" id="valor4" nome="valor4">
+        <label class="preencher" for="valor5">Valor5</label>
+        <input class="preencher" type="text" id="valor5" nome="valor5">
+      </div>
+
+      <div>
+        <h2>Descontos</h2>
+        <label class="preencher" for="Faltas">Valor1</label>
+        <input class="preencher" type="text" id="faltas" nome="faltas">
+        <label class="preencher" for="valor2">Valor2</label>
+        <input class="preencher" type="text" id="valor2" nome="valor2">
+        <label class="preencher" for="valor3">Valor3</label>
+        <input class="preencher" type="text" id="valor3" nome="valor3">
+        <label class="preencher" for="valor4">Valor4</label>
+        <input class="preencher" type="text" id="valor4" nome="valor4">
+        <label class="preencher" for="valor5">Valor5</label>
+        <input class="preencher" type="text" id="valor5" nome="valor5">
+      </div>
+    </div>
+
+    <button class="botao" onclick="calculoEncargos()">CALCULAR</button>
+
+    <p id='inss1'></p>
+    <p id='irrf1'></p>
+    <p id='fgts1'></p>
+
+    <script src="/calculoEncargos.js"> </script>
+
+  </div>
+
+
+</body>
+
+</html>
