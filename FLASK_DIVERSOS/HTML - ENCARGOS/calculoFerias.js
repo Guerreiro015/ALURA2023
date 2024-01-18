@@ -44,7 +44,13 @@ function somar() {
     inss=908.85
   }
 
-  let base_irrf=total_ferias-inss
+  deducao=inss
+
+  if(deducao <= 528){
+    deducao=528
+  }
+
+  let base_irrf=total_ferias-deducao
 
   if(base_irrf < 2112){
     irrf=0
