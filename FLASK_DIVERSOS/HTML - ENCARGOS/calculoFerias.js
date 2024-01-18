@@ -1,7 +1,7 @@
 dias_avos = 0
 function somar() {
   let avos = parseFloat(document.getElementById("avos").value)
-  let faltas = parseFloat(document.getElementById("faltas").value)
+  let faltas = parseFloat(document.getElementById("faltas_periodo").value)
   let salario = parseFloat(document.getElementById("salario").value)
   if (faltas < 6) {
     dias_avos = avos * 2.5

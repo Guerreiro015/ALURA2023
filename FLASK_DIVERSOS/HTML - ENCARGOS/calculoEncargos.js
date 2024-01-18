@@ -35,9 +35,16 @@ function calcularEncargos() {
     valorInss=908.85
   }
 
-  baseIR=baseInss-valorInss
-  baseIR=baseIR-pensao
-  baseIR=baseIR-valordepir
+  
+  deducao=valorInss+pensao+valordepir
+  
+  if(deducao <= 528){
+    deducao=528
+  }
+
+  baseIR=baseInss-deducao
+
+
   if(baseIR<0){
     baseIR=0
   }
