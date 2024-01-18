@@ -72,15 +72,14 @@ function somar() {
 
 
   
-  document.getElementById("avosDia").innerHTML =     'Total de dias de direito        ' + dias_avos;
-  document.getElementById("totalDia").innerHTML =    'Valor de cada dia de férias R$: ' + totaldia.toFixed(2);
-  document.getElementById("valorFerias").innerHTML = 'Valor total das férias      R$: ' + valor_ferias.toFixed(2);
-  document.getElementById("umTerco").innerHTML =     'Valor 1/3 das férias        R$: ' + um_terco.toFixed(2);
-  document.getElementById("totalFerias").innerHTML = 'Valor bruto das férias      R$: ' + total_ferias.toFixed(2);
+  document.getElementById("avosDia").innerHTML =     'Total de dias de direito--------->: ' + dias_avos;
+  document.getElementById("totalDia").innerHTML =    'Valor de cada dia de férias---->R$: ' + totaldia.toFixed(2);
+  document.getElementById("valorFerias").innerHTML = 'Valor total das férias--------->R$: ' + valor_ferias.toFixed(2);
+  document.getElementById("umTerco").innerHTML =     'Valor 1/3 das férias----------->R$: ' + um_terco.toFixed(2);
+  document.getElementById("totalFerias").innerHTML = 'Valor bruto das férias--------->R$: ' + total_ferias.toFixed(2);
   document.getElementById("inss").innerHTML = 'Valor do INSS      R$: ' + inss.toFixed(2);
   document.getElementById("irrf").innerHTML = 'Valor do IRRF      R$: ' + irrf.toFixed(2);
   document.getElementById("feriasLiquido").innerHTML = 'Valor Líquido das Férias  R$: ' + ferias_liquido.toFixed(2);
 
 
-
-}
+  }
