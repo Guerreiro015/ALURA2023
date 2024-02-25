@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de dados</title>
+
+
+    <!-- <script type="text/javascript">
+
+        var db = openDatabase('meubanco', '2.0', 'Mybase', 4048);
+        db = transaction(function (criar) {
+            criar.executeSql('IF NOT EXIST CREATE TABLE usuarios(id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, senha TEXT')
+        })
+
+
+    </script>> -->
+
+
+</head>
+
+<body>
+    <label for="nome">Nome</label><br>
+    <input type="text" id="nome" nome="nome"><br>
+    <label for="Senha">Senha</label><br>
+    <input type="text" id="senha" nome="senha"><br>
+
+    <button onclick="incluir()">Cadastrar</button>
+
+
+    <script src="inclusao.js"></script>
+</body>
+
+</html>
