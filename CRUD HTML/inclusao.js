@@ -31,3 +31,5 @@ const request = window.indexedDB.open("MeuBancoDeTeste", 3);
        db.close();
      };
    };
+
+   
