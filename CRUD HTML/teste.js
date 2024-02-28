@@ -1,27 +1,17 @@
-import { run } from '@microsoft/office-js/excel';
 
-// Função assíncrona para criar uma nova pasta de trabalho
-async function criarPastaDeTrabalho() {
-    try {
-        await run(async (context) => {
-            // Obtenha o objeto de pasta de trabalho ativo
-            const workbook = context.workbook;
+Excel.run(async (context) => {
+    const sheet = context.workbook.worksheets.getActiveWorksheet("dados.xlsx");
+    const range = sheet.getRange("A1:B2");
+    range.values = [["Hello", "World"], ["Excel", "JS"]];
+    await context.sync();
+});
 
-            // Crie uma nova planilha
-            const sheet = workbook.worksheets.add('Nova Planilha');
+//     // Carrega a propriedade "name" da planilha
+//     ws.load("name");
 
-            // Adicione algum conteúdo à planilha (opcional)
-            sheet.getRange('A1').values = [['Olá, mundo!']];
+//     // Sincroniza as alterações com o Excel real
+//     await context.sync();
 
-            // Salve a pasta de trabalho
-            await context.sync();
-
-            console.log('Pasta de trabalho criada com sucesso!');
-        });
-    } catch (error) {
-        console.error('Erro ao criar a pasta de trabalho:', error);
-    }
-}
-
-// Chame a função para criar a pasta de trabalho
-//criarPastaDeTrabalho()
+//     // Agora você pode acessar a propriedade "name"
+//     console.log("Nome da planilha: " + ws.name);
+// });
