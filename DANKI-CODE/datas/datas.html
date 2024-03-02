@@ -10,9 +10,55 @@
     <p>Bem vindo as DATAS</p>
 
     <script>
-var data = new Date()
-
+var data = new Date();
+//DATA INTEIRA
 alert(data)
+
+//dia SEMANA
+alert(data.getDay())
+
+//DIA
+alert(data.getDate())
+
+//MêS
+alert(data.getUTCMonth())
+
+//ANO
+alert(data.getFullYear())
+
+// data inteira
+const myDate = new Date(Date.now()).toLocaleString().split(',')[0];
+alert(myDate); // Saída "26/07/2022"
+
+//---------------------------------------------------------
+
+// Criando a propia data
+let dta = new Date('07/14/2023')
+const minha_data = dta.toLocaleString().split(',')[0];
+alert(minha_data); 
+
+
+// Formula para  calcular datas
+
+data1 = new Date('05/10/2024');
+data2 = new Date('05/23/2024');
+
+// Primeiro vamos calcular os milisegundos
+
+data1=data1.getTime();
+data2=data2.getTime();
+
+diferença = data2-data1
+
+//Tranformando os milisengundos em dias
+segundos = 1000
+segundos_hora = 3600
+horas_dia = 24
+
+dias = diferença/(1000*3600*24)
+
+alert(dias)
+
 
     </script>
     
