@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1 class="inicio">Olá danki-code></h1>;
+    <!--ForEach -->
+    <SCript>
+
+        numero1 = (prompt('informe o  primeiro da operação: '))
+
+        sinal = prompt('INFORME O SINAL DA OPERAÇAÕ: ')
+
+        while (sinal != "+" && sinal != "-" && sinal != "/" && sinal != "*") {
+
+            sinal = prompt(' Sinal não exsite INFORME um SINAL para a OPERAÇAÕ: ')
+        }
+
+        numero2 = (prompt('Informe o segundo número da operação: '))
+
+        numero1 = parseInt(numero1)
+        numero2 = parseInt(numero2)
+
+        var resultado = 0
+
+        if (sinal = '+') {
+            resultado = numero1 + numero2
+        }
+
+        else if (sinal = '-') {
+            resultado = numero1 - numero2
+        }
+
+        else if (sinal = '/') {
+            resultado = numero1 / numero2
+        }
+
+        else if (sinal = '*') {
+            resultado = numero1 * numero2
+        }
+        else {
+            resultado = 0
+        }
+
+
+        alert(' O resultado é: ' + resultado)
+
+    </SCript>
+
+    <!-- <button class="inicio" onclick="testar('Antonio')">Executar Função</button> -->
+
+</body>
+
+</html>

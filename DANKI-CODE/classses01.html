@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Olá mundo</p>
+
+    <script>
+
+
+        class animal {
+            constructor(nome) {
+                this.nome = nome;
+
+            }
+
+            mostrar_nome() {
+                return( this.nome + this.raca)
+            }
+
+            soma() {
+                return (5 * 10)
+            }
+        }
+
+        bicho = new animal('gato');
+
+        alert(bicho.mostrar_nome());
+
+        // usando os valores de outra classe
+        class cachorro extends animal {
+            constructor(nome) {
+                super(nome)
+                this.raca = 'Buldog'
+                this.idade = 51
+            }
+        }
+
+        Cachorro =  new cachorro('Maltés')
+
+        alert(Cachorro.mostrar_nome())
+
+
+    </script>
+
+</body>
+
+</html>

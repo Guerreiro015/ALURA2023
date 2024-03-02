@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1 class="inicio">Olá danki-code></h1>;
+    <!--ForEach -->
+    <SCript>
+
+        var nomes = new Array('joao', 'felipe', 'bruno', 'lucas')
+        nomes.push('Francisca')
+
+        nome = prompt('Qual o seu Nome');
+        idade = prompt('Qual a sua idade');
+        cidade = prompt('Qual a sua cidade');
+
+        console.log('O nome é: ',nome);
+        console.log('A idade é: ',idade);
+        console.log('A cidade é: ',cidade);
+    
+        nomes.push(nome,idade,cidade)
+
+        nomes.forEach(function(value,index){
+            console.log(value)
+        })
+
+
+
+
+    </SCript>
+
+    <!-- <button class="inicio" onclick="testar('Antonio')">Executar Função</button> -->
+
+</body>
+
+</html>

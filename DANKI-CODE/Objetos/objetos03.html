@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Ola mundo</p>
+
+    <script>
+
+        console.log('Ola DANKI');
+
+        function Pessoa() {
+            this.nome = "Antonio";
+            this.idade = 51;
+            this.cidade = " São Paulo";
+            this.mostrar = function (numero) {
+                alert(numero + this.cidade);
+            }
+        }
+
+        var pessoa = new Pessoa();
+        var pessoa2 = new Pessoa();
+
+
+        pessoa.mostrar('Moro em')
+
+        var bicho = prompt('Digite o nome do bicho')
+        var vida = prompt('Digite a idade do bicho')
+        function Animal(nome, peso) {
+            this.nome = nome;
+            this.idade = peso;
+            this.mostrar_animal = function () {
+                console.log('Nome: ' + this.nome + " Idade: " + this.idade + " Anos")
+            }
+
+        }
+
+
+        var animal = new Animal(bicho, vida);
+        //var animal_2 = new Animal('Gato', 10);
+
+
+        animal.mostrar_animal()
+        // animal_2.mostrar_animal()
+    </script>
+</body>
+
+</html>
