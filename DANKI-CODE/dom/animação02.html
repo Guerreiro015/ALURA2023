@@ -1,0 +1,52 @@
+<html>
+
+<body>
+
+    <style>
+        .conteudo h2 span {
+            color: blue;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .conteudo p {
+            width: 400px;
+            overflow: hidden;
+            height: 0px;
+            transition: 1s;
+        }
+
+        .mostrar {
+            height: 200px !important;
+        }
+    </style>
+
+    <div class="conteudo">
+        <h2>Titulo do Conteúdo <span>Ver Mais</span></h2>
+
+        <p>O "texto para meditação infantil" é uma ferramenta utilizada para ajudar as crianças a desenvolverem
+            habilidades de concentração, relaxamento e autoconhecimento. Esses textos são escritos de forma simples e
+            acessível, com o objetivo de transmitir mensagens positivas e inspiradoras para os pequenos.</p>
+    </div>
+
+    <script>
+        ver=document.querySelector('span')
+        document.querySelector('.conteudo span').addEventListener('click', function () {
+            var texto = document.querySelector('.conteudo p');
+       
+
+        if (texto.classList.contains('mostrar')){
+            texto.classList.remove("mostrar");
+            ver.innerHTML = 'Ver Mais'
+        }
+        else{
+            texto.classList.add("mostrar");
+            ver.innerHTML = 'Ver Menos'
+        }
+    });
+
+    </script>
+
+</body>
+
+</html>

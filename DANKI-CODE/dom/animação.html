@@ -1,0 +1,35 @@
+<html>
+
+<body>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            margin-left: 0;
+        }
+
+        .animEsquerda {
+            transition: 1s;
+            margin-left: 90px;
+            margin-top: 90px;
+            background-color:blue;
+            border-radius: 100px;
+        }
+    </style>
+
+    <div class="box"></div>
+
+    <script>
+
+        var box = document.querySelectorAll('.box')[0]
+        setTimeout(() => {
+            box.classList.add('animEsquerda');
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>
