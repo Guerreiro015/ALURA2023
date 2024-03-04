@@ -1,0 +1,1232 @@
+[{
+  "_id": {
+    "$oid": "65e4edbd8fe9029cb7d1fdca"
+  },
+  "nome": "antonio",
+  "conta": "51",
+  "banco": "itau"
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f1d"
+  },
+  "Id Contratado": 112171,
+  "Nome Completo": "ADILSON FLORES DE LIMA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670468
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f1e"
+  },
+  "Id Contratado": 112179,
+  "Nome Completo": "CARLOS ALBERTO TEIXEIRA RAMOS",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,65",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711515
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f1f"
+  },
+  "Id Contratado": 112204,
+  "Nome Completo": "JOANA MORAIS OLIVEIRA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Lavagem Especial Equip.",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711582
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f20"
+  },
+  "Id Contratado": 112208,
+  "Nome Completo": "JOAO EVANGELISTA VIERA DO NASCIMENTO",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,58",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Limpeza Habitacional - Dificil Acesso",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711532
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f21"
+  },
+  "Id Contratado": 112227,
+  "Nome Completo": "JOSE RONILTON DOS SANTOS",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,27",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670526
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f22"
+  },
+  "Id Contratado": 112242,
+  "Nome Completo": "VALMIR DOS SANTOS MACHADO",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA M'Boi Mirim",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,32",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Pintura de Meio-Fio e Remoção Faixas e Propagandas",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711602
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f23"
+  },
+  "Id Contratado": 112329,
+  "Nome Completo": "VAGNER SOARES",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,58",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta - Catabagulho e Entulho",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711540
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f24"
+  },
+  "Id Contratado": 112345,
+  "Nome Completo": "WALLACE TAVARES DA SILVA",
+  "Cargo": "BUEIRISTA",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,50",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Limpeza de Bueiros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711546
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f25"
+  },
+  "Id Contratado": 112354,
+  "Nome Completo": "WESLEY BALBINO DA SILVA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,38",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta - Catabagulho e Entulho",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711541
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f26"
+  },
+  "Id Contratado": 112368,
+  "Nome Completo": "WILLIAM LIMA DE JESUS",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,22",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta - Catabagulho e Entulho",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711542
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f27"
+  },
+  "Id Contratado": 112377,
+  "Nome Completo": "ADRIANO DA SILVA PEREIRA",
+  "Cargo": "BUEIRISTA",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,18",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Limpeza de Bueiros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711543
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f28"
+  },
+  "Id Contratado": 112401,
+  "Nome Completo": "JULIANO LAURINDO CAMILO VICENTE",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,67",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 05:00 AS 13:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - PEV's",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706769
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f29"
+  },
+  "Id Contratado": 112530,
+  "Nome Completo": "CICERO ALVES DE MARIO",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,28",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta Manual - Entulho e Materiais Diversos",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706665
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f2a"
+  },
+  "Id Contratado": 112537,
+  "Nome Completo": "DAMIAO JOSE DA SILVA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,58",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Limpeza Habitacional - Dificil Acesso",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711523
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f2b"
+  },
+  "Id Contratado": 112598,
+  "Nome Completo": "EVALDO MOREIRA SANTOS",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 50% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "2,08",
+  "maoies": 7,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "18/07/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Lavagem Especial Equip.",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 50271379
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f2c"
+  },
+  "Id Contratado": 112598,
+  "Nome Completo": "EVALDO MOREIRA SANTOS",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,17",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Lavagem Especial Equip.",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706723
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f2d"
+  },
+  "Id Contratado": 112744,
+  "Nome Completo": "NELSON ROBERTO RIBEIRO DA SILVA",
+  "Cargo": "BUEIRISTA",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,28",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Limpeza de Bueiros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711545
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f2e"
+  },
+  "Id Contratado": 112759,
+  "Nome Completo": "UILTON SILVA DOS ANJOS SANTOS",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706666
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f2f"
+  },
+  "Id Contratado": 112802,
+  "Nome Completo": "NILTON PASSOS DOS SANTOS",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "4,27",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta Manual - Entulho e Materiais Diversos",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706765
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f30"
+  },
+  "Id Contratado": 112815,
+  "Nome Completo": "ALEXSANDRO SOARES CORREA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,57",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta - Catabagulho e Entulho",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711507
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f31"
+  },
+  "Id Contratado": 112830,
+  "Nome Completo": "ED CARLOS BARBOSA ALVES",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta - Catabagulho e Entulho",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711554
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f32"
+  },
+  "Id Contratado": 112847,
+  "Nome Completo": "EDILSON APARECIDO DE SOUZA",
+  "Cargo": "BUEIRISTA",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "4,67",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Limpeza de Bueiros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711561
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f33"
+  },
+  "Id Contratado": 112850,
+  "Nome Completo": "EDILSON GALDINO DA SILVA",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Limpeza de Bueiros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706667
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f34"
+  },
+  "Id Contratado": 112957,
+  "Nome Completo": "JAILTON DA SILVA AMARAL NASCIMENTO",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,67",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta Manual Residuos - Compactador",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706772
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f35"
+  },
+  "Id Contratado": 113074,
+  "Nome Completo": "WEVERSON DA SILVA FELIPE",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "4,05",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706658
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f36"
+  },
+  "Id Contratado": 113120,
+  "Nome Completo": "JOALDO ALVES DOS ANJOS",
+  "Cargo": "BUEIRISTA",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Limpeza de Bueiros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711575
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f37"
+  },
+  "Id Contratado": 113181,
+  "Nome Completo": "GEORGE DOS SANTOS BARBOSA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670544
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f38"
+  },
+  "Id Contratado": 113276,
+  "Nome Completo": "MARCO AURELIO FREITAS PACHECO",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,60",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Lavagem Especial Equip.",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711533
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f39"
+  },
+  "Id Contratado": 113337,
+  "Nome Completo": "MARCOS SANTOS DA SILVA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta - Catabagulho e Entulho",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711586
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f3a"
+  },
+  "Id Contratado": 113350,
+  "Nome Completo": "PAULO ROBERO MUNIZ MOREIRA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,27",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670531
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f3b"
+  },
+  "Id Contratado": 113353,
+  "Nome Completo": "GIVANILDO FREIRE DE NOVAES",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,68",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Lavagem - Feiras, Vias e Logradouros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706767
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f3c"
+  },
+  "Id Contratado": 113355,
+  "Nome Completo": "ANTONIO AIRTON BARBOSA ALEXANDRE",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Pintura de Meio-Fio e Remoção Faixas e Propagandas",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670533
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f3d"
+  },
+  "Id Contratado": 113441,
+  "Nome Completo": "HENRIQUE DOS SANTOS LANA",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 50% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "2,52",
+  "maoies": 3,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/03/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta Manual - Entulho e Materiais Diversos",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 48932240
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f3e"
+  },
+  "Id Contratado": 113464,
+  "Nome Completo": "HUGO CESAR CANUTO",
+  "Cargo": "BUEIRISTA",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,58",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Limpeza de Bueiros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711544
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f3f"
+  },
+  "Id Contratado": 113529,
+  "Nome Completo": "ANTONIO JOSE DE OLIVEIRA",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,22",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Lavagem - Feiras, Vias e Logradouros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706659
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f40"
+  },
+  "Id Contratado": 113548,
+  "Nome Completo": "EDSON BRAZ DA SILVA FILHO",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,27",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta - Catabagulho e Entulho",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670475
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f41"
+  },
+  "Id Contratado": 113550,
+  "Nome Completo": "BRUNO PIZOLI DE MORAIS",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta - Catabagulho e Entulho",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670534
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f42"
+  },
+  "Id Contratado": 113594,
+  "Nome Completo": "EDSON DE JESUS GUERRA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Lavagem Especial Equip.",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670514
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f43"
+  },
+  "Id Contratado": 113599,
+  "Nome Completo": "JACO LAURIANO DA SILVA",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,17",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta Mecânica de Entulho",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706770
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f44"
+  },
+  "Id Contratado": 113609,
+  "Nome Completo": "EDVALDO DA SILVA FERREIRA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,47",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta - Catabagulho e Entulho",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711530
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f45"
+  },
+  "Id Contratado": 113625,
+  "Nome Completo": "APARECIDA DE FATIMA RODRIGUES DE CASTRO",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Lavagem Especial Equip.",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670473
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f46"
+  },
+  "Id Contratado": 113627,
+  "Nome Completo": "RENATO LUIZ PEREIRA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,58",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711534
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f47"
+  },
+  "Id Contratado": 113628,
+  "Nome Completo": "JOSE CARLOS HENRIQUE DA SILVA",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 50% - NOTURNAS",
+  "Quantidade do Evento de Ponto Justificada": "2,18",
+  "maoies": 2,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "03/02/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Limpeza de Bueiros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 48480777
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f48"
+  },
+  "Id Contratado": 113635,
+  "Nome Completo": "JOSE RAIMUNDO DAS CHAGAS",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706771
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f49"
+  },
+  "Id Contratado": 113769,
+  "Nome Completo": "CRISTIANO APARECIDO VIEIRA LUZ",
+  "Cargo": "ASSISTENTE DE ALMOXARIFADO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "3,77",
+  "maoies": 2,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "12/02/2023",
+  "Horário": "SEGUNDA A SABADO - 10:00 AS 18:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "Apoio Op C.Indireto",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 48770587
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f4a"
+  },
+  "Id Contratado": 113769,
+  "Nome Completo": "CRISTIANO APARECIDO VIEIRA LUZ",
+  "Cargo": "ASSISTENTE DE ALMOXARIFADO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "4,27",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 10:00 AS 18:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "Apoio Op C.Indireto",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51735642
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f4b"
+  },
+  "Id Contratado": 114124,
+  "Nome Completo": "VALDIR ROCHSTROCH BATISTA",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,72",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta Manual - Entulho e Materiais Diversos",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706664
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f4c"
+  },
+  "Id Contratado": 114698,
+  "Nome Completo": "ELISANGELA BARRETO OLIVEIRA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,35",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Pintura de Meio-Fio e Remoção Faixas e Propagandas",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670535
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f4d"
+  },
+  "Id Contratado": 114711,
+  "Nome Completo": "NILVAN CHARLES NUNES LOPES",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "4,75",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Pintura de Meio-Fio e Remoção Faixas e Propagandas",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711594
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f4e"
+  },
+  "Id Contratado": 114761,
+  "Nome Completo": "NIVALDO MARQUES DOS SANTOS",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,12",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Operação dos Ecopontos",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706722
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f4f"
+  },
+  "Id Contratado": 114948,
+  "Nome Completo": "HELIO CORDEIRO LUCIO",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,80",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706768
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f50"
+  },
+  "Id Contratado": 115223,
+  "Nome Completo": "ADEMILSON DE JESUS",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,58",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Lavagem - Feiras, Vias e Logradouros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711502
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f51"
+  },
+  "Id Contratado": 116010,
+  "Nome Completo": "JACIRA DA SILVA ALBANO",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,25",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670521
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f52"
+  },
+  "Id Contratado": 116020,
+  "Nome Completo": "ALEX JULIO SILVA PEREIRA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta Manual - Entulho e Materiais Diversos",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670470
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f53"
+  },
+  "Id Contratado": 116021,
+  "Nome Completo": "SIMONE MORAIS DOS SANTOS",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,52",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Limpeza Habitacional - Dificil Acesso",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711535
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f54"
+  },
+  "Id Contratado": 116316,
+  "Nome Completo": "GUILHERME MARINHO DOS SANTOS",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "5,57",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711531
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f55"
+  },
+  "Id Contratado": 116712,
+  "Nome Completo": "COSME COSTA FERREIRA DA SILVA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta - Catabagulho e Entulho",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711550
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f56"
+  },
+  "Id Contratado": 117235,
+  "Nome Completo": "GLEICE FERNANDES DA SILVA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 50% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "2,28",
+  "maoies": 2,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "11/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Papeleiras Higienização",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 48532681
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f57"
+  },
+  "Id Contratado": 117235,
+  "Nome Completo": "GLEICE FERNANDES DA SILVA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,15",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Papeleiras Higienização",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670518
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f58"
+  },
+  "Id Contratado": 118053,
+  "Nome Completo": "WELLINGTON PONTES FONSECA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,30",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711606
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f59"
+  },
+  "Id Contratado": 118054,
+  "Nome Completo": "PATRICIO AUGUSTO ARAUJO DA SILVA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,32",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Pintura de Meio-Fio e Remoção Faixas e Propagandas",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711598
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f5a"
+  },
+  "Id Contratado": 118641,
+  "Nome Completo": "MARCELO SILVA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,80",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Pintura de Meio-Fio e Remoção Faixas e Propagandas",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670527
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f5b"
+  },
+  "Id Contratado": 119125,
+  "Nome Completo": "PAULO CESAR PEREIRA DA SILVA",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,18",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Coleta Manual - Entulho e Materiais Diversos",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706709
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f5c"
+  },
+  "Id Contratado": 119679,
+  "Nome Completo": "GABRIEL JOSE DA SILVA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Pintura de Meio-Fio e Remoção Faixas e Propagandas",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670517
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f5d"
+  },
+  "Id Contratado": 119929,
+  "Nome Completo": "RONALDO RAIMUNDO DA SILVA",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670554
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f5e"
+  },
+  "Id Contratado": 121486,
+  "Nome Completo": "DIEGO AQUINO DOS SANTOS",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 50% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "2,50",
+  "maoies": 3,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "10/03/2023",
+  "Horário": "SEGUNDA A SABADO - 22:00 AS 05:25 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Lavagem - Feiras, Vias e Logradouros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 48898815
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f5f"
+  },
+  "Id Contratado": 122081,
+  "Nome Completo": "ELAINE SOUZA DAMACENO DE JESUS",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Campo Limpo",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,32",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Pintura de Meio-Fio e Remoção Faixas e Propagandas",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51711568
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f60"
+  },
+  "Id Contratado": 122409,
+  "Nome Completo": "JOSE DE OLIVEIRA COELHO",
+  "Cargo": "MOTORISTA CAMINHAO",
+  "Folha": "ECOSAMPA Operação Geral",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "6,22",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Lavagem - Feiras, Vias e Logradouros",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51706773
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f61"
+  },
+  "Id Contratado": 122834,
+  "Nome Completo": "JOSE CARLOS ALVES DOS SANTOS",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Pintura de Meio-Fio e Remoção Faixas e Propagandas",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670546
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f62"
+  },
+  "Id Contratado": 123084,
+  "Nome Completo": "ABEDIAS CERQUEIRA NETO",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,33",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670532
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f63"
+  },
+  "Id Contratado": 123091,
+  "Nome Completo": "FABIANA MONTENEGRO PIRES",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,32",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Capinação e Roçada de Vias",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670541
+},
+{
+  "_id": {
+    "$oid": "65e4eeff6f7957a8bc561f64"
+  },
+  "Id Contratado": 123096,
+  "Nome Completo": "LAYS FELIX DOS SANTOS",
+  "Cargo": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "Folha": "ECOSAMPA Santo Amaro",
+  "Evento de Ponto": "HORAS EXTRAS 100% - DIURNAS",
+  "Quantidade do Evento de Ponto Justificada": "7,32",
+  "maoies": 11,
+  "anos": 2023,
+  "Data do Dia (Data/Hora)": "20/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+  "Centro de Custo": "SCK - Pintura de Meio-Fio e Remoção Faixas e Propagandas",
+  "Id Resultado de Cálculo Ponto por Dia - Eventos": 51670548
+}]

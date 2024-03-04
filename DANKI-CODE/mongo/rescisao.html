@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ABSENTEISMO</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <link href="/cabecalho.css" rel="stylesheet">
+
+  <header class="cabecalho">
+    <a class="cabecalho_texto" href="/index.html"> Login </a>
+
+  </header>
+</head>
+
+<body>
+
+  <!-- <div class="tabelas">
+    <table class=" tabela">
+      <th>JAN </th>
+      <th>FEV </th>
+      <th>MAR </th>
+      <th>ABR </th>
+      <th>MAI </th>
+      <th>JUN </th>
+      <th>JUL </th>
+      <th>AGO </th>
+      <th>SET </th>
+      <th>OUT </th>
+      <th>NOV </th>
+      <th>DEZ </th>
+    </table>
+    <table class=" tabela">
+      <th>JAN </th>
+      <th>FEV </th>
+      <th>MAR </th>
+      <th>ABR </th>
+      <th>MAI </th>
+      <th>JUN </th>
+      <th>JUL </th>
+      <th>AGO </th>
+      <th>SET </th>
+      <th>OUT </th>
+      <th>NOV </th>
+      <th>DEZ </th>
+    </table>
+    <table class=" tabela">
+      <th>JAN </th>
+      <th>FEV </th>
+      <th>MAR </th>
+      <th>ABR </th>
+      <th>MAI </th>
+      <th>JUN </th>
+      <th>JUL </th>
+      <th>AGO </th>
+      <th>SET </th>
+      <th>OUT </th>
+      <th>NOV </th>
+      <th>DEZ </th>
+    </table>
+    <table class=" tabela">
+      <th>JAN </th>
+      <th>FEV </th>
+      <th>MAR </th>
+      <th>ABR </th>
+      <th>MAI </th>
+      <th>JUN </th>
+      <th>JUL </th>
+      <th>AGO </th>
+      <th>SET </th>
+      <th>OUT </th>
+      <th>NOV </th>
+      <th>DEZ </th>
+    </table> -->
+
+  </div>
+  <div class="dados" id="usuarios">
+
+  </div>
+
+  <script>
+    
+
+    var idade = 30;
+    var mensagem = `Minha idade é ${idade} anos.`; // Resultado: "Minha idade é 30 anos."
+    console.log(mensagem)
+
+
+    var Usuario = document.querySelector('#usuarios')
+
+    fetch('banco.json').then((response) => {
+      response.json().then((dados) => {
+        dados.map((usuario) => {
+          Usuario.innerHTML += ` <li>${usuario["Id Contratado"] } -${usuario["Nome Completo"] } - ${usuario.Cargo} - ${usuario["Folha"]} </li>`
+        })
+      })
+    })
+
+
+  </script>
+
+  <!-- <script src="/calculoGeral.js"> </script> -->
+</body>
+
+<footer class="rodape">
+
+  <p class="rodape_texto"> Desenvolvido por Antonio Neto</p>
+
+</footer>
+
+</html>
+
+<!-- // O avido precio so funiona no esmo amo // -->
+<!-- // O avido precio so funiona no esmo amo // -->
+<!-- // O avido precio so funiona no esmo amo // -->
+<!-- // O avido precio so funiona no esmo amo // -->
+<!-- // O avido precio so funiona no esmo amo // -->
+<!-- // O avido precio so funiona no esmo amo // -->
+<!-- // O avido precio so funiona no esmo amo // -->
+<!-- // O avido precio so funiona no esmo amo // -->
+<!-- // O avido precio so funiona no esmo amo // -->
+<!-- // O avido precio so funiona no esmo amo // -->
