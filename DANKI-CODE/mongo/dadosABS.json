@@ -1,0 +1,3167 @@
+[
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae012"
+  },
+  "MATRICULA": 112930,
+  "NOME": "DANIEL JACINTO DA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,30",
+  "Data": "14/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 08/12/2022 ao 14/12/2022",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae013"
+  },
+  "MATRICULA": 114106,
+  "NOME": "MARIA ISABEL DA SILVA NUNES",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "6,38",
+  "Data": "17/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 11/12/2022 ao 17/12/2022",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae014"
+  },
+  "MATRICULA": 112606,
+  "NOME": "EVANDRO ANTONIO DA CUNHA",
+  "CARGO": "COLETOR",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "24/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 18/12/2022 ao 24/12/2022",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae015"
+  },
+  "MATRICULA": 112494,
+  "NOME": "ERIVALDO PEREIRA DE GOUVEIA",
+  "CARGO": "BUEIRISTA",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "5,02",
+  "Data": "25/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 19/12/2022 ao 25/12/2022",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae016"
+  },
+  "MATRICULA": 112991,
+  "NOME": "JOAO CARLOS MARCONDES DE BRITO",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA M'Boi Mirim",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "25/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 19/12/2022 ao 25/12/2022",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae017"
+  },
+  "MATRICULA": 116011,
+  "NOME": "MOISES DE JESUS NASCIMENTO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,25",
+  "Data": "27/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 21/12/2022 ao 27/12/2022",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae018"
+  },
+  "MATRICULA": 113584,
+  "NOME": "EDUARDO AMAURI ALVES DA SILVA",
+  "CARGO": "BUEIRISTA",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,28",
+  "Data": "28/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 22/12/2022 ao 28/12/2022",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae019"
+  },
+  "MATRICULA": 113520,
+  "NOME": "RAFAEL THEODORO LEITE OLIVEIRA",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,07",
+  "Data": "28/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 22/12/2022 ao 28/12/2022",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae01a"
+  },
+  "MATRICULA": 114698,
+  "NOME": "ELISANGELA BARRETO OLIVEIRA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,30",
+  "Data": "30/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 24/12/2022 ao 30/12/2022",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae01b"
+  },
+  "MATRICULA": 114743,
+  "NOME": "MARCOS SANTOS DA ROCHA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,22",
+  "Data": "30/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 24/12/2022 ao 30/12/2022",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae01c"
+  },
+  "MATRICULA": 117241,
+  "NOME": "ROBSON NUNES MACARIO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA M'Boi Mirim",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "30/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 24/12/2022 ao 30/12/2022",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae01d"
+  },
+  "MATRICULA": 113355,
+  "NOME": "ANTONIO AIRTON BARBOSA ALEXANDRE",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "5,32",
+  "Data": "01/01/2023",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 26/12/2022 ao 01/01/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae01e"
+  },
+  "MATRICULA": 112781,
+  "NOME": "LUCIANO ALCIDES MOTA",
+  "CARGO": "BUEIRISTA",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "01/01/2023",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 26/12/2022 ao 01/01/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae01f"
+  },
+  "MATRICULA": 114751,
+  "NOME": "VALDEIR SILVA LEITAO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "5,20",
+  "Data": "01/01/2023",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 26/12/2022 ao 01/01/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae020"
+  },
+  "MATRICULA": 113519,
+  "NOME": "ISAQUIEL OLIMPIO BERNARDO",
+  "CARGO": "BUEIRISTA",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,17",
+  "Data": "02/01/2023",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 27/12/2022 ao 02/01/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae021"
+  },
+  "MATRICULA": 112812,
+  "NOME": "ALEXSANDRO NOGUEIRA DE SANTANA",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA M'Boi Mirim",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "6,70",
+  "Data": "08/01/2023",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 02/01/2023 ao 08/01/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae022"
+  },
+  "MATRICULA": 113752,
+  "NOME": "SHAYENNE RAIZA CARATIN ROCHA DA SILVA",
+  "CARGO": "AUXILIAR DE CONTROLE OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,23",
+  "Data": "08/01/2023",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 02/01/2023 ao 08/01/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae023"
+  },
+  "MATRICULA": 112686,
+  "NOME": "RUBENS ALVES DA ROCHA",
+  "CARGO": "COLETOR",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,27",
+  "Data": "12/01/2023",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 06/01/2023 ao 12/01/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae024"
+  },
+  "MATRICULA": 113490,
+  "NOME": "ANTONIO DE LIMA RIBEIRO",
+  "CARGO": "MECANICO II",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "5,63",
+  "Data": "14/01/2023",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 08/01/2023 ao 14/01/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae025"
+  },
+  "MATRICULA": 114743,
+  "NOME": "MARCOS SANTOS DA ROCHA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "6,25",
+  "Data": "15/01/2023",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 09/01/2023 ao 15/01/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae026"
+  },
+  "MATRICULA": 113760,
+  "NOME": "ANA PAULA STIGLIANI",
+  "CARGO": "AUXILIAR DE CONTROLE OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,03",
+  "Data": "18/01/2023",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 12/01/2023 ao 18/01/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae027"
+  },
+  "MATRICULA": 113932,
+  "NOME": "WILLIAN DOS SANTOS LOPES",
+  "CARGO": "TECNICO EM SEGURANCA DO TRABALHO JUNIOR",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": " QSMS ",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "6,60",
+  "Data": "29/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae028"
+  },
+  "MATRICULA": 113932,
+  "NOME": "WILLIAN DOS SANTOS LOPES",
+  "CARGO": "TECNICO EM SEGURANCA DO TRABALHO JUNIOR",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "QSMS",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "20/01/2023",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 14/01/2023 ao 20/01/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae029"
+  },
+  "MATRICULA": 114538,
+  "NOME": "FABIANO ANSALDI DOMINGOS",
+  "CARGO": "ENCARREGADO DE TURMA",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,60",
+  "Data": "26/12/2022",
+  "COMPETÊNCIA": "Janeiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "Horário": "SEGUNDA A SABADO - 21:00 AS 04:33 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae02a"
+  },
+  "MATRICULA": 112753,
+  "NOME": "FAUSTINO ARNALDO DE LANA",
+  "CARGO": "MECANICO II",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "INTERJORNADAS",
+  "Evento de Ponto": "HORAS INTERJORNADAS",
+  "Quantidade": "1,00",
+  "Data": "20/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 20/02/2023 ao 20/02/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae02b"
+  },
+  "MATRICULA": 119754,
+  "NOME": "ARYANNE OLIVEIRA REIS",
+  "CARGO": "MENOR/JOVEM APRENDIZ",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "DHO / RH",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,17",
+  "Data": "31/01/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 31/01/2023 ao 31/01/2023",
+  "Horário": "SEGUNDA A SEXTA - 08:00 AS 14:00"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae02c"
+  },
+  "MATRICULA": 119753,
+  "NOME": "TATTIANE ANDRADE RUFINO DOS SANTOS",
+  "CARGO": "MENOR/JOVEM APRENDIZ",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "DHO / RH",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,17",
+  "Data": "31/01/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 31/01/2023 ao 31/01/2023",
+  "Horário": "SEGUNDA A SEXTA - 08:00 AS 14:00"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae02d"
+  },
+  "MATRICULA": 113752,
+  "NOME": "SHAYENNE RAIZA CARATIN ROCHA DA SILVA",
+  "CARGO": "AUXILIAR DE CONTROLE OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,77",
+  "Data": "19/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 19/02/2023 ao 19/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae02e"
+  },
+  "MATRICULA": 119754,
+  "NOME": "ARYANNE OLIVEIRA REIS",
+  "CARGO": "MENOR/JOVEM APRENDIZ",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "DHO / RH",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,83",
+  "Data": "01/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 01/02/2023 ao 01/02/2023",
+  "Horário": "SEGUNDA A SEXTA - 08:00 AS 14:00"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae02f"
+  },
+  "MATRICULA": 112753,
+  "NOME": "FAUSTINO ARNALDO DE LANA",
+  "CARGO": "MECANICO II",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,63",
+  "Data": "19/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 19/02/2023 ao 19/02/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae030"
+  },
+  "MATRICULA": 117398,
+  "NOME": "FABIANA ARIANE TEIXEIRA DOS REIS",
+  "CARGO": "ANALISTA DE PLANEJAMENTO OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,30",
+  "Data": "01/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 01/02/2023 ao 01/02/2023",
+  "Horário": "SEGUNDA A SEXTA - 07:00 AS 16:48 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae031"
+  },
+  "MATRICULA": 112753,
+  "NOME": "FAUSTINO ARNALDO DE LANA",
+  "CARGO": "MECANICO II",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,28",
+  "Data": "29/01/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 29/01/2023 ao 29/01/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae032"
+  },
+  "MATRICULA": 117235,
+  "NOME": "GLEICE FERNANDES DA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 50% - DIURNAS",
+  "Quantidade": "2,28",
+  "Data": "11/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 11/02/2023 ao 11/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae033"
+  },
+  "MATRICULA": 113628,
+  "NOME": "JOSE CARLOS HENRIQUE DA SILVA",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 50% - NOTURNAS",
+  "Quantidade": "2,18",
+  "Data": "03/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 03/02/2023 ao 03/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae034"
+  },
+  "MATRICULA": 119753,
+  "NOME": "TATTIANE ANDRADE RUFINO DOS SANTOS",
+  "CARGO": "MENOR/JOVEM APRENDIZ",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "DHO / RH",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,68",
+  "Data": "01/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 01/02/2023 ao 01/02/2023",
+  "Horário": "SEGUNDA A SEXTA - 08:00 AS 14:00"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae035"
+  },
+  "MATRICULA": 119753,
+  "NOME": "TATTIANE ANDRADE RUFINO DOS SANTOS",
+  "CARGO": "MENOR/JOVEM APRENDIZ",
+  "REGIONAL": "ECOSAMPA Matriz",
+  "DEPARTAMENTO": "DHO / RH",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,87",
+  "Data": "07/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 07/02/2023 ao 07/02/2023",
+  "Horário": "SEGUNDA A SEXTA - 08:00 AS 14:00"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae036"
+  },
+  "MATRICULA": 113760,
+  "NOME": "ANA PAULA STIGLIANI",
+  "CARGO": "AUXILIAR DE CONTROLE OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,10",
+  "Data": "01/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 26/01/2023 ao 01/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae037"
+  },
+  "MATRICULA": 118646,
+  "NOME": "ANDRE LUIZ DELMIRO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "05/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 30/01/2023 ao 05/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae038"
+  },
+  "MATRICULA": 113549,
+  "NOME": "ANTONIO LIMA DE LACERDA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "0,22",
+  "Data": "19/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 13/02/2023 ao 19/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae039"
+  },
+  "MATRICULA": 113701,
+  "NOME": "ARTUR DE ARRUDA RODRIGUES",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,45",
+  "Data": "20/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 14/02/2023 ao 20/02/2023",
+  "Horário": "SEGUNDA A SABADO - 05:20 AS 13:40/ INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae03a"
+  },
+  "MATRICULA": 113678,
+  "NOME": "AURELINO DE ALMEIDA SANTOS",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,35",
+  "Data": "01/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 26/01/2023 ao 01/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae03b"
+  },
+  "MATRICULA": 116008,
+  "NOME": "CARLOS APARIZ BARBOSA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "31/01/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 25/01/2023 ao 31/01/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae03c"
+  },
+  "MATRICULA": 113769,
+  "NOME": "CRISTIANO APARECIDO VIEIRA LUZ",
+  "CARGO": "ASSISTENTE DE ALMOXARIFADO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "SUPRIMENTOS",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "3,77",
+  "Data": "12/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 06/02/2023 ao 12/02/2023",
+  "Horário": "SEGUNDA A SABADO - 08:40 AS 17:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae03d"
+  },
+  "MATRICULA": 113619,
+  "NOME": "EDVALDO ROCHA DE LIMA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "5,80",
+  "Data": "17/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 11/02/2023 ao 17/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae03e"
+  },
+  "MATRICULA": 114698,
+  "NOME": "ELISANGELA BARRETO OLIVEIRA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "0,20",
+  "Data": "19/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 13/02/2023 ao 19/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae03f"
+  },
+  "MATRICULA": 113181,
+  "NOME": "GEORGE DOS SANTOS BARBOSA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,27",
+  "Data": "30/01/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 24/01/2023 ao 30/01/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae040"
+  },
+  "MATRICULA": 116010,
+  "NOME": "JACIRA DA SILVA ALBANO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "5,95",
+  "Data": "29/01/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 23/01/2023 ao 29/01/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae041"
+  },
+  "MATRICULA": 112451,
+  "NOME": "JEFFERSON SANTOS FERRAZ",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,35",
+  "Data": "13/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 07/02/2023 ao 13/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae042"
+  },
+  "MATRICULA": 112341,
+  "NOME": "JOAO BATISTA DOS SANTOS",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,32",
+  "Data": "16/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 10/02/2023 ao 16/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae043"
+  },
+  "MATRICULA": 112991,
+  "NOME": "JOAO CARLOS MARCONDES DE BRITO",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA M'Boi Mirim",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "29/01/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 23/01/2023 ao 29/01/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae044"
+  },
+  "MATRICULA": 113651,
+  "NOME": "JOSE ANTONIO DA SILVA",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "1,07",
+  "Data": "19/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 13/02/2023 ao 19/02/2023",
+  "Horário": "SEGUNDA A SABADO - 22:00 AS 05:25 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae045"
+  },
+  "MATRICULA": 114110,
+  "NOME": "JOSE RIBEIRO DE MOURA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,27",
+  "Data": "14/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 08/02/2023 ao 14/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae046"
+  },
+  "MATRICULA": 112542,
+  "NOME": "KLEBER JOSE OLIVEIRA DA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "05/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 30/01/2023 ao 05/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae047"
+  },
+  "MATRICULA": 121317,
+  "NOME": "LUCIANO RODRIGUES DE SOUZA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "16/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 10/02/2023 ao 16/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae048"
+  },
+  "MATRICULA": 112975,
+  "NOME": "LUIZ ANTONIO DO AMARANTE SOUSA",
+  "CARGO": "ENCARREGADO DE TRAFEGO II",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,47",
+  "Data": "19/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 13/02/2023 ao 19/02/2023",
+  "Horário": "SEGUNDA A SABADO - 05:20 AS 13:40/ INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae049"
+  },
+  "MATRICULA": 115220,
+  "NOME": "MARCELO ROBERTO DE OLIVEIRA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "6,98",
+  "Data": "18/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 12/02/2023 ao 18/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae04a"
+  },
+  "MATRICULA": 113337,
+  "NOME": "MARCOS SANTOS DA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "19/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 13/02/2023 ao 19/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae04b"
+  },
+  "MATRICULA": 113783,
+  "NOME": "MARIA APARECIDA NOBRE CAVALCANTE",
+  "CARGO": "AUXILIAR DE CONTROLE OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,23",
+  "Data": "09/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 03/02/2023 ao 09/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae04c"
+  },
+  "MATRICULA": 112802,
+  "NOME": "NILTON PASSOS DOS SANTOS",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,35",
+  "Data": "16/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 10/02/2023 ao 16/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae04d"
+  },
+  "MATRICULA": 113365,
+  "NOME": "PAULO ROBERTO DA SILVA",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,17",
+  "Data": "01/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 26/01/2023 ao 01/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:00 AS 21:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae04e"
+  },
+  "MATRICULA": 114734,
+  "NOME": "RENATO MARQUES DE SOUSA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "01/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 26/01/2023 ao 01/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae04f"
+  },
+  "MATRICULA": 112454,
+  "NOME": "SANDRO PEREIRA DOS SANTOS",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "12/02/2023",
+  "COMPETÊNCIA": "fevereiro/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 06/02/2023 ao 12/02/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae050"
+  },
+  "MATRICULA": 112812,
+  "NOME": "ALEXSANDRO NOGUEIRA DE SANTANA",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA M'Boi Mirim",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "6,25",
+  "Data": "26/02/2023",
+  "COMPETÊNCIA": "março/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 20/02/2023 ao 26/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae051"
+  },
+  "MATRICULA": 112766,
+  "NOME": "FERNANDO ALVES DE SOUSA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "13/03/2023",
+  "COMPETÊNCIA": "março/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 07/03/2023 ao 13/03/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae052"
+  },
+  "MATRICULA": 113111,
+  "NOME": "GABRIEL SANTOS QUARESMA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,12",
+  "Data": "25/02/2023",
+  "COMPETÊNCIA": "março/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 19/02/2023 ao 25/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae053"
+  },
+  "MATRICULA": 112208,
+  "NOME": "JOAO EVANGELISTA VIERA DO NASCIMENTO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "4,87",
+  "Data": "04/03/2023",
+  "COMPETÊNCIA": "março/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 26/02/2023 ao 04/03/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae054"
+  },
+  "MATRICULA": 112611,
+  "NOME": "LEANDRO JOSE CORREIA DA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,28",
+  "Data": "25/02/2023",
+  "COMPETÊNCIA": "março/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 19/02/2023 ao 25/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae055"
+  },
+  "MATRICULA": 113095,
+  "NOME": "MANACES ALVES CORREIA",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "05/03/2023",
+  "COMPETÊNCIA": "março/2023",
+  "DIA_SEM_FOLGA": " 7,00 ",
+  "PERÍODO": "Do dia 27/02/2023 ao 05/03/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae056"
+  },
+  "MATRICULA": 112400,
+  "NOME": "EMERSON ARAUJO PEDROSO",
+  "CARGO": "AUXILIAR DE CONTROLE OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,67",
+  "Data": "26/02/2023",
+  "COMPETÊNCIA": "março/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "26/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae057"
+  },
+  "MATRICULA": 113441,
+  "NOME": "HENRIQUE DOS SANTOS LANA",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 50% - DIURNAS",
+  "Quantidade": "2,52",
+  "Data": "20/03/2023",
+  "COMPETÊNCIA": "março/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "20/03/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae058"
+  },
+  "MATRICULA": 121486,
+  "NOME": "DIEGO AQUINO DOS SANTOS",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 50% - DIURNAS",
+  "Quantidade": "2,50",
+  "Data": "10/03/2023",
+  "COMPETÊNCIA": "março/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "10/03/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae059"
+  },
+  "MATRICULA": 113753,
+  "NOME": "RODRIGO ALVES DA SILVA",
+  "CARGO": "ANALISTA DE PLANEJAMENTO OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,13",
+  "Data": "15/03/2023",
+  "COMPETÊNCIA": "março/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "15/03/2023",
+  "Horário": "SEG A SEX - 09:30 AS 19:18/ INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae05a"
+  },
+  "MATRICULA": 112376,
+  "NOME": "WILTON SOUSA SILVA",
+  "CARGO": "LAVADOR",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "INTERJORNADAS",
+  "Evento de Ponto": "HORAS INTERJORNADAS",
+  "Quantidade": "1,00",
+  "Data": "25/02/2023",
+  "COMPETÊNCIA": "março/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "25/02/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae05b"
+  },
+  "MATRICULA": 112341,
+  "NOME": "JOAO BATISTA DOS SANTOS",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "01/04/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 12,
+  "PERÍODO": "Do dia 21/03/2023 ao 01/04/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae05c"
+  },
+  "MATRICULA": 112628,
+  "NOME": "WILLIAN CARDOSO DA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,32",
+  "Data": "01/04/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 9,
+  "PERÍODO": "Do dia 24/03/2023 ao 01/04/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae05d"
+  },
+  "MATRICULA": 112682,
+  "NOME": "LEONDINEI VAZ",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,30",
+  "Data": "01/04/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 13,
+  "PERÍODO": "Do dia 20/03/2023 ao 01/04/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae05e"
+  },
+  "MATRICULA": 112744,
+  "NOME": "NELSON ROBERTO RIBEIRO DA SILVA",
+  "CARGO": "BUEIRISTA",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,15",
+  "Data": "06/04/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 11,
+  "PERÍODO": "Do dia 27/03/2023 ao 06/04/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae05f"
+  },
+  "MATRICULA": 112812,
+  "NOME": "ALEXSANDRO NOGUEIRA DE SANTANA",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA M'Boi Mirim",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,35",
+  "Data": "20/04/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 11,
+  "PERÍODO": "Do dia 10/04/2023 ao 20/04/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae060"
+  },
+  "MATRICULA": 112896,
+  "NOME": "WILLIAM DIAS DA SILVA",
+  "CARGO": "COLETOR",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,52",
+  "Data": "13/04/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 9,
+  "PERÍODO": "Do dia 05/04/2023 ao 13/04/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae061"
+  },
+  "MATRICULA": 113339,
+  "NOME": "JORGE ANTONIO PEREIRA DOS REIS",
+  "CARGO": "MECANICO II",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "3,45",
+  "Data": "06/04/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 11,
+  "PERÍODO": "Do dia 27/03/2023 ao 06/04/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae062"
+  },
+  "MATRICULA": 113474,
+  "NOME": "IDENILSON PAURA RIBEIRO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,20",
+  "Data": "24/03/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 18/03/2023 ao 24/03/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae063"
+  },
+  "MATRICULA": 113619,
+  "NOME": "EDVALDO ROCHA DE LIMA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "01/04/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 8,
+  "PERÍODO": "Do dia 25/03/2023 ao 01/04/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae064"
+  },
+  "MATRICULA": 114031,
+  "NOME": "RICARDO APARECIDO DA CONCEICAO",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "15/04/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 09/04/2023 ao 15/04/2023",
+  "Horário": "SEGUNDA A SABADO - 09:00 AS 17:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae065"
+  },
+  "MATRICULA": 114110,
+  "NOME": "JOSE RIBEIRO DE MOURA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,28",
+  "Data": "01/04/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 12,
+  "PERÍODO": "Do dia 21/03/2023 ao 01/04/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae066"
+  },
+  "MATRICULA": 116024,
+  "NOME": "LEANDRO SOARES DA CRUZ",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "06/04/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 10,
+  "PERÍODO": "Do dia 28/03/2023 ao 06/04/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae067"
+  },
+  "MATRICULA": 112341,
+  "NOME": "JOAO BATISTA DOS SANTOS",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "INTERJORNADAS",
+  "Evento de Ponto": "HORAS INTERJORNADAS",
+  "Quantidade": "1,00",
+  "Data": "25/03/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 25/03/2023 ao 25/03/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae068"
+  },
+  "MATRICULA": 112341,
+  "NOME": "JOAO BATISTA DOS SANTOS",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "INTERJORNADAS",
+  "Evento de Ponto": "HORAS INTERJORNADAS",
+  "Quantidade": "1,00",
+  "Data": "27/03/2023",
+  "COMPETÊNCIA": "abril/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 27/03/2023 ao 27/03/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae069"
+  },
+  "MATRICULA": 113355,
+  "NOME": "ANTONIO AIRTON BARBOSA ALEXANDRE",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "15/05/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 8,
+  "PERÍODO": "Do dia 08/05/2023 ao 15/05/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae06a"
+  },
+  "MATRICULA": 116008,
+  "NOME": "CARLOS APARIZ BARBOSA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "18/05/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 10,
+  "PERÍODO": "Do dia 09/05/2023 ao 18/05/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae06b"
+  },
+  "MATRICULA": 113447,
+  "NOME": "EDIVAN MOURA DOS SANTOS",
+  "CARGO": "TECNICO EM SEGURANCA DO TRABALHO PLENO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "QSMS",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "12/05/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 06/05/2023 ao 12/05/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae06c"
+  },
+  "MATRICULA": 113592,
+  "NOME": "EDUARDO LOPES DA COSTA",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "30/04/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 24/04/2023 ao 30/04/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae06d"
+  },
+  "MATRICULA": 114698,
+  "NOME": "ELISANGELA BARRETO OLIVEIRA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,37",
+  "Data": "19/05/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 8,
+  "PERÍODO": "Do dia 12/05/2023 ao 19/05/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae06e"
+  },
+  "MATRICULA": 113077,
+  "NOME": "JEAN DE LIMA GOMES",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "13/05/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 07/05/2023 ao 13/05/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae06f"
+  },
+  "MATRICULA": 119111,
+  "NOME": "JOSE AUGUSTO DOS SANTOS",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,32",
+  "Data": "12/05/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 10,
+  "PERÍODO": "Do dia 03/05/2023 ao 12/05/2023",
+  "Horário": "SEGUNDA A SABADO - 05:20 AS 13:40/ INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae070"
+  },
+  "MATRICULA": 113655,
+  "NOME": "JOSE JEDSON NICACIO DOS SANTOS",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,22",
+  "Data": "27/04/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 21/04/2023 ao 27/04/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae071"
+  },
+  "MATRICULA": 112276,
+  "NOME": "JOSE VENILSON DE PAULA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,12",
+  "Data": "16/05/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 10/05/2023 ao 16/05/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae072"
+  },
+  "MATRICULA": 112975,
+  "NOME": "LUIZ ANTONIO DO AMARANTE SOUSA",
+  "CARGO": "ENCARREGADO DE TRAFEGO II",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,43",
+  "Data": "13/05/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 12,
+  "PERÍODO": "Do dia 02/05/2023 ao 13/05/2023",
+  "Horário": "SEGUNDA A SABADO - 05:20 AS 13:40/ INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae073"
+  },
+  "MATRICULA": 119631,
+  "NOME": "SEVERINO MARCILIO DA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA M'Boi Mirim",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "24/04/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 18/04/2023 ao 24/04/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae074"
+  },
+  "MATRICULA": 112975,
+  "NOME": "LUIZ ANTONIO DO AMARANTE SOUSA",
+  "CARGO": "ENCARREGADO DE TRAFEGO II",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "INTERJORNADAS",
+  "Evento de Ponto": "HORAS INTERJORNADAS",
+  "Quantidade": "1,00",
+  "Data": "08/05/2023",
+  "COMPETÊNCIA": "maio/2023",
+  "DIA_SEM_FOLGA": 1,
+  "PERÍODO": "Do dia 08/05/2023 ao 08/05/2023",
+  "Horário": "SEGUNDA A SABADO - 05:20 AS 13:40/ INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae075"
+  },
+  "MATRICULA": 113760,
+  "NOME": "ANA PAULA STIGLIANI",
+  "CARGO": "AUXILIAR DE PLANEJAMENTO OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,22",
+  "Data": "21/05/2023",
+  "COMPETÊNCIA": "junho/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "21/05/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae076"
+  },
+  "MATRICULA": 115447,
+  "NOME": "NELSON NASCIMENTO DE OLIVEIRA JUNIOR",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA M'Boi Mirim",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,10",
+  "Data": "02/06/2023",
+  "COMPETÊNCIA": "junho/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "02/06/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae077"
+  },
+  "MATRICULA": 121690,
+  "NOME": "MAURICIO ALVES SOUZA",
+  "CARGO": "AUXILIAR ADMINISTRATIVO",
+  "REGIONAL": "ECOSAMPA Administração",
+  "DEPARTAMENTO": "ADMINISTRAÇÃO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,07",
+  "Data": "26/05/2023",
+  "COMPETÊNCIA": "junho/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "26/05/2023",
+  "Horário": "SEGUNDA A SEXTA - 07:00 AS 16:48 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae078"
+  },
+  "MATRICULA": 112461,
+  "NOME": "SERGIO LOPES FERREIRA",
+  "CARGO": "BUEIRISTA",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,32",
+  "Data": "19/06/2023",
+  "COMPETÊNCIA": "junho/2023",
+  "DIA_SEM_FOLGA": 8,
+  "PERÍODO": "Do dia 12/06/2023 ao 19/06/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae079"
+  },
+  "MATRICULA": 112558,
+  "NOME": "LEANDRO BARROSO DA SILVA",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "27/05/2023",
+  "COMPETÊNCIA": "junho/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 21/05/2023 ao 27/05/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae07a"
+  },
+  "MATRICULA": 112686,
+  "NOME": "RUBENS ALVES DA ROCHA",
+  "CARGO": "COLETOR",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "5,25",
+  "Data": "28/05/2023",
+  "COMPETÊNCIA": "junho/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 22/05/2023 ao 28/05/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae07b"
+  },
+  "MATRICULA": 112975,
+  "NOME": "LUIZ ANTONIO DO AMARANTE SOUSA",
+  "CARGO": "ENCARREGADO DE TRAFEGO II",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "18/06/2023",
+  "COMPETÊNCIA": "junho/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 12/06/2023 ao 18/06/2023",
+  "Horário": "SEGUNDA A SABADO - 05:20 AS 13:40/ INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae07c"
+  },
+  "MATRICULA": 114031,
+  "NOME": "RICARDO APARECIDO DA CONCEICAO",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "8,10",
+  "Data": "28/05/2023",
+  "COMPETÊNCIA": "junho/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 22/05/2023 ao 28/05/2023",
+  "Horário": "SEGUNDA A SABADO - 09:00 AS 17:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae07d"
+  },
+  "MATRICULA": 121322,
+  "NOME": "IAGO HENRIQUE PEREIRA OLIVEIRA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS NOTURNAS",
+  "Quantidade": "6,00",
+  "Data": "05/06/2023",
+  "COMPETÊNCIA": "junho/2023",
+  "DIA_SEM_FOLGA": 8,
+  "PERÍODO": "Do dia 29/05/2023 ao 05/06/2023",
+  "Horário": "SEGUNDA A SABADO - 22:00 AS 05:25 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae07e"
+  },
+  "MATRICULA": 122085,
+  "NOME": "EDUARDO FELIX DA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,30",
+  "Data": "17/06/2023",
+  "COMPETÊNCIA": "junho/2023",
+  "DIA_SEM_FOLGA": 8,
+  "PERÍODO": "Do dia 10/06/2023 ao 17/06/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae07f"
+  },
+  "MATRICULA": 113783,
+  "NOME": "MARIA APARECIDA NOBRE CAVALCANTE",
+  "CARGO": "AUXILIAR DE PLANEJAMENTO OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,23",
+  "Data": "12/07/2023",
+  "COMPETÊNCIA": "julho/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "12/07/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae080"
+  },
+  "MATRICULA": 117398,
+  "NOME": "FABIANA ARIANE TEIXEIRA DOS REIS",
+  "CARGO": "ANALISTA DE PLANEJAMENTO OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,20",
+  "Data": "22/06/2023",
+  "COMPETÊNCIA": "julho/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "22/06/2023",
+  "Horário": "SEGUNDA A SEXTA - 07:00 AS 16:48 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae081"
+  },
+  "MATRICULA": 112598,
+  "NOME": "EVALDO MOREIRA SANTOS",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 50% - DIURNAS",
+  "Quantidade": "2,08",
+  "Data": "18/07/2023",
+  "COMPETÊNCIA": "julho/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "18/07/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae082"
+  },
+  "MATRICULA": 113714,
+  "NOME": "FILIPE NASCIMENTO DE PAULA",
+  "CARGO": "ASSISTENTE ADMINISTRATIVO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,05",
+  "Data": "28/06/2023",
+  "COMPETÊNCIA": "julho/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "28/06/2023",
+  "Horário": "SEG A SEX - 08:00 AS 17:00 - INTERVALO DE 01 HORA / SAB - 08:00 AS 12:00"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae083"
+  },
+  "MATRICULA": 121857,
+  "NOME": "BRUNO HENRIQUE DE SOUZA E SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS NOTURNAS",
+  "Quantidade": "5,60",
+  "Data": "08/07/2023",
+  "COMPETÊNCIA": "julho/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 02/07/2023 ao 08/07/2023",
+  "Horário": "SEGUNDA A SABADO - 21:00 AS 04:33 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae084"
+  },
+  "MATRICULA": 112414,
+  "NOME": "ROGERIO DE AQUINO SILVA",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,32",
+  "Data": "15/08/2023",
+  "COMPETÊNCIA": "Agosto/2023",
+  "DIA_SEM_FOLGA": 13,
+  "PERÍODO": "Do dia 03/08/2023 ao 15/08/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae085"
+  },
+  "MATRICULA": 113666,
+  "NOME": "APARECIDO PEDRO DA SILVA",
+  "CARGO": "ENCARREGADO DE MANUTENCAO OFICINA",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "3,20",
+  "Data": "22/08/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "22/08/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae086"
+  },
+  "MATRICULA": 113482,
+  "NOME": "ANTONIO DA CONCEICAO SANTOS",
+  "CARGO": "ELETRICISTA",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,78",
+  "Data": "22/08/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "22/08/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae087"
+  },
+  "MATRICULA": 114538,
+  "NOME": "FABIANO ANSALDI DOMINGOS",
+  "CARGO": "ENCARREGADO DE TURMA",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,52",
+  "Data": "07/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "07/09/2023",
+  "Horário": "SEGUNDA A SABADO - 21:00 AS 04:33 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae088"
+  },
+  "MATRICULA": 113134,
+  "NOME": "JOSE ANTONIO DOS SANTOS",
+  "CARGO": "COLETOR",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 100% - NOTURNAS",
+  "Quantidade": "2,37",
+  "Data": "16/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "16/09/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae089"
+  },
+  "MATRICULA": 113633,
+  "NOME": "JOSE NILTON BASTOS DE OLIVEIRA",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 100% - NOTURNAS",
+  "Quantidade": "2,12",
+  "Data": "16/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "16/09/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae08a"
+  },
+  "MATRICULA": 113155,
+  "NOME": "MANOEL OLIVEIRA NETO",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 100% - NOTURNAS",
+  "Quantidade": "2,12",
+  "Data": "16/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "16/09/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae08b"
+  },
+  "MATRICULA": 113577,
+  "NOME": "REGINALDO ASSUMPCAO GARCIA",
+  "CARGO": "COLETOR",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 100% - NOTURNAS",
+  "Quantidade": "2,08",
+  "Data": "16/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "16/09/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae08c"
+  },
+  "MATRICULA": 114943,
+  "NOME": "WAGNER VARGENS DE ALMEIDA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 100% - NOTURNAS",
+  "Quantidade": "2,02",
+  "Data": "16/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "16/09/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae08d"
+  },
+  "MATRICULA": 112349,
+  "NOME": "JOAO PAULO VIEIRA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "07/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 01/09/2023 ao 07/09/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae08e"
+  },
+  "MATRICULA": 112352,
+  "NOME": "JOSE CARLOS ROQUE DA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "07/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 01/09/2023 ao 07/09/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae08f"
+  },
+  "MATRICULA": 112505,
+  "NOME": "JOSE CARLOS SILVA DOS SANTOS",
+  "CARGO": "BUEIRISTA",
+  "REGIONAL": "ECOSAMPA Parelheiros",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "16/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 9,
+  "PERÍODO": "Do dia 08/09/2023 ao 16/09/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae090"
+  },
+  "MATRICULA": 112548,
+  "NOME": "CICERO LUIZ DA SILVA",
+  "CARGO": "BUEIRISTA",
+  "REGIONAL": "ECOSAMPA Parelheiros",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,35",
+  "Data": "06/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 9,
+  "PERÍODO": "Do dia 29/08/2023 ao 06/09/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae091"
+  },
+  "MATRICULA": 112626,
+  "NOME": "WILLIAM LIMA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "16/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 8,
+  "PERÍODO": "Do dia 09/09/2023 ao 16/09/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae092"
+  },
+  "MATRICULA": 114538,
+  "NOME": "FABIANO ANSALDI DOMINGOS",
+  "CARGO": "ENCARREGADO DE TURMA",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "12/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 06/09/2023 ao 12/09/2023",
+  "Horário": "SEGUNDA A SABADO - 21:00 AS 04:33 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae093"
+  },
+  "MATRICULA": 115220,
+  "NOME": "MARCELO ROBERTO DE OLIVEIRA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "07/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 01/09/2023 ao 07/09/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae094"
+  },
+  "MATRICULA": 117239,
+  "NOME": "JOAO VITOR GOMES RIBEIRO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "07/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 01/09/2023 ao 07/09/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae095"
+  },
+  "MATRICULA": 117244,
+  "NOME": "JOSE DE ASSIS DA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "07/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 01/09/2023 ao 07/09/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae096"
+  },
+  "MATRICULA": 121326,
+  "NOME": "JEFERSON DE JESUS DA SILVA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Parelheiros",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "5,62",
+  "Data": "16/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 9,
+  "PERÍODO": "Do dia 08/09/2023 ao 16/09/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae097"
+  },
+  "MATRICULA": 122247,
+  "NOME": "PAULO DE OLIVEIRA SOUZA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS NOTURNAS",
+  "Quantidade": "5,48",
+  "Data": "08/09/2023",
+  "COMPETÊNCIA": "setembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 02/09/2023 ao 08/09/2023",
+  "Horário": "SEGUNDA A SABADO - 21:00 AS 04:33 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae098"
+  },
+  "MATRICULA": 117410,
+  "NOME": "ALEXANDRE GEAN DA SILVA SANTOS",
+  "CARGO": "AUXILIAR DE ALMOXARIFADO PLENO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "SUPRIMENTOS",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,30",
+  "Data": "29/09/2023",
+  "COMPETÊNCIA": "Outubro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "29/09/2023",
+  "Horário": "SEGUNDA A SABADO - 05:00 AS 13:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae099"
+  },
+  "MATRICULA": 113776,
+  "NOME": "ERIVALDO TIBURCIO DE MELO",
+  "CARGO": "MECANICO III",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,22",
+  "Data": "20/10/2023",
+  "COMPETÊNCIA": "Outubro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "20/10/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae09a"
+  },
+  "MATRICULA": 113449,
+  "NOME": "PEDRO HELI DE CASTRO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "INTERJORNADAS",
+  "Evento de Ponto": "HORAS INTERJORNADAS",
+  "Quantidade": "1,00",
+  "Data": "17/10/2023",
+  "COMPETÊNCIA": "Outubro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "17/10/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae09b"
+  },
+  "MATRICULA": 113618,
+  "NOME": "JOSE APARECIDO BARBOSA DE SOUZA",
+  "CARGO": "OPERADOR DE PA CARREGADEIRA",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "INTERJORNADAS",
+  "Evento de Ponto": "HORAS INTERJORNADAS",
+  "Quantidade": "2,00",
+  "Data": "12/10/2023",
+  "COMPETÊNCIA": "Outubro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "12/10/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae09c"
+  },
+  "MATRICULA": 112975,
+  "NOME": "LUIZ ANTONIO DO AMARANTE SOUSA",
+  "CARGO": "ENCARREGADO DE TRAFEGO II",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "01/10/2023",
+  "COMPETÊNCIA": "Outubro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 25/09/2023 ao 01/10/2023",
+  "Horário": "SEGUNDA A SABADO - 05:20 AS 13:40/ INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae09d"
+  },
+  "MATRICULA": 113064,
+  "NOME": "FRANCISNALDO DA SILVA NEPOMUCENO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS NOTURNAS",
+  "Quantidade": "5,97",
+  "Data": "14/10/2023",
+  "COMPETÊNCIA": "Outubro/2023",
+  "DIA_SEM_FOLGA": 9,
+  "PERÍODO": "Do dia 06/10/2023 ao 14/10/2023",
+  "Horário": "SEGUNDA A SABADO - 22:00 AS 05:25 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae09e"
+  },
+  "MATRICULA": 118053,
+  "NOME": "WELLINGTON PONTES FONSECA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,27",
+  "Data": "07/10/2023",
+  "COMPETÊNCIA": "Outubro/2023",
+  "DIA_SEM_FOLGA": 9,
+  "PERÍODO": "Do dia 29/09/2023 ao 07/10/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae09f"
+  },
+  "MATRICULA": 119678,
+  "NOME": "WESLEY LUCAS AGUIAR DOS ANJOS",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA M'Boi Mirim",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "6,68",
+  "Data": "19/10/2023",
+  "COMPETÊNCIA": "Outubro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 13/10/2023 ao 19/10/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0a0"
+  },
+  "MATRICULA": 121323,
+  "NOME": "IGOR RENATO SOARES MARTINS",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS NOTURNAS",
+  "Quantidade": "5,98",
+  "Data": "30/09/2023",
+  "COMPETÊNCIA": "Outubro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 24/09/2023 ao 30/09/2023",
+  "Horário": "SEGUNDA A SABADO - 22:00 AS 05:25 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0a1"
+  },
+  "MATRICULA": 112733,
+  "NOME": "TIAGO MACHADO CARDOZO",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 50% - NOTURNAS",
+  "Quantidade": "2,05",
+  "Data": "18/11/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "18/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0a2"
+  },
+  "MATRICULA": 113775,
+  "NOME": "DANIEL ALEXANDRE DA COSTA MARQUES",
+  "CARGO": "MECANICO III",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,07",
+  "Data": "10/11/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "10/11/2023",
+  "Horário": "SEGUNDA A SABADO - 22:00 AS 05:25 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0a3"
+  },
+  "MATRICULA": 119742,
+  "NOME": "MARIANA OLIVEIRA",
+  "CARGO": "AGENTE AMBIENTAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,07",
+  "Data": "24/10/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "24/10/2023",
+  "Horário": "SEGUNDA A SABADO - 08:30 AS 16:50 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0a4"
+  },
+  "MATRICULA": 114239,
+  "NOME": "ADINALDO MORAIS",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Parelheiros",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "11/11/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 9,
+  "PERÍODO": "Do dia 03/11/2023 ao 11/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0a5"
+  },
+  "MATRICULA": 113760,
+  "NOME": "ANA PAULA STIGLIANI",
+  "CARGO": "AUXILIAR DE PLANEJAMENTO OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,00",
+  "Data": "27/10/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 21/10/2023 ao 27/10/2023",
+  "Horário": "SEGUNDA A SABADO - 09:00 AS 17:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0a6"
+  },
+  "MATRICULA": 113491,
+  "NOME": "EDMILSON BATISTA DO NASCIMENTO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Parelheiros",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "10/11/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 8,
+  "PERÍODO": "Do dia 03/11/2023 ao 10/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0a7"
+  },
+  "MATRICULA": 112643,
+  "NOME": "FABIANO LANDIM DA ROCHA",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Parelheiros",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "09/11/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 03/11/2023 ao 09/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0a8"
+  },
+  "MATRICULA": 112724,
+  "NOME": "FABIO PEREIRA BARROS",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Parelheiros",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,37",
+  "Data": "01/11/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 10,
+  "PERÍODO": "Do dia 23/10/2023 ao 01/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0a9"
+  },
+  "MATRICULA": 121689,
+  "NOME": "ITALO FERNANDO SILVA COSTA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Parelheiros",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "15/11/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 09/11/2023 ao 15/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0aa"
+  },
+  "MATRICULA": 112967,
+  "NOME": "IZAIAS VIEIRA COSTA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Parelheiros",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,27",
+  "Data": "09/11/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 03/11/2023 ao 09/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0ab"
+  },
+  "MATRICULA": 121685,
+  "NOME": "JARSON BENTES LUCENA DOS SANTOS",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "28/10/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 22/10/2023 ao 28/10/2023",
+  "Horário": "SEGUNDA A SABADO - 21:00 AS 04:33 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0ac"
+  },
+  "MATRICULA": 114774,
+  "NOME": "ODAIR DA SILVA HESSEL",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Parelheiros",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "15/11/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 09/11/2023 ao 15/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0ad"
+  },
+  "MATRICULA": 114259,
+  "NOME": "REGINALDO DE OLIVEIRA COUTO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Parelheiros",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "11/11/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 9,
+  "PERÍODO": "Do dia 03/11/2023 ao 11/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0ae"
+  },
+  "MATRICULA": 112618,
+  "NOME": "WILLIAN ANDRADE LEAL",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,35",
+  "Data": "11/11/2023",
+  "COMPETÊNCIA": "Novembro/2023",
+  "DIA_SEM_FOLGA": 9,
+  "PERÍODO": "Do dia 03/11/2023 ao 11/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0af"
+  },
+  "MATRICULA": 113763,
+  "NOME": "BILLY JOE ZAKARIAN",
+  "CARGO": "ENCARREGADO DE TRAFEGO II",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "3,42",
+  "Data": "28/11/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "28/11/2023",
+  "Horário": "SEGUNDA A SABADO - 21:00 AS 04:33 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0b0"
+  },
+  "MATRICULA": 118993,
+  "NOME": "MARCOS MARCIO ROCHA SANTOS",
+  "CARGO": "SOLDADOR",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,42",
+  "Data": "09/12/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "09/12/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0b1"
+  },
+  "MATRICULA": 120180,
+  "NOME": "JOSE LUCAS ALVES DE OLIVEIRA",
+  "CARGO": "ELETRICISTA",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "MECANICA",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,33",
+  "Data": "09/12/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "09/12/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0b2"
+  },
+  "MATRICULA": 122028,
+  "NOME": "BRUNNA FARIAS SANT ANA",
+  "CARGO": "AGENTE AMBIENTAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,25",
+  "Data": "23/11/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "23/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0b3"
+  },
+  "MATRICULA": 122028,
+  "NOME": "BRUNNA FARIAS SANT ANA",
+  "CARGO": "AGENTE AMBIENTAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,02",
+  "Data": "25/11/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "25/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0b4"
+  },
+  "MATRICULA": 122030,
+  "NOME": "SABRINA FIGUEIREDO DE SOUSA",
+  "CARGO": "AUXILIAR DE CONTROLE OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "CREDITO BANCO DE HORAS",
+  "Quantidade": "2,02",
+  "Data": "07/12/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "07/12/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0b5"
+  },
+  "MATRICULA": 122235,
+  "NOME": "LUIZ CARLOS DE OLIVEIRA",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "HE-EXCEDENTES",
+  "Evento de Ponto": "HORAS EXTRAS 50% - NOTURNAS",
+  "Quantidade": "2,15",
+  "Data": "25/11/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "25/11/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0b6"
+  },
+  "MATRICULA": 122030,
+  "NOME": "SABRINA FIGUEIREDO DE SOUSA",
+  "CARGO": "AUXILIAR DE CONTROLE OPERACIONAL",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "PLANEJAMENTO",
+  "Evento": "INTERJORNADAS",
+  "Evento de Ponto": "HORAS INTERJORNADAS",
+  "Quantidade": "1,00",
+  "Data": "21/11/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 0,
+  "PERÍODO": "21/11/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0b7"
+  },
+  "MATRICULA": 112172,
+  "NOME": "ROGERIO OLIVEIRA LARA",
+  "CARGO": "FISCAL DE TRAFEGO PLENO",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS NOTURNAS",
+  "Quantidade": "0,02",
+  "Data": "09/12/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 03/12/2023 ao 09/12/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0b8"
+  },
+  "MATRICULA": 112809,
+  "NOME": "LUCIANO HENRIQUE REIS DAMACENA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,23",
+  "Data": "08/12/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 02/12/2023 ao 08/12/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0b9"
+  },
+  "MATRICULA": 112957,
+  "NOME": "JAILTON DA SILVA AMARAL NASCIMENTO",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,52",
+  "Data": "25/11/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 19/11/2023 ao 25/11/2023",
+  "Horário": "SEGUNDA A SABADO - 05:40 AS 14:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0ba"
+  },
+  "MATRICULA": 113365,
+  "NOME": "PAULO ROBERTO DA SILVA",
+  "CARGO": "MOTORISTA CAMINHAO",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "13/12/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 8,
+  "PERÍODO": "Do dia 06/12/2023 ao 13/12/2023",
+  "Horário": "SEGUNDA A SABADO - 13:20 AS 21:40 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0bb"
+  },
+  "MATRICULA": 113449,
+  "NOME": "PEDRO HELI DE CASTRO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS NOTURNAS",
+  "Quantidade": "5,38",
+  "Data": "09/12/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 13,
+  "PERÍODO": "Do dia 27/11/2023 ao 09/12/2023",
+  "Horário": "SEGUNDA A SABADO - 21:00 AS 04:33 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0bc"
+  },
+  "MATRICULA": 119641,
+  "NOME": "JOSE GILBERTO PEREIRA",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,32",
+  "Data": "07/12/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 8,
+  "PERÍODO": "Do dia 30/11/2023 ao 07/12/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0bd"
+  },
+  "MATRICULA": 119646,
+  "NOME": "PAULO SERGIO DA SILVA MACHADO",
+  "CARGO": "AJUDANTE EQ SERVICOS DIVERSOS",
+  "REGIONAL": "ECOSAMPA Capela do Socorro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,33",
+  "Data": "06/12/2023",
+  "COMPETÊNCIA": "Dezembro/2023",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 30/11/2023 ao 06/12/2023",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0be"
+  },
+  "MATRICULA": 112744,
+  "NOME": "NELSON ROBERTO RIBEIRO DA SILVA",
+  "CARGO": "BUEIRISTA",
+  "REGIONAL": "ECOSAMPA Campo Limpo",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "7,27",
+  "Data": "21/12/2023",
+  "COMPETÊNCIA": "Janeiro/2024",
+  "DIA_SEM_FOLGA": 10,
+  "PERÍODO": "Do dia 12/12/2023 ao 21/12/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0bf"
+  },
+  "MATRICULA": 112975,
+  "NOME": "LUIZ ANTONIO DO AMARANTE SOUSA",
+  "CARGO": "ENCARREGADO DE TRAFEGO II",
+  "REGIONAL": "ECOSAMPA Operação Geral",
+  "DEPARTAMENTO": "TRAFEGO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "16/12/2023",
+  "COMPETÊNCIA": "Janeiro/2024",
+  "DIA_SEM_FOLGA": 9,
+  "PERÍODO": "Do dia 08/12/2023 ao 16/12/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0c0"
+  },
+  "MATRICULA": 113083,
+  "NOME": "OSMAR NOGUEIRA DA SILVA",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "*** MARCAÇÕES INCONSISTENTES ***",
+  "Quantidade": "1,00",
+  "Data": "20/01/2024",
+  "COMPETÊNCIA": "Janeiro/2024",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 14/01/2024 ao 20/01/2024",
+  "Horário": "SEGUNDA A SABADO - 13:40 AS 22:00 / INTERVALO DE 01 HORA"
+},
+{
+  "_id": {
+    "$oid": "65e5e6830c1535444b9ae0c1"
+  },
+  "MATRICULA": 113768,
+  "NOME": "LEONARDO FRANCISCO DOS SANTOS",
+  "CARGO": "FISCAL DE TURMA PLENO",
+  "REGIONAL": "ECOSAMPA Santo Amaro",
+  "DEPARTAMENTO": "OPERAÇÃO",
+  "Evento": "DIAS SEM FOLGAS",
+  "Evento de Ponto": "HORAS EFETIVAMENTE TRABALHADAS DIURNAS",
+  "Quantidade": "5,83",
+  "Data": "25/12/2023",
+  "COMPETÊNCIA": "Janeiro/2024",
+  "DIA_SEM_FOLGA": 7,
+  "PERÍODO": "Do dia 19/12/2023 ao 25/12/2023",
+  "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA"
+}]
