@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/styles.css">
+   
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
-    <link href="/cabecalho.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+
+  <link href="/cabecalho.css" rel="stylesheet">
+
+  <header class="cabecalho">
+    <a class="cabecalho_texto" href="/index.html"> Login </a>
+    <a class="cabecalho_texto" href="/absento.html"> Absenteismo </a>
+
+  </header>
     <title>Absenteismo</title>
 </head>
 
@@ -16,6 +25,7 @@
 
     <div class="dados" id="dados">
         <p>ola</p>
+        <p> Total</p>
 
         <label for="regional">Escolha a Regional</label>
         <input type="text" name="regional" id="regional">
@@ -44,17 +54,20 @@ function mostrar(){
     pp.innerHTML=cc
             loadJSON('dadosABS.json', (responseText) => {
                 const Dados = JSON.parse(responseText);
-
+                total =0
                 for (i = 0; i <= Dados.length; i++) {
 
                     // console.log(Dados[i].NOME);
                     //  console.log(Dados[i].CARGO);
                     // Aqui você pode manipular os dados do arquivo JSON
                     if (Dados[i].REGIONAL == cc) {
-                        usuario.innerHTML += `<li>  ID:  ${Dados[i].MATRICULA} ---- Nome: ${Dados[i].NOME} ----Cargo: ${Dados[i].CARGO} ----Regional: ${Dados[i].REGIONAL}</li> `
+                        usuario.innerHTML += `<li>  ID:  ${Dados[i].MATRICULA} ---- Nome: ${Dados[i].NOME} ----Cargo: ${Dados[i].CARGO} ----Regional: ${Dados[i].REGIONAL} ----Quantidade: ${Dados[i].Quantidade}</li> `
+                    total=total+Dados[i].Quantidade
                     }
 
+                    
                 }
+                
             });
 
         }
