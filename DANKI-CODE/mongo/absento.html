@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <link href="/cabecalho.css" rel="stylesheet">
+    <title>Absenteismo</title>
+</head>
+
+<body>
+
+    <div class="dados" id="dados">
+        <p>ola</p>
+
+        <label for="regional">Escolha a Regional</label>
+        <input type="text" name="regional" id="regional">
+        <button onclick="mostrar()">Mostrar Dados</button>
+
+        <script>
+            var usuario = document.querySelector('#dados')
+            var base = document.querySelector('#regional')
+            var pp = document.querySelector('p')
+           
+
+            function loadJSON(url, callback) {
+                let xobj = new XMLHttpRequest();
+                xobj.overrideMimeType('application/json');
+                xobj.open('GET', url, true);
+                xobj.onreadystatechange = () => {
+                    if (xobj.readyState === 4 && xobj.status === 200) {
+                        callback(xobj.responseText);
+                    }
+                };
+                xobj.send(null);
+            }
+
+function mostrar(){
+    cc=base.value
+    pp.innerHTML=cc
+            loadJSON('dadosABS.json', (responseText) => {
+                const Dados = JSON.parse(responseText);
+
+                for (i = 0; i <= Dados.length; i++) {
+
+                    // console.log(Dados[i].NOME);
+                    //  console.log(Dados[i].CARGO);
+                    // Aqui você pode manipular os dados do arquivo JSON
+                    if (Dados[i].REGIONAL == cc) {
+                        usuario.innerHTML += `<li>  ID:  ${Dados[i].MATRICULA} ---- Nome: ${Dados[i].NOME} ----Cargo: ${Dados[i].CARGO} ----Regional: ${Dados[i].REGIONAL}</li> `
+                    }
+
+                }
+            });
+
+        }
+
+        </script>
+
+    </div>
+
+</body>
+
+</html>
