@@ -1,0 +1,57 @@
+body {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    background-color: rgb(153, 3, 128);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 15px;
+    color: rgb(32, 29, 237);
+
+}
+
+
+.formulario {
+    width: 70vw;
+    background-color: rgb(8, 202, 176);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+}
+
+h1 {
+    color: rgb(11, 229, 229);
+    font-size: 20px;
+}
+
+.tabelas{
+    display: flex;
+    flex-direction: column;
+}
+.tabela{
+    display: flex;
+   width: 80vh;
+    color: rgb(216, 218, 230);
+    justify-content: space-around;
+}
+th{
+    width: 100px;
+}
+
+.tabela:nth-child(even){
+    background-color: rgb(111, 115, 115);
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    color: beige;
+    font-size: 10px;
+    
+}
+
