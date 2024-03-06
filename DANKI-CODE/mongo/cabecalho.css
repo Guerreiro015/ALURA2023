@@ -18,6 +18,11 @@
     text-decoration: none;
         
     }
+.cabecalho_texto:hover{
+    color: rgb(37, 8, 141);
+    text-decoration: none;
+        
+    }
   
     .rodape{
         display: flex;

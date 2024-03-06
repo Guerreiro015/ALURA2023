@@ -1,14 +1,13 @@
 body {
     margin-top: 60px;
     margin-bottom: 40px;
-    background-color: rgb(153, 3, 128);
-    display: flex;
-    justify-content: space-around;
+    background-color: rgb(193, 186, 192);
+   
     align-items: center;
     justify-content: center;
     gap: 5px;
     font-size: 15px;
-    color: rgb(32, 29, 237);
+    
 
 }
 
@@ -50,8 +49,26 @@ th{
 .dados{
     display: flex;
     flex-direction: column;
-    color: beige;
+    color: rgb(39, 40, 41);
     font-size: 10px;
+    /* margin-left: 100px; */
     
+}
+
+.escolha{
+    width: 200px;
+    height: 1000px;
+    background-color: rgb(136, 150, 154);
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    color: rgb(20, 10, 193);
+    ;
+    
+}
+
+.separa{
+    display: flex;
+    column-gap: 100px;
 }
 
