@@ -80,7 +80,7 @@
         function mostrar(elementos) {
             //setor = base.value
             pp.innerHTML = elementos
-            loadJSON('dadosABS.json', (responseText) => {
+            loadJSON('dados_absentesimo.json', (responseText) => {
                 const Dados = JSON.parse(responseText);
                 total = 0
                 for (i = 0; i <= Dados.length; i++) {
