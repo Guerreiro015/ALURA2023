@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt br">
 
 <head>
     <meta charset="UTF-8">
@@ -25,45 +25,63 @@
     <div class="separa">
         <div class="escolha">
             <h3>Escolha</h3>
-            <button onclick="campo_limpo()">WILSON</button>
-            <button onclick="mboi()">JOAO PAULO</button>
-            <button onclick="santo_amaro()">GUSTAVO</button>
-            <button onclick="matriz()">ADMINISTRAÇÃO</button>
-            <button onclick="escolher()">GERAL</button>            
+            <button onclick="wilson()">WILSON</button>
+            <button onclick="joao()">JOAO SALES</button>
+            <button onclick="gustavo()">GUSTAVO</button>
+            <button onclick="todos()">ADMINISTRAÇÃO</button>
+            <button onclick="escolher()">GERAL</button>
         </div>
 
         <div class="dados" id="dados">
-            <p>ola</p>
-            <p> Total</p>
-            
-            <!-- <label for="regional">Escolha a Regional</label>
-            <input type="text" name="regional" id="regional">
-            <button onclick="mostrar()">Mostrar Dados</button>
-             -->
+            <p id="soma"></p>
+            <div>
+                <p>Gerencia:</p>
+                <p id="gere"></p>
+            </div>
+            <div>
+                <p>Total do Período</p>
+                <p id="peri"></p>
+            </div>
+            <div>
+                <p>Horas Extra Excedentes</p>
+                <p id="extr"></p>
+            </div>
+            <div>
+                <p>Interjornadas</p>
+                <p id="inte"></p>
+            </div>
+            <div>
+                <p>Dias Trabalhados sem Folga</p>
+                <p id="sfol"></p>
+            </div>
+
+        </div>
+        <div>
+            <p id="usuarios"></p>
         </div>
     </div>
 
     <script>
-        function campo_limpo(){
-          var setor="ECOSAMPA Campo Limpo"
+        function wilson() {
+            var setor = "WILSON"
             mostrar(setor)
         }
-        function mboi(){
-          var setor="ECOSAMPA M'Boi Mirim"
+        function joao() {
+            var setor = "JOÃO SALES"
             mostrar(setor)
         }
-        function santo_amaro(){
-          var setor="ECOSAMPA Santo Amaro"
+        function gustavo() {
+            var setor = "GUSTAVO"
             mostrar(setor)
         }
-        function matriz(){
-          var setor="ECOSAMPA Matriz"
+        function todos() {
+            var setor = ""
             mostrar(setor)
         }
-        var usuario = document.querySelector('#dados')
-        var base = document.querySelector('#regional')
-        var pp = document.querySelector('p')
-
+        var pp = document.getElementById("sfol").value
+        var ppp = pp.value
+        var usuario = document.querySelector('#usuarios')       
+       
 
         function loadJSON(url, callback) {
             let xobj = new XMLHttpRequest();
@@ -78,19 +96,20 @@
         }
 
         function mostrar(elementos) {
-            //setor = base.value
-            pp.innerHTML = elementos
-            loadJSON('dados_absentesimo.json', (responseText) => {
-                const Dados = JSON.parse(responseText);
-                total = 0
-                for (i = 0; i <= Dados.length; i++) {
 
-                    // console.log(Dados[i].NOME);
-                    //  console.log(Dados[i].CARGO);
+            loadJSON('banco.json', (responseText) => {
+                const Dados = JSON.parse(responseText);
+                
+                dsf = 0
+                for (i = 0; i <= Dados.length; i++) {                    
                     // Aqui você pode manipular os dados do arquivo JSON
-                    if (Dados[i].REGIONAL == elementos) {
-                        usuario.innerHTML += `<li>  ID:  ${Dados[i].MATRICULA} ---- Nome: ${Dados[i].NOME} ----Cargo: ${Dados[i].CARGO} ----Regional: ${Dados[i].REGIONAL} ----Quantidade: ${Dados[i].Quantidade}</li> `
-                        total = total + Dados[i].Quantidade
+                    if (Dados[i].GERENCIA == elementos) {
+                        usuario.innerHTML += `<li>  ID:  ${Dados[i].MATRICULA} ---- Nome: ${Dados[i].NOME} ----Cargo: ${Dados[i].CARGO} ----Regional: ${Dados[i].REGIONAL} ----GERENCIA: ${Dados[i].GERENCIA}  DATA: ${Dados[i].DATA}</li> `
+                        if (Dados[i].Eventos == "DIAS SEM FOLGAS") {
+                            dsf = dfs + 1                           
+                            document.getElementById("sfol").innerHTML = 'Total: ' + dsf
+
+                        }
                     }
 
 
