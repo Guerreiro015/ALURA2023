@@ -1,7 +1,7 @@
 body {
     margin-top: 60px;
     margin-bottom: 40px;
-    background-color: rgb(193, 186, 192);
+    background-color: rgb(243, 238, 242);
    
     align-items: center;
     justify-content: center;
@@ -43,16 +43,38 @@ th{
 }
 
 .tabela:nth-child(even){
-    background-color: rgb(111, 115, 115);
+    background-color: #f6f8f8;
 }
 
 .dados{
-    display: flex;
-    
-    color: rgb(39, 40, 41);
-    font-size: 10px;
+    display: flex;    
+    color: rgb(10, 118, 226);
+    font-size: 20px;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: center;
+      
     
 }
+
+.dado{
+    display: flex;    
+    flex-direction: column;
+    color: rgb(39, 40, 41);
+    font-size: 10px;
+    column-gap: 20px;
+    align-items: left;
+    justify-content: center;
+    background-color: rgb(250, 253, 252);
+    list-style-type: none; 
+        
+}
+.dado:nth-child(even){
+ 
+    background-color: rgb(127, 240, 195);
+    
+}
+
 
 .escolha{
     width: 200px;
@@ -73,7 +95,8 @@ th{
 
 .eventos{   
     display: flex;
-    column-gap: 20px;
+    column-gap: 5px;
+    align-items: center;
 }
 .evento_texto{   
     font-size: 15PX;

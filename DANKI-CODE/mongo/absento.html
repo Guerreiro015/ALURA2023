@@ -39,44 +39,48 @@
                     <p id="gere"></p>
                 </div>
                 <div class="eventos">
-                    <p class="evento_texto">Total do Período</p>
-                    <p id="peri"></p>
-                </div>
-
-                </dir>
-                </dir>
-
-                <div class="dados">
-
-                    <div class="eventos">
-                        <p class="evento_texto">Horas Extra Excedentes:</p>
-                        <p id="hext"></p>
-                    </div>
-                    <div class="eventos">
-                        <p class="evento_texto">Interjornadas:</p>
-                        <p id="inte"></p>
-                    </div>
-                    <div class="eventos">
-                        <p class="evento_texto">Dias Trabalhados sem Folga:</p>
-                        <p id="sfol"></p>
-                    </div>
+                    <p class="evento_texto">Périodo</p>
+                    <p id="ano"></p>
                 </div>
 
             </div>
-            <div class="dados" id="usuarios"> </div>
+
+
+            <div class="dados">
+
+                <div class="eventos">
+                    <p class="evento_texto">Horas Extra Excedentes:</p>
+                    <p id="hext"></p>
+                </div>
+                <div class="eventos">
+                    <p class="evento_texto">Interjornadas:</p>
+                    <p id="inte"></p>
+                </div>
+                <div class="eventos">
+                    <p class="evento_texto">Dias Trabalhados sem Folga:</p>
+                    <p id="sfol"></p>
+                </div>
+            </div>
+
+            <div class="dado" id="usuarios"> </div>
         </div>
+    </div>
     </div>
 
     <script>
+        var usuario = document.querySelector('#usuarios')
         function wilson() {
+            document.getElementById("usuarios").innerHTML = ''
             var setor = "WILSON"
             mostrar(setor)
         }
         function joao() {
+            document.getElementById("usuarios").innerHTML = ''
             var setor = "JOÃO SALES"
             mostrar(setor)
         }
         function gustavo() {
+            document.getElementById("usuarios").innerHTML = ''
             var setor = "GUSTAVO"
             mostrar(setor)
         }
