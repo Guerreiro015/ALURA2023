@@ -33,7 +33,7 @@
         </div>
 
         <div class="dados" id="dados">
-            <p id="soma"></p>
+            <p id="soma">soma</p>
             <div>
                 <p>Gerencia:</p>
                 <p id="gere"></p>
@@ -56,9 +56,7 @@
             </div>
 
         </div>
-        <div>
-            <p id="usuarios"></p>
-        </div>
+        <div class="dados" id="usuarios"> </div>
     </div>
 
     <script>
@@ -79,9 +77,9 @@
             mostrar(setor)
         }
         var pp = document.getElementById("sfol").value
-        var ppp = pp.value
-        var usuario = document.querySelector('#usuarios')       
-       
+        var ppp = pp
+        var usuario = document.querySelector('#usuarios')
+
 
         function loadJSON(url, callback) {
             let xobj = new XMLHttpRequest();
@@ -99,19 +97,21 @@
 
             loadJSON('banco.json', (responseText) => {
                 const Dados = JSON.parse(responseText);
-                
-                dsf = 0
-                for (i = 0; i <= Dados.length; i++) {                    
+
+                var dsf = 0
+
+
+                for (i = 0; i <= Dados.length; i++) {
                     // Aqui você pode manipular os dados do arquivo JSON
                     if (Dados[i].GERENCIA == elementos) {
-                        usuario.innerHTML += `<li>  ID:  ${Dados[i].MATRICULA} ---- Nome: ${Dados[i].NOME} ----Cargo: ${Dados[i].CARGO} ----Regional: ${Dados[i].REGIONAL} ----GERENCIA: ${Dados[i].GERENCIA}  DATA: ${Dados[i].DATA}</li> `
-                        if (Dados[i].Eventos == "DIAS SEM FOLGAS") {
-                            dsf = dfs + 1                           
-                            document.getElementById("sfol").innerHTML = 'Total: ' + dsf
-
+                        usuario.innerHTML += `<li>  ID:  ${Dados[i].MATRICULA} ---- Nome: ${Dados[i].NOME} ----Cargo: ${Dados[i].CARGO} ----Evento: ${Dados[i].Evento} ----GERENCIA: ${Dados[i].GERENCIA}  DATA: ${Dados[i].DATA} </li> `
+                        if (Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            dsf++
                         }
+
                     }
 
+                    document.getElementById("sfol").innerHTML = 'Total: ' + dsf
 
                 }
 
