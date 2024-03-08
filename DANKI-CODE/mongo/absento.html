@@ -65,64 +65,69 @@
                     <p id="sfol"></p>
                 </div>
             </div>
-            <div class="usuarios2">
-
-                <div class="dado" id="usuarios"> </div>
-                <div class="dado" id="usuarios2"> </div>
-                <div class="dado" id="usuarios3"> </div>
-                <div class="dado" id="usuarios4"> </div>
-                <div class="dado" id="usuarios5"> </div>
-
-            </div>
+        
             <div  class="tabelas">
-                <table>
-                    <td>
-                        <th>JAN</th>
-                        <th>FEV</th>
-                        <th>MAR</th>
-                        <th>ABR</th>
-                        <th>MAI</th>
-                        <th>JUN</th>
-                        <th>JUL</th>
-                        <th>AGO</th>
-                        <th>SET</th>
-                        <th>OUT</th>
-                        <th>NOV</th>
-                        <th>DEZ</th>
-                    </td>
-                </table>
-                <table>
-                    <td>
-                        <th>JAN</th>
-                        <th>FEV</th>
-                        <th>MAR</th>
-                        <th>ABR</th>
-                        <th>MAI</th>
-                        <th>JUN</th>
-                        <th>JUL</th>
-                        <th>AGO</th>
-                        <th>SET</th>
-                        <th>OUT</th>
-                        <th>NOV</th>
-                        <th>DEZ</th>
-                    </td>
-                </table>
-                <table>
-                    <td>
-                        <th>JAN</th>
-                        <th>FEV</th>
-                        <th>MAR</th>
-                        <th>ABR</th>
-                        <th>MAI</th>
-                        <th>JUN</th>
-                        <th>JUL</th>
-                        <th>AGO</th>
-                        <th>SET</th>
-                        <th>OUT</th>
-                        <th>NOV</th>
-                        <th>DEZ</th>
-                    </td>
-                </table>
+               
+                    <ul>
+                        <li>DEPARTAMENTO</li>
+                        <li>Administração</li>
+                        <li>Administração</li>
+                        <li>Administração</li>
+                        <li>Suplimentos</li>
+                        <li>Suplimentos</li>
+                        <li>Suplimentos</li>
+                        <li>Dept. Pessoal</li>
+                        <li>Dept. Pessoal</li>
+                        <li>Dept. Pessoal</li>
+                        <li>DHO / RH</li>
+                        <li>DHO / RH</li>
+                        <li>DHO / RH</li>
+                        <li>QSMS</li>
+                        <li>QSMS</li>
+                        <li>QSMS</li>
+                        
+                    </ul>
+                    <ul>                        
+                        <li>EVENTO</li>
+                        <li>HE - Excedentes</li>
+                        <li>Dias Sem Folga</li>
+                        <li>Interjornadas</li>
+                        <li>HE - Excedentes</li>
+                        <li>Dias Sem Folga</li>
+                        <li>Interjornadas</li>
+                        <li>HE - Excedentes</li>
+                        <li>Dias Sem Folga</li>
+                        <li>Interjornadas</li>
+                        <li>HE - Excedentes</li>
+                        <li>Dias Sem Folga</li>
+                        <li>Interjornadas</li>
+                        <li>HE - Excedentes</li>
+                        <li>Dias Sem Folga</li>
+                        <li>Interjornadas</li>
+                        
+                    </ul>
+                    <ul>                        
+                        <li>Jan</li>
+                        <li id="jan_he_adm"></li>
+                        <li id="jan_dsf_adm"></li>
+                        <li id="jan_in_adm"></li>
+                        <li id="jan_he_sup"></li>
+                        <li id="jan_dsf_sup"></li>
+                        <li id="jan_in_sup"></li>
+                        <li id="jan_he_dp"></li>
+                        <li id="jan_dsf_dp"></li>
+                        <li id="jan_in_dp"></li>
+                        <li id="jan_he_rh"></li>
+                        <li id="jan_dsf_rh"></li>
+                        <li id="jan_in_rh"></li>
+                        <li id="jan_he_qsms"></li>
+                        <li id="jan_dsf_qsms"></li>
+                        <li id="jan_in_qsms"></li>
+                        
+                        
+                    </ul>
+               
+               
             </div>
 
         </div>
@@ -130,36 +135,15 @@
     </div>
 
     <script>
-        var usuario = document.querySelector('#usuarios')
-        var usuario2 = document.querySelector('#usuarios2')
-        var usuario3 = document.querySelector('#usuarios3')
-        var usuario4 = document.querySelector('#usuarios4')
-        var usuario5 = document.querySelector('#usuarios5')
-
-        function wilson() {
-            document.getElementById("usuarios").innerHTML = ''
-            document.getElementById("usuarios2").innerHTML = ''
-            document.getElementById("usuarios3").innerHTML = ''
-            document.getElementById("usuarios4").innerHTML = ''
-            document.getElementById("usuarios5").innerHTML = ''
+        function wilson() {         
             var setor = "WILSON"
             mostrar(setor)
         }
-        function joao() {
-            document.getElementById("usuarios").innerHTML = ''
-            document.getElementById("usuarios2").innerHTML = ''
-            document.getElementById("usuarios3").innerHTML = ''
-            document.getElementById("usuarios4").innerHTML = ''
-            document.getElementById("usuarios5").innerHTML = ''
+        function joao() {            
             var setor = "JOÃO SALES"
             mostrar(setor)
         }
-        function gustavo() {
-            document.getElementById("usuarios").innerHTML = ''
-            document.getElementById("usuarios2").innerHTML = ''
-            document.getElementById("usuarios3").innerHTML = ''
-            document.getElementById("usuarios4").innerHTML = ''
-            document.getElementById("usuarios5").innerHTML = ''
+        function gustavo() {      
             var setor = "GUSTAVO"
             mostrar(setor)
         }
@@ -168,11 +152,9 @@
             mostrar(setor)
         }
 
-        var usuario = document.querySelector('#usuarios')
-        var usuario2 = document.querySelector('#usuarios2')
-        var usuario3 = document.querySelector('#usuarios3')
-        var usuario4 = document.querySelector('#usuarios4')
-        var usuario5 = document.querySelector('#usuarios5')
+        var depe = document.querySelector('#dep')
+        var even = document.querySelector('#eve')
+        
 
 
         function loadJSON(url, callback) {
@@ -200,11 +182,10 @@
                 for (i = 0; i <= Dados.length; i++) {
                     // Aqui você pode manipular os dados do arquivo JSON
                     if (Dados[i].GERENCIA == elementos) {
-                        usuario.innerHTML += `<li>  Competencia:  ${Dados[i].COMPETÊNCIA} --------- Nome: ${Dados[i].NOME} </li> `
-                        usuario2.innerHTML += `<li> Cargo: ${Dados[i].CARGO} </li>`
-                        usuario3.innerHTML += `<li> Departamento: ${Dados[i].DEPARTAMENTO} </li>`
-                        usuario4.innerHTML += `<li> Evento:  ${Dados[i].Evento} </li> `
-                        usuario5.innerHTML += `<li> Data: ${Dados[i].DATA}</li> `
+                        
+                        depe.innerHTML = Dados[i].DEPARTAMENTO
+                        even.innerHTML = Dados[i].Evento
+                        
 
                         if (Dados[i].Evento == "DIAS SEM FOLGAS") {
                             totaldsf++

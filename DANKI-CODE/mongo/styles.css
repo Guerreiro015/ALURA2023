@@ -30,12 +30,10 @@ h1 {
 
 .tabelas {
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    font-size: 10px;
 }
-.tabelas:nth-child(even){
-    display: flex;
-    background-color: rgb(184, 245, 245);
-}
+
 
 .tabela {
     display: flex;
@@ -90,7 +88,7 @@ th {
 
 .separa {
     display: flex;
-    column-gap: 50px;
+    column-gap: 20px;
 }
 
 .eventos {
