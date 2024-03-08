@@ -61,26 +61,51 @@
                     <p id="sfol"></p>
                 </div>
             </div>
+            <div class="usuarios2">
 
-            <div class="dado" id="usuarios"> </div>
+                <div class="dado" id="usuarios"> </div>
+                <div class="dado" id="usuarios2"> </div>
+                <div class="dado" id="usuarios3"> </div>
+                <div class="dado" id="usuarios4"> </div>
+                <div class="dado" id="usuarios5"> </div>
+
+            </div>
+
         </div>
     </div>
     </div>
 
     <script>
         var usuario = document.querySelector('#usuarios')
+        var usuario2 = document.querySelector('#usuarios2')
+        var usuario3 = document.querySelector('#usuarios3')
+        var usuario4 = document.querySelector('#usuarios4')
+        var usuario5 = document.querySelector('#usuarios5')
+
         function wilson() {
             document.getElementById("usuarios").innerHTML = ''
+            document.getElementById("usuarios2").innerHTML = ''
+            document.getElementById("usuarios3").innerHTML = ''
+            document.getElementById("usuarios4").innerHTML = ''
+            document.getElementById("usuarios5").innerHTML = ''
             var setor = "WILSON"
             mostrar(setor)
         }
         function joao() {
             document.getElementById("usuarios").innerHTML = ''
+            document.getElementById("usuarios2").innerHTML = ''
+            document.getElementById("usuarios3").innerHTML = ''
+            document.getElementById("usuarios4").innerHTML = ''
+            document.getElementById("usuarios5").innerHTML = ''
             var setor = "JOÃO SALES"
             mostrar(setor)
         }
         function gustavo() {
             document.getElementById("usuarios").innerHTML = ''
+            document.getElementById("usuarios2").innerHTML = ''
+            document.getElementById("usuarios3").innerHTML = ''
+            document.getElementById("usuarios4").innerHTML = ''
+            document.getElementById("usuarios5").innerHTML = ''
             var setor = "GUSTAVO"
             mostrar(setor)
         }
@@ -88,9 +113,12 @@
             var setor = ""
             mostrar(setor)
         }
-        var pp = document.getElementById("sfol").value
-        var ppp = pp
+        
         var usuario = document.querySelector('#usuarios')
+        var usuario2 = document.querySelector('#usuarios2')
+        var usuario3 = document.querySelector('#usuarios3')
+        var usuario4 = document.querySelector('#usuarios4')
+        var usuario5 = document.querySelector('#usuarios5')
 
 
         function loadJSON(url, callback) {
@@ -118,7 +146,12 @@
                 for (i = 0; i <= Dados.length; i++) {
                     // Aqui você pode manipular os dados do arquivo JSON
                     if (Dados[i].GERENCIA == elementos) {
-                        usuario.innerHTML += `<li>  ID:  ${Dados[i].MATRICULA} ---- Nome: ${Dados[i].NOME} ----Cargo: ${Dados[i].CARGO} ----Evento: ${Dados[i].Evento} ----GERENCIA: ${Dados[i].GERENCIA}  DATA: ${Dados[i].DATA} </li> `
+                        usuario.innerHTML += `<li>  ID:  ${Dados[i].MATRICULA} --------- Nome: ${Dados[i].NOME} </li> `
+                        usuario2.innerHTML += `<li> Cargo: ${Dados[i].CARGO} </li>`
+                        usuario3.innerHTML += `<li> Departamento: ${Dados[i].DEPARTAMENTO} </li>`
+                        usuario4.innerHTML += `<li> Evento:  ${Dados[i].Evento} </li> `
+                        usuario5.innerHTML += `<li> Data: ${Dados[i].DATA}</li> `
+
                         if (Dados[i].Evento == "DIAS SEM FOLGAS") {
                             totaldsf++
                         }

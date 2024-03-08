@@ -49,7 +49,7 @@ th{
 .dados{
     display: flex;    
     color: rgb(10, 118, 226);
-    font-size: 20px;
+    font-size: 10px;
     column-gap: 30px;
     align-items: center;
     justify-content: center;
@@ -69,12 +69,6 @@ th{
     list-style-type: none; 
         
 }
-.dado:nth-child(even){
- 
-    background-color: rgb(127, 240, 195);
-    
-}
-
 
 .escolha{
     width: 200px;
@@ -106,4 +100,9 @@ th{
 .mostrando{
     display: flex;
     flex-direction: column;
+}
+
+.usuarios2{
+    display: flex;
+    column-gap: 20px;
 }
