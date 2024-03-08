@@ -2,12 +2,12 @@ body {
     margin-top: 60px;
     margin-bottom: 40px;
     background-color: rgb(243, 238, 242);
-   
+
     align-items: center;
     justify-content: center;
     gap: 5px;
     font-size: 15px;
-    
+
 
 }
 
@@ -28,37 +28,43 @@ h1 {
     font-size: 20px;
 }
 
-.tabelas{
+.tabelas {
     display: flex;
     flex-direction: column;
 }
-.tabela{
+.tabelas:nth-child(even){
     display: flex;
-   width: 80vh;
+    background-color: rgb(184, 245, 245);
+}
+
+.tabela {
+    display: flex;
+    width: 80vh;
     color: rgb(216, 218, 230);
     justify-content: space-around;
 }
-th{
+
+th {
     width: 100px;
 }
 
-.tabela:nth-child(even){
+.tabela:nth-child(even) {
     background-color: #f6f8f8;
 }
 
-.dados{
-    display: flex;    
+.dados {
+    display: flex;
     color: rgb(10, 118, 226);
     font-size: 10px;
     column-gap: 30px;
     align-items: center;
     justify-content: center;
-      
-    
+
+
 }
 
-.dado{
-    display: flex;    
+.dado {
+    display: flex;
     flex-direction: column;
     color: rgb(39, 40, 41);
     font-size: 10px;
@@ -66,11 +72,11 @@ th{
     align-items: left;
     justify-content: center;
     background-color: rgb(250, 253, 252);
-    list-style-type: none; 
-        
+    list-style-type: none;
+
 }
 
-.escolha{
+.escolha {
     width: 200px;
     height: 1000px;
     background-color: rgb(136, 150, 154);
@@ -79,30 +85,31 @@ th{
     padding-left: 20px;
     color: rgb(20, 10, 193);
     ;
-    
+
 }
 
-.separa{
+.separa {
     display: flex;
-    column-gap: 100px;
+    column-gap: 50px;
 }
 
-.eventos{   
+.eventos {
     display: flex;
     column-gap: 5px;
     align-items: center;
 }
-.evento_texto{   
+
+.evento_texto {
     font-size: 15PX;
 
 }
 
-.mostrando{
+.mostrando {
     display: flex;
     flex-direction: column;
 }
 
-.usuarios2{
+.usuarios2 {
     display: flex;
     column-gap: 20px;
 }
