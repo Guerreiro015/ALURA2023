@@ -106,7 +106,7 @@
                     <li>Interjornadas</li>
 
                 </ul>
-                
+
                 <ul>
                     <li>JAN</li>
                     <li id="he_adm_1"></li>
@@ -169,11 +169,7 @@
             mostrar(setor)
         }
 
-        var depe = document.querySelector('#dep')
-        var even = document.querySelector('#eve')
-
-
-
+  //==============================================================================    
         function loadJSON(url, callback) {
             let xobj = new XMLHttpRequest();
             xobj.overrideMimeType('application/json');
@@ -190,19 +186,19 @@
 
             loadJSON('banco.json', (responseText) => {
                 const Dados = JSON.parse(responseText);
-
+//=================================================================================
                 var totaldsf = 0
                 var totalhex = 0
                 var totalint = 0
 
+                var total_evento = Dados.GERENCIA.GUSTAVO.length
+                document.getElementById("he_adm_1").innerHTML = 'total denhene'
+                document.getElementById("he_adm_2").innerHTML = total_evento
+                document.getElementById("dsf_adm_1").innerHTML = total_evento
 
                 for (i = 0; i <= Dados.length; i++) {
                     // Aqui você pode manipular os dados do arquivo JSON
                     if (Dados[i].GERENCIA == elementos) {
-
-                        depe.innerHTML = Dados[i].DEPARTAMENTO
-                        even.innerHTML = Dados[i].Evento
-
 
                         if (Dados[i].Evento == "DIAS SEM FOLGAS") {
                             totaldsf++
@@ -220,7 +216,7 @@
                     document.getElementById("sfol").innerHTML = totaldsf
                     document.getElementById("hext").innerHTML = totalhex
                     document.getElementById("inte").innerHTML = totalint
-
+                   
                 }
 
             });
