@@ -24,15 +24,45 @@ body {
 }
 
 h1 {
-    color: rgb(11, 229, 229);
+    color: rgb(84, 11, 229);
     font-size: 20px;
 }
+
+ul {
+    display: flex;
+    flex-direction: column;
+   
+    padding: 5px 5px 5px 0px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+ul:nth-child(even) {
+    background-color: rgb(247, 251, 251);
+}
+
+
+li {   
+    list-style-type: none;
+    padding-bottom: 20px;      
+}
+
+.texto{
+color:brown;
+font-weight: bolder;
+width: 120px;
+}
+
 
 .tabelas {
     display: flex;
     align-items: flex-start;
-    font-size: 10px;
+    font-size: 15px;    
+    
 }
+
+
 
 
 .tabela {
@@ -40,11 +70,9 @@ h1 {
     width: 80vh;
     color: rgb(216, 218, 230);
     justify-content: space-around;
+    
 }
 
-th {
-    width: 100px;
-}
 
 .tabela:nth-child(even) {
     background-color: #f6f8f8;
@@ -57,6 +85,9 @@ th {
     column-gap: 30px;
     align-items: center;
     justify-content: center;
+    border-style: double;
+    border-color: rgb(14, 52, 192);
+    background-color: aqua;
 
 
 }
