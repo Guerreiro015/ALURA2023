@@ -54,6 +54,13 @@ font-weight: bolder;
 width: 120px;
 }
 
+.ano{
+    color:coral;
+    font-style: oblique;
+    font-weight: bold;
+    
+}
+
 
 .tabelas {
     display: flex;
@@ -141,4 +148,11 @@ width: 120px;
 .usuarios2 {
     display: flex;
     column-gap: 20px;
+}
+
+.imagem{
+    border-radius: 10px;
+    background-color: rgb(13, 173, 160);
+    color: #f6f8f8;
+
 }
