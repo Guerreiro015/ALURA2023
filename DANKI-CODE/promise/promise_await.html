@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise async e await</title>
+</head>
+
+<body>
+
+    <script>
+
+        function testes() {
+
+            return new Promise(function (resolve, reject) {
+
+                setTimeout(function () {
+                    const erro = true;
+                    if (erro) {
+                        resolve('A promise foi resolvida')
+                    }
+                    else {
+                        reject('Alguma coisa errada...');
+                    }
+                }, 2000)
+            })
+        }
+
+        testes().then(function (res) {
+            alert(res)
+        }).catch(function (err) {
+            alert(err)
+
+        })
+
+        async function testes2() {
+            await (testes().then(function (res) {
+                alert(res)
+            }))
+
+            alert('ola')
+
+        }
+
+        testes2()
+
+    </script>
+
+</body>
+
+</html>
