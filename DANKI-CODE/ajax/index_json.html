@@ -16,8 +16,11 @@
                 var data = JSON.parse(this.response);
 
                 console.log(data);
-                for (i = 0; i <= length.data; i++) {
-                    if (CARGO == 'AUXILIAR DE CONTROLE OPERACIONAL')
+               
+                console.log(data.length);
+
+                for (i = 0; i <= data.length; i++) {
+                    if (data[i].CARGO == 'AUXILIAR DE CONTROLE OPERACIONAL')
                         console.log(data[i]);
                 }
             }
