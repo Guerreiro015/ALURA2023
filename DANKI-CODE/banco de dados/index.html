@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de CRUD com JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><center>Exemplo de CRUD com JavaScript</center></h1>
+    <hr>
+    <div class="employee-form">
+        <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+            <div>
+                <label>Nome Completo*</label>
+                <label class="validation-error hide" id="fullNameValidationError">Este campo é obrigatório.</label>
+                <input type="text" name="fullName" id="fullName">
+            </div>
+            <!-- Adicione campos para email, salário e cidade aqui -->
+            <div class="form-action-buttons">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="employees-table">
+        <table class="list" id="employeeList">
+            <thead>
+                <tr>
+                    <th>Nome Completo</th>
+                    <!-- Adicione cabeçalhos para email, salário e cidade aqui -->
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- As linhas da tabela serão adicionadas dinamicamente via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
