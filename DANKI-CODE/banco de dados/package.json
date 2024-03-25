@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@babel/helper-compilation-targets": "^7.23.6",
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.1",
+    "multiformats": "^9.9.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.2",
+    "sequelize": "^6.37.1"
+  }
+}

@@ -1,40 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Exemplo de CRUD com JavaScript</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <h1><center>Exemplo de CRUD com JavaScript</center></h1>
-    <hr>
-    <div class="employee-form">
-        <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
-            <div>
-                <label>Nome Completo*</label>
-                <label class="validation-error hide" id="fullNameValidationError">Este campo é obrigatório.</label>
-                <input type="text" name="fullName" id="fullName">
-            </div>
-            <!-- Adicione campos para email, salário e cidade aqui -->
-            <div class="form-action-buttons">
-                <input type="submit" value="Enviar">
-            </div>
-        </form>
-    </div>
-    <br>
-    <div class="employees-table">
-        <table class="list" id="employeeList">
-            <thead>
-                <tr>
-                    <th>Nome Completo</th>
-                    <!-- Adicione cabeçalhos para email, salário e cidade aqui -->
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- As linhas da tabela serão adicionadas dinamicamente via JavaScript -->
-            </tbody>
-        </table>
-    </div>
-    <script src="script.js"></script>
+
+
+<p>CADASTRO DE USUÁRIOS</p>
+<div class="menu">
+    <label for="nome">NOME</label>
+    <input id="nome" nome="nome" type="text">
+    <label for="email">EMAIL</label>
+    <input id="email" nome="email" type="text">
+    <label for="senha">SENHA</label>
+    <input id="senha" nome=senha" type="text">
+    <label for="idade">IDADE</label>
+    <input id="idade" nome="idade" type="text">   
+
+    <button onclick=" inserir()">CADASTRAR</Button>
+</div>
+
+<p id="dados"></p>
+
+<script src="./index.js"></script>
+
 </body>
+
 </html>
