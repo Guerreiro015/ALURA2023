@@ -76,3 +76,7 @@ td {
     background-image: url(/static/imagem/Banner.png);
     color: white
 }
+
+.menu{
+    background-color: aqua;
+}
