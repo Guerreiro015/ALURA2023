@@ -8,7 +8,7 @@ import mysql.connector
 conexao = mysql.connector.connect(
     host='localhost',
     user='root',
-    password='lucas0108',
+    password='Lucas@0108',
     database='jogoteca'
 )
 
@@ -98,7 +98,7 @@ def ver_usuario(i):
     conexao = mysql.connector.connect(
     host='localhost',
     user='root',
-    password='lucas0108',
+    password='Lucas@0108',
     database='jogoteca'
 )
 
@@ -124,7 +124,7 @@ def ver_jogos(i):
     conexao = mysql.connector.connect(
     host='localhost',
     user='root',
-    password='lucas0108',
+    password='Lucas@0108',
     database='jogoteca'
 )
    

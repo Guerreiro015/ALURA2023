@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Luana\Documents\GitHub\ALURA\Flask_CLUD Alura\venv
+set VIRTUAL_ENV=C:\Users\anton\OneDrive\Documentos\GitHub\ALURA2023\Flask_CLUD - MySQL\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
