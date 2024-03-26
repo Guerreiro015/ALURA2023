@@ -1,0 +1,8 @@
+.logar{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(177, 205, 230);
+    width: 600px;
+    height: 600px;
+    gap: 20px;
+}
