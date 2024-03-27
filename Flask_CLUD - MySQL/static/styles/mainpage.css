@@ -1,0 +1,38 @@
+
+.mensagem{
+    background-color: blue;
+    color:rgb(15, 196, 151)
+}
+
+.container{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+}
+
+.menu{
+    background-color: rgb(218, 27, 148);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.menu-texto{
+    color: color="green" size="5";
+    font-size: color="blue" size="5";
+
+}
+
+.menu-visual{
+    color: blue;
+    text-decoration: none;
+}
+
+.menu-editar{
+    color: rgb(226, 38, 38);
+    text-decoration: none;
+}

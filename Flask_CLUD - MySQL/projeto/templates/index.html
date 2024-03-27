@@ -2,17 +2,14 @@
 {% extends 'base.html'%}
     {% block conteudo %}
 
-    <link rel="stylesheet" href="/static/app.css">
-
-    <thead class="thead-default">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/mainpage.css') }}">
 
       <body class="menu">      
                 
-        <a href="/novo_jogo" class="link-success"> NOVO JOGO</a></br>
-        <a href="/" class="link-warning">FAZER LOGIN</a></br>  
-        <a href="/logout" class="link-danger">FAZER LOGOUT</a></br>
-
-      </body>      
+        <a href="/novo_jogo" class="menu-visual"> NOVO JOGO</a></br>
+        <a href="/" class="menu-visual">FAZER LOGIN</a></br>  
+        <a href="/logout" class="menu-visual">FAZER LOGOUT</a></br>
+          
    
                 <tr>
                     <th>ID</th>
@@ -24,8 +21,7 @@
                     <th>FOTO</th>
                     <th>ACÃO</th>                    
                 </tr>
-            </thead>
-            <tbody>
+          
 
                 {% for jogo in jogos %}                
 
@@ -39,16 +35,15 @@
                   <td> {{jogo[5]}} </td>
                   <td> <img src="{{jogo[5]}}" width="50"   height="50" ></td> 
 
-                  <td> <a href="{{url_for('detalhes',id=jogo[0])}}" class="text-primary"> Detalhes</a> </br>        
-                    <a href="{{url_for('editar_jogos',id=jogo[0])}}" class="link-success"> Editar</a>  </br>         
-                    <a href="{{url_for('deletar_jogos',id=jogo[0])}}" class="link-danger"> Deletar</a> </td>                   
+                  <td> <a href="{{url_for('detalhes',id=jogo[0])}}" class="menu-editar"> Detalhes</a> </br>        
+                    <a href="{{url_for('editar_jogos',id=jogo[0])}}" class="menu-editar"> Editar</a>  </br>         
+                    <a href="{{url_for('deletar_jogos',id=jogo[0])}}" class="menu-editar"> Deletar</a> </td>                   
 
                 </tr>
                 
-                {% endfor %}     
-
-            </tbody>
-        </table>
+                {% endfor %}   
+            
+        
     
     </body>
   {%endblock%}
