@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-   
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/mainpage.css') }}">
-    <link rel="stylesheet" href="/static/styles/mainpage.css">
 
-    <title>Jogoteca</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <div class="" >
-    
-      <div class="container">
+  <title>Jogoteca</title>
+</head>
 
-       
-        
-          {% with messages = get_flashed_messages() %}
-                    {% if messages %} 
-                        <ul id="messages" class="text-primary">
-                        {% for message in messages %}
-                            <li class="mensagem">{{ message }}</li>
-                        {% endfor %}
-                        </ul>
-                    {% endif %}
-          {% endwith %}        
-      
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(229, 237, 237);
+    align-items: center;
+    justify-content: center;
+  }
 
-        <div class="">  
+  .mensagem {
+    color: rgb(112, 15, 196)
+  }
 
-          <i>                           
-           <font color="black" size="5" > {{ titulo.upper() }} </font>
-          </i>
+  .menu-visual {
+    color: blue;
+    text-decoration: none;
+  }
 
-        </div>
-        <table class="">
-          
-            <thead class="">
-              <nav> 
 
-                <a href="/index" > PAGINA INICIAL</a><br/>
-                
-                
-              </nav>  
+  .opcoes {
+    display: flex;
+    justify-content: space-around;
+  }
+</style>
+
+<body>
+
+  <div class="">
+
+    <div>
+
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul id="messages" class="text-primary">
+        {% for message in messages %}
+        <li class="mensagem">{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% endwith %}
+
+
+      <div class="">        
+          <font color="black" size="5"> {{ titulo.upper() }} </font>
       </div>
-                     
-{%block conteudo%}
 
-{%endblock%}
-  
+      <nav>
+        <div class="opcoes">
+          <a href="/novo_jogo" class="menu-visual"> NOVO JOGO</a></br>
+          <a href="/" class="menu-visual">FAZER LOGIN</a></br>
+          <a href="/logout" class="menu-visual">FAZER LOGOUT</a></br>
+          <a href="/index" class="menu-visual"> PAGINA INICIAL</a><br />
+        </div>
+      </nav>
+    </div>
+
+    {%block conteudo%}
+
+    {%endblock%}
+
   </div>
+
 </html>

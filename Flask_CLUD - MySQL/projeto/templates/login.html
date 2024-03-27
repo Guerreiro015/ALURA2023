@@ -21,21 +21,11 @@
     justify-content: center;
   }
 
-  .mensagem {
-    color: rgb(112, 15, 196)
-  }
+  .mensagem {   
+    color: #dc3545;
+   }
 
-  .container {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(11, 200, 200);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
-    height: 600px;
-  }
+ 
 
   fieldset {
     display: flex;
@@ -45,6 +35,8 @@
     height: 300px;
     justify-content: center;
     align-items: center;
+    border: 2px solid rgb(0, 0, 128);
+    border-radius: 10px;
 
   }
 
@@ -53,26 +45,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
 
   }
 
   .menu-texto {
     width: 200px;
-    color: color="green" size="5";
-    font-size: color="blue" size="5";
+    height: 20px;     
+    color: black;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
 
   }
 
-  .menu-visual {
-    color: blue;
-    text-decoration: none;
+  .botao{
+    width: 150px;
+    height: 40px;
+    background-color:#0d6efd;
+    color:aliceblue;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    
   }
 
-  .menu-editar {
-    color: rgb(226, 38, 38);
-    text-decoration: none;
-  }
+
 </style>
 
 <body>
@@ -88,19 +86,20 @@
 
   <div class="mensagem">
     <font color="blue" size="5"> {{ usuario }} </font><br />
-    <font color="red" size="5"> {{ titulo }} </font>
+    <font color="green" size="5"> {{ titulo }} </font>
   </div>
 
-  <form class="container" method="post" action="{{url_for('autenticar')}}">
+  <form method="post" action="{{url_for('autenticar')}}">
     <fieldset>
 
       <div class="menu">
         <label class="menu-texto" for="nome">Usuário</label>
         <input type="text" id="nome" name="nome" class="menu-texto" placeholder="Digite nome usuario" />
+       <br>
         <label class="menu-texto" for="senha">Senha</label>
         <input type="text" id="senha" name="senha" class="menu-texto" placeholder="Digite a senha" />
         <br>
-        <button type="submit" class="btn btn-primary btn-salvar">Logar</button>
+        <button type="submit" class="botao">Logar</button>
       </div>
 
     </fieldset>
