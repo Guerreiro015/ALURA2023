@@ -18,55 +18,63 @@
   }
 
   .mensagem {
-    color: rgb(112, 15, 196)
+    color: #198754)
   }
 
   .menu-visual {
-    color: blue;
+    color: #fff;
     text-decoration: none;
+    font-size: 30px;
+  }
+  .menu-visual:hover {  
+    text-decoration: none;
+    color: rgb(220, 236, 47);
   }
 
 
-  .opcoes {
+  .opcoes-base {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 30px;
+    background-color: rgb(56, 50, 87);
+    color: aliceblue;
   }
 </style>
 
 <body>
 
   <div class="">
+    <nav class="opcoes-base">
 
-    <div>
+      <a href="/index" class="menu-visual"> PAGINA INICIAL</a><br />
+      <a href="/" class="menu-visual">FAZER LOGIN</a></br>
+      <a href="/logout" class="menu-visual">FAZER LOGOUT</a></br>
+      <a href="/novo_jogo" class="menu-visual"> NOVO JOGO</a></br>
 
-      {% with messages = get_flashed_messages() %}
-      {% if messages %}
-      <ul id="messages" class="text-primary">
-        {% for message in messages %}
-        <li class="mensagem">{{ message }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-      {% endwith %}
+    </nav>
+  </div>
 
+  <div>
 
-      <div class="">        
-          <font color="black" size="5"> {{ titulo.upper() }} </font>
-      </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul id="messages" class="mensagem">
+      {% for message in messages %}
+      <li class="mensagem">{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+  </div>
 
-      <nav>
-        <div class="opcoes">
-          <a href="/novo_jogo" class="menu-visual"> NOVO JOGO</a></br>
-          <a href="/" class="menu-visual">FAZER LOGIN</a></br>
-          <a href="/logout" class="menu-visual">FAZER LOGOUT</a></br>
-          <a href="/index" class="menu-visual"> PAGINA INICIAL</a><br />
-        </div>
-      </nav>
-    </div>
+  <div class="mensagem">
+    <font> {{ titulo.upper() }} </font>
+  </div>
+  {%block conteudo%}
 
-    {%block conteudo%}
-
-    {%endblock%}
+  {%endblock%}
 
   </div>
 
