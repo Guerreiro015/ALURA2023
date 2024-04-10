@@ -37,7 +37,14 @@
     color: white;
     padding-right: 2rem;
     font-size: .8rem;
-    
-    
+     
         
+}
+
+.mensagem{
+    display: flex;
+    flex-direction: column;
+    color: #dc3545;
+    align-items: center;
+    font-size: 40px;
 }

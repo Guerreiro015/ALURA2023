@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PLANILHA</title>
 </head>
 
 <body>
 
+    <script type="module" src="plani.js">        
 
-    <script>
+        import { data } from 'plani.js'
 
+        console.log(dados)
 
-        const XLSX = require("xlsx");       
+    </script>
 
-        const file = 'sindicato.xlsx';
-        const workbook = XLSX.readFile(file);
-        const sheetName = workbook.SheetNames[0];
-        const worksheet = workbook.Sheets[sheetName];
-        const data = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-        console.log(data);
-
-    </script>F
+    </script>
 
 </body>
 

@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="../static/styles_inss/cabecalho.css" rel="stylesheet">   
-    
-    <header class="cabecalho">     
-      <a class="cabecalho_texto" href="/" > PAGINA INICIAL</a>
-      <a  class="cabecalho_texto" href="{{url_for('calculo_inss')}}">Cáculo Salário</a>        
-      <a  class="cabecalho_texto"  href="{{url_for('calculo_fgts')}}" >Cálculos FGTS</a> 
-      <a  class="cabecalho_texto" href="/">Cáculo IRRF</a> 
-      <a  class="cabecalho_texto" href="/">Cáculo INSS</a> 
-      <a  class="cabecalho_texto" href="/">Cáculo Folha</a> 
-      <a  class="cabecalho_texto" href="/encargos" > Sobre Encargos Trabalhistas</a>
-   </header>
-            
-    <body>     
-            
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}
-              {{ message }}
-            {% endfor %}
-        {% endif %}
-        {% endwith %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="../static/styles_inss/cabecalho.css" rel="stylesheet">
+
+  <header class="cabecalho">
+    <a class="cabecalho_texto" href="/"> PAGINA INICIAL</a>
+    <a class="cabecalho_texto" href="{{url_for('calculo_inss')}}">Cáculo Salário</a>
+    <a class="cabecalho_texto" href="{{url_for('calculo_fgts')}}">Cálculos FGTS</a>
+    <a class="cabecalho_texto" href="/">Cáculo IRRF</a>
+    <a class="cabecalho_texto" href="/">Cáculo INSS</a>
+    <a class="cabecalho_texto" href="/">Cáculo Folha</a>
+    <a class="cabecalho_texto" href="/encargos"> Sobre Encargos Trabalhistas</a>
+  </header>
+
+<body>
+  <div class="mensagem">
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+  </div>
 
 </body>
 
@@ -38,5 +41,5 @@
   <p class="rodape_texto"> Produzido por Antonio Neto</p>
 
 </footer>
- 
+
 </html>
