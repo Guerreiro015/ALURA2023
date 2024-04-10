@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Relatório</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<div class="relato">
+    <h3>ID:</h3>
+    <h3>Nome:</h3>
+    <h3>Cargo:</h3>
+    <h3>Regional:</h3>
+
+</div>
+
 
 
     <script>
 
 
-        const XLSX = require("xlsx");       
+dados.map(function () {
+  
+    dados.innerHTML += `
+    <div class="relato">                            
+        <h3>`+ dados[i][0] + `</h3>
+        <h3>`+ dados[i][1] + `</h3>
+        <h3>`+ dados[i][2] + `</h3>
+        <h3>`+ dados[i][3] + `</h3>
+        
+    </div>                       
+    `});
 
-        const file = 'sindicato.xlsx';
-        const workbook = XLSX.readFile(file);
-        const sheetName = workbook.SheetNames[0];
-        const worksheet = workbook.Sheets[sheetName];
-        const data = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-        console.log(data);
 
-    </script>F
+
+    </script>
 
 </body>
 
