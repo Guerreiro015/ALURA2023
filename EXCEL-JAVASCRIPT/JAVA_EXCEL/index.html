@@ -4,18 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLANILHA</title>
+    <title>Relatório</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <script type="module" src="plani.js">        
+<div class="relato">
+    <h3>ID:</h3>
+    <h3>Nome:</h3>
+    <h3>Cargo:</h3>
+    <h3>Regional:</h3>
+
+</div>
+
+
 
         import { data } from 'plani.js'
 
         console.log(dados)
 
-    </script>
+dados.map(function () {
+  
+    dados.innerHTML += `
+    <div class="relato">                            
+        <h3>`+ dados[i][0] + `</h3>
+        <h3>`+ dados[i][1] + `</h3>
+        <h3>`+ dados[i][2] + `</h3>
+        <h3>`+ dados[i][3] + `</h3>
+        
+    </div>                       
+    `});
+
+
 
     </script>
 
