@@ -1,15 +1,10 @@
-const botao = document.querySelector('.button');
-botao.addEventListener('click', alerta);
 
-function alerta(){
-  alert('OLha ai')
-}
 
 function busca() {
 
   const XLSX = require("xlsx");
 
-  const file = 'sindicato.xlsx';
+  const file = 'relatorio.xlsx';
   const workbook = XLSX.readFile(file);
   const sheetName = workbook.SheetNames[0];
   const worksheet = workbook.Sheets[sheetName];
@@ -23,7 +18,9 @@ function busca() {
       console.log(data[i][0], '--', data[i][1], '--', data[i][2], '--', data[i][3], '--', data[i][9], '--', data[i][10]);
   };
 
-  const caminhoArquivo = 'dados.json';
+  // Abaixo vamos salvar em arquivo json
+
+  const caminhoArquivo = 'dados2.json';
   const dadosJSON = JSON.stringify(data, null, 2);
 
   const fs = require('fs');
@@ -36,8 +33,8 @@ function busca() {
     }
   });
 
-}
+};
 
 
 
-//busca()
+busca()

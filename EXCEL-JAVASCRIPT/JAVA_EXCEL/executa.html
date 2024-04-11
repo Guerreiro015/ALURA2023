@@ -1,0 +1,22 @@
+<div class="trabalheObs">Carregar Currículo</div>
+<input style="display:none" type="file" class="margin-top-20 cp" id="curriculoForm" name="curriculoForm" value="" />
+
+<script>
+
+    var div = document.getElementsByClassName("trabalheObs")[0];
+    var input = document.getElementById("curriculoForm");
+
+    div.addEventListener("click", function() {
+        input.click();
+    });
+
+    input.addEventListener("change", function() {
+        var nome = "Não há arquivo selecionado. Selecionar arquivo...";
+        if (input.files.length > 0) {
+            nome = input.files[0].name;
+        }
+        div.innerHTML = nome;
+    });
+
+    
+</script>

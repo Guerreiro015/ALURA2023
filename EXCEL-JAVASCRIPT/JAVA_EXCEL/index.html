@@ -11,8 +11,9 @@
 <body>
 
     <h1>Atualizar Planilha</h1>
-    <form action="">       
-        <button onclick="busca()">Atualizar</button>
+    <form id="uploadForm">
+        <input type="file" id="fileInput">
+        <button type="submit">Enviar</button>
     </form>
 
     <div class="relato">
@@ -22,6 +23,19 @@
     </div>
 
     <script>
+        
+    var input = document.getElementById("uploadForm");
+  
+    input.addEventListener("change", function() {
+        var nome = "Não há arquivo selecionado. Selecionar arquivo...";
+        if (input.files.length > 0) {
+            nome = input.files[0].name;
+        }
+        
+    });
+    alert(nome)
+//===========================================
+
         var tabela = document.querySelector('.relato')
 
         function loadJSON(url, callback) {
@@ -37,8 +51,9 @@
         }
 
         function mostrar() {
-
-            loadJSON('dados.json', (responseText) => {
+            alert(nome)
+           
+            loadJSON(nome, (responseText) => {
                 const Dados = JSON.parse(responseText);
 
                 for (i = 0; i < Dados.length; i++) {
@@ -58,7 +73,7 @@
         mostrar()
 
     </script>
-    
+
 
 
 </body>
