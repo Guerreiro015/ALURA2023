@@ -10,35 +10,56 @@
 
 <body>
 
-<div class="relato">
-    <h3>ID:</h3>
-    <h3>Nome:</h3>
-    <h3>Cargo:</h3>
-    <h3>Regional:</h3>
+    <h1>Atualizar Planilha</h1>
+    <form action="">       
+        <button onclick="busca()">Atualizar</button>
+    </form>
 
-</div>
+    <div class="relato">
+        <div class="most">
+            <!-- //dados serão mostrados aqui -->
+        </div>
+    </div>
+
+    <script>
+        var tabela = document.querySelector('.relato')
+
+        function loadJSON(url, callback) {
+            let xobj = new XMLHttpRequest();
+            xobj.overrideMimeType('application/json');
+            xobj.open('GET', url, true);
+            xobj.onreadystatechange = () => {
+                if (xobj.readyState === 4 && xobj.status === 200) {
+                    callback(xobj.responseText);
+                }
+            };
+            xobj.send(null);
+        }
+
+        function mostrar() {
+
+            loadJSON('dados.json', (responseText) => {
+                const Dados = JSON.parse(responseText);
+
+                for (i = 0; i < Dados.length; i++) {
+                    tabela.innerHTML += ` <div class="most">
+                        <h3>`+ Dados[i][0] + `</h3>
+                        <h3>`+ Dados[i][1] + `</h3>
+                        <h3>`+ Dados[i][2] + `</h3>
+                        <h3>`+ Dados[i][3] + `</h3>
+                        <h3>`+ Dados[i][4] + `</h3>
+                        
+                    </div>`
+                }
+            })
+        }
 
 
-
-        import { data } from 'plani.js'
-
-        console.log(dados)
-
-dados.map(function () {
-  
-    dados.innerHTML += `
-    <div class="relato">                            
-        <h3>`+ dados[i][0] + `</h3>
-        <h3>`+ dados[i][1] + `</h3>
-        <h3>`+ dados[i][2] + `</h3>
-        <h3>`+ dados[i][3] + `</h3>
-        
-    </div>                       
-    `});
-
-
+        mostrar()
 
     </script>
+    
+
 
 </body>
 
