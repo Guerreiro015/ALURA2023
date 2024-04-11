@@ -4,12 +4,12 @@
 import mysql.connector
 
 def criar_bd(banco,tabela):
-      conn = mysql.connector.connect(user='root', password='lucas0108', host='localhost')
+      conn = mysql.connector.connect(user='root', password='Lucas@0108', host='localhost')
       cursor = conn.cursor()
       comando=(f'CREATE DATABASE IF NOT EXISTS {banco}')
       cursor.execute(comando)
 
-      conn = mysql.connector.connect(user='root', password='lucas0108', host='localhost',database=f'{banco}')
+      conn = mysql.connector.connect(user='root', password='Lucas@0108', host='localhost',database=f'{banco}')
       cursor = conn.cursor()      
             
 

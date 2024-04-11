@@ -19,5 +19,17 @@ for(i=0;i<data.length;i++){
     console.log(data[i][0],'--',data[i][1],'--',data[i][2],'--',data[i][3],'--',data[i][9],'--',data[i][10]);
 };
 
+const caminhoArquivo = 'dados.json';
+const dadosJSON = JSON.stringify(data, null, 2);
+
+const fs = require('fs');
+
+fs.writeFile(caminhoArquivo, dadosJSON, 'utf-8', (err) => {
+    if (err) {
+      console.error('Erro ao salvar o arquivo:', err);
+    } else {
+      console.log('Os dados foram salvos com sucesso!');
+    }
+  });
 
 

@@ -8,7 +8,7 @@ from sqlalchemy import Column,String,Integer
 #pip install PyMySQL
 
 
-engine = ce('mysql://root:lucas0108@localhost:3306/jogoteca')
+engine = ce('mysql://root:Lucas@0108@localhost:3306/jogoteca')
 base=declarative_base()
 session=sessionmaker(bind=engine)
 session=session()
