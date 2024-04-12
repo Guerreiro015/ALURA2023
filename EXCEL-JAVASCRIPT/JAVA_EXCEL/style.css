@@ -37,3 +37,8 @@ button:hover{
     overflow-x: auto;
 
 }
+
+.arquivo{
+    display: flex;
+    flex-direction: column;
+}

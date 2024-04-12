@@ -8,7 +8,7 @@ class App(tk.Tk):
 
         cellYScrollbar = tk.Scrollbar(self, orient="vertical")
         cellXScrollbar = tk.Scrollbar(self, orient="horizontal")
-        full_width = 100
+        full_width = 50
 
         self.cell = tk.Text(
             self,

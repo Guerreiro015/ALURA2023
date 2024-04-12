@@ -11,11 +11,14 @@
 <body>
     <!-- //-Carregando arquivo----------------------------------- -->
 
-    <form action="#" method="post" enctype="multipart/form-data">
+    <form class="arquivo" action="#" method="post" enctype="multipart/form-data">
+        <label for="file">Carregar Arquivo</label>
         <input type="file" name="file" id="file">
     </form>
 
     <!-- //------------------------------------------------------ -->
+
+
 
     <div class="relato">
         <div class="most">
@@ -28,11 +31,11 @@
     <script>
 
         //-----------------------------------------------------
-        var inputNome = document.getElementById('name');
+       
         var inputFicheiro = document.getElementById('file');
 
         inputFicheiro.addEventListener('change', function () {
-            var nome = this.files[0].name;
+            var arquivo = this.files[0].name;
         //------------------------------------------
 
 
@@ -54,7 +57,7 @@
 
             function mostrar() {
 
-                loadJSON(nome, (responseText) => {
+                loadJSON(arquivo, (responseText) => {
                     const Dados = JSON.parse(responseText);
 
                     for (i = 0; i < Dados.length; i++) {
