@@ -9,12 +9,13 @@
 </head>
 
 <body>
+    <!-- //-Carregando arquivo----------------------------------- -->
 
-    <h1>Atualizar Planilha</h1>
-    <form id="uploadForm">
-        <input type="file" id="fileInput">
-        <button type="submit">Enviar</button>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file">
     </form>
+
+    <!-- //------------------------------------------------------ -->
 
     <div class="relato">
         <div class="most">
@@ -22,42 +23,42 @@
         </div>
     </div>
 
+
+
     <script>
-        
-    var input = document.getElementById("uploadForm");
-  
-    input.addEventListener("change", function() {
-        var nome = "Não há arquivo selecionado. Selecionar arquivo...";
-        if (input.files.length > 0) {
-            nome = input.files[0].name;
-        }
-        
-    });
-    alert(nome)
-//===========================================
 
-        var tabela = document.querySelector('.relato')
+        //-----------------------------------------------------
+        var inputNome = document.getElementById('name');
+        var inputFicheiro = document.getElementById('file');
 
-        function loadJSON(url, callback) {
-            let xobj = new XMLHttpRequest();
-            xobj.overrideMimeType('application/json');
-            xobj.open('GET', url, true);
-            xobj.onreadystatechange = () => {
-                if (xobj.readyState === 4 && xobj.status === 200) {
-                    callback(xobj.responseText);
-                }
-            };
-            xobj.send(null);
-        }
+        inputFicheiro.addEventListener('change', function () {
+            var nome = this.files[0].name;
+        //------------------------------------------
 
-        function mostrar() {
-            alert(nome)
-           
-            loadJSON(nome, (responseText) => {
-                const Dados = JSON.parse(responseText);
 
-                for (i = 0; i < Dados.length; i++) {
-                    tabela.innerHTML += ` <div class="most">
+            var tabela = document.querySelector('.relato')
+
+            function loadJSON(url, callback) {
+                let xobj = new XMLHttpRequest();
+                xobj.overrideMimeType('application/json');
+                xobj.open('GET', url, true);
+                xobj.onreadystatechange = () => {
+                    if (xobj.readyState === 4 && xobj.status === 200) {
+                        callback(xobj.responseText);
+                    }
+                };
+                xobj.send(null);
+            }
+            //--------------------------------------------------------------------     
+
+
+            function mostrar() {
+
+                loadJSON(nome, (responseText) => {
+                    const Dados = JSON.parse(responseText);
+
+                    for (i = 0; i < Dados.length; i++) {
+                        tabela.innerHTML += ` <div class="most">
                         <h3>`+ Dados[i][0] + `</h3>
                         <h3>`+ Dados[i][1] + `</h3>
                         <h3>`+ Dados[i][2] + `</h3>
@@ -65,13 +66,12 @@
                         <h3>`+ Dados[i][4] + `</h3>
                         
                     </div>`
-                }
-            })
-        }
+                    }
+                })
+            }
+            mostrar()
 
-
-        mostrar()
-
+        });
     </script>
 
 
