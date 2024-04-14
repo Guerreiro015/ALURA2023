@@ -4,7 +4,7 @@ function busca() {
 
   const XLSX = require("xlsx");
 
-  const file = 'relatorio.xlsx';
+  const file =  'relatorio.xlsx';
   const workbook = XLSX.readFile(file);
   const sheetName = workbook.SheetNames[0];
   const worksheet = workbook.Sheets[sheetName];
@@ -34,7 +34,5 @@ function busca() {
   });
 
 };
-
-
-
+        
 busca()

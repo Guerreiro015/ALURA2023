@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <!-- -- //------------------------------------------------------ --> 
     <!-- //-Carregando arquivo----------------------------------- -->
 
     <form class="arquivo" action="#" method="post" enctype="multipart/form-data">
@@ -16,13 +17,13 @@
         <input type="file" name="file" id="file">
     </form>
 
-    <!-- //------------------------------------------------------ -->
+<!-- -- //------------------------------------------------------ --> 
 
 
+<!-- //dados serão mostrados aqui -->
 
     <div class="relato">
         <div class="most">
-            <!-- //dados serão mostrados aqui -->
         </div>
     </div>
 
@@ -30,14 +31,16 @@
 
     <script>
 
-        //-----------------------------------------------------
+        //--Carregando o arquivo---------------------------------------------------
        
         var inputFicheiro = document.getElementById('file');
 
         inputFicheiro.addEventListener('change', function () {
             var arquivo = this.files[0].name;
-        //------------------------------------------
 
+
+
+        //----Comandos da requisição--------------------------------------
 
             var tabela = document.querySelector('.relato')
 
