@@ -1,0 +1,7 @@
+
+  .gradiente {
+    width: 1000px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(189, 52, 243), rgb(35, 142, 223));
+    
+  }
