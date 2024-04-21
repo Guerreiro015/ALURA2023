@@ -1,0 +1,52 @@
+.home {
+    width: 100%;
+    padding: 70px 50px 0 50px;
+    box-sizing: border-box;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to right, #160025, #000c27);
+}
+
+.home > div:nth-child(1) {
+    flex: 1;
+    margin: 50px;
+}
+
+.title {
+    margin-bottom: 50px;
+}
+
+.home h1 {
+    font-size: var(--title);
+    font-style: italic;
+}
+
+.home p {
+    font-size: var(--subtitle);
+    font-weight: lighter;
+}
+
+.home img {
+    position: relative;
+    top: 50px;
+    width: 50%;
+}
+
+@media (max-width: 720px) {
+    .home > div:nth-child(1) {
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .home h1 {
+        font-size: 3.3rem;
+    }
+    .home p  {
+        font-size: 2.3rem;
+    }
+
+    .home img {
+        width: 70%;
+    }
+}
