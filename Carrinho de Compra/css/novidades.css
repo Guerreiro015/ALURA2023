@@ -1,0 +1,47 @@
+.novidades {
+    width: 100%;
+    margin: 50px 0;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to bottom, #160025, #000c27);
+}
+
+.novidades div {
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    padding: 50px 50px 100px 50px;
+}
+
+.novidades img {
+    width: 6rem
+}
+
+.novidades h2 {
+    font-size: var(--subtitle);
+    text-align: center;
+    font-style: italic;
+}
+
+.novidades p {
+    font-size: var(--description);
+    font-weight: lighter;
+    margin: 10px 0;
+}
+
+.novidades .recomendado, .destaque, .envio {
+    align-items: center;
+    justify-content: center;
+}
+
+.novidades .recomendado button {
+    margin-top: 20px;
+}
+
+.novidades .destaque img {
+    width: 4rem;
+    margin: 20px 0;
+}
+
+.novidades .envio img {
+    margin-bottom: 30px;
+}

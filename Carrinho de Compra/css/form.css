@@ -1,0 +1,20 @@
+form {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.input {
+    flex: 100% 50%;
+    color: var(--primary);
+    font-size: var(--text);
+    padding: 0 10px;
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    outline: none;
+}
+
+.input, 
+form .btn-secondary {
+    margin: 10px 5px;
+}

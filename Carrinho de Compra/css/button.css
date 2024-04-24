@@ -1,0 +1,30 @@
+.btn {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    border-radius: 30px;
+    padding: 12px 0;
+    width: 200px;
+    font-size: var(--text);
+    color: var(--white);
+    transition: ease-in-out .5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.btn-secondary {
+    background-color: var(--primary);
+    border: none;
+    padding: 12px 20px;
+    font-size: var(--text);
+    color: var(--white);
+    transition: ease-in-out .5s;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    opacity: .5;
+}
