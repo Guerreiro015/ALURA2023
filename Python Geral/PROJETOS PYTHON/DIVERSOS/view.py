@@ -44,7 +44,7 @@ def ver_form():
 
 
 # Ver Iten
-def ver_iten(id):
+def ver_item(id):
     lista_itens = []
     with con:
         cur = con.cursor()
