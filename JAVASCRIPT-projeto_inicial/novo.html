@@ -1,0 +1,18 @@
+<dialog id="dialog-box">
+    <p>Conteúdo do modal aqui.</p>
+    <button onclick="fecharModal()">Fechar</button>
+  </dialog>
+  
+  <button onclick="abrirModal()">Abrir Modal</button>
+  
+  <script>
+    const dialog = document.getElementById("dialog-box");
+  
+    function abrirModal() {
+      dialog.showModal();
+    }
+  
+    function fecharModal() {
+      dialog.close();
+    }
+  </script>
