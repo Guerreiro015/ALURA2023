@@ -49,13 +49,27 @@
         border-radius: 10px;
         width: 400px;
         height: 200px;
+        z-index: 3; /* Índice maior que o da camada de fundo */
 
+    }
+
+    .tras{       
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.4); /* Cor preta com transparência */
+            z-index: 2; /* Coloque um índice menor que o modal */
     }
 </style>
 
 
 <body>
+    <div class="tras">
     <button onclick="abrir()">Mostrar</button>
+        <h1 >testandop p teste</h1>
+    </div>
     <dialog id="mostrar">
         <div>
             <button onclick="fechar()" class="botao">X</button>
