@@ -1,82 +1,80 @@
-
-
-body{
+body {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 5rem 3rem 0 0;
     background-color: rgb(247, 239, 246);
     gap: 10px;
 }
 
 
+.foto {
 
-.formulario{
+    width: 20%;
+    height: 100%;
+}
 
+.formulario {
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-       
-}
-
-.container_lista{
-
-    width: 50vw;
-    height: 30vw;
-    background-color:rgb(193, 226, 250);
-    display: flex;
-    justify-content: space-around;
+    background-color: rgb(193, 226, 250);
     border-radius: 15px;
-    align-items: center;    
-
-}
-
-.foto{
-
-    width: 350px;
-}
-h4{
-    display: flex;
-    font-size: 16px;
-        
-}
-
-
-.lista{
-   
- 
     
 }
 
+.container_lista {
+    display: flex;
+    width: 100%;    
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
 
-.lista_texto{
-    display: flex; 
-    width: 400px;
+}
+
+.lista {
+    background-color: rgb(208, 210, 237);
+    width: 50%;
+    height: auto; 
+
+}
+
+
+.lista_texto {
+    display: flex;
+    width: 90%;
     background-color: rgb(245, 248, 250);
     justify-content: space-between;
-    margin-right: 10px;
-    padding: 5px;
-    gap: 5px;
-    
-    
+    padding-right: 10px;    
+
+
 }
 
 .lista_texto:nth-child(even) {
-    background:rgb(232, 233, 233);
-  }
+    background: rgb(232, 233, 233);
+}
 
 
-  .total{
+.total {
     font-weight: bold;
     color: rgb(228, 17, 17);
-  }
+}
 
-.colinsalubridade{
+h4 {
+    display: flex;
+    font-size: 16px;
+
+}
+
+.colinsalubridade {
     display: flex;
 }
 
 
-.botoes{
+.botoes {
 
     display: flex;
     justify-content: space-around;
@@ -85,12 +83,12 @@ h4{
     gap: 1rem;
 }
 
-.botao{
+.botao {
     display: flex;
     width: 200px;
     background-color: rgb(6, 54, 108);
     border-radius: 10px;
-    color: antiquewhite;   
+    color: antiquewhite;
     padding: .5rem;
     padding-left: 1rem;
     font-weight: bold;
