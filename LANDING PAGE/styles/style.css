@@ -6,6 +6,8 @@
 
     margin: 0;
 
+    scroll-behavior: smooth;
+
 }
 
 nav{
@@ -29,7 +31,9 @@ nav ul a{
     }
 
 nav ul a :hover{
-    color: #ec36cb;
+    color: #048573;
+    font-size: 20px;
+    
 }  
 
 header{
@@ -86,8 +90,12 @@ footer p {
 }
 
 footer a{
-    color: rgb(240, 236, 236);
-    
+    color: rgb(240, 236, 236);    
+
+}
+
+footer a:hover{
+    color: rgb(207, 47, 247);    
 
 }
 
@@ -168,6 +176,77 @@ aside h4 {
 #cta:hover {
 
     background-color: #5E6D97;
+
+}
+
+#about{
+    background-color: #c4c1e0;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    column-gap: 20PX;
+    margin: 10rem 0;
+
+    color: #374058;   
+    
+}
+
+#about img {
+    width: 40%;
+    border-radius: 60%;
+}
+#about h3 {
+    max-width: 40%;
+}
+
+
+#employees {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 2rem;
+
+}
+
+#employees > article {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 400px;
+
+    background-color: #374058;
+
+    color: #fff;
+
+    border-radius: 10px;
+
+    padding: 1rem;
+
+}
+
+#employees-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+#employees-container > h2 {
+
+    margin: 2rem 0;
+
+    color: #3f6ce9;
 
 }
 
