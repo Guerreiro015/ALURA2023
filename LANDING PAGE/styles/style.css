@@ -108,7 +108,7 @@ footer a:hover{
 
     color: #374058;
 
-    padding: 4rem 0;
+    padding: 6rem 0;
 
 }
 
@@ -185,8 +185,8 @@ aside h4 {
     justify-content: center;
     align-items: center;
     column-gap: 20PX;
-    margin: 10rem 0;
-
+    margin: 4rem 0;
+    padding: 6rem 0;
     color: #374058;   
     
 }
@@ -244,12 +244,168 @@ aside h4 {
 
 #employees-container > h2 {
 
-    margin: 2rem 0;
+    margin: 5rem 0;
 
     color: #3f6ce9;
 
 }
 
+#account {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 6rem 0;
+
+}
+
+#regitration-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: #374058;
+
+    color: #f0f0f0;
+
+    height: fit-content;
+
+    padding: 2rem;
+
+    border-radius: 10px;
+
+    gap: 2rem;
+
+}
+
+.input-wrapper {
+
+    display: flex;
+
+}
+
+.input-wrapper > input {
+
+    flex-grow: 1;
+
+}
+
+.input-wrapper > label {
+
+    width: 130px;
+
+    text-align: end;
+
+    padding-right: 10px;
+
+}#account {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 4rem 0;
+
+    column-gap: 20px;
+
+    align-items: center;
+
+}
+
+#registro {
+
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: #374058;
+
+    color: #f0f0f0;
+
+    height: fit-content;
+
+    padding: 2rem;
+
+    border-radius: 10px;
+
+    gap: 2rem;
+
+}
+
+.input-wrapper {
+
+    display: flex;
+
+}
+
+.input-wrapper > input {
+
+    flex-grow: 1;
+
+}
+
+.input-wrapper > label {
+
+    width: 130px;
+
+    text-align: end;
+
+    padding-right: 10px;
+
+}
+
+#account img{
+border-radius: 50%;
+}
+
+#register-button {
+
+    padding: 0.2rem;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    font-size: 1rem;
+
+    background-color: #f0f0f0;
+
+    color: #374058;
+
+}
+
+#register-button:hover {
+
+    background-color: #5E6D97;
+
+    color: #f0f0f0;
+
+    transition: 0.1s all ease-in;
+
+}
+
+.input-wrapper > input {     
+
+    flex-grow: 1;     
+
+    padding: 0.3rem;     
+
+    font-weight: bold;     
+
+    border-radius: 5px; 
+
+}
+
+
+.input-wrapper {     
+
+    display: flex;     
+
+    align-items: center; 
+
+}
 
 
 
