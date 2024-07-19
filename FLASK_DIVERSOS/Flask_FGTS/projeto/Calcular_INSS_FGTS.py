@@ -16,7 +16,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column,String,Integer
 import pandas as pd
 
-tb = pd.read_excel("minha base.xlsx")
+tb = pd.read_excel("./minha base.xlsx")
 
 from flask import Flask, render_template, request, redirect, session,flash,send_from_directory
 import mysql
