@@ -2,8 +2,9 @@
     width: 100%;
     align-items: center;
     padding: 15px 0;
-    position: absolute;
+    position: fixed;
     background-image: linear-gradient(to right, #160025, #062e8b);
+
 }
 
 .logo {

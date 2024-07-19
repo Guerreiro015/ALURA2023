@@ -1,18 +1,5 @@
 
-
-{
-    "version": 2,
-    "builds": [
-     {
-     "src": "./Calcular_INSS_FGTS.py",
-    "use": "@vercel/python"
-    }
-    ],
-     "rewrites": [
     {
-    "src": "/(.*)",
-    "dest": "/"
-     }
-     ]
-    }
+        "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+      }
     
