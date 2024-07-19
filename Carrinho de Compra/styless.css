@@ -1,0 +1,6 @@
+#loja{
+    font-size: 20px;
+}
+#loja:hover{
+    transition: 0.1s;
+}
