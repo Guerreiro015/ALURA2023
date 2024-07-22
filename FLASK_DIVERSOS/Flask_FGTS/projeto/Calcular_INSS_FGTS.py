@@ -18,21 +18,6 @@ import pandas as pd
 
 tb = pd.read_excel("./minha base.xlsx")
 
-from flask import Flask, render_template, request, redirect, session,flash,send_from_directory
-import mysql
-from datetime import *
-import time
-import sqlite3
-import os
-from flask import Flask, flash, request, redirect, url_for
-from werkzeug.utils import secure_filename
-from flask import Flask, url_for
-from flask_sqlalchemy import SQLAlchemy
-import mysql.connector
-from sqlalchemy import create_engine as ce
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column,String,Integer
 from bases_2023 import *
 # pip install PyMySQL
 
@@ -170,7 +155,7 @@ def calcular_fgts():
         mes=(request.form['mes'])
         ano=(request.form['ano'])    
 
-        tb = pd.read_excel("minha base.xlsx",sheet_name=f'{mes}_{ano}')
+        tb = pd.read_excel("./minha base.xlsx",sheet_name=f'{mes}_{ano}')
     except:
         flash("Não existe dados para este mês")
         return render_template('calculo_fgts.html')
