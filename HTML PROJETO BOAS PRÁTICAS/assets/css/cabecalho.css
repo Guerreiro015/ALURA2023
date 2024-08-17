@@ -16,13 +16,13 @@
 }
 
 .cabecalho{
-    width: 100vw;
+    width: 100vw;    
     align-items: center;
     background-color: #e4dfdf;
     display: flex;
     justify-content: space-between;
     padding-left: 2rem;
-    padding-right: 2rem;    
+    padding-right: 2rem;     
 }
 
 .lista{

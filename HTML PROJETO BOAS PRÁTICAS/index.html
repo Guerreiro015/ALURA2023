@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Fruta & Fruto</title>
-        <link href="./assets/css/normalize.css" rel="stylesheet" />
-        <link href="./assets/css/reset.css" rel="stylesheet" />
-        <link rel="stylesheet" href="assets/css/cabecalho.css">
-        <link rel="stylesheet" href="assets/css/titulo.css">
-        <link rel="stylesheet" href="assets/css/receitas.css">
-        <link rel="stylesheet" href="assets/css/quem-somos.css">
-        <link rel="stylesheet" href="assets/css/rodape.css">
+        <link rel="stylesheet" href="./assets/css/normalize.css">
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="./assets/css/cabecalho.css">
+        <link rel="stylesheet" href="./assets/css/titulo.css">
+        <link rel="stylesheet" href="./assets/css/receitas.css">
+        <link rel="stylesheet" href="./assets/css/quem-somos.css">
+        <link rel="stylesheet" href="./assets/css/rodape.css">
     </head>
     <body>
-        <header class="cabecalho">
+        <header class="cabecalho" id="inicio">
             <img  class="logo" src="./assets/img/logo.jpg" alt="">
             <nav  class="menu">
                 <ul class="lista">
@@ -23,9 +23,9 @@
                     <label for="">Procurar</label>
                     <input class="procura2" type="text">
                     </li>
-                    <li class="item"> <a class="menu_link ativo" href="#">Início</a> </li>   
-                    <li class="item"> <a class="menu_link" href="#">Receita</a> </li> 
-                    <li class="item"> <a class="menu_link" href="#">Quem Somos</a> </li> 
+                    <li class="item"> <a class="menu_link ativo" href="#inicio">Início</a> </li>   
+                    <li class="item"> <a class="menu_link" href="#receita">Receita</a> </li> 
+                    <li class="item"> <a class="menu_link" href="#somos">Quem Somos</a> </li> 
                     <li class="item"> <a class="menu_link" href="#">Comunidade</a> </li> 
                 </ul>
 
@@ -36,7 +36,7 @@
             <h2 class="banner_titulo" > Reaproveite melhor os alimentos!</h2>
         </section>
         <section class="sobre">
-            <h2 class="sobre_titulo">Receita para economizar e ganhar saúde</h2>
+            <h2 class="sobre_titulo"  id="receita">Receita para economizar e ganhar saúde</h2>
             <p class="sobre_descricao">Nossas receitas ajudam você a aproveitar melhor os alimentos, economizar,
                 ganhar tempo e praticidade
             </p>           
@@ -121,7 +121,7 @@
             </div>
         </section>
 
-        <section class="somos">
+        <section class="somos" id="somos">
             <h3 class="somos_titulo">Quem somos</h3>
             <p class="somos_descricao">Conheça a comunidade por trás da iniciativa</p>
             <div class="pessoas">
