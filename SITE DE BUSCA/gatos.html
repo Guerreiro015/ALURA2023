@@ -1,45 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de gatinhos</title>
+    <title>Loja de Gatos</title>
 </head>
 
 <body>
+    <style>
+        #lista {
+            width: 210px;
+            height: 300px;
+            background-color: rgb(231, 223, 223);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;            
+            gap: 20px;
+        }
+
+        li{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 10px;            
+        }
+
+
+    </style>
     <h1>Loja de Gatos</h1>
-    <input id="Buscar" type="text">
+    <button id="buscar">Buscar</button>
+
     <ul id="lista">
-        
+
     </ul>
 
-
     <script>
-        url = 'https://api.thecatapi.com/v1/images/search?limit=10'
-        fetch(url)
+        fetch('https://api.thecatapi.com/v1/images/search?limit=10')
             .then(res => res.json())
             .then((dados) => {
-
-                const ul = document.getElementById('lista');
+                ul = document.getElementById('lista')
                 ul.innerHTML = ""
 
                 dados.map((key) => {
                     li = document.createElement('li')
                     li.innerHTML = `
-                    <a href="">
-                        <img src="${key.url}" alt="">
-                        <span>${key.id} </span>
-                        
-                    </a>            
-                    `
-                    ul.appendChild(li);
+             <img width="200px" height="200px" src="${key.url}" alt="">
+             <span>ID: ${key.id}</span>
+             <span>Tamanho: ${key.width}</span>
+             <span>Comprimento: ${key.height}</span>
+             
+             `
+                    ul.appendChild(li)
                 })
 
             })
-
     </script>
 
 </body>
 
 </html>
+
+<!-- "id":"ebv",
+"url":"https://cdn2.thecatapi.com/images/ebv.jpg",
+"width":176,"height":540,
+"breeds":[],
+"favourite":{}
+}] -->
