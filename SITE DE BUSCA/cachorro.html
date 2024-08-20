@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Cachorros</title>
+</head>
+
+<body>
+
+    <style>
+        #lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+           
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+    </style>
+    <h1>Loja de Cachorros</h1>
+
+    <button id="buscar">Pesquisar</button>
+
+    <ul id="lista">
+    </ul>
+    <script>
+        fetch('https://api.thecatapi.com/v1/images/search?limit=10')
+            .then(res => res.json())
+            .then((dados) => {
+
+                ul = document.getElementById('lista')
+                ul.innerHTML = ''
+                dados.map((key) => {
+
+                    li = document.createElement('li')
+
+                    li.innerHTML = `
+    <img width="200px" height="200" src="${key.url}" alt="">
+    <span> Id: ${key.id}</span>
+    <span> Tamanho: ${key.width}</span>
+    <span> Largura: ${key.height}</span>
+    
+    <span></span>
+    
+    `
+                    ul.appendChild(li)
+
+                })
+
+
+            })
+    </script>
+
+</body>
+
+</html>
+
+<!-- [{
+    "id":"ebv",
+    "url":"https://cdn2.thecatapi.com/images/ebv.jpg",
+    "width":176,"height":540,
+    "breeds":[],
+    "favourite":{}
+    }] -->
