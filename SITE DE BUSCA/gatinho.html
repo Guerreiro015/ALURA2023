@@ -1,76 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Cachorros</title>
+    <title>Loja de Gatinho</title>
 </head>
 
 <body>
 
     <style>
-        #lista {
+        #lista{
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
 
         }
-
-        li {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .dog {
+        .foto{
+            width: 200px;
+            height: 200px;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
+        }
+
+        li{
+            list-style-type: none;
         }
 
         .resumo{
             display: flex;
             flex-direction: column;
-            height: 280px;
+            width: 200px;
+            height: 300px;
             background-color: rgb(166, 168, 168);
             border-radius: 10px;
-
-
+            border: 1px solid #ddd;
         }
-
     </style>
-    <h1>Loja de Cachorros</h1>
 
-    <button id="buscar">Pesquisar</button>
+    <h1>LOJA DE GATINHO</h1>
+
+    <input placeholder="Pesquisar">
 
     <ul id="lista">
+
+
     </ul>
+
     <script>
-        fetch('https://api.thedogapi.com/v1/images/search?limit=10')
+        fetch('https://api.thecatapi.com/v1/images/search?limit=10')
             .then(res => res.json())
             .then((dados) => {
-
                 ul = document.getElementById('lista')
-                ul.innerHTML = ''
+                ul.innerHTML = ""
                 dados.map((key) => {
-
                     li = document.createElement('li')
-
                     li.innerHTML = `
-                    <a class="resumo">
-                <img width="200px" height="200" class="dog" src="${key.url}" alt="">
-                <span> Id: ${key.id}</span>
-                <span> Tamanho: ${key.width}</span>
-                <span> Largura: ${key.height}</span>  
-                    </a> 
-                `
+                     <div class="resumo">
+                    <img class="foto" src="${key.url}" alt="">
+                    <span> Id: ${key.id}</span>
+                    <span> Tamanho: ${key.width}</span>
+                    <span> Largura: ${key.height}</span>  
+                     </div>                 
+                    
+                    `
                     ul.appendChild(li)
-
                 })
 
-
             })
+
+
     </script>
 
 </body>

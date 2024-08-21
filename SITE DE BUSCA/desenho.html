@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenho Rick e Mortis</title>
+</head>
+
+<body>
+    <style>
+        #lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20PX;
+
+        }
+
+        .resumo {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: 330px;
+            border: 1px solid #ddd;
+            background-color: #f6f6f6; 
+            border-radius: 10px;  
+            gap: 5PX;
+        }
+
+        .foto {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: 200px;
+            height: 200px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+    </style>
+
+
+    <h1>Desenho Rick e Mortis</h1>
+    <input placeholder="O que está procurando ?" type="text">
+
+    <ul id="lista">
+
+    </ul>
+
+
+    <script>
+        fetch('https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20')
+            .then(res => res.json())
+            .then((dados) => {
+                ul = document.getElementById('lista')
+                ul.innerHTML = ""
+
+                dados.map((key) => {
+                    li = document.createElement('li');
+                    li.innerHTML = `
+            <div class="resumo">
+            <img class='foto' src="${key.image}" alt="">
+            <span>NOME: ${key.name}</span>
+            <span>STATUS: ${key.status}</span>
+            <span>ESPECIE: ${key.species}</span>
+            <span>GENERO: ${key.gender}</span>
+            </div>           
+            `
+                    ul.appendChild(li)
+
+                })
+
+
+
+
+            })
+    </script>
+</body>
+
+</html>
+<!-- 
+"id": 1,
+    "name": "Rick Sanchez",
+    "status": "Alive",
+    "species": "Human",
+    "type": "",
+    "gender": "Male",
+    "image":  -->

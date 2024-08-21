@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojão do Tonho</title>
+</head>
+
+<body>
+    <h1>LOJÃO GERAL</h1>
+    <input id="busca" type="text">
+
+    <ul id="resumo">
+
+
+    </ul>
+
+    <script>
+        fetch('https://fakestoreapi.com/users')
+            .then(res => res.json())
+            .then((dados) => {
+
+                ul = document.getElementById('resumo')
+                ul = innerHTML = ""
+
+                dados.map((key) => {
+                    li = document.createElement('li')
+                    li.innerHTML = `
+                    <div id="resumo">
+                        <span>${key.email}</span>
+                        <span>${key.username}</span>
+                        <span>${key.password}</span>
+                    </div>   
+    
+                 `                   
+                    ul.appendChild(li);
+
+
+                })
+            })
+    </script>
+
+</body>
+
+</html>
+
+<!-- "email":"John@gmail.com",
+	"username":"johnd",
+	"password":"m38rm#F", -->

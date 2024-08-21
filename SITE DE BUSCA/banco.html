@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Dados</title>
+</head>
+
+<body>
+    <style>
+        .resumo {
+            width: 280px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background-color: #eee;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 12px;
+
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        #lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+
+
+        }
+    </style>
+
+
+    <h1>Banco de Dados</h1>
+    <input id="busca" onkeyup="Exibir(this.value)" type="text" placeholder="O que você procura?">
+
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+        function Exibir(filtro) {
+            fetch('banco.json')
+                .then(res => res.json())
+                .then((dados) => {
+                    ul = document.getElementById('lista')
+                    ul.innerHTML = ""
+
+                    dados.map((key) => {
+                        if (key.NOME.toUpperCase().indexOf(filtro.toUpperCase()) >= 0 || filtro == "") {
+                            li = document.createElement("li")
+
+                            li.innerHTML = `
+      <a class="resumo">
+            <span>Nome.....: ${key.NOME} </span>
+            <span>Cargo....: ${key.CARGO} </span>
+            <span>Regional.: ${key.REGIONAL} </span>
+            <span>Gerente..: ${key.GERENCIA}</span>
+            <span>Evento...: ${key.Evento}</span>
+        </a>    
+    `
+                            ul.appendChild(li)
+
+
+                        }
+                    })
+                })
+        }
+        Exibir()
+    </script>
+
+
+</body>
+
+</html>
+
+<!-- "Id": 113776,
+    "Nome": "ERIVALDO TIBURCIO DE MELO",
+    "Cargo": "MECANICO III",
+    "Regional": "ECOSAMPA Operação Geral",
+    "Gerente": "João Sales",
+    "Departamento": "MECANICA" -->
