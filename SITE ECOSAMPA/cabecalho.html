@@ -1,0 +1,29 @@
+<script src="jquery-3.2.1.min.js"></script>
+
+<link href="/cabecalho.css" rel="stylesheet">
+<header class="cabecalho">
+    <div class="cabecalho-left">
+        <a class="cabecalho_texto" href="/todos.html"> Total Geral </a>
+        <a class="cabecalho_texto" href="/relatorio_BHP.html"> Banco de Horas </a>
+        <a class="cabecalho_texto" href="/relatorio_departamentos.html"> Departamentos </a>
+        <a class="cabecalho_texto" href="/relatorio_gerencia.html"> Gerencias </a>
+        <a class="cabecalho_texto" href="/todos.html"> Wilson </a>
+        <a class="cabecalho_texto" href="/relatorio_gustavo.html"> Gustavo </a>
+        <a class="cabecalho_texto" href="/relatorio_joao.html"> Joao Sales </a>
+        <a class="cabecalho_texto" href="/pesquisa.html"> PESQUISAR </a>
+        
+    </div>
+    <div class="cabecalho-right">
+        <img class="foto" src="usuario.jpg" alt="usuario">
+        <p class="usuario-nome" id="usador"></p>
+
+        <script>
+            var cliente = document.getElementById("usador")
+            nome_usuario = localStorage.getItem('Apelido');
+            cliente.innerHTML = nome_usuario
+
+        </script>
+        <a class="cabecalho_texto-left" href="/index.html"> Sair </a>
+    </div>
+
+</header>
