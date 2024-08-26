@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <ul id="lista">
+        <ul id="listagem">
 
         </ul>
     </div>
@@ -87,7 +87,7 @@
         var evento = document.getElementById('evento')
         evento.innerHTML = `Relatórios: TODOS - ${nome_usuario}`
 
-        fetch('banco2023.json')
+        fetch('banco.json')
             .then(res => res.json())
             .then((dados) => {
 
@@ -256,8 +256,8 @@
                      `
 
                 //Valores Gerais - Lista Completa
-                lista = document.getElementById('lista')
-                lista.innerHTML = ""
+                listagem = document.getElementById('listagem')
+                listagem.innerHTML = ""
 
                 dados.map((key) => {
                     li = document.createElement('li')
@@ -266,14 +266,14 @@
             <span id="linhas1">${key.MATRICULA}</span>
             <span id="linhas2">${key.NOME}</span>
             <span id="linhas2">${key.CARGO}</span>
-            <span id="linhas2">${key.REGIONAL}</span>
+            <span id="linhas">${key.REGIONAL}</span>
             <span id="linhas">${key.DEPARTAMENTO}</span>
             <span id="linhas">${key.GERENCIA}</span>
             <span id="linhas">${key.Evento}</span>
             <span id="linhas">${key.COMPETÊNCIA}</span>
            </div>          
             `
-                    lista.appendChild(li)
+                    listagem.appendChild(li)
                 })
 
             })
