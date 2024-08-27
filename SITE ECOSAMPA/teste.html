@@ -9,44 +9,47 @@
 
 <body>
 
+    <div id="lista">
+
+        <span></span>
+
+    </div>
+
 </body>
 
 </html>
 <script>
 
-    fetch('banco.json')
+    fetch('bhmenor.json')
         .then(res => res.json())
-        .then((dados) => {
-
-            // Obtém as chaves do objeto
-            const keys = Object.keys('dados');
-
-            // Conta o número de chaves
-            const numberOfKeys = keys.length;
-
-            // Mostra as chaves e a contagem
-            console.log("Chaves:", keys);
-            console.log("Número de chaves:", numberOfKeys);
-
-            const jsonData = {
-                "nome": "João",
-                "idade": 30,
-                "cidade": "São Paulo"
-            };
+        .then((dados) => {            
 
             // Obter as chaves do objeto
-            const chaves = Object.keys(jsonData);
+            const keys = Object.keys(dados[0]);
 
             // Mostrar as chaves
-            console.log(chaves); // ["nome", "idade", "cidade"]
+            console.log(keys); 
 
             // Contar o número de chaves
-            const numeroDeChaves = chaves.length;
-            console.log(numeroDeChaves); // 3
+            const numberOfKeys = keys.length;
+            console.log(numberOfKeys);
 
+            lista=document.getElementById('lista')
+            lista.innerHTML=""
 
             dados.map((key) => {
-                console.log(key.Nome)
+                for(i=0;i<numberOfKeys;i++){
+
+                    li=document.createElement('li')
+
+                    li.innerHTML=`
+                    
+                     < id="linha" span>${keys[i]}</span>
+                    
+                    `
+                    lista.appendChild(li)
+                    console.log(keys[5])
+                }
 
             })
 
