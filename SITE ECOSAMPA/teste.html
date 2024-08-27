@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    fetch('banco.json')
+        .then(res => res.json())
+        .then((dados) => {
+
+            // Obtém as chaves do objeto
+            const keys = Object.keys('dados');
+
+            // Conta o número de chaves
+            const numberOfKeys = keys.length;
+
+            // Mostra as chaves e a contagem
+            console.log("Chaves:", keys);
+            console.log("Número de chaves:", numberOfKeys);
+
+            const jsonData = {
+                "nome": "João",
+                "idade": 30,
+                "cidade": "São Paulo"
+            };
+
+            // Obter as chaves do objeto
+            const chaves = Object.keys(jsonData);
+
+            // Mostrar as chaves
+            console.log(chaves); // ["nome", "idade", "cidade"]
+
+            // Contar o número de chaves
+            const numeroDeChaves = chaves.length;
+            console.log(numeroDeChaves); // 3
+
+
+            dados.map((key) => {
+                console.log(key.Nome)
+
+            })
+
+        })
+</script>
