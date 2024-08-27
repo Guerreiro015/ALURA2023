@@ -9,9 +9,15 @@
 
 <body>
 
-    <div id="lista">
+    <style>
+        #linha{
+            display: flex;
+        }
+    </style>
 
-        <span></span>
+<p>lista teste</p>
+
+    <div id="lista">               
 
     </div>
 
@@ -37,21 +43,21 @@
             lista=document.getElementById('lista')
             lista.innerHTML=""
 
-            dados.map((key) => {
-                for(i=0;i<numberOfKeys;i++){
+           
+                for(i=0;i<keys.length;i++){
 
                     li=document.createElement('li')
 
                     li.innerHTML=`
-                    
-                     < id="linha" span>${keys[i]}</span>
+                   
+                    <div id="linha">
+                        <span>${keys[i]}</span>
+                    </div> 
                     
                     `
                     lista.appendChild(li)
                     console.log(keys[5])
                 }
-
-            })
-
         })
+
 </script>
