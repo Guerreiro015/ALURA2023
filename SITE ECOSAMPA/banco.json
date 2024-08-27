@@ -1,23 +1,4 @@
-[
-  {
-    "MATRICULA": "MATRICULA",
-    "NOME": "NOME",
-    "CARGO": "CARGO",
-    "REGIONAL": "REGIONAL",
-    "DEPARTAMENTO": "DEPARTAMENTO",
-    "GERENCIA": "GERENCIA",
-    "Evento": "Evento",
-    "Evento de Ponto": "Evento de Ponto",
-    "Quantidade do Evento de Ponto Justificada": "Quantidade do Evento de Ponto Justificada",
-    "DATA": "DATA",
-    "COMPETÊNCIA": "COMPETÊNCIA",
-    "BATE": "BATE",
-    "DIA SEM FOLGA": "DIA SEM FOLGA",
-    "PERÍODO": "PERÍODO",
-    "Horário": "Horário",
-    "ANO": "ANO",
-    "MÊS": "MÊS"
-  },
+[ 
   {
     "MATRICULA": 112781,
     "NOME": "LUCIANO ALCIDES MOTA",

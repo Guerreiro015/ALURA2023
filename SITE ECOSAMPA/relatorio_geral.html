@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Dados</title>
+    <link rel="stylesheet" href="./banco.css">
+    <link rel="stylesheet" href="./cabecalho.css">
+    <link rel="stylesheet" href="./styles.css">
+
+
+    <header class="cabecalho">
+        <div class="cabecalho-left">
+
+            <a class="cabecalho_texto" href="./relatorio_geral.html"> Total Geral </a>
+            <a class="cabecalho_texto" href="./relatorio_2022.html"> Total 2022 </a>
+            <a class="cabecalho_texto" href="./relatorio_2023.html"> Total 2023 </a>
+            <a class="cabecalho_texto" href="/relatorio_gerencia.html"> Gerencias </a>           
+            <a class="cabecalho_texto" href="/relatorio_departamentos.html"> Departamentos </a>
+            <a class="cabecalho_texto" href="/relatorio_BHP.html"> Banco de Horas </a>
+            <a class="cabecalho_texto" href="/pesquisa.html"> PESQUISAR </a>
+
+        </div>
+        <div class="cabecalho-right">
+            <img class="foto" src="usuario.jpg" alt="usuario">
+            <p class="usuario-nome" id="usador"></p>
+
+            <script>
+                var cliente = document.getElementById("usador")
+                nome_usuario = localStorage.getItem('Apelido');
+                cliente.innerHTML = `Olá, ${nome_usuario}`
+            </script>
+            <a class="cabecalho_texto-left" href="/index.html"> Sair </a>
+        </div>
+
+    </header>
+</head>
+
+
+<body>
+
+    <h2 id="evento">Eventos Anuais</h2>
+    <div id="container">
+        <div id="cabeca">
+            <div id="cabeca_tit">
+                <span>EVENTOS:</span>
+                <span>HE-Excedentes</span>
+                <span>Dias sem Folgas</span>
+                <span>Interjornadas</span>
+                <span>Total:</span>
+            </div>
+            <div id="totais">
+
+                <div id="meses">
+                </div>
+
+                <div id="tot_he">
+                </div>
+                <div id="tot_dsf">
+                </div>
+                <div id="tot_int">
+                </div>
+
+                <div id="tot_titulo">
+                </div>
+
+            </div>
+            <div id="soma">
+
+            </div>
+        </div>
+        <div>
+            <div id="tit_resumo">
+                <span id="linhas1">MATRICULA</span>
+                <span id="linhas2">NOME</span>
+                <span id="linhas2">CARGO</span>
+                <span id="linhas">REGIONAL</span>
+                <span id="linhas">DEPARTAMENTO</span>
+                <span id="linhas">GERENCIA</span>
+                <span id="linhas">Evento</span>
+                <span id="linhas">COMPETÊNCIA</span>
+            </div>
+        </div>
+        <ul id="listagem">
+
+        </ul>
+    </div>
+
+
+
+    <script>
+
+        var cliente = document.getElementById("usador")
+        nome_usuario = localStorage.getItem('Apelido');
+        cliente.innerHTML = nome_usuario
+        var evento = document.getElementById('evento')
+        gerente = "TOTAL GERAL"
+        evento.innerHTML = `Relatórios Gerencia: ${gerente}`
+
+        fetch('banco.json')
+            .then(res => res.json())
+            .then((dados) => {
+
+                var titulo = document.getElementById('meses')
+                meses.innerHTML = ""
+
+                var tot_titulo = document.getElementById('tot_titulo')
+                tot_titulo.innerHTML = ""
+
+                var tot_he = document.getElementById('tot_he')
+                tot_he.innerHTML = ""
+
+                var tot_dsf = document.getElementById('tot_dsf')
+                tot_dsf.innerHTML = ""
+
+                var tot_int = document.getElementById('tot_int')
+                tot_int.innerHTML = ""
+
+                var soma = document.getElementById('soma')
+                soma.innerHTML = ""
+
+                let lista = [];
+                let quant = [0];
+                let quanthe = [0]
+                let quantdsf = [0]
+                let quantint = [0]
+
+                dados.map((key) => {
+                    if (!lista.includes(key.COMPETÊNCIA)) {
+                        lista.push(key.COMPETÊNCIA)
+
+                    }
+                })
+
+
+                //Nomes dos meses
+                var item = 0
+                for (i = 1; i < lista.length; i++) {
+                    dados.map((key) => {
+                        if (key.COMPETÊNCIA == lista[i]) {
+                            item += 1
+                        }
+                    })
+                    quant.push(item)
+                    item = 0
+
+                    li = document.createElement('li')
+                    li.innerHTML = `
+                     <div id="tit">   
+                        <span id="li-titulo">${lista[i]}</span>
+                     </div>
+                     `
+                    meses.appendChild(li)
+                }
+
+                //Total do meses
+                var item = 0
+                for (i = 1; i < lista.length; i++) {
+                    dados.map((key) => {
+                        if (key.COMPETÊNCIA == lista[i]) {
+                            item += 1
+                        }
+                    })
+                    quant.push(item)
+                    item = 0
+
+                    li = document.createElement('li')
+                    li.innerHTML = `
+                     <div id="tit">   
+                        <span id="li-titulo"> ${quant[i]}</span>
+                     </div>
+                     `
+                    tot_titulo.appendChild(li)
+                }
+
+
+                //Total do HE-Exedentes
+                var item = 0
+                for (i = 1; i < lista.length; i++) {
+                    dados.map((key) => {
+                        if (key.COMPETÊNCIA == lista[i] && key.Evento == "HE-EXCEDENTES") {
+                            item += 1
+                        }
+                    })
+                    quanthe.push(item)
+                    item = 0
+
+                    li = document.createElement('li')
+                    li.innerHTML = `
+                     <div id="tit">   
+                        <span id="li-titu"> ${quanthe[i]}</span>
+                     </div>
+                     `
+                    tot_he.appendChild(li)
+                }
+
+
+                //Total do DSF
+                var item = 0
+                for (i = 1; i < lista.length; i++) {
+                    dados.map((key) => {
+                        if (key.COMPETÊNCIA == lista[i] && key.Evento == "DIAS SEM FOLGAS") {
+                            item += 1
+                        }
+                    })
+                    quantdsf.push(item)
+                    item = 0
+
+                    li = document.createElement('li')
+                    li.innerHTML = `
+                     <div id="tit">   
+                        <span id="li-titu"> ${quantdsf[i]}</span>
+                     </div>
+                     `
+                    tot_dsf.appendChild(li)
+                }
+
+
+                //Total do INTERjornadas
+                var item = 0
+                for (i = 1; i < lista.length; i++) {
+                    dados.map((key) => {
+                        if (key.COMPETÊNCIA == lista[i] && key.Evento == "INTERJORNADAS") {
+                            item += 1
+                        }
+                    })
+                    quantint.push(item)
+                    item = 0
+
+                    li = document.createElement('li')
+                    li.innerHTML = `
+                     <div id="tit">   
+                        <span id="li-titu"> ${quantint[i]}</span>
+                     </div>
+                     `
+                    tot_int.appendChild(li)
+                }
+
+                //Total de Todos os Eventos
+                var totalHE = 0
+                var totalDSF = 0
+                var totalINT = 0
+                dados.map((key) => {
+                    if (key.Evento == "HE-EXCEDENTES") {
+                        totalHE += 1
+                    }
+                    if (key.Evento == "DIAS SEM FOLGAS") {
+                        totalDSF += 1
+                    }
+                    if (key.Evento == "INTERJORNADAS") {
+                        totalINT += 1
+                    }
+                })
+
+                total = dados.length
+                total = total - 1
+                soma = document.getElementById('soma')
+                soma.innerHTML = `               
+                     <div id="soma">                            
+                         <span id="li_total"> Total</span>
+                         <span id="li_total"> ${totalHE}</span>
+                         <span id="li_total"> ${totalDSF}</span>
+                         <span id="li_total"> ${totalINT}</span>
+                         <span id="li_total"> ${total}</span>
+                     </div>
+                     `
+
+                //Valores Gerais - Lista Completa
+                listagem = document.getElementById('listagem')
+                listagem.innerHTML = ""
+
+                dados.map((key) => {
+                    li = document.createElement('li')
+                    li.innerHTML = ` 
+           <div id="resumo">          
+            <span id="linhas1">${key.MATRICULA}</span>
+            <span id="linhas2">${key.NOME}</span>
+            <span id="linhas2">${key.CARGO}</span>
+            <span id="linhas">${key.REGIONAL}</span>
+            <span id="linhas">${key.DEPARTAMENTO}</span>
+            <span id="linhas">${key.GERENCIA}</span>
+            <span id="linhas">${key.Evento}</span>
+            <span id="linhas">${key.COMPETÊNCIA}</span>
+           </div>          
+            `
+                    listagem.appendChild(li)
+                })
+
+            })
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- "MATRICULA": 113760,
+    "NOME": "ANA PAULA STIGLIANI",
+    "CARGO": "AUXILIAR DE PLANEJAMENTO OPERACIONAL",
+    "REGIONAL": "ECOSAMPA Operação Geral",
+    "DEPARTAMENTO": "PLANEJAMENTO",
+    "GERENCIA": "JOÃO SALES",
+    "Evento": "HE-EXCEDENTES",
+    "Evento de Ponto": "CREDITO BANCO DE HORAS",
+    "Quantidade do Evento de Ponto Justificada": "2,22",
+    "DATA": "21/05/2023",
+    "COMPETÊNCIA": "jun-23",
+    "BATE": 0,
+    "DIA SEM FOLGA": 0,
+    "PERÍODO": "21/05/2023",
+    "Horário": "SEGUNDA A SABADO - 06:00 AS 14:20 / INTERVALO DE 01 HORA",
+    "ANO": 2023,
+    "MÊS": 6 -->

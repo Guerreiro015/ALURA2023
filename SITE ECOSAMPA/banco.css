@@ -18,17 +18,26 @@ body {
     margin-left: 5dvw;
     box-sizing: border-box;
     border: 3px solid rgb(5, 74, 236);
-    width: 80dvw;
+    width: 90dvw;
     height: 30dvw;
     overflow-y: auto;
     border-radius: 10px;
 }
 
+#tit_resumo {
+    display: flex;    
+    justify-content: left;
+    margin-top: 10px;
+    margin-left: 123px;
+    color: rgb(9, 66, 197);
+    font-weight: bold;    
+}
+
 #resumo {
     display: flex;
     color: #262b47;
+    
    }
-
 
 
 #linhas {

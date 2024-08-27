@@ -13,13 +13,12 @@
     <header class="cabecalho">
         <div class="cabecalho-left">
 
-            <a class="cabecalho_texto" href="/todos.html"> Total Geral </a>
-            <a class="cabecalho_texto" href="/relatorio_BHP.html"> Banco de Horas </a>
+            <a class="cabecalho_texto" href="./relatorio_geral.html"> Total Geral </a>
+            <a class="cabecalho_texto" href="./relatorio_2022.html"> Total 2022 </a>
+            <a class="cabecalho_texto" href="./relatorio_2023.html"> Total 2023 </a>
+            <a class="cabecalho_texto" href="/relatorio_gerencia.html"> Gerencias </a>           
             <a class="cabecalho_texto" href="/relatorio_departamentos.html"> Departamentos </a>
-            <a class="cabecalho_texto" href="/relatorio_gerencia.html"> Gerencias </a>
-            <a class="cabecalho_texto" href="/todos.html"> Wilson </a>
-            <a class="cabecalho_texto" href="/relatorio_gustavo.html"> Gustavo </a>
-            <a class="cabecalho_texto" href="/relatorio_joao.html"> Joao Sales </a>
+            <a class="cabecalho_texto" href="/relatorio_BHP.html"> Banco de Horas </a>
             <a class="cabecalho_texto" href="/pesquisa.html"> PESQUISAR </a>
 
         </div>
@@ -71,7 +70,18 @@
 
             </div>
         </div>
-
+        <div>
+            <div id="tit_resumo">
+                <span id="linhas1">MATRICULA</span>
+                <span id="linhas2">NOME</span>
+                <span id="linhas2">CARGO</span>
+                <span id="linhas">REGIONAL</span>
+                <span id="linhas">DEPARTAMENTO</span>
+                <span id="linhas">GERENCIA</span>
+                <span id="linhas">Evento</span>
+                <span id="linhas">COMPETÊNCIA</span>
+            </div>
+        </div>
         <ul id="listagem">
 
         </ul>
@@ -85,9 +95,10 @@
         nome_usuario = localStorage.getItem('Apelido');
         cliente.innerHTML = nome_usuario
         var evento = document.getElementById('evento')
-        evento.innerHTML = `Relatórios: TODOS - ${nome_usuario}`
+        gerente = "TOTAL GERAL 2022"
+        evento.innerHTML = `Relatórios Gerencia: ${gerente}`
 
-        fetch('banco.json')
+        fetch('banco2022.json')
             .then(res => res.json())
             .then((dados) => {
 
