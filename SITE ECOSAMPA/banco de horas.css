@@ -6,7 +6,7 @@
 
         #titulo {
             margin-top: 20px;
-            margin-left: 5px;
+            margin-left: 100px;
             display: flex;
             font-family: 'Times New Roman';
             width: 1475px;
@@ -33,7 +33,7 @@
 
         #lista {            
             background-color: cadetblue;
-            margin-left: 10px;
+            margin-left: 100px;
             display: flex;
             flex-direction: column;
             font-family: 'Times New Roman';
