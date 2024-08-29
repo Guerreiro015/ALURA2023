@@ -121,10 +121,10 @@
                 soma.innerHTML = ""
 
                 let lista = [];
-                let quant = [0];
-                let quanthe = [0]
-                let quantdsf = [0]
-                let quantint = [0]
+                let quant = [];
+                let quanthe = []
+                let quantdsf = []
+                let quantint = []
 
                 dados.map((key) => {
                     if (!lista.includes(key.COMPETÊNCIA)) {
@@ -177,7 +177,7 @@
 
                 //Total do HE-Exedentes
                 var item = 0
-                for (i = 1; i < lista.length; i++) {
+                for (i = 0; i < lista.length; i++) {
                     dados.map((key) => {
                         if (key.COMPETÊNCIA == lista[i] && key.Evento == "HE-EXCEDENTES") {
                             item += 1
@@ -198,7 +198,7 @@
 
                 //Total do DSF
                 var item = 0
-                for (i = 1; i < lista.length; i++) {
+                for (i = 0; i < lista.length; i++) {
                     dados.map((key) => {
                         if (key.COMPETÊNCIA == lista[i] && key.Evento == "DIAS SEM FOLGAS") {
                             item += 1
@@ -219,7 +219,7 @@
 
                 //Total do INTERjornadas
                 var item = 0
-                for (i = 1; i < lista.length; i++) {
+                for (i = 0; i < lista.length; i++) {
                     dados.map((key) => {
                         if (key.COMPETÊNCIA == lista[i] && key.Evento == "INTERJORNADAS") {
                             item += 1
