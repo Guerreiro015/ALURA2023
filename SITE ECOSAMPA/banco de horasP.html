@@ -31,7 +31,7 @@
         <script>
             var cliente = document.getElementById("usador")
             nome_usuario = localStorage.getItem('Apelido');
-            cliente.innerHTML = `Olá, ${nome_usuario}`
+            cliente.innerHTML = `${nome_usuario}`
         </script>
         <a class="cabecalho_texto-left" href="/index.html"> Sair </a>
     </div>
@@ -85,7 +85,7 @@
                         li.innerHTML = `
                    
                     <div id="li_titu">
-                        <span id="li_tit">${keys[i]}</span>
+                        <span id="li_titi">${keys[i]}</span>
                     </div> 
                     
                     `
@@ -111,9 +111,7 @@
                             <span id="li_tit">${key.Total_Mai}</span >
                             <span id="li_tit">${key.Total_Jun}</span >
                             <span id="li_tit">${key.Total_Jul}</span >
-                            <span id="li_tit">${key.Total_Ago}</span >
-                           
-                            
+                            <span id="li_tit">${key.Total_Ago}</span >                           
                         </div >
                         `
                         lista.appendChild(li)

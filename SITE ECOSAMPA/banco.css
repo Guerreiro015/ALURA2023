@@ -67,8 +67,7 @@ li:nth-child(even) {
 
 #tit {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;      
     width: 50px;
     display: flex;
     gap: 12px;
