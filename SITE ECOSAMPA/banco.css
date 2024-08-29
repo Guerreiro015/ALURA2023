@@ -68,8 +68,7 @@ li:nth-child(even) {
 #tit {
     display: flex;
     justify-content: center;      
-    width: 50px;
-    display: flex;
+    width: 50px;    
     gap: 12px;
 }
 
@@ -99,7 +98,6 @@ li:nth-child(even) {
 }
 
 #li-titu {
-
     font-size: 12px;
 }
 
