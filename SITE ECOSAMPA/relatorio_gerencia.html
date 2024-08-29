@@ -12,10 +12,10 @@
 
     <header class="cabecalho">
         <div class="cabecalho-left">
-            <a class="cabecalho_voltar" href="./relatorio_geral.html">Total Geral</a>            
+            <a class="cabecalho_voltar" href="./relatorio_geral.html">Total Geral</a>
             <button class="cabecalho_botao" onclick="Gerente('WILSON')"> WILSON</a>
-            <button class="cabecalho_botao" onclick="Gerente('GUSTAVO')"> GUSTAVO</a>
-            <button class="cabecalho_botao" onclick="Gerente('JOÃO SALES')"> JOÃO SALES</a>            
+                <button class="cabecalho_botao" onclick="Gerente('GUSTAVO')"> GUSTAVO</a>
+                    <button class="cabecalho_botao" onclick="Gerente('JOÃO SALES')"> JOÃO SALES</a>
         </div>
         <div class="cabecalho-right">
             <img class="foto" src="usuario.jpg" alt="usuario">
@@ -34,8 +34,14 @@
 
 
 <body>
+    <div class="dados-tit">
 
-    <h2 id="evento">Eventos Anuais</h2>
+        <div class="eventos_tit">
+            <p> <span id="evento"></span> </p>
+        </div>
+
+    </div>
+
     <div id="container">
         <div id="cabeca">
             <div id="cabeca_tit">
@@ -47,213 +53,206 @@
             </div>
             <div id="totais">
 
-                <div id="meses">
-                </div>
+                <div id="meses"></div>
 
-                <div id="tot_he">
-                </div>
-                <div id="tot_dsf">
-                </div>
-                <div id="tot_int">
-                </div>
+                <div id="tot_he"></div>
+                <div id="tot_dsf"></div>
+                <div id="tot_int"></div>
 
-                <div id="tot_titulo">
-                </div>
+                <div id="tot_titulo"></div>
 
             </div>
-            <div id="soma">
+            <div id="soma"></div>
 
-            </div>
         </div>
-        <div>
-            <div id="tit_resumo">
-                <span id="linhas1">MATRICULA</span>
-                <span id="linhas2">NOME</span>
-                <span id="linhas2">CARGO</span>
-                <span id="linhas">REGIONAL</span>
-                <span id="linhas">DEPARTAMENTO</span>
-                <span id="linhas">GERENCIA</span>
-                <span id="linhas">EVENTOS</span>
-                <span id="linhas">COMPETÊNCIA</span>
-            </div>
+    </div>
+    <div id="lista-eventos">
+        <div id="tit_resumo">
+            <span id="linhas1">MATRICULA</span>
+            <span id="linhas2">NOME</span>
+            <span id="linhas2">CARGO</span>
+            <span id="linhas">REGIONAL</span>
+            <span id="linhas">DEPARTAMENTO</span>
+            <span id="linhas">GERENCIA</span>
+            <span id="linhas">EVENTOS</span>
+            <span id="linhas">COMPETÊNCIA</span>
         </div>
-        <ul id="listagem">
-
-        </ul>
+        <ul id="listagem"></ul>
+    </div>
     </div>
 
 
 
     <script>
-        function Gerente(ger){
+        function Gerente(ger) {
 
-        var cliente = document.getElementById("usador")
-        nome_usuario = localStorage.getItem('Apelido');
-        cliente.innerHTML = nome_usuario
-        var evento = document.getElementById('evento')
-        gerente = ger
-        evento.innerHTML = `Relatórios Gerencia: ${gerente}`
+            var cliente = document.getElementById("usador")
+            nome_usuario = localStorage.getItem('Apelido');
+            cliente.innerHTML = nome_usuario
+            var evento = document.getElementById('evento')
+            gerente = ger
+            evento.innerHTML = `Relatórios Gerencia: ${gerente}`
 
-        fetch('banco.json')
-            .then(res => res.json())
-            .then((dados) => {
+            fetch('banco.json')
+                .then(res => res.json())
+                .then((dados) => {
 
-                var titulo = document.getElementById('meses')
-                meses.innerHTML = ""
+                    var titulo = document.getElementById('meses')
+                    meses.innerHTML = ""
 
-                var tot_titulo = document.getElementById('tot_titulo')
-                tot_titulo.innerHTML = ""
+                    var tot_titulo = document.getElementById('tot_titulo')
+                    tot_titulo.innerHTML = ""
 
-                var tot_he = document.getElementById('tot_he')
-                tot_he.innerHTML = ""
+                    var tot_he = document.getElementById('tot_he')
+                    tot_he.innerHTML = ""
 
-                var tot_dsf = document.getElementById('tot_dsf')
-                tot_dsf.innerHTML = ""
+                    var tot_dsf = document.getElementById('tot_dsf')
+                    tot_dsf.innerHTML = ""
 
-                var tot_int = document.getElementById('tot_int')
-                tot_int.innerHTML = ""
+                    var tot_int = document.getElementById('tot_int')
+                    tot_int.innerHTML = ""
 
-                var soma = document.getElementById('soma')
-                soma.innerHTML = ""
+                    var soma = document.getElementById('soma')
+                    soma.innerHTML = ""
 
-                let lista = [];
-                let quant = [];
-                let quanthe = []
-                let quantdsf = []
-                let quantint = []
+                    let lista = [];
+                    let quant = [];
+                    let quanthe = []
+                    let quantdsf = []
+                    let quantint = []
 
-                dados.map((key) => {
-                    if (!lista.includes(key.COMPETÊNCIA)) {
-                        lista.push(key.COMPETÊNCIA)
-
-                    }
-                })
-
-
-
-                //Nomes dos meses
-                var item = 0
-                for (i = 0; i < lista.length; i++) {
                     dados.map((key) => {
-                        if (key.COMPETÊNCIA == lista[i] && key.GERENCIA == gerente) {
-                            item += 1
+                        if (!lista.includes(key.COMPETÊNCIA)) {
+                            lista.push(key.COMPETÊNCIA)
+
                         }
                     })
-                    quant.push(item)
-                    item = 0
 
-                    li = document.createElement('li')
-                    li.innerHTML = `
+
+
+                    //Nomes dos meses
+                    var item = 0
+                    for (i = 0; i < lista.length; i++) {
+                        dados.map((key) => {
+                            if (key.COMPETÊNCIA == lista[i] && key.GERENCIA == gerente) {
+                                item += 1
+                            }
+                        })
+                        quant.push(item)
+                        item = 0
+
+                        li = document.createElement('li')
+                        li.innerHTML = `
                      <div id="tit">   
                         <span id="li-titulo">${lista[i]}</span>
                      </div>
                      `
-                    meses.appendChild(li)
-                }
+                        meses.appendChild(li)
+                    }
 
-                //Total do meses
-                var item = 0
-                for (i = 0; i < lista.length; i++) {
-                    dados.map((key) => {
-                        if (key.COMPETÊNCIA == lista[i] && key.GERENCIA == gerente) {
-                            item += 1
-                        }
-                    })
-                    quant.push(item)
-                    item = 0
+                    //Total do meses
+                    var item = 0
+                    for (i = 0; i < lista.length; i++) {
+                        dados.map((key) => {
+                            if (key.COMPETÊNCIA == lista[i] && key.GERENCIA == gerente) {
+                                item += 1
+                            }
+                        })
+                        quant.push(item)
+                        item = 0
 
-                    li = document.createElement('li')
-                    li.innerHTML = `
+                        li = document.createElement('li')
+                        li.innerHTML = `
                      <div id="tit">   
                         <span id="li-titulo"> ${quant[i]}</span>
                      </div>
                      `
-                    tot_titulo.appendChild(li)
-                }
+                        tot_titulo.appendChild(li)
+                    }
 
 
-                //Total do HE-Exedentes
-                var item = 0
-                for (i = 0; i < lista.length; i++) {
-                    dados.map((key) => {
-                        if (key.COMPETÊNCIA == lista[i] && key.Evento == "HE-EXCEDENTES" && key.GERENCIA == gerente) {
-                            item += 1
-                        }
-                    })
-                    quanthe.push(item)
-                    item = 0
+                    //Total do HE-Exedentes
+                    var item = 0
+                    for (i = 0; i < lista.length; i++) {
+                        dados.map((key) => {
+                            if (key.COMPETÊNCIA == lista[i] && key.Evento == "HE-EXCEDENTES" && key.GERENCIA == gerente) {
+                                item += 1
+                            }
+                        })
+                        quanthe.push(item)
+                        item = 0
 
-                    li = document.createElement('li')
-                    li.innerHTML = `
+                        li = document.createElement('li')
+                        li.innerHTML = `
                      <div id="tit">   
                         <span id="li-titu"> ${quanthe[i]}</span>
                      </div>
                      `
-                    tot_he.appendChild(li)
-                }
+                        tot_he.appendChild(li)
+                    }
 
 
-                //Total do DSF
-                var item = 0
-                for (i = 0; i < lista.length; i++) {
-                    dados.map((key) => {
-                        if (key.COMPETÊNCIA == lista[i] && key.Evento == "DIAS SEM FOLGAS" && key.GERENCIA == gerente) {
-                            item += 1
-                        }
-                    })
-                    quantdsf.push(item)
-                    item = 0
+                    //Total do DSF
+                    var item = 0
+                    for (i = 0; i < lista.length; i++) {
+                        dados.map((key) => {
+                            if (key.COMPETÊNCIA == lista[i] && key.Evento == "DIAS SEM FOLGAS" && key.GERENCIA == gerente) {
+                                item += 1
+                            }
+                        })
+                        quantdsf.push(item)
+                        item = 0
 
-                    li = document.createElement('li')
-                    li.innerHTML = `
+                        li = document.createElement('li')
+                        li.innerHTML = `
                      <div id="tit">   
                         <span id="li-titu"> ${quantdsf[i]}</span>
                      </div>
                      `
-                    tot_dsf.appendChild(li)
-                }
+                        tot_dsf.appendChild(li)
+                    }
 
 
-                //Total do INTERjornadas
-                var item = 0
-                for (i = 0; i < lista.length; i++) {
-                    dados.map((key) => {
-                        if (key.COMPETÊNCIA == lista[i] && key.Evento == "INTERJORNADAS" && key.GERENCIA == gerente) {
-                            item += 1
-                        }
-                    })
-                    quantint.push(item)
-                    item = 0
+                    //Total do INTERjornadas
+                    var item = 0
+                    for (i = 0; i < lista.length; i++) {
+                        dados.map((key) => {
+                            if (key.COMPETÊNCIA == lista[i] && key.Evento == "INTERJORNADAS" && key.GERENCIA == gerente) {
+                                item += 1
+                            }
+                        })
+                        quantint.push(item)
+                        item = 0
 
-                    li = document.createElement('li')
-                    li.innerHTML = `
+                        li = document.createElement('li')
+                        li.innerHTML = `
                      <div id="tit">   
                         <span id="li-titu"> ${quantint[i]}</span>
                      </div>
                      `
-                    tot_int.appendChild(li)
-                }
+                        tot_int.appendChild(li)
+                    }
 
-                //Total de Todos os Eventos
-                var totalHE = 0
-                var totalDSF = 0
-                var totalINT = 0
-                dados.map((key) => {
-                    if (key.Evento == "HE-EXCEDENTES" && key.GERENCIA == gerente) {
-                        totalHE += 1
-                    }
-                    if (key.Evento == "DIAS SEM FOLGAS" && key.GERENCIA == gerente) {
-                        totalDSF += 1
-                    }
-                    if (key.Evento == "INTERJORNADAS" && key.GERENCIA == gerente) {
-                        totalINT += 1
-                    }
-                })
+                    //Total de Todos os Eventos
+                    var totalHE = 0
+                    var totalDSF = 0
+                    var totalINT = 0
+                    dados.map((key) => {
+                        if (key.Evento == "HE-EXCEDENTES" && key.GERENCIA == gerente) {
+                            totalHE += 1
+                        }
+                        if (key.Evento == "DIAS SEM FOLGAS" && key.GERENCIA == gerente) {
+                            totalDSF += 1
+                        }
+                        if (key.Evento == "INTERJORNADAS" && key.GERENCIA == gerente) {
+                            totalINT += 1
+                        }
+                    })
 
-                total = dados.length
-                total = parseFloat(totalHE + totalDSF + tot_int)
-                soma = document.getElementById('soma')
-                soma.innerHTML = `               
+                    total = dados.length
+                    total = parseFloat(totalHE + totalDSF + tot_int)
+                    soma = document.getElementById('soma')
+                    soma.innerHTML = `               
                      <div id="soma">                            
                          <span id="li_total"> Total</span>
                          <span id="li_total"> ${totalHE}</span>
@@ -263,14 +262,14 @@
                      </div>
                      `
 
-                //Valores Gerais - Lista Completa
-                listagem = document.getElementById('listagem')
-                listagem.innerHTML = ""
+                    //Valores Gerais - Lista Completa
+                    listagem = document.getElementById('listagem')
+                    listagem.innerHTML = ""
 
-                dados.map((key) => {
-                    if (key.GERENCIA == gerente) {
-                        li = document.createElement('li')
-                        li.innerHTML = ` 
+                    dados.map((key) => {
+                        if (key.GERENCIA == gerente) {
+                            li = document.createElement('li')
+                            li.innerHTML = ` 
            <div id="resumo">          
             <span id="linhas1">${key.MATRICULA}</span>
             <span id="linhas2">${key.NOME}</span>
@@ -282,13 +281,13 @@
             <span id="linhas">${key.COMPETÊNCIA}</span>
            </div>          
             `
-                        listagem.appendChild(li)
-                    }
+                            listagem.appendChild(li)
+                        }
+                    })
+
+
+
                 })
-
-
-
-            })
 
         }
 

@@ -13,16 +13,17 @@
     <header class="cabecalho">
         <div class="cabecalho-dp">
 
-            <a class="cabecalho_voltar" href="./relatorio_geral.html">Total Geral</a>            
+            <a class="cabecalho_voltar" href="./relatorio_geral.html">Total Geral</a>
             <button class="cabecalho_botao" onclick="Depa('OPERAÇÃO')"> OPERAÇÃO</a>
-            <button class="cabecalho_botao" onclick="Depa('QSMS')"> QSMS</a>
-            <button class="cabecalho_botao" onclick="Depa('TRAFEGO')"> TRÁFEGO</a>
-            <button class="cabecalho_botao" onclick="Depa('MECANICA')"> MECANICA</a>
-            <button class="cabecalho_botao" onclick="Depa('PREDIAL')"> PREDIAL</a>
-            <button class="cabecalho_botao" onclick="Depa('SUPRIMENTOS')"> SUPRIMENTOS</a>
-            <button class="cabecalho_botao" onclick="Depa('DHO / RH')"> DHO / RH</a>
-            <button class="cabecalho_botao" onclick="Depa('PLANEJAMENTO')"> PLANEJAMENTO</a>
-            <button class="cabecalho_botao" onclick="Depa('ADMINISTRAÇÃO')"> ADMINISTRAÇÃO</a>
+                <button class="cabecalho_botao" onclick="Depa('QSMS')"> QSMS</a>
+                    <button class="cabecalho_botao" onclick="Depa('TRAFEGO')"> TRÁFEGO</a>
+                        <button class="cabecalho_botao" onclick="Depa('MECANICA')"> MECANICA</a>
+                            <button class="cabecalho_botao" onclick="Depa('PREDIAL')"> PREDIAL</a>
+                                <button class="cabecalho_botao" onclick="Depa('SUPRIMENTOS')"> SUPRIMENTOS</a>
+                                    <button class="cabecalho_botao" onclick="Depa('DHO / RH')"> DHO / RH</a>
+                                        <button class="cabecalho_botao" onclick="Depa('PLANEJAMENTO')"> PLANEJAMENTO</a>
+                                            <button class="cabecalho_botao" onclick="Depa('ADMINISTRAÇÃO')">
+                                                ADMINISTRAÇÃO</a>
 
 
         </div>
@@ -44,7 +45,14 @@
 
 <body>
 
-    <h2 id="evento"></h2>
+    <div class="dados-tit">
+
+        <div class="eventos_tit">
+            <p> <span id="evento"></span> </p>
+        </div>
+
+    </div>
+
     <div id="container">
         <div id="cabeca">
             <div id="cabeca_tit">
@@ -56,39 +64,32 @@
             </div>
             <div id="totais">
 
-                <div id="meses">
-                </div>
+                <div id="meses"></div>
 
-                <div id="tot_he">
-                </div>
-                <div id="tot_dsf">
-                </div>
-                <div id="tot_int">
-                </div>
+                <div id="tot_he"></div>
+                <div id="tot_dsf"></div>
+                <div id="tot_int"></div>
 
-                <div id="tot_titulo">
-                </div>
+                <div id="tot_titulo"></div>
 
             </div>
-            <div id="soma">
-
-            </div>
+            <div id="soma"></div>
         </div>
-        <div>
-            <div id="tit_resumo">
-                <span id="linhas1">MATRICULA</span>
-                <span id="linhas2">NOME</span>
-                <span id="linhas2">CARGO</span>
-                <span id="linhas">REGIONAL</span>
-                <span id="linhas">DEPARTAMENTO</span>
-                <span id="linhas">GERENCIA</span>
-                <span id="linhas">EVENTOS</span>
-                <span id="linhas">COMPETÊNCIA</span>
-            </div>
-        </div>
-        <ul id="listagem">
 
-        </ul>
+    </div>
+    <div id="lista-eventos">
+        <div id="tit_resumo">
+            <span id="linhas1">MATRICULA</span>
+            <span id="linhas2">NOME</span>
+            <span id="linhas2">CARGO</span>
+            <span id="linhas">REGIONAL</span>
+            <span id="linhas">DEPARTAMENTO</span>
+            <span id="linhas">GERENCIA</span>
+            <span id="linhas">EVENTOS</span>
+            <span id="linhas">COMPETÊNCIA</span>
+        </div>
+        <ul id="listagem"></ul>
+    </div>
     </div>
 
 

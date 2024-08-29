@@ -224,6 +224,7 @@ li {
     display: flex;
     column-gap: 5px;
     align-items: center;
+    font-size: 15PX;
 }
 
 .evento_texto {
