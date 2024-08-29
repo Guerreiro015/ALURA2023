@@ -27,17 +27,14 @@ body {
     font-weight: bold;
 }
 
-#listagem {
-    display: flex;
-    justify-content: space-around;
-    margin-left: 50px;
+#lista-eventos{
+    margin-top: 250px;
+    position: fixed;    
     box-sizing: border-box;
-    border: 1px solid rgb(5, 74, 236);
-    width: 1400px;
+    border: 2px solid rgb(255, 0, 85);
+    width: 1500px;
     height: 500px;
-    overflow-y: auto;
-    border-radius: 10px;
-    background-color: #baccd6;
+    
 }
 
 #tit_resumo {
@@ -45,9 +42,23 @@ body {
     justify-content: left;
     margin-top: 10px;
     margin-left: 75px;
-    color: rgb(9, 66, 197);
-    font-weight: bold;   
+    color: rgb(243, 70, 70);
+    font-weight: bold;       
 }
+
+#listagem {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    box-sizing: border-box;
+    border: 1px solid rgb(236, 5, 5);
+    width: 1400px;
+    height: 500px;
+    overflow-y: auto;
+    border-radius: 10px;
+    background-color: #baccd6;
+}
+
 
 #resumo {
     display: flex;
@@ -87,14 +98,23 @@ li:nth-child(even) {
     gap: 12px;
 }
 
+#li-titulo {
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(255, 0, 25);
+}
+
 #meses {
     display: flex;
     gap: 10px;
+    
+    
 }
 
 #tot_titulo {
     display: flex;
     gap: 10px;
+   
 }
 
 #tot_he {
@@ -114,12 +134,6 @@ li:nth-child(even) {
 
 #li-titu {
     font-size: 12px;
-}
-
-#li-titulo {
-    font-size: 12px;
-    font-weight: bold;
-    color: blue;
 }
 
 #container {
@@ -174,7 +188,3 @@ li:nth-child(even) {
     border-bottom-right-radius: 10px;
 }
 
-#lista-eventos{
-    margin-top: 250px;
-    position: fixed;
-}
