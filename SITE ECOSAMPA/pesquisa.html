@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibindo Dados</title>
+    <link rel="stylesheet" href="./style_pesquisa.css">
+    <script>
+        $(function () {
+            $("#header").load("cabecalho.html");
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="inicio">
+        <h1 class="titulo">MODO DE PESQUISA DE DADOS</h1>
+        <a class="retorno" href="./relatorio_geral.html">Retornar</a>
+    </div>
+
+    <div>
+        <input class="titulo" id="pesquisa" type="text"
+            placeholder="Pesquisar gerencias,departamentos,eventos ou competências" onkeyup="Exibir(this.value)">
+        <h2 class="total"></h2>
+
+        <div class="totaisGerentes">
+            <div>
+                <fieldset>
+                    <legend>Totais Gerencia</legend>
+                    <h2 class="gerente">WILSON</h2>
+                    <h3 class="wilson_HE"></h3>
+                    <h3 class="wilson_Inter"></h3>
+                    <h3 class="wilson_Dsf"></h3>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Totais Gerencia</legend>
+                    <h2 class="gerente">JOÃO SALES</h2>
+                    <h3 class="joao_HE"></h3>
+                    <h3 class="joao_Inter"></h3>
+                    <h3 class="joao_Dsf"></h3>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Totais Gerencia</legend>
+                    <h2 class="gerente">GUSTAVO</h2>
+                    <h3 class="gustavo_HE"></h3>
+                    <h3 class="gustavo_Inter"></h3>
+                    <h3 class="gustavo_Dsf"></h3>
+                </fieldset>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tabelas">
+        <div class="dadosTabela">
+            <h3 class="titulo">GERENTE</h3>
+            <h3 class="titulo">DEPARTAMENTO</h3>
+            <h3 class="titulo">EVENTO</h3>
+            <h3 class="titulo">NOMES</h3>
+            <h3 class="titulo">CARGO</h3>
+            <h3 class="titulo">REGIONAL</h3>
+            <h3 class="titulo">DATA DO EVENTO</h3>
+            <h3 class="titulo">COMPETÊNCIA</h3>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+        function Exibir(filtro) {
+            fetch('banco.json')
+                .then(response => response.json())
+                .then(jogos => {
+                    var tabela = document.querySelector('.tabelas')
+                    var tot = document.querySelector('.total')
+
+                    let jhe = document.querySelector(".joao_HE")
+                    let jdsf = document.querySelector(".joao_Dsf")
+                    let jint = document.querySelector(".joao_Inter")
+
+                    let ghe = document.querySelector(".gustavo_HE")
+                    let gdsf = document.querySelector(".gustavo_Dsf")
+                    let gint = document.querySelector(".gustavo_Inter")
+
+                    let whe = document.querySelector(".wilson_HE")
+                    let wdsf = document.querySelector(".wilson_Dsf")
+                    let wint = document.querySelector(".wilson_Inter")
+
+
+
+                    tabela.innerHTML = ""
+                    quant = 0
+
+                    tjhe = 0
+                    tjdsf = 0
+                    tjint = 0
+
+                    tghe = 0
+                    tgdsf = 0
+                    tgint = 0
+
+                    twhe = 0
+                    twdsf = 0
+                    twint = 0
+
+
+
+                    jogos.map((key) => {
+                        if (key.GERENCIA.toUpperCase().indexOf(filtro.toUpperCase()) >= 0 || filtro == "" || key.DEPARTAMENTO.toUpperCase().indexOf(filtro.toUpperCase()) >= 0 || key.Evento.toUpperCase().indexOf(filtro.toUpperCase()) >= 0 || key.COMPETÊNCIA.toUpperCase().indexOf(filtro.toUpperCase()) >= 0) {
+
+                            tabela.innerHTML += `
+                                <div class="dadosTabela">                            
+                                    <h3>`+ key.GERENCIA + `</h3>
+                                    <h3>`+ key.DEPARTAMENTO + `</h3>
+                                    <h3>`+ key.Evento + `</h3>
+                                    <h3>`+ key.NOME + `</h3>
+                                    <h3>`+ key.CARGO + `</h3>
+                                    <h3>`+ key.REGIONAL + `</h3>
+                                    <h3>`+ key.DATA + `</h3>                            
+                                    <h3>`+ key.COMPETÊNCIA + `</h3>
+                                </div>                       
+                                `;
+                            quant++
+                            tot.innerHTML = "Total de Eventos..: " + quant
+
+                            if (key.GERENCIA == "JOÃO SALES" && key.Evento == "DIAS SEM FOLGAS") {
+                                tjdsf++
+                            }
+                            if (key.GERENCIA == "JOÃO SALES" && key.Evento == "HE-EXCEDENTES") {
+                                tjhe++
+                            }
+                            if (key.GERENCIA == "JOÃO SALES" && key.Evento == "INTERJORNADAS") {
+                                tjint++
+                            }
+
+                            if (key.GERENCIA == "GUSTAVO" && key.Evento == "DIAS SEM FOLGAS") {
+                                tgdsf++
+                            }
+                            if (key.GERENCIA == "GUSTAVO" && key.Evento == "HE-EXCEDENTES") {
+                                tghe++
+                            }
+                            if (key.GERENCIA == "GUSTAVO" && key.Evento == "INTERJORNADAS") {
+                                tgint++
+                            }
+
+                            if (key.GERENCIA == "WILSON" && key.Evento == "DIAS SEM FOLGAS") {
+                                twdsf++
+                            }
+                            if (key.GERENCIA == "WILSON" && key.Evento == "HE-EXCEDENTES") {
+                                twhe++
+                            }
+                            if (key.GERENCIA == "WILSON" && key.Evento == "INTERJORNADAS") {
+                                twint++
+                            }
+
+                            jhe.innerHTML = "Horas Extras Excedentes..: " + tjhe
+                            jdsf.innerHTML = "Dias sem folgas ........: " + tjdsf
+                            jint.innerHTML = "Horas interjornadas.....: " + tjint
+
+                            ghe.innerHTML = "Horas Extras Excedentes..: " + tghe
+                            gdsf.innerHTML = "Dias sem folgas.........: " + tgdsf
+                            gint.innerHTML = "Horas interjornadas.....: " + tgint
+
+                            whe.innerHTML = "Horas Extras Excedentes..: " + twhe
+                            wdsf.innerHTML = "Dias sem folgas.........: " + twdsf
+                            wint.innerHTML = "Horas interjornadas.....: " + twint
+
+
+                        }
+                    })
+                })
+        }
+        Exibir()
+    </script>
+
+</body>
+
+</html>
