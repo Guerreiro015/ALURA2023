@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Animada</title>
+    <style>
+        .message {
+            font-size: 2em;
+            color: #333;
+            animation: fadeIn 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">Olá, Mundo!</div>
+</body>
+</html>
+Este código cria uma mensagem simples que pisca na tela. A animação é feita usando CSS, mas você pode adicionar mais interatividade com JavaScript, se desejar. Por exemplo, você pode mudar a mensagem ao clicar nela:
+
+<script>
+    document.querySelector('.message').addEventListener('click', function() {
+        this.textContent = 'Você clicou na mensagem!';
+    });
+</script>

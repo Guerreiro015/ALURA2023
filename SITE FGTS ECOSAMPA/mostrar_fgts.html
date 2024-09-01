@@ -33,7 +33,7 @@
       </div>
       <div>
         <label for="ano">Ano</label>
-        <input id="ano" type="number" min="2019">
+        <input id="ano" type="number" min="2019" value="2024">
       </div>
       <div>
         <button class="botao" onclick="calcular()">Calcular</button>
@@ -153,6 +153,10 @@
       console.log(data)
 
       fetch(data)
+        .then(response => {
+          if (response.ok) {
+         
+      fetch(data)
         .then(resp => resp.json())
         .then((dados) => {
 
@@ -238,7 +242,15 @@
           totalFGTS.innerHTML = totalguia.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
         })
+
+      } else {
+      alert(` O arquivo ${data} não existe `)
+      }
+    })
+
     }
+
+    
 
   </script>
 
