@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Procurar Mês com Input</title>
+</head>
+<body>
+    <label for="dateInput">Escolha uma data:</label>
+    <input type="date" id="dateInput">
+    <button onclick="getMonth()">Procurar Mês</button>
+    <p id="result"></p>
+
+    <script>
+        function getMonth() {
+            const dateInput = document.getElementById('dateInput').value;
+            if (dateInput) {
+                const date = new Date(dateInput);
+                const month = date.toLocaleString('default', { month: 'long' });
+                document.getElementById('result').innerText = `O mês selecionado é: ${month}`;
+            } else {
+                document.getElementById('result').innerText = 'Por favor, selecione uma data.';
+            }
+        }
+    </script>
+</body>
+</html>
