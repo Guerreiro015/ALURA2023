@@ -16,7 +16,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column,String,Integer
 import pandas as pd
 
-tb = pd.read_excel("./minha base.xlsx")
+tb = pd.read_excel("./minha_base.xlsx")
 
 from bases_2023 import *
 # pip install PyMySQL
@@ -155,7 +155,7 @@ def calcular_fgts():
         mes=(request.form['mes'])
         ano=(request.form['ano'])    
 
-        tb = pd.read_excel("./minha base.xlsx",sheet_name=f'{mes}_{ano}')
+        tb = pd.read_excel("./minha_base.xlsx",sheet_name=f'{mes}_{ano}')
     except:
         flash("Não existe dados para este mês")
         return render_template('calculo_fgts.html')

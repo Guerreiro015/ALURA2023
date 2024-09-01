@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: slategrey;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    color: aliceblue;
+}
+
+.container{
+    display: flex;
+    width: 1200px;
+    height: 450px;
+    background-color: bisque;
+    justify-content: space-evenly;
+}
+
+.lista_texto{
+    display: flex;
+    justify-content:space-between;
+    column-gap: 50px;
+}
+
+.totalfgts{
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    background-color: blue;
+    color: aliceblue;
+}
+
+.botao{
+    background-color: teal;
+    color: aliceblue;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.pesquisa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#mes{
+    width: 50px;
+    color: rgb(214, 6, 89);
+}
+#ano{
+    width: 50px;
+    color: rgb(234, 14, 14);
+}
+
+label{
+    color: aliceblue;
+    font-weight: bold;
+}
+
+

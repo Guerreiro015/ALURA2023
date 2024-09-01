@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\antonio.neto\Documents\GitHub\ALURA2023\FLASK DIVERSOS\venv
+set VIRTUAL_ENV=C:\Users\anton\OneDrive\Documentos\GitHub\ALURA2023\FLASK_CUSTOS_FGTS\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

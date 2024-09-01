@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FGTS</title>
+  <link rel="stylesheet" href="./mostrar.css">
+
+</head>
+
+<body>
+
+  <main>
+    <div class="pesquisa">
+      <div>
+        <label for="mes">Mês</label>
+        <select class="texto_mes" name="mes" id="mes">                 
+          <option value="01">01 </option>
+          <option value="02">02 </option>
+          <option value="03">03 </option>
+          <option value="04">04 </option>
+          <option value="05">05 </option>
+          <option value="06">06 </option>
+          <option value="07">07 </option>
+          <option value="08">08 </option>
+          <option value="09">09 </option>
+          <option value="10">10 </option>
+          <option value="11">11 </option>
+          <option value="12">12 </option>
+          <option value="13">13º </option>
+        </select>   
+      </div>
+      <div>
+        <label for="ano">Ano</label>
+        <input id="ano" type="number" min="2019">
+      </div>
+      <div>
+        <button class="botao" onclick="calcular()">Calcular</button>
+      </div>
+    </div>
+
+
+
+    <div class="titulo">
+      <h1>Cálculo de FGTS Folha</h1>
+    </div>
+
+    <div class="container">
+      <ul class="lista">
+
+        <li class="lista_texto">
+          <h4>Base do FGTS Normal</h4>
+          <h4 id="fgtsnormal"> </h4>
+        </li>
+
+        <li class="lista_texto">
+          <h4>Base do FGTS 13º Salário</h4>
+          <h4 id="fgts13"> </h4>
+        </li>
+
+        <li class="lista_texto">
+          <h4>Base FGTS Férias do Mês</h4>
+          <h4 id="fgtsferias"></h4>
+        </li>
+
+        <li class="lista_texto">
+          <h4>Total Base FGTS Normal</h4>
+          <h4 id="totalbase"></h4>
+        </li>
+
+
+        <li class="lista_texto">
+          <h4>Valor do FGTS 8%</h4>
+          <h4 id="fgts8"></h4>
+        </li>
+
+
+        <li class="lista_texto">
+          <h4>Valor do FGTS - GRFF - Já Recolhido</h4>
+          <h4 id="fgtsrecolhido"></h4>
+        </li>
+
+        <li class="lista_texto">
+          <h4>Total da Guia 8% Normal </h4>
+          <h4 id="fgts8total"></h4>
+        </li>
+      </ul>
+
+      <ul class="lista">
+
+        <li class="lista_texto">
+          <h4>Base do FGTS Normal Jovem Aprendiz</h4>
+          <h4 id="fgtsnormalj"> </h4>
+        </li>
+
+        <li class="lista_texto">
+          <h4>Base do FGTS 13º Salário Jovem Aprendiz</h4>
+          <h4 id="fgts13j"> </h4>
+        </li>
+
+        <li class="lista_texto">
+          <h4>Base FGTS Férias do Mês Jovem Aprendiz</h4>
+          <h4 id="fgtsferiasj"></h4>
+        </li>
+
+        <li class="lista_texto">
+          <h4>Total Base FGTS Jovem Aprendiz</h4>
+          <h4 id="totalbasej"></h4>
+        </li>
+
+
+        <li class="lista_texto">
+          <h4>Valor do FGTS 2% Jovem Aprendiz</h4>
+          <h4 id="fgts2j"></h4>
+        </li>
+
+
+        <li class="lista_texto">
+          <h4>Valor do FGTS - GRFF - Já Recolhido Jovem Aprendiz</h4>
+          <h4 id="fgtsrecolhidoj"></h4>
+        </li>
+
+        <li class="lista_texto">
+          <h4>Total da Guia 2% Normal Jovem Aprendiz </h4>
+          <h4 id="fgts2totalj"></h4>
+        </li>
+
+      </ul>
+
+
+    </div>
+
+    <div class="totalfgts">
+
+      <h1> Valor Total do FGTS Para Recolher ...:</h1>
+      <h1 id="totalFGTS"></h1>
+
+    </div>
+  </main>
+
+  <script>
+    function calcular() {
+
+      ano = document.getElementById("ano").value
+      mes = document.getElementById("mes").value
+
+     
+        mes = String(mes)
+        ano = String(ano)
+
+      data = ("fgts" + mes + ano + ".json")
+      console.log(data)
+
+      fetch(data)
+        .then(resp => resp.json())
+        .then((dados) => {
+
+          var fgtsnormal = document.getElementById("fgtsnormal")
+          var fgts13 = document.getElementById("fgts13")
+          var fgtsferias = document.getElementById("fgtsferias")
+          var fgtsrecolhido = document.getElementById("fgtsrecolhido")
+          var fgts8 = document.getElementById("fgts8")
+          var fgts8total = document.getElementById("fgts8total")
+
+
+          var fgtsnormalj = document.getElementById("fgtsnormalj")
+          var fgts13j = document.getElementById("fgts13j")
+          var fgtsferiasj = document.getElementById("fgtsferiasj")
+          var fgtsrecolhidoj = document.getElementById("fgtsrecolhidoj")
+          var fgts2j = document.getElementById("fgts2j")
+          var fgts2totalj = document.getElementById("fgts2totalj")
+
+          var totalFGTS = document.getElementById("totalFGTS")
+
+
+          var somafgtsnormal = 0
+          var somafgts13 = 0
+          var somafgtsferias = 0
+          var somafgtsrecolhido = 0
+          var somafgts8 = 0
+          var somafgts8total = 0
+
+          var somafgtsnormalj = 0
+          var somafgts13j = 0
+          var somafgtsferiasj = 0
+          var somafgtsrecolhidoj = 0
+          var somafgts2j = 0
+          var somafgts2totalj = 0
+
+          dados.map((key) => {
+
+            somafgtsnormal += Number(key["Base do FGTS Normal"])
+            somafgts13 += Number(key["Base do FGTS 13º Salário"])
+            somafgtsferias += Number(key["Base INSS/FGTS Férias do Mês"])
+            somafgtsrecolhido += Number(key["Base do FGTS - GRFF"])
+
+            if (key.Cargo == "MENOR/JOVEM APRENDIZ") {
+              somafgtsnormalj += Number(key["Base do FGTS Normal"])
+              somafgts13j += Number(key["Base do FGTS 13º Salário"])
+              somafgtsferiasj += Number(key["Base INSS/FGTS Férias do Mês"])
+              somafgtsrecolhidoj += Number(key["Base do FGTS - GRFF"])
+            }
+
+          })
+          somafgtsnormal = somafgtsnormal - somafgtsnormalj
+          somafgts13 = somafgts13 - somafgts13j
+          somafgtsferias = somafgtsferias - somafgtsferiasj
+          subtotalfgts8 = (somafgtsnormal + somafgts13 + somafgtsferias)
+          subtotalfgts2 = (somafgtsnormalj + somafgts13j + somafgtsferiasj)
+          subtotalfgts8 = subtotalfgts8 * 0.08
+          subtotalfgts2 = subtotalfgts2 * 0.02
+          totalfgtsrecolhidoj = somafgtsrecolhidoj * 0.02
+          totalfgtsrecolhido = (somafgtsrecolhido - somafgtsrecolhidoj) * 0.08
+          totalfgts2 = subtotalfgts2 - totalfgtsrecolhidoj
+          totalfgts8 = (subtotalfgts8 - totalfgtsrecolhido)
+
+          totalguia = totalfgts2 + totalfgts8
+
+
+          fgtsnormal.innerHTML = (somafgtsnormal - somafgtsnormalj).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgts13.innerHTML = (somafgts13 - somafgts13j).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgtsferias.innerHTML = (somafgtsferias - somafgtsferiasj).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          totalbase.innerHTML = (somafgtsnormal + somafgts13 + somafgtsferias).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgtsrecolhido.innerHTML = totalfgtsrecolhido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgts8.innerHTML = subtotalfgts8.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgts8total.innerHTML = totalfgts8.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+
+          fgtsnormalj.innerHTML = somafgtsnormalj.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgts13j.innerHTML = somafgts13j.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgtsferiasj.innerHTML = somafgtsferiasj.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          totalbasej.innerHTML = (somafgtsnormalj + somafgts13j + somafgtsferiasj).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgtsrecolhidoj.innerHTML = totalfgtsrecolhidoj.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgts2j.innerHTML = subtotalfgts2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgts2totalj.innerHTML = totalfgts2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+          totalFGTS.innerHTML = totalguia.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        })
+    }
+
+  </script>
+
+
+</body>
+
+</html>
