@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FGTS</title>
+  <link rel="stylesheet" href="./mostrar.css">
+
+</head>
+
+<body>
+
+  <main>
+   <h1>FGTS FOLHA</h1>
+      
+    <div>
+<h1  id="fgts"></h1>
+    </div>
+
+
+
+  <script>
+    fgts=document.getElementById("fgts")
+    fetch("fgts0724.json")
+      .then(resp => resp.json())
+      .then((dados) => {
+       var total = 0
+        dados.map((key) => {
+          if (key[Verba__1] == "Base do FGTS Normal") {
+            total += Number(key["Valor da Verba"])
+          }
+          fgts.innerHTML = total
+        })
+      })  
+
+  </script>
+
+
+</body>
+
+</html>
