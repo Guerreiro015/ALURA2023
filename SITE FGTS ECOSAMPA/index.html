@@ -158,7 +158,7 @@
 
 
 
-      fetch("fgtsgeral.json")
+      fetch("fgts2024.json")
         .then(resp => resp.json())
         .then((dados) => {
 
@@ -211,7 +211,7 @@
               somafgtsferias += parseFloat(key["Valor da Verba"])
             }
 
-            if (key.Verba__1 == "Base do FGTS - GRFF" && key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
+            if (key.Verba__1 == "Valor do FGTS - GRFF" && key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
               somafgtsrecolhido += parseFloat(key["Valor da Verba"])
             }
 
@@ -229,7 +229,7 @@
               somafgtsferiasj += parseFloat(key["Valor da Verba"])
             }
 
-            if (key.Verba__1 == "Base do FGTS - GRFF" && key.Cargo == "MENOR/JOVEM APRENDIZ"  && key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
+            if (key.Verba__1 == "Valor do FGTS - GRFF" && key.Cargo == "MENOR/JOVEM APRENDIZ"  && key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
               somafgtsrecolhidoj += parseFloat(key["Valor da Verba"])
             }
 
@@ -237,16 +237,14 @@
 
 
           //calculos
-          somafgtsnormal = somafgtsnormal - somafgtsnormalj
-          somafgts13 = somafgts13 - somafgts13j
-          somafgtsferias = somafgtsferias - somafgtsferiasj
+          somafgtsnormal = somafgtsnormal - somafgtsnormalj;
+          somafgts13 = somafgts13 - somafgts13j;
           subtotalfgts8 = (somafgtsnormal + somafgts13 + somafgtsferias)
           subtotalfgts2 = (somafgtsnormalj + somafgts13j + somafgtsferiasj)
           subtotalfgts8 = subtotalfgts8 * 0.08
           subtotalfgts2 = subtotalfgts2 * 0.02
-          totalfgtsrecolhidoj = somafgtsrecolhidoj * 0.02
-          totalfgtsrecolhido = (somafgtsrecolhido - somafgtsrecolhidoj) * 0.08
-          totalfgts2 = subtotalfgts2 - totalfgtsrecolhidoj
+          totalfgtsrecolhido = (somafgtsrecolhido - somafgtsrecolhidoj)
+          totalfgts2 = subtotalfgts2 - somafgtsrecolhidoj
           totalfgts8 = (subtotalfgts8 - totalfgtsrecolhido)
 
           totalguia = totalfgts2 + totalfgts8
@@ -265,7 +263,7 @@
           fgts13j.innerHTML = somafgts13j.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgtsferiasj.innerHTML = somafgtsferiasj.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           totalbasej.innerHTML = (somafgtsnormalj + somafgts13j + somafgtsferiasj).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-          fgtsrecolhidoj.innerHTML = totalfgtsrecolhidoj.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgtsrecolhidoj.innerHTML = somafgtsrecolhidoj.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgts2j.innerHTML = subtotalfgts2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgts2totalj.innerHTML = totalfgts2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 

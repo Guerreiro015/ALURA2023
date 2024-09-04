@@ -8,6 +8,8 @@ body{
     justify-content: center;
     background-color: blue;
     color: aliceblue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .container{
@@ -30,6 +32,9 @@ body{
     column-gap: 50px;
     background-color: blue;
     color: aliceblue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bor
 }
 
 .botao{
@@ -56,10 +61,12 @@ body{
 #mes{
     width: 50px;
     color: rgb(214, 6, 89);
+    font-weight: bold;
 }
 #ano{
     width: 50px;
     color: rgb(234, 14, 14);
+    font-weight: bold;
 }
 
 label{
