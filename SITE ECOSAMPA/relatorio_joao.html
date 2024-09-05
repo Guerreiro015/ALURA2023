@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerência Joao Sales</title>
+    <title>Gerência João Sales</title>
     <link rel="stylesheet" href="./banco.css">
     <link rel="stylesheet" href="./cabecalho.css">
     <link rel="stylesheet" href="./styles.css">
@@ -14,8 +14,9 @@
         <div class="cabecalho-left">
            
             <a class="cabecalho_botao" href="/relatorio_departamentos_joao.html"> Departamentos </a>
-                <button class="cabecalho_botao" onclick="Gerente('JOÃO SALES')"> Relatorio Geral</a>
-                    
+            <a class="cabecalho_botao" href="./banco de horasN joao.html"> BH - Negativo </a>
+            <a class="cabecalho_botao" href="./banco de horasP joao.html"> BH - Positivo </a>
+           
         </div>
         <div class="cabecalho-right">
             <img class="foto" src="usuario.jpg" alt="usuario">
@@ -84,6 +85,7 @@
 
 
     <script>
+        
         function Gerente(ger) {
 
             var cliente = document.getElementById("usador")
@@ -290,6 +292,8 @@
                 })
 
         }
+
+        Gerente("JOÃO SALES")
 
     </script>
 
