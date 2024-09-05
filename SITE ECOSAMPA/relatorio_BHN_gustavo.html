@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <link href="/cabecalho.css" rel="stylesheet">
+
+    <header class="cabecalho">
+        <div class="cabecalho-left">
+           
+            <a class="cabecalho_texto" href="/relatorio_gustavo.html"> Gustavo </a>
+            
+        </div>
+        <div class="cabecalho-right">
+            <img class="foto" src="usuario.jpg" alt="usuario">
+            <p class="usuario-nome" id="usador"></p>
+    
+            <script>
+                var cliente = document.getElementById("usador")
+                nome_usuario = localStorage.getItem('Apelido');
+                cliente.innerHTML = nome_usuario
+    
+            </script>
+            <a class="cabecalho_texto-left" href="/index.html"> Sair </a>
+        </div>
+    
+    </header>
+
+    <title>Absenteismo</title>
+</head>
+
+<body>
+    <div class="separa">
+        <div class="escolha">
+
+            <button class="botao_gerente">BH - Negativo GUSTAVO</button>
+            <br>
+            <br>
+            <br>
+            <a class="botao_limpar" href="/relatorio_BHP_gustavo.html">Ver BH-Positivo </a>
+            <br>
+            <a class="botao_limpar" href="/relatorio_gustavo.html">Voltar</a>
+            <br>
+
+        </div>
+
+        <div mostrando>
+            <div class="dados-bh">
+                <div class="eventos">
+                    <p class="evento_texto">Relatório: </p>
+                    <p class="evento_id" id="gere"></p>
+                </div>
+
+                <div class="eventos">
+                    <p class="evento_texto">Périodo: <span class="evento_id">FEVEREIRO a JULHO - 2024</span> </p>
+                    <p class="evento_id" id="ano"></p>
+                </div>
+
+            </div>
+
+
+            <div class="totais">
+
+            </div>
+
+
+
+            <div class="menuBH">
+                <div class="menuTabelaBH">
+                    <h3 class="titulo">NOME</h3>
+                    <h3 class="titulo">CARGO</h3>
+                    <h3 class="titulo">REGIONAL</h3>
+                    <h3 class="titulo">GERENTE</h3>
+                    <h3 class="titulo">DEPARTAMENTO</h3>                    
+                    <h3 class="titulo">FEV-2024</h3>
+                    <h3 class="titulo">MAR-2024</h3>
+                    <h3 class="titulo">ABR-2024</h3>
+                    <h3 class="titulo">MAI-2024</h3>
+                    <h3 class="titulo">JUN-2024</h3>
+                    <h3 class="titulo">JUL-2024</h3>
+                </div>
+            </div>
+            <div class="tabelasBH">
+                <div class="dadosTabelaBH">
+                    
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+
+
+            //==============================================================================    
+            function loadJSON(url, callback) {
+                let xobj = new XMLHttpRequest();
+                xobj.overrideMimeType('application/json');
+                xobj.open('GET', url, true);
+                xobj.onreadystatechange = () => {
+                    if (xobj.readyState === 4 && xobj.status === 200) {
+                        callback(xobj.responseText);
+                    }
+                };
+                xobj.send(null);
+            }
+
+            function mostrar(elementos) {
+
+                loadJSON('bhmenor.json', (responseText) => {
+                    const Dados = JSON.parse(responseText);
+
+                    //=================================================================================                    
+
+                    var tabela = document.querySelector('.tabelasBH')
+                    var total = document.querySelector('.totais')
+                    var gerente = document.getElementById("gere")
+
+                    var totaldsf = 0
+                    var totalhex = 0
+                    var totalint = 0
+
+
+                    Dados.map(function (val) {
+                        if (val.Gerente=="Gustavo"){
+
+                        gerente.innerHTML = elementos
+                        tabela.innerHTML += `
+                        <div class="dadosTabela">                           
+                            <h3>`+ val.Nome + `</h3>
+                            <h3>`+ val.Cargo + `</h3>
+                            <h3>`+ val.Regional + `</h3>
+                            <h3>`+ val.Gerente + `</h3>
+                            <h3>`+ val.Departamento + `</h3>                                                      
+                            <h3>`+ val.Total_Fev + `</h3>
+                            <h3>`+ val.Total_Mar + `</h3>
+                            <h3>`+ val.Total_Abr + `</h3>
+                            <h3>`+ val.Total_Mai + `</h3>
+                            <h3>`+ val.Total_Jun + `</h3>
+                            <h3>`+ val.Total_Jul + `</h3>
+                        </div>                       
+                        `;
+
+
+                 } })
+                })}
+
+mostrar("BANCO DE HORAS NEGATIVO - Gerente: GUSTAVO")
+
+
+        </script>
+
+
+
+</body>
+
+<footer class="rodape">
+
+    <p class="rodape_texto"> Atualizado em 20/07/2024</p>
+
+</footer>
+
+</html>

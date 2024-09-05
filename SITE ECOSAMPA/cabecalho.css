@@ -9,7 +9,7 @@
 .cabecalho {
     /* background-color: rgb(2, 74, 74); */
     background-image: linear-gradient(to right, #045071, rgb(35, 142, 223));
-    display: flex;   
+    display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -22,47 +22,12 @@
 
 }
 
-.cabecalho_botao{
-    display: flex;
-    background-color:  #045071;
-    color:rgb(249, 253, 253);
-    border: none;
-    width: 120px;
-    height: 30px;
-    border-radius: 10px;
-    text-decoration: none;
-    align-items: center;
-    cursor: pointer;
-}
-.cabecalho_voltar{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    background-color:  #045071;
-    color:rgb(214, 220, 26);
-    border: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-style: italic;
-}
-
-.cabecalho-dp {
-    display: flex;
-    color: white;
-    text-decoration: none;
-    margin-left: 50px;   
-    column-gap: 10px; 
-
-}
 .cabecalho-left {
     display: flex;
     color: white;
     text-decoration: none;
-    margin-left: 50px;   
-    column-gap: 50px; 
-    align-items: center;
+    margin-left: 60px;   
+    column-gap: 40px; 
 
 }
 

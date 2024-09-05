@@ -1,302 +1,513 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatorio 2023</title>
-    <link rel="stylesheet" href="./banco.css">
-    <link rel="stylesheet" href="./cabecalho.css">
-    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
 
-    <header class="cabecalho">
-        <div class="cabecalho-left">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
-            <a class="cabecalho_texto" href="./relatorio_geral.html"> Total Geral </a>
-            <a class="cabecalho_texto" href="./relatorio_2022.html"> Total 2022 </a>
-            <a class="cabecalho_texto" href="./relatorio_2023.html"> Total 2023 </a>
-            <a class="cabecalho_texto" href="/relatorio_gerencia.html"> Gerencias </a>
-            <a class="cabecalho_texto" href="/relatorio_departamentos.html"> Departamentos </a>
-            <a class="cabecalho_texto" href="./banco de horasP.html"> BH - POSITIVO </a>
-            <a class="cabecalho_texto" href="./banco de horasN.html"> BH - NEGATIVO </a>
-            <a class="cabecalho_texto" href="/pesquisa.html"> PESQUISAR </a>
-        </div>
-        <div class="cabecalho-right">
-            <img class="foto" src="usuario.jpg" alt="usuario">
-            <p class="usuario-nome" id="usador"></p>
+    <link rel="stylesheet" href="/styles.css">
 
-            <script>
-                var cliente = document.getElementById("usador")
-                nome_usuario = localStorage.getItem('Apelido');
-                cliente.innerHTML = `Olá, ${nome_usuario}`
-            </script>
-            <a class="cabecalho_texto-left" href="/index.html"> Sair </a>
-        </div>
+    <link href="/cabecalho.css" rel="stylesheet">
+    <title>Absenteismo</title>
 
-    </header>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("cabecalho.html");
+        });
+    </script>
+
 </head>
 
-
 <body>
-    <div class="dados-tit">
+    <div id="header"></div>
 
-        <div class="eventos_tit">
-            <p> <span id="evento"></span> </p>
+
+    <div class="separa">
+
+
+        <div class="escolha">
+
+            <button class="botao_gerente">** 2023 **</button>
+            <br>
+            <br>
+            <br>
+            <a class="botao_limpar" href="/relatorio_2022.html">Ir p/ 2022 </a>
+            <br>
+            <a class="botao_limpar" href="/relatorio_TOTAL.html">Ir p/ 2023/2024 </a>
+            <br>
+
+
         </div>
 
-    </div>
 
-    <div id="container">
-        <div id="cabeca">
-            <div id="cabeca_tit">
-                <span>EVENTOS:</span>
-                <span>HE-Excedentes</span>
-                <span>Dias sem Folgas</span>
-                <span>Interjornadas</span>
-                <span>Total:</span>
+        <div mostrando>
+            <div class="dados">
+                <div class="eventos">
+                    <p class="evento_texto">Gerencia: </p>
+                    <p class="evento_id" id="gere"></p>
+                </div>
+
+                <div class="eventos">
+                    <p class="evento_texto">Périodo: <span class="evento_id">2023</span> </p>
+                    <p class="evento_id" id="ano"></p>
+                </div>
+
+                
+
             </div>
-            <div id="totais">
 
-                <div id="meses"></div>
 
-                <div id="tot_he"></div>
-                <div id="tot_dsf"></div>
-                <div id="tot_int"></div>
-
-                <div id="tot_titulo"></div>
+            <div class="totais">
 
             </div>
-            <div id="soma"></div>
+
+
+
+
+            <div class="meses_totais">
+                <div class="mesesTotal ano">
+                    <h3 class="ano">Eventos</h3>
+                    <h3 class="ano">Jan/2023</h3>
+                    <h3>Fev/2023</h3>
+                    <h3>Mar/2023</h3>
+                    <h3>Abr/2023</h3>
+                    <h3>Mai/2023</h3>
+                    <h3>Jun/2023</h3>
+                    <h3>Jul/2023</h3>
+                    <h3>Ago/2023</h3>
+                    <h3>Set/2023</h3>
+                    <h3>Out/2023</h3>
+                    <h3>Nov/2023</h3>
+                    <h3>Dez/2023</h3>
+
+                    <h3>Total</h3>
+                </div>
+            </div>
+
+            <div class="tabelas">
+                <div class="dadosTabela">
+                    <h3 class="titulo">GERENTE</h3>
+                    <h3 class="titulo">DEPARTAMENTO</h3>
+                    <h3 class="titulo">EVENTO</h3>
+                    <h3 class="titulo">NOMES</h3>
+                    <h3 class="titulo">CARGO</h3>
+                    <h3 class="titulo">REGIONAL</h3>
+                    <h3 class="titulo">DATA DO EVENTO</h3>
+                    <h3 class="titulo">COMPETÊNCIA</h3>
+                </div>
+            </div>
 
         </div>
-    </div>
-    <div id="lista-eventos">
-        <div id="tit_resumo">
-            <span id="linhas1">MATRICULA</span>
-            <span id="linhas2">NOME</span>
-            <span id="linhas2">CARGO</span>
-            <span id="linhas">REGIONAL</span>
-            <span id="linhas">DEPARTAMENTO</span>
-            <span id="linhas">GERENCIA</span>
-            <span id="linhas">EVENTOS</span>
-            <span id="linhas">COMPETÊNCIA</span>
-        </div>
-        <ul id="listagem"></ul>
-    </div>
-    </div>
 
+        <script>
 
+            function wilson() {
+                var setor = "WILSON"
+                mostrar(setor)
+                meses(setor)
+            }
+            function joao() {
+                var setor = "JOÃO SALES"
+                mostrar(setor)
+                meses(setor)
+            }
+            function gustavo() {
+                var setor = "GUSTAVO"
+                mostrar(setor)
+                meses(setor)
+            }
+            function todos() {
+                var setor = "TOTAL GERAL"
+                mostrar(setor)
+                meses(setor)
+            }
 
-    <script>
-
-        var cliente = document.getElementById("usador")
-        nome_usuario = localStorage.getItem('Apelido');
-        cliente.innerHTML = nome_usuario
-        var evento = document.getElementById('evento')
-        gerente = "TOTAL GERAL 2023"
-        evento.innerHTML = `Relatórios Gerencia: ${gerente}`
-
-        fetch('banco2023.json')
-            .then(res => res.json())
-            .then((dados) => {
-
-                var titulo = document.getElementById('meses')
-                meses.innerHTML = ""
-
-                var tot_titulo = document.getElementById('tot_titulo')
-                tot_titulo.innerHTML = ""
-
-                var tot_he = document.getElementById('tot_he')
-                tot_he.innerHTML = ""
-
-                var tot_dsf = document.getElementById('tot_dsf')
-                tot_dsf.innerHTML = ""
-
-                var tot_int = document.getElementById('tot_int')
-                tot_int.innerHTML = ""
-
-                var soma = document.getElementById('soma')
-                soma.innerHTML = ""
-
-                let lista = [];
-                let quant = [];
-                let quanthe = []
-                let quantdsf = []
-                let quantint = []
-
-                dados.map((key) => {
-                    if (!lista.includes(key.COMPETÊNCIA)) {
-                        lista.push(key.COMPETÊNCIA)
-
+            //==============================================================================    
+            function loadJSON(url, callback) {
+                let xobj = new XMLHttpRequest();
+                xobj.overrideMimeType('application/json');
+                xobj.open('GET', url, true);
+                xobj.onreadystatechange = () => {
+                    if (xobj.readyState === 4 && xobj.status === 200) {
+                        callback(xobj.responseText);
                     }
+                };
+                xobj.send(null);
+            }
+
+            function mostrar(elementos) {
+
+                loadJSON('banco2023.json', (responseText) => {
+                    const Dados = JSON.parse(responseText);
+
+                    //=================================================================================                    
+
+                    var tabela = document.querySelector('.tabelas')
+                    var total = document.querySelector('.totais')
+                    var gerente = document.getElementById("gere")
+                   
+
+                    var totaldsf = 0
+                    var totalhex = 0
+                    var totalint = 0
+
+
+                    Dados.map(function (val) {
+
+                        gerente.innerHTML = elementos
+                        tabela.innerHTML += `
+                        <div class="dadosTabela">                            
+                            <h3>`+ val.GERENCIA + `</h3>
+                            <h3>`+ val.DEPARTAMENTO + `</h3>
+                            <h3>`+ val.Evento + `</h3>
+                            <h3>`+ val.NOME + `</h3>
+                            <h3>`+ val.CARGO + `</h3>
+                            <h3>`+ val.REGIONAL + `</h3>
+                            <h3>`+ val.DATA + `</h3>                            
+                            <h3>`+ val.COMPETÊNCIA + `</h3>
+                        </div>                       
+                        `;
+
+
+                        if (val.Evento == "DIAS SEM FOLGAS") {
+                            totaldsf += 1
+                        }
+
+                        if (val.Evento == "HE-EXCEDENTES") {
+                            totalhex += 1
+                        }
+                        if (val.Evento == "INTERJORNADAS") {
+                            totalint += 1
+                        }
+
+
+                        total.innerHTML = `
+                <div class="eventos">
+                 <p class="evento_texto">Horas Extra Excedentes:</p>
+                   <p>`+ totalhex + `</p>
+                </div>
+                 <div class="eventos">
+                   <p class="evento_texto">Interjornadas:</p>
+                  <p>`+ totalint + `</p>
+                 </div>
+                <div class="eventos">
+                 <p class="evento_texto">Dias Trabalhados sem Folga:</p>
+                  <p>`+ totaldsf + `</p>
+                </div>
+               </div>
+               `;
+
+
+                    })
+
                 })
 
 
-                //Nomes dos meses
-                var item = 0
-                for (i = 0; i < lista.length; i++) {
-                    dados.map((key) => {
-                        if (key.COMPETÊNCIA == lista[i]) {
-                            item += 1
+
+            }
+
+            mostrar("TOTAIS  ANUAL")
+            //=======================================================================================================================
+            function meses(elementos) {
+
+                loadJSON('banco2023.json', (responseText) => {
+                    const Dados = JSON.parse(responseText);
+
+                    //=================================================================================
+                    var dadost = document.querySelector('.meses_totais')
+                    var tabela = document.querySelector('.tabelas')
+                    var total = document.querySelector('.totais')
+                    var gerente = document.getElementById("gere")
+                    var cliente = document.getElementById("usador")
+                    nome_usuario = localStorage.getItem('Apelido');
+
+                    var totaldsf = 0
+                    var totalhex = 0
+                    var totalint = 0
+
+
+
+                    var Jan_2023dsf = 0
+                    var Fev_2023dsf = 0
+                    var Mar_2023dsf = 0
+                    var Abr_2023dsf = 0
+                    var Mai_2023dsf = 0
+                    var Jun_2023dsf = 0
+                    var Jul_2023dsf = 0
+                    var Ago_2023dsf = 0
+                    var Sete_2023dsf = 0
+                    var Out_2023dsf = 0
+                    var Nov_2023dsf = 0
+                    var Dez_2023dsf = 0
+
+
+                    var Jan_2023hex = 0
+                    var Fev_2023hex = 0
+                    var Mar_2023hex = 0
+                    var Abr_2023hex = 0
+                    var Mai_2023hex = 0
+                    var Jun_2023hex = 0
+                    var Jul_2023hex = 0
+                    var Ago_2023hex = 0
+                    var Sete_2023hex = 0
+                    var Out_2023hex = 0
+                    var Nov_2023hex = 0
+                    var Dez_2023hex = 0
+
+
+                    var Jan_2023int = 0
+                    var Fev_2023int = 0
+                    var Mar_2023int = 0
+                    var Abr_2023int = 0
+                    var Mai_2023int = 0
+                    var Jun_2023int = 0
+                    var Jul_2023int = 0
+                    var Ago_2023int = 0
+                    var Sete_2023int = 0
+                    var Out_2023int = 0
+                    var Nov_2023int = 0
+                    var Dez_2023int = 0
+
+
+
+
+                    //=======================================================================================================================
+
+                    for (i = 0; i < Dados.length; i++) {
+
+                        if (Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            totaldsf += 1
                         }
-                    })
-                    quant.push(item)
-                    item = 0
 
-                    li = document.createElement('li')
-                    li.innerHTML = `
-                     <div id="tit">   
-                        <span id="li-titulo">${lista[i]}</span>
-                     </div>
-                     `
-                    meses.appendChild(li)
-                }
-
-                //Total do meses
-                var item = 0
-                for (i = 0; i < lista.length; i++) {
-                    dados.map((key) => {
-                        if (key.COMPETÊNCIA == lista[i]) {
-                            item += 1
+                        if (Dados[i].Evento == "HE-EXCEDENTES") {
+                            totalhex += 1
                         }
-                    })
-                    quant.push(item)
-                    item = 0
-
-                    li = document.createElement('li')
-                    li.innerHTML = `
-                     <div id="tit">   
-                        <span id="li-titulo"> ${quant[i]}</span>
-                     </div>
-                     `
-                    tot_titulo.appendChild(li)
-                }
-
-
-                //Total do HE-Exedentes
-                var item = 0
-                for (i = 0; i < lista.length; i++) {
-                    dados.map((key) => {
-                        if (key.COMPETÊNCIA == lista[i] && key.Evento == "HE-EXCEDENTES") {
-                            item += 1
+                        if (Dados[i].Evento == "INTERJORNADAS") {
+                            totalint += 1
                         }
-                    })
-                    quanthe.push(item)
-                    item = 0
-
-                    li = document.createElement('li')
-                    li.innerHTML = `
-                     <div id="tit">   
-                        <span id="li-titu"> ${quanthe[i]}</span>
-                     </div>
-                     `
-                    tot_he.appendChild(li)
-                }
 
 
-                //Total do DSF
-                var item = 0
-                for (i = 0; i < lista.length; i++) {
-                    dados.map((key) => {
-                        if (key.COMPETÊNCIA == lista[i] && key.Evento == "DIAS SEM FOLGAS") {
-                            item += 1
-                        }
-                    })
-                    quantdsf.push(item)
-                    item = 0
+                    };
 
-                    li = document.createElement('li')
-                    li.innerHTML = `
-                     <div id="tit">   
-                        <span id="li-titu"> ${quantdsf[i]}</span>
-                     </div>
-                     `
-                    tot_dsf.appendChild(li)
-                }
+                    //=======================================================================================================================
+
+                    for (i = 0; i < Dados.length; i++) {
+                        if (Dados[i].COMPETÊNCIA == "jan-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Jan_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "jan-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Jan_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "jan-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Jan_2023int++
+                        };
+
+                        if (Dados[i].COMPETÊNCIA == "fev-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Fev_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "fev-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Fev_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "fev-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Fev_2023int++
+                        };
+
+                        if (Dados[i].COMPETÊNCIA == "mar-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Mar_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "mar-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Mar_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "mar-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Mar_2023int++
+                        };
+
+                        if (Dados[i].COMPETÊNCIA == "abr-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Abr_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "abr-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Abr_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "abr-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Abr_2023int++
+                        };
+
+                        if (Dados[i].COMPETÊNCIA == "mai-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Mai_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "mai-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Mai_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "mai-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Mai_2023int++
+                        };
+
+                        if (Dados[i].COMPETÊNCIA == "jun-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Jun_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "jun-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Jun_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "jun-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Jun_2023int++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "jul-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Jul_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "jul-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Jul_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "jul-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Jul_2023int++
+                        };
+
+                        if (Dados[i].COMPETÊNCIA == "ago-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Ago_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "ago-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Ago_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "ago-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Ago_2023int++
+                        };
+
+                        if (Dados[i].COMPETÊNCIA == "set-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Sete_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "set-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Sete_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "set-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Sete_2023int++
+                        };
+
+                        if (Dados[i].COMPETÊNCIA == "out-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Out_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "out-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Out_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "out-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Out_2023int++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "nov-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Nov_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "nov-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Nov_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "nov-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Nov_2023int++
+                        };
+
+                        if (Dados[i].COMPETÊNCIA == "dez-23" && Dados[i].Evento == "DIAS SEM FOLGAS") {
+                            Dez_2023dsf++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "dez-23" && Dados[i].Evento == "HE-EXCEDENTES") {
+                            Dez_2023hex++
+                        };
+                        if (Dados[i].COMPETÊNCIA == "dez-23" && Dados[i].Evento == "INTERJORNADAS") {
+                            Dez_2023int++
+                        };
 
 
-                //Total do INTERjornadas
-                var item = 0
-                for (i = 0; i < lista.length; i++) {
-                    dados.map((key) => {
-                        if (key.COMPETÊNCIA == lista[i] && key.Evento == "INTERJORNADAS") {
-                            item += 1
-                        }
-                    })
-                    quantint.push(item)
-                    item = 0
 
-                    li = document.createElement('li')
-                    li.innerHTML = `
-                     <div id="tit">   
-                        <span id="li-titu"> ${quantint[i]}</span>
-                     </div>
-                     `
-                    tot_int.appendChild(li)
-                }
+                    };
 
-                //Total de Todos os Eventos
-                var totalHE = 0
-                var totalDSF = 0
-                var totalINT = 0
-                dados.map((key) => {
-                    if (key.Evento == "HE-EXCEDENTES") {
-                        totalHE += 1
-                    }
-                    if (key.Evento == "DIAS SEM FOLGAS") {
-                        totalDSF += 1
-                    }
-                    if (key.Evento == "INTERJORNADAS") {
-                        totalINT += 1
-                    }
+
+                    dadost.innerHTML += `
+                         
+                            <div class="mesesTotal">
+                                <h3 class="ano1">HE - Excedentes</h3>
+                                <h3>`+ Jan_2023hex + `</h3>
+                                <h3>`+ Fev_2023hex + `</h3>
+                                <h3>`+ Mar_2023hex + `</h3>
+                                <h3>`+ Abr_2023hex + `</h3>
+                                <h3>`+ Mai_2023hex + `</h3>
+                                <h3>`+ Jun_2023hex + `</h3>
+                                <h3>`+ Jul_2023hex + `</h3>
+                                <h3>`+ Ago_2023hex + `</h3>
+                                <h3>`+ Sete_2023hex + `</h3>
+                                <h3>`+ Out_2023hex + `</h3>
+                                <h3>`+ Nov_2023hex + `</h3>
+                                <h3>`+ Dez_2023hex + `</h3>
+                                
+                                <h3 class="ano1">`+ totalhex + `</h3>
+                                
+                            </div>
+                            <div class="mesesTotal">
+                                <h3 class="ano1"> Interjornadas </h3>
+                                <h3>`+ Jan_2023int + `</h3>
+                                <h3>`+ Fev_2023int + `</h3>
+                                <h3>`+ Mar_2023int + `</h3>
+                                <h3>`+ Abr_2023int + `</h3>
+                                <h3>`+ Mai_2023int + `</h3>
+                                <h3>`+ Jun_2023int + `</h3>
+                                <h3>`+ Jul_2023int + `</h3>
+                                <h3>`+ Ago_2023int + `</h3>
+                                <h3>`+ Sete_2023int + `</h3>
+                                <h3>`+ Out_2023int + `</h3>
+                                <h3>`+ Nov_2023int + `</h3>
+                                <h3>`+ Dez_2023int + `</h3>
+                               
+                                <h3 class="ano1">`+ totalint + `</h3>
+                                
+                            </div>
+
+                            <div class="mesesTotal">
+                                <h3 class="ano1">Dias sem Folgas </h3>
+                                <h3>`+ Jan_2023dsf + `</h3>
+                                <h3>`+ Fev_2023dsf + `</h3>
+                                <h3>`+ Mar_2023dsf + `</h3>
+                                <h3>`+ Abr_2023dsf + `</h3>
+                                <h3>`+ Mai_2023dsf + `</h3>
+                                <h3>`+ Jun_2023dsf + `</h3>
+                                <h3>`+ Jul_2023dsf + `</h3>
+                                <h3>`+ Ago_2023dsf + `</h3>
+                                <h3>`+ Sete_2023dsf + `</h3>
+                                <h3>`+ Out_2023dsf + `</h3>
+                                <h3>`+ Nov_2023dsf + `</h3>
+                                <h3>`+ Dez_2023dsf + `</h3>
+                               
+                                <h3 class="ano1">`+ totaldsf + `</h3>
+                                
+                            </div>
+                        
+                        `;
+
+
+                    total.innerHTML = `
+                    <div class="eventos">
+                        <p class="evento_texto">Horas Extra Excedentes:</p>
+                          <p class="evento_id" >`+ totalhex + `</p>
+                       </div>
+                        <div class="eventos">
+                          <p class="evento_texto">Interjornadas:</p>
+                         <p class="evento_id" >`+ totalint + `</p>
+                        </div>
+                       <div class="eventos">
+                        <p class="evento_texto">Dias Trabalhados sem Folga:</p>
+                         <p class="evento_id" >`+ totaldsf + `</p>
+                       </div>
+
+               </div>`;
+
                 })
 
-                total = dados.length
-                total = total - 1
-                soma = document.getElementById('soma')
-                soma.innerHTML = `               
-                     <div id="soma">                            
-                         <span id="li_total"> Total</span>
-                         <span id="li_total"> ${totalHE}</span>
-                         <span id="li_total"> ${totalDSF}</span>
-                         <span id="li_total"> ${totalINT}</span>
-                         <span id="li_total"> ${total}</span>
-                     </div>
-                     `
+            }
 
-                //Valores Gerais - Lista Completa
-                listagem = document.getElementById('listagem')
-                listagem.innerHTML = ""
+            meses("TOTAIS  ANUAL")
 
-                dados.map((key) => {
-                    li = document.createElement('li')
-                    li.innerHTML = ` 
-           <div id="resumo">          
-            <span id="linhas1">${key.MATRICULA}</span>
-            <span id="linhas2">${key.NOME}</span>
-            <span id="linhas2">${key.CARGO}</span>
-            <span id="linhas">${key.REGIONAL}</span>
-            <span id="linhas">${key.DEPARTAMENTO}</span>
-            <span id="linhas">${key.GERENCIA}</span>
-            <span id="linhas">${key.Evento}</span>
-            <span id="linhas">${key.COMPETÊNCIA}</span>
-           </div>          
-            `
-                    listagem.appendChild(li)
-                })
 
-            })
+        </script>
 
-    </script>
 
 </body>
 
-<footer class="rodape">
-
-    <p class="rodape_texto"> Atualizado em 20/08/2024</p>
-
-</footer>
-
 </html>
-

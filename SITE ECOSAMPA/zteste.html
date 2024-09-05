@@ -1,0 +1,37 @@
+<!-- 🔒
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar e Ocultar Senha</title>
+    <style>
+        #olho {
+            display: none;
+        }
+        #senha:focus + #olho {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <input type="password" id="senha" placeholder="Digite sua senha">
+    <div id="olho" onclick="alternarSenha()">👁️ Mostrar senha</div>
+
+    <script>
+        function alternarSenha() {
+            const campoSenha = document.getElementById('senha');
+            campoSenha.type = campoSenha.type === 'password' ? 'text' : 'password';
+        }
+    </script>
+</body>
+</html>
+
+     
+      <!-- //  olhoIcon.textContent = "🔒";
+     
+      //  olhoIcon.textContent = "👁️"; -->
+    -->
+
+   

@@ -17,7 +17,7 @@
 <body>
     <div class="inicio">
         <h1 class="titulo">MODO DE PESQUISA DE DADOS</h1>
-        <a class="retorno" href="./relatorio_geral.html">Retornar</a>
+        <a class="retorno" href="/relatorio_TOTAL.html">Retornar</a>
     </div>
 
     <div>
@@ -76,7 +76,7 @@
 
     <script>
         function Exibir(filtro) {
-            fetch('banco2024.json')
+            fetch('banco.json')
                 .then(response => response.json())
                 .then(jogos => {
                     var tabela = document.querySelector('.tabelas')

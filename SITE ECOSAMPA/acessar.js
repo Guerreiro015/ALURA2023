@@ -6,23 +6,23 @@ var usuario_valor = usuario.value
 function validar() {
   
   if (usuario.value === 'wilson' && senha.value === "wilson@12345ecosampa") {
-    localStorage.setItem('Apelido', 'Olá Wilson');
-    return window.location.href = './relatorio_geral.html'; // Página após o login   
+    localStorage.setItem('Apelido', 'Olá, Wilson');
+    return window.location.href = 'relatorio_TOTAL.html'; // Página após o login   
   }
 
   else if (usuario.value === 'wilson' && senha.value === "111111111") {
-    localStorage.setItem('Apelido', 'Olá Wilson');
-    return window.location.href = './relatorio_geral.html'; // Página após o login   
+    localStorage.setItem('Apelido', 'Olá, Wilson');
+    return window.location.href = 'relatorio_TOTAL.html'; // Página após o login   
   }
 
   else if (usuario.value === 'alex' && senha.value === "ecosampa@alex123") {
     localStorage.setItem('Apelido', 'Olá, Alex');
-    return window.location.href = 'relatorio_geral.html'; // Página após o login   
+    return window.location.href = 'relatorio_TOTAL.html'; // Página após o login   
   }
 
   else if (usuario.value === 'alex' && senha.value === "111111111") {
     localStorage.setItem('Apelido', 'Olá, Alex');
-    return window.location.href = 'relatorio_geral.html'; // Página após o login   
+    return window.location.href = 'relatorio_TOTAL.html'; // Página após o login   
   }
 
 
