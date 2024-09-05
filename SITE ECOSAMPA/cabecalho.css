@@ -23,12 +23,16 @@
 }
 
 .cabecalho_botao{
+    display: flex;
     background-color:  #045071;
     color:rgb(249, 253, 253);
     border: none;
     width: 120px;
     height: 30px;
     border-radius: 10px;
+    text-decoration: none;
+    align-items: center;
+    cursor: pointer;
 }
 .cabecalho_voltar{
     display: flex;
@@ -58,6 +62,7 @@
     text-decoration: none;
     margin-left: 50px;   
     column-gap: 50px; 
+    align-items: center;
 
 }
 
