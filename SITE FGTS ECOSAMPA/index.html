@@ -148,8 +148,7 @@
 
       ano = document.getElementById("ano").value
       mes = document.getElementById("mes").value
-
-
+     
       mes = String(mes)
       ano = String(ano)
 
@@ -158,7 +157,7 @@
 
 
 
-      fetch("fgts2024.json")
+      fetch(data)
         .then(resp => resp.json())
         .then((dados) => {
 
@@ -207,7 +206,7 @@
               somafgts13 += parseFloat(key["Valor da Verba"])
             }
 
-            if (key.Verba__1 == "Base INSS/FGTS Férias do Mês"&& key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
+            if (key.Verba__1 == "Base INSS/FGTS Férias do Mês" && key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
               somafgtsferias += parseFloat(key["Valor da Verba"])
             }
 
@@ -221,15 +220,15 @@
               somafgtsnormalj += parseFloat(key["Valor da Verba"])
             }
 
-            if (key.Verba__1 == "Base do FGTS 13º Salário" && key.Cargo == "MENOR/JOVEM APRENDIZ"  && key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
+            if (key.Verba__1 == "Base do FGTS 13º Salário" && key.Cargo == "MENOR/JOVEM APRENDIZ" && key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
               somafgts13j += parseFloat(key["Valor da Verba"])
             }
 
-            if (key.Verba__1 == "Base INSS/FGTS Férias do Mês" && key.Cargo == "MENOR/JOVEM APRENDIZ"  && key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
+            if (key.Verba__1 == "Base INSS/FGTS Férias do Mês" && key.Cargo == "MENOR/JOVEM APRENDIZ" && key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
               somafgtsferiasj += parseFloat(key["Valor da Verba"])
             }
 
-            if (key.Verba__1 == "Valor do FGTS - GRFF" && key.Cargo == "MENOR/JOVEM APRENDIZ"  && key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
+            if (key.Verba__1 == "Valor do FGTS - GRFF" && key.Cargo == "MENOR/JOVEM APRENDIZ" && key["Ano - Referência"] == ano && key["Mês - Referência"] == mes) {
               somafgtsrecolhidoj += parseFloat(key["Valor da Verba"])
             }
 
