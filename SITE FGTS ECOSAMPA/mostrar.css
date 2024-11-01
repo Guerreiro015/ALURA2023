@@ -15,7 +15,7 @@ body{
 .container{
     display: flex;
     width: 1200px;
-    height: 450px;
+    height: 500px;
     background-color: bisque;
     justify-content: space-evenly;
 }

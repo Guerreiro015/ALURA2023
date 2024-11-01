@@ -188,7 +188,7 @@
           var fgtsnormalj = document.getElementById("fgtsnormalj")
           var fgts13j = document.getElementById("fgts13j")
           var fgtsferiasj = document.getElementById("fgtsferiasj")
-          var fgtsdissidio = document.getElementById("fgtsdissidioj")
+          var fgtsdissidioj = document.getElementById("fgtsdissidioj")
           var fgtsrecolhidoj = document.getElementById("fgtsrecolhidoj")
           var fgts2j = document.getElementById("fgts2j")
           var fgts2totalj = document.getElementById("fgts2totalj")
@@ -267,9 +267,10 @@
           subtotalfgts8 = subtotalfgts8 * 0.08
           subtotalfgts2 = subtotalfgts2 * 0.02
           subtotaldissidio = somafgtsdissidio * 0.08
-          totalfgtsrecolhido = (somafgtsrecolhido + subtotaldissidio - somafgtsrecolhidoj)
+          totalfgtsrecolhido = subtotalfgts8 + subtotaldissidio
+          totalfgtsrecolhido = (somafgtsrecolhido - somafgtsrecolhidoj)
           totalfgts2 = subtotalfgts2 - somafgtsrecolhidoj
-          totalfgts8 = (subtotalfgts8 - totalfgtsrecolhido - subtotaldissidio)
+          totalfgts8 = (subtotalfgts8 - totalfgts2)
           totalfgtsdissidio = subtotaldissidio
 
           totalguia = totalfgts2 + totalfgts8
@@ -278,8 +279,7 @@
           fgtsnormal.innerHTML = somafgtsnormal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgts13.innerHTML = somafgts13.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgtsferias.innerHTML = somafgtsferias.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-          fgtsdissidio.innerHTML = totalfgtsdissidio.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-
+          fgtsdissidio.innerHTML = somafgtsdissidio.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           totalbase.innerHTML = (somafgtsnormal + somafgts13 + somafgtsferias).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgtsrecolhido.innerHTML = totalfgtsrecolhido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgts8.innerHTML = subtotalfgts8.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -289,6 +289,7 @@
           fgtsnormalj.innerHTML = somafgtsnormalj.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgts13j.innerHTML = somafgts13j.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgtsferiasj.innerHTML = somafgtsferiasj.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          fgtsdissidioj.innerHTML = somafgtsdissidioj.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           totalbasej.innerHTML = (somafgtsnormalj + somafgts13j + somafgtsferiasj).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgtsrecolhidoj.innerHTML = somafgtsrecolhidoj.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgts2j.innerHTML = subtotalfgts2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
