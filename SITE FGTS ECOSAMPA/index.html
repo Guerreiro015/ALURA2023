@@ -262,15 +262,14 @@
           //calculos
           somafgtsnormal = somafgtsnormal - somafgtsnormalj;
           somafgts13 = somafgts13 - somafgts13j;
-          subtotalfgts8 = (somafgtsnormal + somafgts13 + somafgtsferias)
+          subtotalfgts8 = (somafgtsnormal + somafgts13 + somafgtsferias+ somafgtsdissidio)
           subtotalfgts2 = (somafgtsnormalj + somafgts13j + somafgtsferiasj)
           subtotalfgts8 = subtotalfgts8 * 0.08
           subtotalfgts2 = subtotalfgts2 * 0.02
-          subtotaldissidio = somafgtsdissidio * 0.08
-          totalfgtsrecolhido = subtotalfgts8 + subtotaldissidio
+          subtotaldissidio = somafgtsdissidio * 0.08          
           totalfgtsrecolhido = (somafgtsrecolhido - somafgtsrecolhidoj)
           totalfgts2 = subtotalfgts2 - somafgtsrecolhidoj
-          totalfgts8 = (subtotalfgts8 - totalfgts2)
+          totalfgts8 = (subtotalfgts8 - totalfgtsrecolhido)
           totalfgtsdissidio = subtotaldissidio
 
           totalguia = totalfgts2 + totalfgts8
@@ -280,7 +279,7 @@
           fgts13.innerHTML = somafgts13.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgtsferias.innerHTML = somafgtsferias.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgtsdissidio.innerHTML = somafgtsdissidio.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-          totalbase.innerHTML = (somafgtsnormal + somafgts13 + somafgtsferias).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          totalbase.innerHTML = (somafgtsnormal + somafgts13 + somafgtsferias + somafgtsdissidio).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgtsrecolhido.innerHTML = totalfgtsrecolhido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgts8.innerHTML = subtotalfgts8.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           fgts8total.innerHTML = totalfgts8.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
