@@ -3,69 +3,249 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tabela com JSON</title>
+    <title>Lista de Colaboradores</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: var(--cor-titulo);
+        }
+
+        :root {
+            --cor-fundo: #121212;
+            --cor-texto: #f1f1f1;
+            --cor-titulo: #00bcd4;
+            --cor-th: #00bcd4;
+            --cor-tr-even: #252525;
+            --cor-tr-hover: #2a2a2a;
+            --cor-td: #1e1e1e;
+            --cor-borda: #333;
+            --cor-select: #1e1e1e;
+        }
+
+        body.light {
+            --cor-fundo: #f9f9f9;
+            --cor-texto: #222;
+            --cor-titulo: #007b9e;
+            --cor-th: #007b9e;
+            --cor-tr-even: #eaeaea;
+            --cor-tr-hover: #d3f3ff;
+            --cor-td: #fff;
+            --cor-borda: #ccc;
+            --cor-select: #fff;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+        }
+
+        .controle {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 8px 12px;
+            font-size: 1em;
+            border-radius: 6px;
+            border: 1px solid var(--cor-borda);
+            background-color: var(--cor-select);
+            color: var(--cor-texto);
+            outline: none;
+        }
+
+        #contadorRegistros {
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .tabela-container {
+            overflow-x: auto;
+            background-color: var(--cor-td);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+            padding: 10px;
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
-            margin-top: 20px;
+            min-width: 600px;
         }
 
         th,
         td {
-            border: 1px solid #888;
-            padding: 8px;
+            padding: 12px 15px;
             text-align: left;
+            border-bottom: 1px solid var(--cor-borda);
         }
-
 
         th {
-            background-color: #333;
-            color: white;
+            background-color: var(--cor-th);
+            color: #fff;
+            font-weight: 600;
         }
 
-        tbody tr:nth-child(even) {
-            background-color: #f2f2f2;
-            /* cor clara para linha par */
+        td {
+            background-color: var(--cor-td);
+            color: var(--cor-texto);
+        }
+
+        tbody tr:hover {
+            background-color: var(--cor-tr-hover);
+        }
+
+        tbody tr:nth-child(even) td {
+            background-color: var(--cor-tr-even);
+        }
+
+        .toggle-theme {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: var(--cor-titulo);
+            transition: transform 0.3s;
+        }
+
+        .toggle-theme:hover {
+            transform: rotate(20deg);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            th,
+            td {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+
+            select {
+                width: 100%;
+            }
+
+            .controle {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 
 <body>
+    <button class="toggle-theme" id="toggleTheme" title="Alternar tema">🌙</button>
+
     <h1>Lista de Colaboradores</h1>
-    <table id="tabela">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Cargo</th>
-                <th>REGIONAL</th>
-                <th>Departamento</th>
-                <th>Gerencia</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+
+    <div class="controle">
+        <label for="gerenciaSelect">Filtrar por Gerência:</label>
+        <select id="gerenciaSelect">
+            <option value="TODAS">Todas</option>
+        </select>
+        <p id="contadorRegistros">Total: 0 registros</p>
+    </div>
+
+    <div class="tabela-container">
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Regional</th>
+                    <th>Departamento</th>
+                    <th>Gerência</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
     <script>
-        fetch('banco2025.json')
-            .then(response => response.json())
-            .then(dados => {
-                const tbody = document.querySelector("#tabela tbody");
-                dados.forEach(item => {
-                    if(item.GERENCIA == "João Paulo"){
-                        const linha = document.createElement("tr");
-                        linha.innerHTML = `
+        const tabelaBody = document.querySelector("#tabela tbody");
+        const selectGerencia = document.getElementById("gerenciaSelect");
+        const contador = document.getElementById("contadorRegistros");
+        let dadosJSON = [];
+
+        function atualizarTabela(gerencia) {
+            tabelaBody.innerHTML = '';
+            let contadorTotal = 0;
+
+            dadosJSON.forEach(item => {
+                if (gerencia === "TODAS" || item.GERENCIA === gerencia) {
+                    const linha = document.createElement("tr");
+                    linha.innerHTML = `
                         <td>${item.NOME}</td>
                         <td>${item.CARGO}</td>
                         <td>${item.REGIONAL}</td>
                         <td>${item.DEPARTAMENTO}</td>
                         <td>${item.GERENCIA}</td>
-                        `;
-                        tbody.appendChild(linha);
-                    }
+                    `;
+                    tabelaBody.appendChild(linha);
+                    contadorTotal++;
+                }
+            });
+
+            contador.textContent = `Total: ${contadorTotal} registro${contadorTotal !== 1 ? 's' : ''}`;
+        }
+
+        fetch('banco2025.json')
+            .then(response => response.json())
+            .then(dados => {
+                dadosJSON = dados;
+                const gerencias = [...new Set(dados.map(item => item.GERENCIA))].sort();
+                gerencias.forEach(gerencia => {
+                    const option = document.createElement("option");
+                    option.value = gerencia;
+                    option.textContent = gerencia;
+                    selectGerencia.appendChild(option);
                 });
+                atualizarTabela("TODAS");
             })
             .catch(error => console.error("Erro ao carregar JSON:", error));
+
+        selectGerencia.addEventListener("change", () => {
+            atualizarTabela(selectGerencia.value);
+        });
+
+        const body = document.body;
+        const toggle = document.getElementById("toggleTheme");
+
+        function aplicarTema(modo) {
+            body.classList.toggle("light", modo === "light");
+            toggle.textContent = modo === "light" ? "🌞" : "🌙";
+        }
+
+        let temaSalvo = localStorage.getItem("tema") || "dark";
+        aplicarTema(temaSalvo);
+
+        toggle.addEventListener("click", () => {
+            temaSalvo = body.classList.contains("light") ? "dark" : "light";
+            localStorage.setItem("tema", temaSalvo);
+            aplicarTema(temaSalvo);
+        });
     </script>
 </body>
 
