@@ -163,9 +163,11 @@
     <div class="controle">
         <label for="gerenciaSelect">Filtrar por Gerência:</label>
         <select id="gerenciaSelect">
-            <option value="TODAS">Todas</option>
+            <option value="todos">Todos</option>
+            <option value="WILSON">Wilson</option>
+            <option value="GUSTAVO">Gustavo</option>
+            <option value="João Paulo">João Paulo</option>
         </select>
-        <p id="contadorRegistros">Total: 0 registros</p>
     </div>
 
     <div class="tabela-container">
@@ -187,66 +189,43 @@
         const tabelaBody = document.querySelector("#tabela tbody");
         const selectGerencia = document.getElementById("gerenciaSelect");
         const contador = document.getElementById("contadorRegistros");
-        let dadosJSON = [];
-
-        function atualizarTabela(gerencia) {
+    
+        function atualizarTabela() {
             tabelaBody.innerHTML = '';
-            let contadorTotal = 0;
-
-            dadosJSON.forEach(item => {
-                if (gerencia === "TODAS" || item.GERENCIA === gerencia) {
-                    const linha = document.createElement("tr");
-                    linha.innerHTML = `
-                        <td>${item.NOME}</td>
-                        <td>${item.CARGO}</td>
-                        <td>${item.REGIONAL}</td>
-                        <td>${item.DEPARTAMENTO}</td>
-                        <td>${item.GERENCIA}</td>
-                    `;
-                    tabelaBody.appendChild(linha);
-                    contadorTotal++;
-                }
-            });
-
-            contador.textContent = `Total: ${contadorTotal} registro${contadorTotal !== 1 ? 's' : ''}`;
-        }
-
-        fetch('banco2025.json')
-            .then(response => response.json())
-            .then(dados => {
-                dadosJSON = dados;
-                const gerencias = [...new Set(dados.map(item => item.GERENCIA))].sort();
-                gerencias.forEach(gerencia => {
-                    const option = document.createElement("option");
-                    option.value = gerencia;
-                    option.textContent = gerencia;
-                    selectGerencia.appendChild(option);
+    
+            fetch('banco2025.json')
+                .then(response => response.json())
+                .then(dados => {
+                    let count = 0;
+    
+                    dados.forEach(item => {
+                        if (item.GERENCIA === selectGerencia.value || selectGerencia.value === "todos") {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${item.NOME}</td>
+                                <td>${item.CARGO}</td>
+                                <td>${item.REGIONAL}</td>
+                                <td>${item.DEPARTAMENTO}</td>
+                                <td>${item.GERENCIA}</td>
+                            `;
+                            tabelaBody.appendChild(row);
+                            count++;
+                        }
+                    });
+    
+                    contador.textContent = `${count} registros encontrados.`;
+                })
+                .catch(error => {
+                    console.error("Erro ao carregar JSON:", error);
                 });
-                atualizarTabela("TODAS");
-            })
-            .catch(error => console.error("Erro ao carregar JSON:", error));
-
-        selectGerencia.addEventListener("change", () => {
-            atualizarTabela(selectGerencia.value);
-        });
-
-        const body = document.body;
-        const toggle = document.getElementById("toggleTheme");
-
-        function aplicarTema(modo) {
-            body.classList.toggle("light", modo === "light");
-            toggle.textContent = modo === "light" ? "🌞" : "🌙";
         }
-
-        let temaSalvo = localStorage.getItem("tema") || "dark";
-        aplicarTema(temaSalvo);
-
-        toggle.addEventListener("click", () => {
-            temaSalvo = body.classList.contains("light") ? "dark" : "light";
-            localStorage.setItem("tema", temaSalvo);
-            aplicarTema(temaSalvo);
-        });
+    
+        // Atualiza ao carregar e ao trocar a seleção
+        atualizarTabela();
+        selectGerencia.addEventListener("change", atualizarTabela);
     </script>
+    
+
 </body>
 
 </html>
