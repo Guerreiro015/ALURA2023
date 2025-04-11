@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela com JSON</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #888;
+            padding: 8px;
+            text-align: left;
+        }
+
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+            /* cor clara para linha par */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lista de Colaboradores</h1>
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>REGIONAL</th>
+                <th>Departamento</th>
+                <th>Gerencia</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        fetch('banco2025.json')
+            .then(response => response.json())
+            .then(dados => {
+                const tbody = document.querySelector("#tabela tbody");
+                dados.forEach(item => {
+                    if(item.GERENCIA == "João Paulo"){
+                        const linha = document.createElement("tr");
+                        linha.innerHTML = `
+                        <td>${item.NOME}</td>
+                        <td>${item.CARGO}</td>
+                        <td>${item.REGIONAL}</td>
+                        <td>${item.DEPARTAMENTO}</td>
+                        <td>${item.GERENCIA}</td>
+                        `;
+                        tbody.appendChild(linha);
+                    }
+                });
+            })
+            .catch(error => console.error("Erro ao carregar JSON:", error));
+    </script>
+</body>
+
+</html>

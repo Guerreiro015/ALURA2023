@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualizador de CSV com Estilo</title>
+  <style>
+    :root {
+      --bg-color: #fff;
+      --text-color: #111;
+      --header-bg: #333;
+      --header-text: #fff;
+      --row-hover: #f2f2f2;
+    }
+
+    body.dark {
+      --bg-color: #111;
+      --text-color: #f5f5f5;
+      --header-bg: #222;
+      --header-text: #facc15;
+      --row-hover: #1e1e1e;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    input[type="file"], input[type="text"] {
+      padding: 8px;
+      margin: 10px 5px 10px 0;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 8px 10px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--header-bg);
+      color: var(--header-text);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    tr:hover {
+      background: var(--row-hover);
+    }
+
+    .dark-toggle {
+      float: right;
+      background: #222;
+      color: #facc15;
+      border: none;
+      padding: 6px 10px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Alternar tema</button>
+  <h2>Visualizador de CSV com Filtro</h2>
+
+  <div class="search-container">
+    <input type="file" id="csvFileInput" accept=".csv">
+    <input type="text" id="searchInput" placeholder="Buscar por nome ou cargo...">
+  </div>
+
+  <div id="tableContainer"></div>
+
+  <script>
+    let fullData = [];
+
+    document.getElementById('csvFileInput').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        const text = event.target.result;
+        const data = parseCSV(text, ';');
+        fullData = data;
+        generateTable(data);
+      };
+      reader.readAsText(file);
+    });
+
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const searchTerm = this.value.toLowerCase();
+      const filtered = fullData.filter((row, index) => {
+        if (index === 0) return true; // sempre manter cabeçalho
+        return row.some(cell => cell.toLowerCase().includes(searchTerm));
+      });
+      generateTable(filtered);
+    });
+
+    function parseCSV(text, separator = ';') {
+      const rows = text.trim().split('\n').map(row => row.split(separator));
+      return rows;
+    }
+
+    function generateTable(data) {
+      const container = document.getElementById('tableContainer');
+      container.innerHTML = '';
+
+      const table = document.createElement('table');
+      const thead = document.createElement('thead');
+      const headerRow = document.createElement('tr');
+      data[0].forEach(headerText => {
+        const th = document.createElement('th');
+        th.textContent = headerText.trim();
+        headerRow.appendChild(th);
+      });
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+
+      const tbody = document.createElement('tbody');
+      data.slice(1).forEach(row => {
+        const tr = document.createElement('tr');
+        row.forEach(cellText => {
+          const td = document.createElement('td');
+          td.textContent = cellText.trim();
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+
+      container.appendChild(table);
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
