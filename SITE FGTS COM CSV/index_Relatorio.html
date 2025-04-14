@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Relatórios CSV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #121212;
+      color: #f0f0f0;
+    }
+    h1 { text-align: center; }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+    select, input[type="file"] {
+      padding: 10px;
+      font-size: 1rem;
+    }
+    #output {
+      width: 90%;
+      margin: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.85rem;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #222;
+    }
+    tr:nth-child(even) {
+      background-color: #1e1e1e;
+    }
+    .hidden { display: none; }
+    .totals {
+      background-color: #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Relatórios Dinâmicos - CSV</h1>
+  <div class="controls">
+    <input type="file" id="csvFile" accept=".csv" />
+    <select id="reportType">
+      <option value="total">Total Geral</option>
+      <option value="gerencia">Por Gerência + Ano + Mês</option>
+      <option value="departamento">Por Departamento</option>
+    </select>
+    <select id="gerenciaSelect" class="hidden"></select>
+    <select id="anoSelect" class="hidden"></select>
+    <select id="mesSelect" class="hidden"></select>
+    <select id="departamentoSelect" class="hidden"></select>
+  </div>
+
+  <div id="output"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script>
+    let allData = [];
+
+    document.getElementById('csvFile').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      Papa.parse(file, {
+        header: true,
+        skipEmptyLines: true,
+        delimiter: ";",
+        complete: function(results) {
+          allData = results.data;
+          populateSelects();
+          renderReport();
+        }
+      });
+    });
+
+    document.getElementById('reportType').addEventListener('change', function () {
+      const type = this.value;
+      const isGerencia = type === 'gerencia';
+      document.getElementById('gerenciaSelect').classList.toggle('hidden', !isGerencia);
+      document.getElementById('anoSelect').classList.toggle('hidden', !isGerencia);
+      document.getElementById('mesSelect').classList.toggle('hidden', !isGerencia);
+      document.getElementById('departamentoSelect').classList.toggle('hidden', type !== 'departamento');
+      renderReport();
+    });
+
+    document.getElementById('gerenciaSelect').addEventListener('change', renderReport);
+    document.getElementById('anoSelect').addEventListener('change', renderReport);
+    document.getElementById('mesSelect').addEventListener('change', renderReport);
+    document.getElementById('departamentoSelect').addEventListener('change', renderReport);
+
+    function populateSelects() {
+      const gerenciaSelect = document.getElementById('gerenciaSelect');
+      const departamentoSelect = document.getElementById('departamentoSelect');
+      const mesSelect = document.getElementById('mesSelect');
+      const anoSelect = document.getElementById('anoSelect');
+
+      const gerencias = [...new Set(allData.map(row => row.GERENCIA).filter(Boolean))];
+      const departamentos = [...new Set(allData.map(row => row.DEPARTAMENTO).filter(Boolean))];
+      const meses = [...new Set(allData.map(row => row.MÊS || row.MES).filter(Boolean))];
+      const anos = [...new Set(allData.map(row => row.ANO || row.Ano || row.ano).filter(Boolean))];
+
+      gerenciaSelect.innerHTML = '<option value="">Selecione uma gerência</option>';
+      gerencias.forEach(g => {
+        gerenciaSelect.innerHTML += `<option value="${g}">${g}</option>`;
+      });
+
+      departamentoSelect.innerHTML = '<option value="">Selecione um departamento</option>';
+      departamentos.forEach(d => {
+        departamentoSelect.innerHTML += `<option value="${d}">${d}</option>`;
+      });
+
+      mesSelect.innerHTML = '<option value="">Selecione um mês</option>';
+      meses.forEach(m => {
+        mesSelect.innerHTML += `<option value="${m}">${m}</option>`;
+      });
+
+      anoSelect.innerHTML = '<option value="">Selecione um ano</option>';
+      anos.forEach(a => {
+        anoSelect.innerHTML += `<option value="${a}">${a}</option>`;
+      });
+    }
+
+    function calculateTotals(data) {
+      const totals = {
+        "HE-EXCEDENTES": 0,
+        "DIAS SEM FOLGAS": 0,
+        "INTERJORNADAS": 0
+      };
+
+      data.forEach(row => {
+        if (row["HE-EXCEDENTES"]) totals["HE-EXCEDENTES"] += parseFloat(row["HE-EXCEDENTES"]);
+        if (row["DIAS SEM FOLGAS"]) totals["DIAS SEM FOLGAS"] += parseFloat(row["DIAS SEM FOLGAS"]);
+        if (row["INTERJORNADAS"]) totals["INTERJORNADAS"] += parseFloat(row["INTERJORNADAS"]);
+      });
+
+      return totals;
+    }
+
+    function renderReport() {
+      const type = document.getElementById('reportType').value;
+      const output = document.getElementById('output');
+      if (allData.length === 0) {
+        output.innerHTML = '<p>Nenhum dado carregado.</p>';
+        return;
+      }
+
+      let displayData = [...allData];
+
+      if (type === 'gerencia') {
+        const selectedGerencia = document.getElementById('gerenciaSelect').value;
+        const selectedMes = document.getElementById('mesSelect').value;
+        const selectedAno = document.getElementById('anoSelect').value;
+
+        if (!selectedGerencia || !selectedMes || !selectedAno) {
+          output.innerHTML = '<p>Selecione a gerência, o ano e o mês para visualizar os dados.</p>';
+          return;
+        }
+
+        displayData = allData.filter(row =>
+          row.GERENCIA === selectedGerencia &&
+          (row.MÊS === selectedMes || row.MES === selectedMes) &&
+          (row.ANO === selectedAno || row.Ano === selectedAno || row.ano === selectedAno)
+        );
+      }
+
+      if (type === 'departamento') {
+        const selectedDepartamento = document.getElementById('departamentoSelect').value;
+        if (!selectedDepartamento) {
+          output.innerHTML = '<p>Selecione um departamento para visualizar os dados.</p>';
+          return;
+        }
+        displayData = allData.filter(row => row.DEPARTAMENTO === selectedDepartamento);
+      }
+
+      const totals = calculateTotals(displayData);
+      let html = `<div class="totals">
+                    <h2>Totais dos Eventos</h2>
+                    <p>HE-EXCEDENTES: ${totals["HE-EXCEDENTES"]}</p>
+                    <p>DIAS SEM FOLGAS: ${totals["DIAS SEM FOLGAS"]}</p>
+                    <p>INTERJORNADAS: ${totals["INTERJORNADAS"]}</p>
+                  </div>`;
+
+      html += '<table><thead><tr>';
+      html += Object.keys(displayData[0]).map(k => `<th>${k}</th>`).join('');
+      html += '</tr></thead><tbody>';
+
+      displayData.forEach(row => {
+        html += '<tr>' + Object.values(row).map(v => `<td>${v}</td>`).join('') + '</tr>';
+      });
+
+      html += '</tbody></table>';
+      output.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
