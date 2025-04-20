@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatórios CSV</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 12px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 4px 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #dbd5d5;
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Relatórios Dinâmicos - CSV</h1>
+  <div class="controls">
+
+    <label for="gerente">Escolha um Gerente:</label>
+    <select id="gerente" name="gerente">
+      <option value="TODOS">Todos</option>
+      <option value="WILSON">Wilson</option>
+      <option value="GUSTAVO">Gustavo</option>
+      <option value="JOÃO PAULO">João Paulo</option>
+    </select>
+
+  </div>
+
+  <table>
+    <tr>
+
+      <th>Matrícula</th>
+      <th>Nome</th>
+      <th>Cargo</th>
+      <th>Regional</th>
+      <th>Setor</th>
+      <th>Gerencia</th>
+      <th>Evento </th>
+      <th>Período</th>
+      <th>Quantidade</th>
+      <th>Competencia</th>
+
+    </tr>
+
+    <tbody id="saida"></tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script>
+    function formatarValor(valor) {
+      return valor.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
+    }
+
+    let dados = []; // ← variável global
+
+    function exibir_dados() {
+      const gerente = document.getElementById("gerente").value;
+      const tbody = document.getElementById("saida");
+      tbody.innerHTML = "";
+
+      dados.forEach(key => {
+        if (gerente === "TODOS" || key["GERENCIA"] === gerente) {
+          const row = document.createElement('tr');
+          const quant = parseFloat((key["QUANTIDADE"] || "0").replace(",", ".")) || 0;
+          row.innerHTML = `
+            <td>${key["ID"] || ""}</td>
+            <td>${key["NOME"] || ""}</td>
+            <td>${key["CARGO"] || ""}</td>
+            <td>${key["REGIONAL"] || ""}</td>
+            <td>${key["DEPARTAMENTO"] || ""}</td>
+            <td>${key["GERENCIA"] || ""}</td>
+            <td>${key["EVENTO"] || ""}</td>              
+            <td>${key["PERÍODO"] || ""}</td>              
+            <td>${quant}</td>              
+            <td>${key["COMPETÊNCIA"] || ""}</td>
+          `;
+          tbody.appendChild(row);
+        }
+      });
+    }
+
+    // Carrega o CSV automaticamente
+    fetch("Base.csv")
+      .then(response => response.text())
+      .then(csvText => {
+        Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          delimiter: ";",
+          complete: function (results) {
+            dados = results.data;
+
+            exibir_dados();
+          }
+        });
+      })
+      .catch(error => console.error("Erro ao carregar CSV:", error));
+
+    document.getElementById("gerente").addEventListener("change", exibir_dados);
+  </script>
+</body>
+
+</html>
