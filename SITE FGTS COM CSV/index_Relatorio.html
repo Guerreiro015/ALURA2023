@@ -39,21 +39,22 @@
   <div class="controls">
     <input type="file" id="csvFile" accept=".csv" />
   </div>
+<table>
+  <tr>
 
-  <table id="tabela">
-    <thead>
-      <tr>
-        <th>Matrícula</th>
-        <th>Nome</th>
-        <th>Cargo</th>
-        <th>Regional</th>
-        <th>Verba</th>
-        <th>Valor da Verba</th>
-      </tr>
-    </thead>
-    <tbody id="saida">
-    </tbody>
-  </table>
+    <th>Matrícula</th>
+    <th>Nome</th>
+    <th>Cargo</th>
+    <th>Regional</th>
+    <th>Admissão</th>
+    <th>Salário</th>
+    <th>Valor Insalubridade </th>
+    <th>Horário</th> 
+    
+  </tr>
+
+  <tbody id="saida"></tbody>
+</table>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
   <script>
@@ -78,14 +79,19 @@
 
           dados.forEach(key => {
             const row = document.createElement('tr');
-            const valor = parseFloat(key["Valor da Verba"].replace(",", ".")) || 0;
+            const salario = parseFloat(key["Valor do Salário"].replace(",", ".")) || 0;
+            const insal = parseFloat(key["Percentual de Insalubridade"].replace(",", ".")) || 0;
+            const valor = 1518*insal/100
             row.innerHTML = `
               <td>${key["Id Contratado"]}</td>
-              <td>${key["Nome"]}</td>
+              <td>${key["Nome Completo"]}</td>
               <td>${key["Cargo"]}</td>
               <td>${key["Folha"]}</td>
-              <td>${key["Verba"]}</td>
+              <td>${key["Data da Admissão"]}</td>
+              <td>${formatarValor(salario)}</td>
               <td>${formatarValor(valor)}</td>
+              <td>${key["Horário"]}</td>
+              
             `;
             tbody.appendChild(row);
           });
