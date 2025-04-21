@@ -29,7 +29,8 @@
       color: var(--text-dark);
     }
 
-    h1, h3 {
+    h1,
+    h3 {
       text-align: center;
     }
 
@@ -54,7 +55,8 @@
       margin-top: 10px;
     }
 
-    th, td {
+    th,
+    td {
       border: 1px solid #ccc;
       padding: 6px 8px;
       text-align: left;
@@ -86,7 +88,8 @@
       word-wrap: break-word;
     }
 
-    .resumo-compacto th, .resumo-compacto td {
+    .resumo-compacto th,
+    .resumo-compacto td {
       padding: 4px;
       border: 1px solid #ccc;
       text-align: center;
@@ -114,16 +117,15 @@
       color: #fff;
       border-color: #fff;
     }
-    
   </style>
 </head>
 
 <body>
-      
+
   <button class="theme-toggle" onclick="toggleTheme()">🌞🌙 Tema</button>
 
   <div class="header">
-    <h1>Relatórios por Departamentos</h1>   
+    <h1>Relatórios Departamentos - JOÃO PAULO</h1>
   </div>
 
   <div class="controls">
@@ -163,10 +165,11 @@
       tbody.innerHTML = "";
 
       dados.forEach(key => {
-        if (departamento === "TODOS" || key["DEPARTAMENTO"] === departamento) {
-          const row = document.createElement('tr');
-          const quant = parseFloat((key["QUANTIDADE"] || "0").replace(",", ".")) || 0;
-          row.innerHTML = `
+        if (key["GERENCIA"] === "JOÃO PAULO") {
+          if (departamento === "TODOS" || key["DEPARTAMENTO"] === departamento) {
+            const row = document.createElement('tr');
+            const quant = parseFloat((key["QUANTIDADE"] || "0").replace(",", ".")) || 0;
+            row.innerHTML = `
             <td>${key["ID"] || ""}</td>
             <td>${key["NOME"] || ""}</td>
             <td>${key["CARGO"] || ""}</td>
@@ -178,7 +181,8 @@
             <td>${quant}</td>
             <td>${key["COMPETÊNCIA"] || ""}</td>
           `;
-          tbody.appendChild(row);
+            tbody.appendChild(row);
+          }
         }
       });
 
@@ -186,18 +190,21 @@
       const competenciasSet = new Set();
 
       dados.forEach(key => {
-        const match = departamento === "TODOS" || key["DEPARTAMENTO"] === departamento;
-        if (!match) return;
+        if (key["GERENCIA"] === "JOÃO PAULO") {
+          const match = departamento === "TODOS" || key["DEPARTAMENTO"] === departamento;
+          if (!match) return;
 
-        const comp = key["COMPETÊNCIA"];
-        const evento = key["EVENTO"];
-        if (!comp || !evento) return;
+          const comp = key["COMPETÊNCIA"];
+          const evento = key["EVENTO"];
+          if (!comp || !evento) return;
 
-        competenciasSet.add(comp);
-        if (!resumoEventos[evento]) resumoEventos[evento] = {};
-        if (!resumoEventos[evento][comp]) resumoEventos[evento][comp] = 0;
-        resumoEventos[evento][comp] += 1;
+          competenciasSet.add(comp);
+          if (!resumoEventos[evento]) resumoEventos[evento] = {};
+          if (!resumoEventos[evento][comp]) resumoEventos[evento][comp] = 0;
+          resumoEventos[evento][comp] += 1;
+        }
       });
+
 
       const competencias = Array.from(competenciasSet).sort((a, b) => {
         const [ma, aa] = a.split("/").map(Number);
