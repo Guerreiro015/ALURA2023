@@ -1,54 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Relatórios Anuais</title>
   <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-size: 12px;
+    :root {
+      --bg-light: #f9f9f9;
+      --bg-dark: #121212;
+      --text-light: #000;
+      --text-dark: #fff;
+      --primary: #007bff;
     }
 
-    th,
-    td {
-      border: 1px solid #ccc;
-      padding: 4px 8px;
-      text-align: left;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      margin: 0;
+      padding: 20px;
+      transition: all 0.3s ease;
     }
 
-    th {
-      background-color: #f0f0f0;
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
     }
 
-    tr:nth-child(odd) {
-      background-color: #dbd5d5;
+    h1, h3 {
+      text-align: center;
     }
 
     .controls {
       margin-bottom: 20px;
+      text-align: center;
     }
 
-    h1 {
-      margin-bottom: 10px;
+    select {
+      padding: 6px 10px;
+      font-size: 16px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    tr:nth-child(odd) td {
+      background-color: #eaeaea;
+    }
+
+    body.dark tr:nth-child(odd) td {
+      background-color: #1e1e1e;
     }
 
     #resumo {
-      margin: 20px 0;
+      margin: 30px 0;
     }
 
-    #resumo th,
-    #resumo td {
+    /* Estilo compacto e responsivo */
+    .resumo-compacto {
+      width: 100%;
+      table-layout: fixed;
+      font-size: 11px;
+      border-collapse: collapse;
+      word-wrap: break-word;
+    }
+
+    .resumo-compacto th, .resumo-compacto td {
+      padding: 4px;
+      border: 1px solid #ccc;
       text-align: center;
     }
-  </style>
 
+    .resumo-compacto th {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      background: none;
+      border: 2px solid var(--primary);
+      padding: 4px 8px;
+      border-radius: 6px;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    body.dark .theme-toggle {
+      color: #fff;
+      border-color: #fff;
+    }
+  </style>
 </head>
 
 <body>
+  
+  <button class="theme-toggle" onclick="toggleTheme()">🌞🌙 Tema</button>
+
   <h1>Relatórios Anuais - CSV</h1>
+
   <div class="controls">
     <label for="ano">Escolha um Ano:</label>
     <select id="ano" name="ano">
@@ -56,21 +128,23 @@
     </select>
   </div>
 
-  <div id="resumo"></div>
+  <div  class="tabela-scroll-wrapper" id="resumo"></div>
 
   <table>
-    <tr>
-      <th>Matrícula</th>
-      <th>Nome</th>
-      <th>Cargo</th>
-      <th>Regional</th>
-      <th>Setor</th>
-      <th>Gerência</th>
-      <th>Evento</th>
-      <th>Período</th>
-      <th>Quantidade</th>
-      <th>Competência</th>
-    </tr>
+    <thead>
+      <tr>
+        <th>Matrícula</th>
+        <th>Nome</th>
+        <th>Cargo</th>
+        <th>Regional</th>
+        <th>Setor</th>
+        <th>Gerência</th>
+        <th>Evento</th>
+        <th>Período</th>
+        <th>Quantidade</th>
+        <th>Competência</th>
+      </tr>
+    </thead>
     <tbody id="saida"></tbody>
   </table>
 
@@ -131,7 +205,9 @@
       competencias.forEach(comp => totaisCompetencia[comp] = 0);
 
       let totalGeral = 0;
-      let resumoHTML = "<h3>Resumo por Competência</h3><table><tr><th>Evento</th>";
+
+      let resumoHTML = "<h3>Resumo por Competência</h3><table class='resumo-compacto'><tr><th>Evento</th>";
+
       competencias.forEach(c => resumoHTML += `<th>${c}</th>`);
       resumoHTML += `<th>Total por Evento</th></tr>`;
 
@@ -156,6 +232,11 @@
       document.getElementById("resumo").innerHTML = resumoHTML;
     }
 
+     // Dark mode toggle
+     function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+
     fetch("Base.csv")
       .then(response => response.text())
       .then(csvText => {
@@ -166,8 +247,6 @@
           complete: function (results) {
             dados = results.data;
 
-
-            // Criando cabeçalho //
             const anos = new Set(dados.map(d => d["ANO"]).filter(Boolean));
             const selectAno = document.getElementById("ano");
 
@@ -184,9 +263,7 @@
       })
       .catch(error => console.error("Erro ao carregar CSV:", error));
 
-      document.getElementById("ano").addEventListener("change", exibir_dados);
-
+    document.getElementById("ano").addEventListener("change", exibir_dados);
   </script>
 </body>
-
 </html>

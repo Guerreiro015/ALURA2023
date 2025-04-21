@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu de Relatórios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f0f0f0;
+      --text-color: #222;
+      --button-bg: #1565c0;
+      --button-text: #fff;
+      --card-bg: #fff;
+      --shadow: rgba(0, 0, 0, 0.2);
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --button-bg: #1e88e5;
+      --button-text: #fdd835;
+      --card-bg: #1e1e1e;
+      --shadow: rgba(0, 0, 0, 0.5);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .menu button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 8px var(--shadow);
+    }
+
+    .menu button:hover {
+      background-color: #0d47a1;
+    }
+
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    .toggle-dark {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: var(--button-bg);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px var(--shadow);
+      transition: background 0.3s ease;
+    }
+
+    .toggle-dark:hover {
+      background-color: #0d47a1;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        height: 75vh;
+      }
+
+      .menu {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-dark" onclick="document.body.classList.toggle('dark-mode')">🌓</button>
+  <h1>Relatórios Interativos Mensais </h1>
+  <div class="menu">
+    <button onclick="carregar('Relatorio_Eventos_gerencias.html')">Relatório por Gerência</button>
+    <button onclick="carregar('Relatorio_Eventos_dept.html')">Relatório por Departamento</button>
+    <button onclick="carregar('Relatorio_Eventos_Anuais.html')">Relatório Anuais</button>
+  </div>
+  <iframe id="conteudo" src=""></iframe>
+
+  <script>
+    function carregar(pagina) {
+      document.getElementById('conteudo').src = pagina;
+    }
+  </script>
+</body>
+</html>

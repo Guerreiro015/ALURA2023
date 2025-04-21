@@ -4,52 +4,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Relatórios por Gerencia</title>
+  <title>Relatórios por Gerência</title>
   <style>
-    
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-size: 12px;
+    :root {
+      --bg-light: #f9f9f9;
+      --bg-dark: #121212;
+      --text-light: #000;
+      --text-dark: #fff;
+      --primary: #007bff;
     }
 
-    th,
-    td {
-      border: 1px solid #ccc;
-      padding: 4px 8px;
-      text-align: left;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      margin: 0;
+      padding: 20px;
+      transition: all 0.3s ease;
     }
 
-    th {
-      background-color: #f0f0f0;
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
     }
 
-    tr:nth-child(odd) {
-      background-color: #dbd5d5;
+    h1, h3 {
+      text-align: center;
     }
 
     .controls {
       margin-bottom: 20px;
-    }
-
-    h1 {
-      margin-bottom: 10px;
-    }
-
-    #resumo {
-      margin: 20px 0;
-    }
-
-    #resumo th,
-    #resumo td {
       text-align: center;
     }
 
+    select {
+      padding: 6px 10px;
+      font-size: 16px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    tr:nth-child(odd) td {
+      background-color: #eaeaea;
+    }
+
+    body.dark tr:nth-child(odd) td {
+      background-color: #1e1e1e;
+    }
+
+    #resumo {
+      margin: 0 0;
+    }
+
+    /* Estilo compacto e responsivo */
+    .resumo-compacto {
+      width: 100%;
+      table-layout: fixed;
+      font-size: 11px;
+      border-collapse: collapse;
+      word-wrap: break-word;
+    }
+
+    .resumo-compacto th, .resumo-compacto td {
+      padding: 4px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .resumo-compacto th {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      background: none;
+      border: 2px solid var(--primary);
+      padding: 4px 8px;
+      border-radius: 6px;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    body.dark .theme-toggle {
+      color: #fff;
+      border-color: #fff;
+    }
   </style>
 </head>
 
 <body>
-  <h1>Relatórios Gerência - CSV</h1>
+  <button class="theme-toggle" onclick="toggleTheme()">🌞🌙 Tema</button>
+
+  <h1>Relatórios por Gerência - CSV</h1>
   <div class="controls">
     <label for="gerente">Escolha um Gerente:</label>
     <select id="gerente" name="gerente">
@@ -60,36 +130,33 @@
     </select>
   </div>
 
-  <div id="resumo"></div>
+  <div id="resumo" class="table-container"></div>
 
- 
-
-  <table>
-    <thead>
-      <tr>
-        <th>Matrícula</th>
-        <th>Nome</th>
-        <th>Cargo</th>
-        <th>Regional</th>
-        <th>Setor</th>
-        <th>Gerencia</th>
-        <th>Evento </th>
-        <th>Período</th>
-        <th>Quantidade</th>
-        <th>Competência</th>
-      </tr>
-    </thead>
-    <tbody id="saida"></tbody>
-  </table>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Matrícula</th>
+          <th>Nome</th>
+          <th>Cargo</th>
+          <th>Regional</th>
+          <th>Setor</th>
+          <th>Gerência</th>
+          <th>Evento</th>
+          <th>Período</th>
+          <th>Quantidade</th>
+          <th>Competência</th>
+        </tr>
+      </thead>
+      <tbody id="saida"></tbody>
+    </table>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
   <script>
     let dados = [];
 
-    function exibir_dados() {     
-
-      let he = 0, dsf = 0, int = 0;
-
+    function exibir_dados() {
       const gerente = document.getElementById("gerente").value;
       const tbody = document.getElementById("saida");
       tbody.innerHTML = "";
@@ -108,12 +175,12 @@
             <td>${key["REGIONAL"] || ""}</td>
             <td>${key["DEPARTAMENTO"] || ""}</td>
             <td>${key["GERENCIA"] || ""}</td>
-            <td>${key["EVENTO"] || ""}</td>              
-            <td>${key["PERÍODO"] || ""}</td>              
-            <td>${quant}</td>              
+            <td>${key["EVENTO"] || ""}</td>
+            <td>${key["PERÍODO"] || ""}</td>
+            <td>${quant}</td>
             <td>${key["COMPETÊNCIA"] || ""}</td>
           `;
-          tbody.appendChild(row);         
+          tbody.appendChild(row);
 
           const comp = key["COMPETÊNCIA"];
           const evento = key["EVENTO"];
@@ -126,22 +193,19 @@
         }
       });
 
-   
-
       const competencias = Array.from(competenciasSet).sort((a, b) => {
         const [ma, aa] = a.split("/").map(Number);
         const [mb, ab] = b.split("/").map(Number);
         return aa === ab ? ma - mb : aa - ab;
       });
-      
+
       const totaisCompetencia = {};
       competencias.forEach(comp => totaisCompetencia[comp] = 0);
 
-
       let totalGeral = 0;
-      let resumoHTML = "<h3>Resumo por Competência</h3><table><tr><th>Evento</th>";
+      let resumoHTML = "<h3>Resumo por Competência</h3><table class='resumo-compacto'><tr><th>Evento</th>";
       competencias.forEach(c => resumoHTML += `<th>${c}</th>`);
-      resumoHTML += `<th>Total por Evento</th></tr>`;
+      resumoHTML += `<th>Total</th></tr>`;
 
       for (const evento in resumoEventos) {
         let totalEvento = 0;
@@ -162,6 +226,10 @@
       resumoHTML += "</table>";
 
       document.getElementById("resumo").innerHTML = resumoHTML;
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
     }
 
     fetch("Base.csv")
