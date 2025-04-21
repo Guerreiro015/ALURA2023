@@ -50,6 +50,11 @@
     </select>
 
   </div>
+  <div>
+    <li> <span>Total de dias sem folgas</span> <span id="dias"></span></li>
+    <li> <span>Total de horas extras excedentes</span> <span id="horas"></span></li>
+    <li> <span>Total de Interjornadas</span> <span id="inter"></span></li>
+  </div>
 
   <table>
     <tr>
@@ -81,7 +86,15 @@
 
     let dados = []; // ← variável global
 
+    let he = 0, dsf = 0, int = 0
+
     function exibir_dados() {
+      const DIAS = document.getElementById("dias");
+      const HE = document.getElementById("horas");
+      const INTER = document.getElementById("inter");
+
+      let he = 0, dsf = 0, int = 0
+
       const gerente = document.getElementById("gerente").value;
       const tbody = document.getElementById("saida");
       tbody.innerHTML = "";
@@ -103,6 +116,18 @@
             <td>${key["COMPETÊNCIA"] || ""}</td>
           `;
           tbody.appendChild(row);
+          if (key["EVENTO"] === "DIAS SEM FOLGAS") {
+            dsf += 1
+            DIAS.innerHTML = dsf
+          }
+          if (key["EVENTO"] === "HE-EXCEDENTES") {
+            he += 1
+            HE.innerHTML = he
+          }
+          if (key["EVENTO"] === "INTERJORNADAS") {
+            int += 1
+            INTER.innerHTML = int
+          }
         }
       });
     }
@@ -116,7 +141,7 @@
           skipEmptyLines: true,
           delimiter: ";",
           complete: function (results) {
-            dados = results.data;
+            dados = results.data;           
 
             exibir_dados();
           }
