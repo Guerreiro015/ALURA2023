@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatórios por Departamentos</title>
+  <style>
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 12px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 4px 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #dbd5d5;
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    #resumo {
+      margin: 20px 0;
+    }
+
+    #resumo th,
+    #resumo td {
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Relatórios Departamentos - CSV</h1>
+  <div class="controls">
+    <label for="departamento">Escolha um Departamento:</label>
+    <select id="departamento" name="departamento">
+      <option value="TODOS">Todos</option>
+    </select>
+  </div>
+
+  <div id="resumo"></div>
+
+  <table>
+    <tr>
+      <th>Matrícula</th>
+      <th>Nome</th>
+      <th>Cargo</th>
+      <th>Regional</th>
+      <th>Setor</th>
+      <th>Gerência</th>
+      <th>Evento</th>
+      <th>Período</th>
+      <th>Quantidade</th>
+      <th>Competência</th>
+    </tr>
+    <tbody id="saida"></tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script>
+    let dados = [];
+
+    function exibir_dados() {
+      const departamento = document.getElementById("departamento").value;
+      const tbody = document.getElementById("saida");
+      tbody.innerHTML = "";
+
+      dados.forEach(key => {
+        if (departamento === "TODOS" || key["DEPARTAMENTO"] === departamento) {
+          const row = document.createElement('tr');
+          const quant = parseFloat((key["QUANTIDADE"] || "0").replace(",", ".")) || 0;
+          row.innerHTML = `
+            <td>${key["ID"] || ""}</td>
+            <td>${key["NOME"] || ""}</td>
+            <td>${key["CARGO"] || ""}</td>
+            <td>${key["REGIONAL"] || ""}</td>
+            <td>${key["DEPARTAMENTO"] || ""}</td>
+            <td>${key["GERENCIA"] || ""}</td>
+            <td>${key["EVENTO"] || ""}</td>
+            <td>${key["PERÍODO"] || ""}</td>
+            <td>${quant}</td>
+            <td>${key["COMPETÊNCIA"] || ""}</td>
+          `;
+          tbody.appendChild(row);
+        }
+      });
+
+      // ==== RESUMO POR COMPETÊNCIA E EVENTO ====
+      const resumoEventos = {};
+      const competenciasSet = new Set();
+
+      dados.forEach(key => {
+        const departamentoMatch = departamento === "TODOS" || key["DEPARTAMENTO"] === departamento;
+        if (!departamentoMatch) return;
+
+        const comp = key["COMPETÊNCIA"];
+        const evento = key["EVENTO"];
+        if (!comp || !evento) return;
+
+        competenciasSet.add(comp);
+        if (!resumoEventos[evento]) resumoEventos[evento] = {};
+        if (!resumoEventos[evento][comp]) resumoEventos[evento][comp] = 0;
+        resumoEventos[evento][comp] += 1;
+      });
+
+      const competencias = Array.from(competenciasSet).sort((a, b) => {
+        const [ma, aa] = a.split("/").map(Number);
+        const [mb, ab] = b.split("/").map(Number);
+        return aa === ab ? ma - mb : aa - ab;
+      });
+      
+      const totaisCompetencia = {};
+      competencias.forEach(comp => totaisCompetencia[comp] = 0);
+
+      let totalGeral = 0;
+      let resumoHTML = "<h3>Resumo por Competência</h3><table><tr><th>Evento</th>";
+      competencias.forEach(c => resumoHTML += `<th>${c}</th>`);
+      resumoHTML += `<th>Total por Evento</th></tr>`;
+
+      for (const evento in resumoEventos) {
+        let totalEvento = 0;
+        resumoHTML += `<tr><td>${evento}</td>`;
+        competencias.forEach(comp => {
+          const valor = resumoEventos[evento][comp] || 0;
+          resumoHTML += `<td>${valor}</td>`;
+          totalEvento += valor;
+          totaisCompetencia[comp] += valor;
+        });
+        totalGeral += totalEvento;
+        resumoHTML += `<td><b>${totalEvento}</b></td></tr>`;
+      }
+
+      resumoHTML += `<tr><td><b>Total por Competência</b></td>`;
+      competencias.forEach(comp => resumoHTML += `<td><b>${totaisCompetencia[comp]}</b></td>`);
+      resumoHTML += `<td><b>${totalGeral}</b></td></tr>`;
+      resumoHTML += "</table>";
+
+      document.getElementById("resumo").innerHTML = resumoHTML;
+    }
+
+    fetch("Base.csv")
+      .then(response => response.text())
+      .then(csvText => {
+        Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          delimiter: ";",
+          complete: function (results) {
+            dados = results.data;
+
+
+            const anos = new Set(dados.map(d => d["ANO"]).filter(Boolean));
+            const selectAnos = document.getElementById("ano");
+
+            anos.forEach(dep => {
+              const option = document.createElement("option");
+              option.value = dep;
+              option.textContent = dep;
+              selectAnos.appendChild(option);
+            });
+
+            exibir_dados();
+          }
+        });
+      })
+      .catch(error => console.error("Erro ao carregar CSV:", error));
+
+    document.getElementById("ano").addEventListener("change", exibir_dados);
+  </script>
+</body>
+
+</html>
