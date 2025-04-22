@@ -2,143 +2,179 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login Estiloso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
   <style>
     :root {
-      --bg-light: #f9f9f9;
-      --bg-dark: #1b1b1b;
-      --text-light: #000;
-      --text-dark: #fff;
-      --primary: #00d8ff;
+      --bg: linear-gradient(to right, #e0eafc, #cfdef3);
+      --card-bg: #ffffff;
+      --text: #333;
+      --button: #4a90e2;
+      --button-hover: #357ab8;
+      --input-bg: #f5f7fa;
+    }
+
+    .dark {
+      --bg: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      --card-bg: #1e1e1e;
+      --text: #f0f0f0;
+      --button: #0d6efd;
+      --button-hover: #084298;
+      --input-bg: #2e2e2e;
     }
 
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--bg-light);
-      color: var(--text-light);
+      background: var(--bg);
+      color: var(--text);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      transition: all 0.4s ease;
-    }
-
-    body.dark {
-      background: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
-    .login-box {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-      width: 90%;
-      max-width: 400px;
-      backdrop-filter: blur(10px);
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      background-color: var(--primary);
-      color: #000;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #00b6e0;
-    }
-
-    .error {
-      color: #ff4c4c;
-      margin-top: 10px;
-      display: none;
+      transition: background 0.4s ease;
     }
 
     .theme-toggle {
       position: absolute;
       top: 20px;
       right: 20px;
-      background: none;
-      border: 2px solid var(--primary);
-      color: var(--primary);
-      border-radius: 10px;
-      padding: 5px 12px;
+      font-size: 1.8rem;
       cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s ease;
+      user-select: none;
     }
 
-    .dark .theme-toggle {
-      border-color: #fff;
-      color: #fff;
+    .login-container {
+      background-color: var(--card-bg);
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      width: 320px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .login-container h2 {
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+
+    form input {
+      width: 100%;
+      padding: 12px 14px;
+      margin: 10px 0;
+      border-radius: 12px;
+      border: none;
+      background: var(--input-bg);
+      font-size: 1rem;
+      transition: box-shadow 0.3s;
+    }
+
+    form input:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--button);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 16px;
+      border: none;
+      border-radius: 12px;
+      background-color: var(--button);
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    button:hover {
+      background-color: var(--button-hover);
+      box-shadow: 0 7px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    #error-msg {
+      color: #ff4d4d;
+      margin-top: 14px;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 400px) {
+      .login-container {
+        width: 90%;
+        padding: 2rem 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">🌞/🌙</button>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+  </div>
 
-  <div class="login-box">
-    <h2>🔐 Login Seguro</h2>
-    <input type="text" id="nome" placeholder="Usuário" />
-    <input type="password" id="senha" placeholder="Senha" />
-    <button onclick="login()">Entrar</button>
-    <div class="error" id="erro">Usuário ou senha inválidos!</div>
+  <div class="login-container">
+    <h2>Bem-vindo</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Usuário" required />
+      <input type="password" id="password" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+    </form>
+    <p id="error-msg"></p>
   </div>
 
   <script>
-    const usuarios = {
-      "joao": { senha: "senha123", pagina: "joao.html" },
-      "maria": { senha: "abc456", pagina: "maria.html" },
-      "carlos": { senha: "carlos789", pagina: "carlos.html" },
-      "ana": { senha: "senhaana", pagina: "ana.html" },
-      "admin": { senha: "adminmaster", pagina: "admin.html" } // acesso especial
+    const users = {
+      admin: "123",
+      joao: "joao123",
+      gustavo: "gustavo123",
+      wilson: "wilson123"
     };
 
-    function login() {
-      const nome = document.getElementById("nome").value.trim().toLowerCase();
-      const senha = document.getElementById("senha").value;
-      const erro = document.getElementById("erro");
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
 
-      if (usuarios[nome] && usuarios[nome].senha === senha) {
-        window.location.href = usuarios[index].pagina;
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const errorMsg = document.getElementById("error-msg");
+
+      if (users[username] && users[username] === password) {
+        errorMsg.textContent = "";
+        switch (username) {
+          case "admin":
+          case "wilson":
+            window.location.href = "index.html";
+            break;
+          case "joao":
+            window.location.href = "Relatorio_Eventos_Joao.html";
+            break;
+          case "gustavo":
+            window.location.href = "Relatorio_Eventos_Gustavo.html";
+            break;
+        }
       } else {
-        erro.style.display = "block";
+        errorMsg.textContent = "Usuário ou senha incorretos.";
       }
-    }
+    });
 
     function toggleTheme() {
       document.body.classList.toggle("dark");
+      const icon = document.getElementById("theme-icon");
+      icon.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
     }
   </script>
 </body>
