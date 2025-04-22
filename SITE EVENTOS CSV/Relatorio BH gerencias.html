@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatórios BH - Gerências</title>
+  <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --bg-dark: #121212;
+      --text-light: #000;
+      --text-dark: #fff;
+      --primary: #007bff;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      margin: 0;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    h1,
+    h3 {
+      text-align: center;
+    }
+
+    .controls {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    select {
+      padding: 6px 10px;
+      font-size: 16px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 6px 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    tr:nth-child(odd) td {
+      background-color: #eaeaea;
+    }
+
+    body.dark tr:nth-child(odd) td {
+      background-color: #1e1e1e;
+    }
+
+    #resumo {
+      margin: 0 0;
+    }
+
+    /* Estilo compacto e responsivo */
+    .resumo-compacto {
+      width: 100%;
+      table-layout: fixed;
+      font-size: 11px;
+      border-collapse: collapse;
+      word-wrap: break-word;
+    }
+
+    .resumo-compacto th,
+    .resumo-compacto td {
+      padding: 4px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .resumo-compacto th {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      background: none;
+      border: 2px solid var(--primary);
+      padding: 4px 8px;
+      border-radius: 6px;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    body.dark .theme-toggle {
+      color: #fff;
+      border-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌞🌙 Tema</button>
+
+  <h1>Relatórios de BANCO DE HORAS</h1>
+  <div class="controls">
+    <label for="gerente">Escolha um Gerente:</label>
+    <select id="gerente" name="gerente">
+      <option value="TODOS">Todos</option>
+      <option value="WILSON">Wilson</option>
+      <option value="GUSTAVO">Gustavo</option>
+      <option value="JOÃO PAULO">João Paulo</option>
+    </select>
+  </div>
+
+  <div id="resumo" class="table-container"></div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Matrícula</th>
+          <th>Nome</th>
+          <th>Cargo</th>
+          <th>Regional</th>
+          <th>Setor</th>
+          <th>Gerência</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody id="saida"></tbody>
+    </table>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script>
+    let dados = [];
+
+    function exibir_dados() {
+      const gerente = document.getElementById("gerente").value;
+      const tbody = document.getElementById("saida");
+      tbody.innerHTML = "";
+
+      const resumoEventos = {};
+      const competenciasSet = new Set();
+
+      dados.forEach(key => {
+        // Tranformando tudo em minúsculo
+        const gerenteKey = (key["GERENTE"] || "").toLowerCase();
+        const gerenteFiltro = (gerente || "").toLowerCase();
+
+        if (gerenteFiltro === "todos" || gerenteKey === gerenteFiltro) {
+          const row = document.createElement('tr');
+          const quant = parseFloat((key["QUANTIDADE"] || "0").replace(",", ".")) || 0;
+          row.innerHTML = `
+            <td>${key["ID"] || ""}</td>
+            <td>${key["NOME"] || ""}</td>
+            <td>${key["CARGO"] || ""}</td>
+            <td>${key["REGIONAL"] || ""}</td>
+            <td>${key["DEPARTAMENTO"] || ""}</td>
+            <td>${key["GERENTE"] || ""}</td>            
+            <td>${quant}</td>
+           
+          `;
+          tbody.appendChild(row);
+        }
+      });
+    }
+
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+
+    fetch("BH_GERAL.csv")
+      .then(response => response.text())
+      .then(csvText => {
+        Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          delimiter: ";",
+          complete: function (results) {
+            dados = results.data;
+            exibir_dados();
+          }
+        });
+      })
+      .catch(error => console.error("Erro ao carregar CSV:", error));
+
+    document.getElementById("gerente").addEventListener("change", exibir_dados);
+  </script>
+</body>
+
+</html>
