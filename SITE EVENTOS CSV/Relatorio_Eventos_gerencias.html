@@ -205,7 +205,7 @@
       let totalGeral = 0;
       let resumoHTML = "<h3>Resumo por Competência</h3><table class='resumo-compacto'><tr><th>Evento</th>";
       competencias.forEach(c => resumoHTML += `<th>${c}</th>`);
-      resumoHTML += `<th>Total</th></tr>`;
+      resumoHTML += `<th>Total por Evento</th></tr>`;
 
       for (const evento in resumoEventos) {
         let totalEvento = 0;
