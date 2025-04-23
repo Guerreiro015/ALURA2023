@@ -1,133 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
+
   <style>
     :root {
-      --bg: linear-gradient(to right, #e0eafc, #cfdef3);
-      --card-bg: #ffffff;
+      --bg: #f2f2f2;
+      --card-bg: #fff;
       --text: #333;
-      --button: #4a90e2;
-      --button-hover: #357ab8;
-      --input-bg: #f5f7fa;
+      --button: #007bff;
+      --button-hover: #0056b3;
     }
 
     .dark {
-      --bg: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      --bg: #121212;
       --card-bg: #1e1e1e;
       --text: #f0f0f0;
       --button: #0d6efd;
       --button-hover: #084298;
-      --input-bg: #2e2e2e;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--bg);
+      background-color: var(--bg);
       color: var(--text);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      transition: background 0.4s ease;
+      transition: 0.4s;
+    }
+
+    .login-container {
+      background-color: var(--card-bg);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    .login-container h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: var(--button);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--button-hover);
+    }
+
+    #error-msg {
+      color: red;
+      margin-top: 10px;
+      font-size: 0.9rem;
     }
 
     .theme-toggle {
       position: absolute;
       top: 20px;
       right: 20px;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       cursor: pointer;
-      user-select: none;
     }
 
-    .login-container {
-      background-color: var(--card-bg);
-      padding: 2.5rem 2rem;
-      border-radius: 20px;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-      text-align: center;
-      width: 320px;
-      animation: fadeIn 0.8s ease-in-out;
+    /* Animação de erro */
+    .shake {
+      animation: shake 0.3s;
     }
 
-    .login-container h2 {
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-      font-size: 1.6rem;
-    }
-
-    form input {
-      width: 100%;
-      padding: 12px 14px;
-      margin: 10px 0;
-      border-radius: 12px;
-      border: none;
-      background: var(--input-bg);
-      font-size: 1rem;
-      transition: box-shadow 0.3s;
-    }
-
-    form input:focus {
-      outline: none;
-      box-shadow: 0 0 0 2px var(--button);
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      margin-top: 16px;
-      border: none;
-      border-radius: 12px;
-      background-color: var(--button);
-      color: white;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s, box-shadow 0.3s;
-      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    button:hover {
-      background-color: var(--button-hover);
-      box-shadow: 0 7px 18px rgba(0, 0, 0, 0.2);
-    }
-
-    #error-msg {
-      color: #ff4d4d;
-      margin-top: 14px;
-      font-size: 0.9rem;
-      transition: 0.3s;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 400px) {
-      .login-container {
-        width: 90%;
-        padding: 2rem 1.5rem;
-      }
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
     }
   </style>
 </head>
+
 <body>
   <div class="theme-toggle" onclick="toggleTheme()">
-    <span id="theme-icon">🌙</span>
+    <span class="icon" id="theme-icon">🌙</span>
   </div>
 
-  <div class="login-container">
+  <div class="login-container" id="loginBox">
     <h2>Bem-vindo</h2>
     <form id="loginForm">
       <input type="text" id="username" placeholder="Usuário" required />
@@ -151,23 +134,34 @@
       const username = document.getElementById("username").value.trim();
       const password = document.getElementById("password").value.trim();
       const errorMsg = document.getElementById("error-msg");
+      const loginBox = document.getElementById("loginBox");
 
       if (users[username] && users[username] === password) {
         errorMsg.textContent = "";
-        switch (username) {
-          case "admin":
-          case "wilson":
-            window.location.href = "index.html";
-            break;
-          case "joao":
-            window.location.href = "Relatorio_Eventos_Joao.html";
-            break;
-          case "gustavo":
-            window.location.href = "Relatorio_Eventos_Gustavo.html";
-            break;
-        }
+
+        // Mensagem personalizada
+        loginBox.innerHTML = `
+          <h2>Olá, ${username.charAt(0).toUpperCase() + username.slice(1)}!</h2>
+          <p style="margin-top: 1rem; font-size: 1rem;">Redirecionando...</p>`;
+
+        setTimeout(() => {
+          switch (username) {
+            case "admin":
+            case "wilson":
+              window.location.href = "index.html";
+              break;
+            case "joao":
+              window.location.href = "Relatorio_Eventos_Joao.html";
+              break;
+            case "gustavo":
+              window.location.href = "Relatorio_Eventos_Gustavo.html";
+              break;
+          }
+        }, 2000);
       } else {
         errorMsg.textContent = "Usuário ou senha incorretos.";
+        loginBox.classList.add("shake");
+        setTimeout(() => loginBox.classList.remove("shake"), 400);
       }
     });
 
@@ -178,4 +172,5 @@
     }
   </script>
 </body>
+
 </html>

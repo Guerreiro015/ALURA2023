@@ -92,6 +92,25 @@
       background-color: #0d47a1;
     }
 
+    .logout-btn {     
+      position: fixed;
+      top: 20px;
+      right: 80px;
+      background-color: var(--button-bg);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px var(--shadow);
+      transition: background 0.3s ease;
+    }
+
+    .logout-btn:hover {
+      background-color: #c62828;
+    }
+
     @media (max-width: 768px) {
       iframe {
         height: 80vh;
@@ -105,13 +124,17 @@
   </style>
 </head>
 <body>
+
+  <button class="logout-btn" onclick="sair()">Sair</button>
+
   <button class="toggle-dark" onclick="document.body.classList.toggle('dark-mode')">🌓</button>
+
   <h1>Relatórios Interativos Mensais </h1>
   <div class="menu">
     <button onclick="carregar('Relatorio_Eventos_gerencias.html')">Relatório por Gerência</button>
     <button onclick="carregar('Relatorio_Eventos_dept.html')">Relatório por Departamento</button>
     <button onclick="carregar('Relatorio_Eventos_Anuais.html')">Relatório por Ano</button>
-    <button onclick="carregar('Relatorio BH gerencias.html')">Banco de Horas por Gerencia</button>
+    <button onclick="carregar('Relatorio BH gerencias.html')">Banco de Horas por Gerência</button>
     <button onclick="carregar('Relatorio BH 8.html')">Banco de horas por +8 e -8</button>
   </div>
   <iframe id="conteudo" src=""></iframe>
@@ -119,6 +142,10 @@
   <script>
     function carregar(pagina) {
       document.getElementById('conteudo').src = pagina;
+    }
+
+    function sair() {
+      window.location.href = "login.html"; // Altere para a página de login correta
     }
   </script>
 </body>
