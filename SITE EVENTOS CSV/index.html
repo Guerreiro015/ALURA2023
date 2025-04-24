@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -120,27 +119,32 @@
     }
 
     @keyframes shake {
-      0% {
-        transform: translateX(0);
-      }
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      50% { transform: translateX(6px); }
+      75% { transform: translateX(-6px); }
+      100% { transform: translateX(0); }
+    }
 
-      25% {
-        transform: translateX(-6px);
-      }
-
-      50% {
-        transform: translateX(6px);
-      }
-
-      75% {
-        transform: translateX(-6px);
-      }
-
-      100% {
-        transform: translateX(0);
-      }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background: var(--card-bg);
+      color: var(--text);
+      padding: 8px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 6px var(--shadow);
+      z-index: 999;
     }
   </style>
+
+<script>
+  // Exemplo: isso pode ser dinâmico ou puxado de backend
+  localStorage.setItem("dataAtualizacao", "Atualizado até data 20/03/2025");
+</script>
+
 </head>
 
 <body>
@@ -157,7 +161,14 @@
     <p id="error-msg"></p>
   </div>
 
+  <!-- RODAPÉ -->
+  <footer id="rodape-info"></footer>
+
+  <!-- SCRIPT -->
   <script>
+    const dataAtualizacao = "Atualizado até data 20/03/2025";
+    document.getElementById("rodape-info").textContent = dataAtualizacao;
+
     const users = {
       admin: "111111111111",
       joao: "joao123",
@@ -207,5 +218,4 @@
     }
   </script>
 </body>
-
 </html>

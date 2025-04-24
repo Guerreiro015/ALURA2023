@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu de Relatórios</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
@@ -92,7 +93,7 @@
       background-color: #0d47a1;
     }
 
-    .logout-btn {     
+    .logout-btn {
       position: fixed;
       top: 20px;
       right: 80px;
@@ -111,6 +112,19 @@
       background-color: #c62828;
     }
 
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      padding: 8px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 6px var(--shadow);
+      z-index: 999;
+    }
+
     @media (max-width: 768px) {
       iframe {
         height: 80vh;
@@ -123,13 +137,14 @@
     }
   </style>
 </head>
+
 <body>
 
   <button class="logout-btn" onclick="sair()">Sair</button>
 
   <button class="toggle-dark" onclick="document.body.classList.toggle('dark-mode')">🌓</button>
 
-  <h1>Relatórios Interativos Mensais </h1>
+  <h1>Relatórios Interativos Mensais</h1>
   <div class="menu">
     <button onclick="carregar('Relatorio_Eventos_gerencias.html')">Relatório por Gerência</button>
     <button onclick="carregar('Relatorio_Eventos_dept.html')">Relatório por Departamento</button>
@@ -139,6 +154,9 @@
   </div>
   <iframe id="conteudo" src=""></iframe>
 
+  <!-- Rodapé com data de atualização -->
+  <footer id="rodape-info"></footer>
+
   <script>
     function carregar(pagina) {
       document.getElementById('conteudo').src = pagina;
@@ -147,6 +165,11 @@
     function sair() {
       window.location.href = "index.html"; // Altere para a página de login correta
     }
+
+    const dataAtualizacao = localStorage.getItem("dataAtualizacao") || "Data não disponível";
+    document.getElementById("rodape-info").textContent = dataAtualizacao;
+
   </script>
 </body>
+
 </html>

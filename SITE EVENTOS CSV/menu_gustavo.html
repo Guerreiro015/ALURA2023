@@ -111,6 +111,19 @@
       background-color: #c62828;
     }
 
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      padding: 8px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 6px var(--shadow);
+      z-index: 999;
+    }
+
     @media (max-width: 768px) {
       iframe {
         height: 80vh;
@@ -126,17 +139,19 @@
 <body>
 
   <button class="logout-btn" onclick="sair()">Sair</button>
-
   <button class="toggle-dark" onclick="document.body.classList.toggle('dark-mode')">🌓</button>
 
   <h1>Relatórios Interativos GERENTE Gustavo </h1>
   <div class="menu">
-    
     <button onclick="carregar('Relatorio_Eventos_gustavo.html')">Relatório de Eventos</button>   
     <button onclick="carregar('Relatorio BH gustavo.html')">Banco de Horas</button>
-    
   </div>
+  
   <iframe id="conteudo" src=""></iframe>
+
+  <footer>
+    <span id="rodape-info">Carregando data...</span>
+  </footer>
 
   <script>
     function carregar(pagina) {
@@ -146,6 +161,12 @@
     function sair() {
       window.location.href = "index.html"; // Altere para a página de login correta
     }
+
+    // Atualiza rodapé com data armazenada
+    document.addEventListener("DOMContentLoaded", () => {
+      const dataAtualizacao = localStorage.getItem("dataAtualizacao") || "Data não disponível";
+      document.getElementById("rodape-info").textContent = dataAtualizacao;
+    });
   </script>
 </body>
 </html>

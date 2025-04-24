@@ -92,7 +92,7 @@
       background-color: #0d47a1;
     }
 
-    .logout-btn {     
+    .logout-btn {
       position: fixed;
       top: 20px;
       right: 80px;
@@ -111,11 +111,20 @@
       background-color: #c62828;
     }
 
-    @media (max-width: 768px) {
-      iframe {
-        height: 80vh;
-      }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      padding: 8px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 6px var(--shadow);
+      z-index: 999;
+    }
 
+    @media (max-width: 768px) {
       .menu {
         flex-direction: column;
         align-items: center;
@@ -126,16 +135,18 @@
 <body>
 
   <button class="logout-btn" onclick="sair()">Sair</button>
-
   <button class="toggle-dark" onclick="document.body.classList.toggle('dark-mode')">🌓</button>
 
   <h1>Relatórios Interativos GERENTE João Paulo</h1>
+
   <div class="menu">
-    
-    <button onclick="carregar('Relatorio_Eventos_joao.html')">Relatório de Eventos</button>       
-    <button onclick="carregar('Relatorio BH joao.html')">Banco de horas</button>
+    <button onclick="carregar('Relatorio_Eventos_joao.html')">Relatório de Eventos</button>
+    <button onclick="carregar('Relatorio BH joao.html')">Banco de Horas</button>
   </div>
+
   <iframe id="conteudo" src=""></iframe>
+
+  <footer id="rodape-info">Carregando data de atualização...</footer>
 
   <script>
     function carregar(pagina) {
@@ -143,8 +154,11 @@
     }
 
     function sair() {
-      window.location.href = "index.html"; // Altere para a página de login correta
+      window.location.href = "index.html";
     }
+
+    const dataAtualizacao = localStorage.getItem("dataAtualizacao") || "Data não disponível";
+    document.getElementById("rodape-info").textContent = `Última atualização: ${dataAtualizacao}`;
   </script>
 </body>
 </html>
