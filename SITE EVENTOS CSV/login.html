@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
   <style>
     :root {
-      --bg: #f0f2f5;
-      --card-bg: #ffffff;
-      --text: #222;
-      --input-bg: #f9f9f9;
-      --button: #4f46e5;
-      --button-hover: #4338ca;
-      --shadow: rgba(0, 0, 0, 0.1);
+      --bg: #1c1c1e;
+      --card-bg: #2c2c2e;
+      --text: #e0e0e0;
+      --input-bg: #3a3a3c;
+      --button: #5c7cfa;
+      --button-hover: #4c6ef5;
+      --shadow: rgba(0, 0, 0, 0.4);
     }
 
     .dark {
       --bg: #121212;
-      --card-bg: #1f1f1f;
-      --text: #f0f0f0;
-      --input-bg: #2c2c2c;
-      --button: #6366f1;
-      --button-hover: #818cf8;
+      --card-bg: #1e1e1e;
+      --text: #f2f2f2;
+      --input-bg: #2b2b2b;
+      --button: #748ffc;
+      --button-hover: #5c7cfa;
       --shadow: rgba(255, 255, 255, 0.05);
     }
 
@@ -43,27 +44,27 @@
 
     .login-container {
       background-color: var(--card-bg);
-      padding: 2.5rem;
-      border-radius: 20px;
-      box-shadow: 0 15px 35px var(--shadow);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px var(--shadow);
       text-align: center;
       width: 90%;
-      max-width: 350px;
+      max-width: 340px;
       position: relative;
       transition: 0.4s;
     }
 
     .login-container h2 {
       margin-bottom: 1.5rem;
-      font-size: 1.7rem;
+      font-size: 1.6rem;
     }
 
     input {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
-      border-radius: 12px;
-      border: 1px solid #ccc;
+      border-radius: 10px;
+      border: 1px solid #444;
       background: var(--input-bg);
       color: var(--text);
       font-size: 1rem;
@@ -73,7 +74,7 @@
     input:focus {
       border-color: var(--button);
       outline: none;
-      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+      box-shadow: 0 0 0 2px rgba(92, 124, 250, 0.3);
     }
 
     button {
@@ -81,7 +82,7 @@
       padding: 12px;
       margin-top: 16px;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       background-color: var(--button);
       color: white;
       font-weight: 600;
@@ -96,16 +97,16 @@
     }
 
     #error-msg {
-      color: #ff4d4f;
-      margin-top: 12px;
+      color: #ff6b6b;
+      margin-top: 10px;
       font-size: 0.9rem;
     }
 
     .theme-toggle {
       position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 1.4rem;
+      top: 16px;
+      right: 16px;
+      font-size: 1.3rem;
       cursor: pointer;
       transition: transform 0.3s;
     }
@@ -119,14 +120,29 @@
     }
 
     @keyframes shake {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-6px); }
-      50% { transform: translateX(6px); }
-      75% { transform: translateX(-6px); }
-      100% { transform: translateX(0); }
+      0% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-6px);
+      }
+
+      50% {
+        transform: translateX(6px);
+      }
+
+      75% {
+        transform: translateX(-6px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="login-container" id="loginBox">
     <div class="theme-toggle" onclick="toggleTheme()">
@@ -191,4 +207,5 @@
     }
   </script>
 </body>
+
 </html>
