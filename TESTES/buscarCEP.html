@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Endereço pelo CEP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+        }
+        .resultado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Buscar Endereço pelo CEP</h1>
+
+    <input type="text" id="cep" placeholder="Digite o CEP" maxlength="9">
+    <button onclick="buscarEndereco()">Buscar</button>
+
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        async function buscarEndereco() {
+            const cep = document.getElementById('cep').value.replace(/\D/g, '');
+
+            if (cep.length !== 8) {
+                alert('Digite um CEP válido com 8 dígitos.');
+                return;
+            }
+
+            try {
+                const resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+                const dados = await resposta.json();
+
+                if (dados.erro) {
+                    document.getElementById('resultado').innerHTML = "CEP não encontrado.";
+                } else {
+                    document.getElementById('resultado').innerHTML = `
+                        <p><strong>Rua:</strong> ${dados.logradouro}</p>
+                        <p><strong>Bairro:</strong> ${dados.bairro}</p>
+                        <p><strong>Cidade:</strong> ${dados.localidade}</p>
+                        <p><strong>Estado:</strong> ${dados.uf}</p>
+                    `;
+                }
+            } catch (error) {
+                console.error('Erro ao buscar o endereço:', error);
+                document.getElementById('resultado').innerHTML = "Erro na busca.";
+            }
+        }
+    </script>
+
+</body>
+</html>
