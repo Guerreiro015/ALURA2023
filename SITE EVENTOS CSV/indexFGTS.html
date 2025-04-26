@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FGTS - Cálculo Total</title>
   <style>
     /* Estilos base */
@@ -42,7 +43,7 @@
       border-radius: 12px;
       width: 100%;
       max-width: 900px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
 
     h2 {
@@ -136,13 +137,14 @@
     }
   </style>
 </head>
+
 <body>
   <button class="toggle-darkmode" onclick="toggleDarkMode()" title="Alternar tema">🌙</button>
 
   <div class="container">
     <div class="file-area">
       <input type="file" id="csvFile" accept=".csv" />
-      <button onclick="lerCSV()">Calcular</button>
+      <button onclick="Sair()">Sair</button>
     </div>
 
     <h2>💰 Cálculo de FGTS Folha</h2>
@@ -275,11 +277,19 @@
       const totalarecolher = total8 + total2j;
       document.getElementById("totalarecolher").textContent = formatarValor(totalarecolher);
     }
-   
 
   </script>
 
+  <script>
+
+    function Sair() {
+      window.location.href = "index.html"; // Altere para a página de login
+    }
+  </script>
+
+
   <script> document.getElementById('csvFile').addEventListener('change', lerCSV);</script>
-  
+
 </body>
+
 </html>
