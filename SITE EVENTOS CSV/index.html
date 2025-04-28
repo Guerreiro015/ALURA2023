@@ -166,14 +166,16 @@
 
   <!-- SCRIPT -->
   <script>
-    const dataAtualizacao = "Atualizado até data 20/03/2025";
+
+    const dataAtualizacao = localStorage.getItem("dataAtualizacao") || "Atualizado não disponível"
     document.getElementById("rodape-info").textContent = dataAtualizacao;
 
     const users = {
       admin: "111111111",      
       joao: "joao123",
       gustavo: "123gustavo",
-      wilson: "123wilson"
+      wilson: "123wilson",
+      djair: "123"
     };
 
     document.getElementById("loginForm").addEventListener("submit", function (e) {
@@ -198,9 +200,12 @@
               break;
             case "joao":
               window.location.href = "menu_Joao.html";
-              break;
+              break;           
             case "gustavo":
               window.location.href = "menu_Gustavo.html";
+              break;
+            case "djair":
+              window.location.href = "indexFGTS.html";
               break;
           }
         }, 2000);

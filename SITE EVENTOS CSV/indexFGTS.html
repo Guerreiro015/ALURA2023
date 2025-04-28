@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FGTS - Cálculo Total</title>
+  <style>
+    /* Estilos base */
+    :root {
+      --bg: #141622;
+      --bg-card: #1e2130;
+      --text: #ffffff;
+      --accent: #21c065;
+      --input-bg: #2a2d42;
+      --border: #3e415e;
+    }
+
+    body.light {
+      --bg: #f5f5f5;
+      --bg-card: #ffffff;
+      --text: #222;
+      --accent: #21c065;
+      --input-bg: #e2e2e2;
+      --border: #ccc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .file-area {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .file-area input {
+      background: var(--input-bg);
+      color: var(--text);
+      border: none;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+
+    .file-area button {
+      background-color: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--input-bg);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card li {
+      border-bottom: 1px solid var(--border);
+      padding: 0.4rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .total {
+      background-color: var(--accent);
+      color: #fff;
+      font-weight: bold;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Toggle botão */
+    .toggle-darkmode {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--text);
+      transition: transform 0.3s;
+    }
+
+    .toggle-darkmode:hover {
+      transform: rotate(20deg);
+    }
+  </style>
+</head>
+
+<body>
+  <button class="toggle-darkmode" onclick="toggleDarkMode()" title="Alternar tema">🌙</button>
+
+  <div class="container">
+    <div class="file-area">
+      <input type="file" id="csvFile" accept=".csv" />
+      <button onclick="Sair()">Sair</button>
+    </div>
+
+    <h2>💰 Cálculo de FGTS Folha</h2>
+
+    <div class="grid">
+      <!-- Cards -->
+      <div class="card">
+        <ul>
+          <li><span>Base FGTS Normal</span><span id="fgtsnormal">R$ 0,00</span></li>
+          <li><span>FGTS 13º</span><span id="fgts13">R$ 0,00</span></li>
+          <li><span>FGTS Férias</span><span id="fgtsferias">R$ 0,00</span></li>
+          <li><span>FGTS Dissídio</span><span id="fgtsdissidio">R$ 0,00</span></li>
+          <li><span>Total Base FGTS</span><span id="totalbase">R$ 0,00</span></li>
+          <li><span>FGTS 8%</span><span id="fgts8">R$ 0,00</span></li>
+          <li><span>Já Recolhido</span><span id="recolhido">R$ 0,00</span></li>
+          <li><span>Total 8%</span><span id="total8">R$ 0,00</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <ul>
+          <li><span>FGTS Normal Jovem</span><span id="fgtsnormalj">R$ 0,00</span></li>
+          <li><span>13º Jovem</span><span id="fgts13j">R$ 0,00</span></li>
+          <li><span>Férias Jovem</span><span id="fgtsferiasj">R$ 0,00</span></li>
+          <li><span>Dissídio Jovem</span><span id="fgtsdissidioj">R$ 0,00</span></li>
+          <li><span>Total Base Jovem</span><span id="totalbasej">R$ 0,00</span></li>
+          <li><span>FGTS 2% Jovem</span><span id="fgts2j">R$ 0,00</span></li>
+          <li><span>Já Recolhido Jovem</span><span id="recolhidoj">R$ 0,00</span></li>
+          <li><span>Total 2% Jovem</span><span id="total2j">R$ 0,00</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="total">💸 Total a Recolher:<br><span id="totalarecolher">R$ 0,00</span></div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      const button = document.querySelector(".toggle-darkmode");
+      body.classList.toggle("light");
+
+      // Troca ícone do botão
+      button.textContent = body.classList.contains("light") ? "☀️" : "🌙";
+    }
+
+    function formatarValor(valor) {
+      return valor.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
+    }
+
+    function lerCSV() {
+      const input = document.getElementById("csvFile");
+      if (!input.files.length) return;
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const texto = e.target.result;
+        const linhas = texto.trim().split("\n");
+        const cabecalhos = linhas[0].split(";").map(c => c.trim());
+
+        const dados = linhas.slice(1).map(linha => {
+          const colunas = linha.split(";").map(c => c.trim());
+          const obj = {};
+          cabecalhos.forEach((cab, i) => {
+            obj[cab] = colunas[i];
+          });
+          return obj;
+        });
+
+        processarDados(dados);
+      };
+      reader.readAsText(input.files[0], "UTF-8");
+    }
+
+    function processarDados(dados) {
+      let fgtsnormal = 0, fgts13 = 0, fgtsferias = 0, fgtsdissidio = 0, fgtsrecolhido = 0;
+      let fgtsnormalj = 0, fgts13j = 0, fgtsferiasj = 0, fgtsdissidioj = 0, fgtsrecolhidoj = 0;
+
+      dados.forEach((key) => {
+        const verba = key["Verba"];
+        const valor = parseFloat(key["Valor da Verba"].replace(",", ".")) || 0;
+        const cargo = key["Cargo"];
+
+        if (verba === "Base do FGTS Normal") {
+          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsnormalj += valor : fgtsnormal += valor;
+        }
+        if (verba === "Base do FGTS 13º Salário") {
+          cargo === "MENOR/JOVEM APRENDIZ" ? fgts13j += valor : fgts13 += valor;
+        }
+        if (verba === "Base INSS/FGTS Férias do Mês") {
+          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsferiasj += valor : fgtsferias += valor;
+        }
+        if (verba === "Base FGTS Normal Dif Dis") {
+          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsdissidioj += valor : fgtsdissidio += valor;
+        }
+        if (verba === "Valor do FGTS - GRFF") {
+          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsrecolhidoj += valor : fgtsrecolhido += valor;
+        }
+      });
+
+      const totalbase = fgtsnormal + fgts13 + fgtsferias + fgtsdissidio;
+      const totalfgts = totalbase * 0.08;
+      const total8 = totalfgts - fgtsrecolhido;
+
+      const totalbasej = fgtsnormalj + fgts13j + fgtsferiasj + fgtsdissidioj;
+      const totalfgtsj = totalbasej * 0.02;
+      const total2j = totalfgtsj - fgtsrecolhidoj;
+
+      document.getElementById("fgtsnormal").textContent = formatarValor(fgtsnormal);
+      document.getElementById("fgts13").textContent = formatarValor(fgts13);
+      document.getElementById("fgtsferias").textContent = formatarValor(fgtsferias);
+      document.getElementById("fgtsdissidio").textContent = formatarValor(fgtsdissidio);
+      document.getElementById("totalbase").textContent = formatarValor(totalbase);
+      document.getElementById("fgts8").textContent = formatarValor(totalfgts);
+      document.getElementById("recolhido").textContent = formatarValor(fgtsrecolhido);
+      document.getElementById("total8").textContent = formatarValor(total8);
+
+      document.getElementById("fgtsnormalj").textContent = formatarValor(fgtsnormalj);
+      document.getElementById("fgts13j").textContent = formatarValor(fgts13j);
+      document.getElementById("fgtsferiasj").textContent = formatarValor(fgtsferiasj);
+      document.getElementById("fgtsdissidioj").textContent = formatarValor(fgtsdissidioj);
+      document.getElementById("totalbasej").textContent = formatarValor(totalbasej);
+      document.getElementById("fgts2j").textContent = formatarValor(totalfgtsj);
+      document.getElementById("recolhidoj").textContent = formatarValor(fgtsrecolhidoj);
+      document.getElementById("total2j").textContent = formatarValor(total2j);
+
+      const totalarecolher = total8 + total2j;
+      document.getElementById("totalarecolher").textContent = formatarValor(totalarecolher);
+    }
+
+  </script>
+
+  <script>
+
+    function Sair() {
+      window.location.href = "index.html"; // Altere para a página de login
+    }
+  </script>
+
+
+  <script> document.getElementById('csvFile').addEventListener('change', lerCSV);</script>
+
+</body>
+
+</html>
