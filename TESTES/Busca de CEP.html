@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .result h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .result p {
+            margin: 8px 0;
+            color: #555;
+        }
+        
+        .error {
+            color: #d32f2f;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .loading {
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid #4CAF50;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de CEP</h1>
+        
+        <div class="input-group">
+            <label for="cep">Digite o CEP:</label>
+            <input type="text" id="cep" placeholder="Ex: 01001000" maxlength="9">
+        </div>
+        
+        <button id="btn-buscar">Buscar Endereço</button>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Buscando informações...</p>
+        </div>
+        
+        <div class="error" id="error">
+            CEP não encontrado ou inválido. Por favor, verifique e tente novamente.
+        </div>
+        
+        <div class="result" id="result">
+            <h2>Endereço encontrado</h2>
+            <p><strong>CEP:</strong> <span id="result-cep"></span></p>
+            <p><strong>Logradouro:</strong> <span id="result-logradouro"></span></p>
+            <p><strong>Complemento:</strong> <span id="result-complemento"></span></p>
+            <p><strong>Bairro:</strong> <span id="result-bairro"></span></p>
+            <p><strong>Cidade:</strong> <span id="result-cidade"></span></p>
+            <p><strong>Estado:</strong> <span id="result-estado"></span></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cepInput = document.getElementById('cep');
+            const btnBuscar = document.getElementById('btn-buscar');
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const result = document.getElementById('result');
+            
+            // Formata o CEP enquanto digita
+            cepInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                
+                if (value.length > 5) {
+                    value = value.substring(0, 5) + '-' + value.substring(5, 8);
+                }
+                
+                e.target.value = value;
+            });
+            
+            // Função para buscar o CEP
+            btnBuscar.addEventListener('click', buscarCEP);
+            
+            // Também permite buscar pressionando Enter
+            cepInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    buscarCEP();
+                }
+            });
+            
+            function buscarCEP() {
+                const cep = cepInput.value.replace(/\D/g, '');
+                
+                // Validação básica do CEP
+                if (cep.length !== 8) {
+                    showError();
+                    return;
+                }
+                
+                // Mostra o loading e esconde outros elementos
+                loading.style.display = 'block';
+                error.style.display = 'none';
+                result.style.display = 'none';
+                
+                // Faz a requisição para a API ViaCEP
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        loading.style.display = 'none';
+                        
+                        if (data.erro) {
+                            showError();
+                        } else {
+                            showResult(data);
+                        }
+                    })
+                    .catch(() => {
+                        loading.style.display = 'none';
+                        showError();
+                    });
+            }
+            
+            function showError() {
+                error.style.display = 'block';
+                result.style.display = 'none';
+            }
+            
+            function showResult(data) {
+                document.getElementById('result-cep').textContent = formatCEP(data.cep);
+                document.getElementById('result-logradouro').textContent = data.logradouro || 'Não informado';
+                document.getElementById('result-complemento').textContent = data.complemento || 'Não informado';
+                document.getElementById('result-bairro').textContent = data.bairro || 'Não informado';
+                document.getElementById('result-cidade').textContent = data.localidade;
+                document.getElementById('result-estado').textContent = data.uf;
+                
+                error.style.display = 'none';
+                result.style.display = 'block';
+            }
+            
+            function formatCEP(cep) {
+                if (!cep) return '';
+                return cep.replace(/(\d{5})(\d{3})/, '$1-$2');
+            }
+        });
+    </script>
+</body>
+</html>
