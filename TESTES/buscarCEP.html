@@ -44,10 +44,12 @@
                     document.getElementById('resultado').innerHTML = "CEP não encontrado.";
                 } else {
                     document.getElementById('resultado').innerHTML = `
-                        <p><strong>Rua:</strong> ${dados.logradouro}</p>
-                        <p><strong>Bairro:</strong> ${dados.bairro}</p>
-                        <p><strong>Cidade:</strong> ${dados.localidade}</p>
-                        <p><strong>Estado:</strong> ${dados.uf}</p>
+                        <p><strong>CEP:</strong> ${dados.cep || 'Não informado'}</p>
+                        <p><strong>Rua:</strong> ${dados.logradouro || 'Não informado'}</p>
+                        <p><strong>Bairro:</strong> ${dados.bairro || 'Não informado'}</p>
+                        <p><strong>Complemento:</strong> ${ dados.complemento || 'Não informado'}</p>
+                        <p><strong>Cidade:</strong> ${dados.localidade || 'Não informado'}</p>
+                        <p><strong>Estado:</strong> ${dados.uf || 'Não informado'}</p>
                     `;
                 }
             } catch (error) {
