@@ -178,15 +178,14 @@
           const row = document.createElement('tr');
           const quant = parseFloat((key["QUANTIDADE"] || "0").replace(",", ".")) || 0;
           row.innerHTML = `
-            <td>${key["ID"] || ""}</td>
-            <td>${key["NOME"] || ""}</td>
-            <td>${key["CARGO"] || ""}</td>
-            <td>${key["REGIONAL"] || ""}</td>
-            <td>${key["DEPARTAMENTO"] || ""}</td>
-            <td>${key["GERENTE"] || ""}</td>            
-            <td>${quant}</td>
-           
-          `;
+          <td>${key["ID"] || ""}</td>
+          <td>${key["NOME"] || ""}</td>
+          <td>${key["CARGO"] || ""}</td>
+          <td>${key["REGIONAL"] || ""}</td>
+          <td>${key["DEPARTAMENTO"] || ""}</td>
+          <td>${key["GERENTE"] || ""}</td>            
+          <td>${quant.toFixed(2).replace(".", ",")}</td>
+      `;
           tbody.appendChild(row);
         }
       });
@@ -197,7 +196,7 @@
       document.body.classList.toggle('dark');
     }
 
-    fetch("BH_GERAL.csv")
+    fetch("BH_Geral.csv")
       .then(response => response.text())
       .then(csvText => {
         Papa.parse(csvText, {

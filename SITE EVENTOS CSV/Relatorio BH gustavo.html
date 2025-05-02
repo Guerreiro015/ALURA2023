@@ -201,7 +201,7 @@
       document.body.classList.toggle('dark');
     }
 
-    fetch("BH_GERAL.csv")
+    fetch("BH_Geral.csv")
       .then(response => response.text())
       .then(csvText => {
         Papa.parse(csvText, {
