@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Aviso avisado</div>
+    <div id="teste"></div>
+    <div id="testes"></div>
+    <div id="meio"></div>
+    <div id="metade"></div>
+    <script>
+        const meio = document.getElementById("meio")
+        const metade = document.getElementById("metade")
+        testado = localStorage.getItem("Aviso")
+        document.getElementById("teste").innerHTML = testado
+        document.getElementById("testes").textContent = testado
+        meio.innerHTML = "testanso o teste"
+        metade.innerHTML = "teatdo o stests"
+        
+    </script>
+
+</body>
+
+</html>
