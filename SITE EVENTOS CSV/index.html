@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -119,11 +120,25 @@
     }
 
     @keyframes shake {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-6px); }
-      50% { transform: translateX(6px); }
-      75% { transform: translateX(-6px); }
-      100% { transform: translateX(0); }
+      0% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-6px);
+      }
+
+      50% {
+        transform: translateX(6px);
+      }
+
+      75% {
+        transform: translateX(-6px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
     }
 
     footer {
@@ -140,10 +155,18 @@
     }
   </style>
 
-<script>
-  // Exemplo: isso pode ser dinâmico ou puxado de backend
-  localStorage.setItem("dataAtualizacao", "Atualizado até data 20/04/2025  -  BH - Atualizado");
-</script>
+  <!-- RODAPÉ -->
+  <footer id="rodape-info"></footer>
+
+  <!-- SCRIPT -->
+
+  <script>
+    // Exemplo: isso pode ser dinâmico ou puxado de backend
+    mensagem = "Eventos Atualizado até 20/04/2025  - Banco de Horas Atualizado até 20/04/2025"
+    localStorage.setItem("dataAtualizacao", mensagem);
+
+    document.getElementById("rodape-info").textContent = mensagem;
+  </script>
 
 </head>
 
@@ -161,17 +184,10 @@
     <p id="error-msg"></p>
   </div>
 
-  <!-- RODAPÉ -->
-  <footer id="rodape-info"></footer>
-
-  <!-- SCRIPT -->
   <script>
 
-    const dataAtualizacao = localStorage.getItem("dataAtualizacao") || "Atualizado não disponível"
-    document.getElementById("rodape-info").textContent = dataAtualizacao;
-
     const users = {
-      admin: "111",      
+      admin: "111",
       joao: "joao123",
       gustavo: "123gustavo",
       wilson: "123wilson",
@@ -200,7 +216,7 @@
               break;
             case "joao":
               window.location.href = "menu_Joao.html";
-              break;           
+              break;
             case "gustavo":
               window.location.href = "menu_Gustavo.html";
               break;
@@ -223,4 +239,5 @@
     }
   </script>
 </body>
+
 </html>
