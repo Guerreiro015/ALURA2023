@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro de Clientes</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+    input, button { padding: 10px; margin-top: 10px; width: 100%; max-width: 300px; display: block; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; background: #fff; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background-color: #007bff; color: white; }
+    .acoes button { margin-right: 5px; }
+    #mensagem { margin-top: 10px; color: green; }
+  </style>
+</head>
+<body>
+
+  <h2>Cadastro de Clientes</h2>
+
+  <input id="nome" type="text" placeholder="Nome">
+  <input id="email" type="email" placeholder="Email">
+  <input id="telefone" type="text" placeholder="Telefone">
+  <button onclick="salvar()">Salvar</button>
+  <div id="mensagem"></div>
+
+  <h3>Lista de Clientes</h3>
+  <table id="tabela-clientes">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script type="module">
+    // Importações com módulos (versão moderna)
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getDatabase, ref, push, set, onValue, remove, child } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+  
+    const firebaseConfig = {
+      apiKey: "AIzaSyAAAbVt5bsjRES8BLzoriXw3dNbs2CXuDc",
+      authDomain: "meubanco-25c55.firebaseapp.com",
+      databaseURL: "https://meubanco-25c55-default-rtdb.firebaseio.com",
+      projectId: "meubanco-25c55",
+      storageBucket: "meubanco-25c55.firebasestorage.app",
+      messagingSenderId: "226601964119",
+      appId: "1:226601964119:web:24baed295f7c7cc72a8912",
+      measurementId: "G-Y4TEYXLZ1L"
+    };
+  
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const clientesRef = ref(db, 'clientes/');
+  
+    let idEditando = null;
+  
+    function salvar() {
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+  
+      if (!nome || !email || !telefone) {
+        alert("Preencha todos os campos!");
+        return;
+      }
+  
+      const cliente = { nome, email, telefone };
+  
+      if (idEditando) {
+        set(child(clientesRef, idEditando), cliente);
+        idEditando = null;
+        document.querySelector("button").innerText = "Salvar";
+        document.getElementById('mensagem').innerText = "Cliente atualizado!";
+      } else {
+        push(clientesRef, cliente);
+        document.getElementById('mensagem').innerText = "Cliente adicionado!";
+      }
+  
+      document.getElementById('nome').value = "";
+      document.getElementById('email').value = "";
+      document.getElementById('telefone').value = "";
+    }
+  
+    window.salvar = salvar;
+  
+    function carregarClientes() {
+      onValue(clientesRef, (snapshot) => {
+        const tbody = document.querySelector("#tabela-clientes tbody");
+        tbody.innerHTML = "";
+  
+        snapshot.forEach((childSnapshot) => {
+          const cliente = childSnapshot.val();
+          const id = childSnapshot.key;
+  
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${cliente.nome}</td>
+            <td>${cliente.email}</td>
+            <td>${cliente.telefone}</td>
+            <td>
+              <button onclick="editar('${id}', '${cliente.nome}', '${cliente.email}', '${cliente.telefone}')">Editar</button>
+              <button onclick="excluir('${id}')">Excluir</button>
+            </td>
+          `;
+  
+          tbody.appendChild(tr);
+        });
+      });
+    }
+  
+    window.editar = function(id, nome, email, telefone) {
+      document.getElementById('nome').value = nome;
+      document.getElementById('email').value = email;
+      document.getElementById('telefone').value = telefone;
+      document.querySelector("button").innerText = "Atualizar";
+      idEditando = id;
+    };
+  
+    window.excluir = function(id) {
+      if (confirm("Deseja realmente excluir este cliente?")) {
+        remove(child(clientesRef, id));
+        document.getElementById('mensagem').innerText = "Cliente excluído!";
+      }
+    };
+  
+    carregarClientes();
+  </script>
+  
+</body>
+</html>
