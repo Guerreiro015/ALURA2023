@@ -187,11 +187,11 @@
   <script>
 
     const users = {
-      admin: "111",
-      joao: "joao123",
-      gustavo: "123gustavo",
-      wilson: "123wilson",
-      djair: "123"
+      admin: "111111111",
+      wilson: "wilson@12345ecosampa",
+      alex: "ecosampa@alex123",
+      gustavo: "gustavo@ecosampa123",
+      joao: "joao@2024ecosampa"
     };
 
     document.getElementById("loginForm").addEventListener("submit", function (e) {
@@ -227,6 +227,9 @@
         }, 2000);
       } else {
         errorMsg.textContent = "Usuário ou senha incorretos.";
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        return;
         loginBox.classList.add("shake");
         setTimeout(() => loginBox.classList.remove("shake"), 400);
       }
