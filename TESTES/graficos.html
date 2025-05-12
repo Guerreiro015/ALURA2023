@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard ECOSAMPA</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --text: #111;
+      --card: #fff;
+    }
+    [data-theme="dark"] {
+      --bg: #1e1e1e;
+      --text: #f5f5f5;
+      --card: #2c2c2c;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .card {
+      background: var(--card);
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    .toggle-theme {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
+  <h1 style="text-align: center">Dashboard ECOSAMPA</h1>
+  <div class="container">
+    <div class="card">
+      <h2>Distribuição por Unidade</h2>
+      <canvas id="unidadeChart"></canvas>
+    </div>
+    <div class="card">
+      <h2>Turnos em Santo Amaro</h2>
+      <canvas id="turnoChart"></canvas>
+    </div>
+    <div class="card">
+      <h2>Situação em Santo Amaro</h2>
+      <canvas id="situacaoChart"></canvas>
+    </div>
+    <div class="card">
+      <h2>Noturno Ativo em Santo Amaro</h2>
+      <canvas id="noturnoAtivoChart"></canvas>
+    </div>
+  </div>
+  <script>
+    Chart.register(ChartDataLabels);
+
+    const datalabelsOptions = {
+      plugins: {
+        datalabels: {
+          color: '#fff',
+          formatter: (value) => value + '%',
+          font: { weight: 'bold' }
+        },
+        legend: { position: 'bottom' }
+      }
+    };
+
+    new Chart(document.getElementById('unidadeChart'), {
+      type: 'pie',
+      data: {
+        labels: ['Campo Limpo', 'Capela do Socorro', "M'Boi Mirim", 'Parelheiros', 'Santo Amaro'],
+        datasets: [{
+          data: [19.92, 27.04, 15.09, 4.40, 33.54],
+          backgroundColor: ['#4e79a7', '#f28e2b', '#e15759', '#76b7b2', '#59a14f'],
+        }]
+      },
+      options: datalabelsOptions
+    });
+
+    new Chart(document.getElementById('turnoChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Diurno', 'Noturno'],
+        datasets: [{
+          label: '%',
+          data: [63.13, 36.88],
+          backgroundColor: ['#4e79a7', '#f28e2b']
+        }]
+      },
+      options: {
+        ...datalabelsOptions,
+        plugins: {
+          ...datalabelsOptions.plugins,
+          legend: { display: false }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('situacaoChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Afastado', 'Ativo'],
+        datasets: [{
+          data: [1.25, 98.75],
+          backgroundColor: ['#e15759', '#59a14f']
+        }]
+      },
+      options: datalabelsOptions
+    });
+
+    new Chart(document.getElementById('noturnoAtivoChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Noturno Ativo'],
+        datasets: [{
+          label: '%',
+          data: [100],
+          backgroundColor: ['#59a14f']
+        }]
+      },
+      options: {
+        ...datalabelsOptions,
+        indexAxis: 'y',
+        scales: {
+          x: {
+            max: 100,
+            ticks: { callback: value => value + '%' }
+          }
+        },
+        plugins: {
+          ...datalabelsOptions.plugins,
+          legend: { display: false }
+        }
+      }
+    });
+
+    function toggleTheme() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', theme === 'dark' ? '' : 'dark');
+    }
+  </script>
+</body>
+</html>
