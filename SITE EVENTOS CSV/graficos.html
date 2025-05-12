@@ -6,6 +6,7 @@
   <title>Dashboard ECOSAMPA</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
     :root {
       --bg: #f5f5f5;
@@ -49,29 +50,49 @@
       cursor: pointer;
       color: var(--text);
     }
+    .pdf-button {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background-color: #4e79a7;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .pdf-button:hover {
+      background-color: #3a5a87;
+    }
   </style>
 </head>
 <body>
   <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
-  <h1 style="text-align: center">Dashboard Varredores ECOSAMPA</h1>
-  <div class="container">
-    <div class="card">
-      <h2>Distribuição por Unidade</h2>
-      <canvas id="unidadeChart"></canvas>
-    </div>
-    <div class="card">
-      <h2>Turnos em Santo Amaro</h2>
-      <canvas id="turnoChart"></canvas>
-    </div>
-    <div class="card">
-      <h2>Situação em Santo Amaro</h2>
-      <canvas id="situacaoChart"></canvas>
-    </div>
-    <div class="card">
-      <h2>Noturnos Ativos em Santo Amaro</h2>
-      <canvas id="noturnoAtivoChart"></canvas>
+  <button class="pdf-button" onclick="gerarPDF()">Salvar em PDF</button>
+
+  <div id="conteudo-pdf">
+    <h1 style="text-align: center">Dashboard Varredores ECOSAMPA</h1>
+    <div class="container">
+      <div class="card">
+        <h2>Distribuição por Unidade</h2>
+        <canvas id="unidadeChart"></canvas>
+      </div>
+      <div class="card">
+        <h2>Turnos em Santo Amaro</h2>
+        <canvas id="turnoChart"></canvas>
+      </div>
+      <div class="card">
+        <h2>Situação em Santo Amaro</h2>
+        <canvas id="situacaoChart"></canvas>
+      </div>
+      <div class="card">
+        <h2>Noturnos Ativos em Santo Amaro</h2>
+        <canvas id="noturnoAtivoChart"></canvas>
+      </div>
     </div>
   </div>
+
   <script>
     Chart.register(ChartDataLabels);
 
@@ -158,6 +179,18 @@
     function toggleTheme() {
       const theme = document.documentElement.getAttribute('data-theme');
       document.documentElement.setAttribute('data-theme', theme === 'dark' ? '' : 'dark');
+    }
+
+    function gerarPDF() {
+      const elemento = document.getElementById('conteudo-pdf');
+      const opcoes = {
+        margin: 0.5,
+        filename: 'dashboard-ecosampa.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opcoes).from(elemento).save();
     }
   </script>
 </body>
