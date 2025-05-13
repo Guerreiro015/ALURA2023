@@ -2,68 +2,88 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard ECOSAMPA</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
     :root {
-      --bg: #f5f5f5;
+      --bg: #f0f0f0;
       --text: #111;
       --card: #fff;
     }
     [data-theme="dark"] {
-      --bg: #1e1e1e;
-      --text: #f5f5f5;
-      --card: #2c2c2c;
+      --bg: #121212;
+      --text: #fff;
+      --card: #1e1e1e;
     }
     body {
-      background: var(--bg);
+      background-color: var(--bg);
       color: var(--text);
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 2rem;
     }
-    .container {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-    .card {
-      background: var(--card);
-      border-radius: 1rem;
-      padding: 1rem;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
+
+    h1 {
       text-align: center;
-      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
-    .toggle-theme {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--text);
-    }
+
+    .toggle-theme,
     .pdf-button {
       position: fixed;
       top: 1rem;
-      left: 1rem;
-      background-color: #4e79a7;
-      color: white;
-      border: none;
-      border-radius: 0.5rem;
       padding: 0.5rem 1rem;
       font-size: 1rem;
+      border: none;
       cursor: pointer;
+      border-radius: 5px;
     }
-    .pdf-button:hover {
-      background-color: #3a5a87;
+
+    .toggle-theme {
+      right: 1rem;
+      background: none;
+      color: var(--text);
+    }
+
+    .pdf-button {
+      left: 1rem;
+      background: #4e79a7;
+      color: white;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .card h2 {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+      max-height: 300px;
+    }
+
+    @media print {
+      .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
@@ -72,22 +92,22 @@
   <button class="pdf-button" onclick="gerarPDF()">Salvar em PDF</button>
 
   <div id="conteudo-pdf">
-    <h1 style="text-align: center">Dashboard Varredores ECOSAMPA</h1>
-    <div class="container">
+    <h1>Dashboard Varredores ECOSAMPA</h1>
+    <div class="dashboard">
       <div class="card">
         <h2>Varredores por Regional</h2>
         <canvas id="unidadeChart"></canvas>
       </div>
       <div class="card">
-        <h2>Varredores em Santo Amaro por Turno</h2>
+        <h2>Santo Amaro por Turno</h2>
         <canvas id="turnoChart"></canvas>
       </div>
       <div class="card">
-        <h2>Situação dos Varredores em Santo Amaro</h2>
+        <h2>Situações em Santo Amaro</h2>
         <canvas id="situacaoChart"></canvas>
       </div>
       <div class="card">
-        <h2>Varredores Noturnos Ativos em Santo Amaro</h2>
+        <h2>Noturnos Ativos em Santo Amaro</h2>
         <canvas id="noturnoAtivoChart"></canvas>
       </div>
     </div>
@@ -113,7 +133,7 @@
         labels: ['Campo Limpo', 'Capela do Socorro', "M'Boi Mirim", 'Parelheiros', 'Santo Amaro'],
         datasets: [{
           data: [19.92, 27.04, 15.09, 4.40, 33.54],
-          backgroundColor: ['#4e79a7', '#f28e2b', '#e15759', '#76b7b2', '#59a14f'],
+          backgroundColor: ['#4e79a7', '#f28e2b', '#e15759', '#76b7b2', '#59a14f']
         }]
       },
       options: datalabelsOptions
@@ -183,14 +203,15 @@
 
     function gerarPDF() {
       const elemento = document.getElementById('conteudo-pdf');
-      const opcoes = {
+      const opt = {
         margin: 0.5,
         filename: 'dashboard-ecosampa.pdf',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
       };
-      html2pdf().set(opcoes).from(elemento).save();
+      html2pdf().set(opt).from(elemento).save();
     }
   </script>
 </body>
