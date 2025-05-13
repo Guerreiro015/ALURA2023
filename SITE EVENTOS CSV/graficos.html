@@ -142,11 +142,11 @@
     new Chart(document.getElementById('turnoChart'), {
       type: 'bar',
       data: {
-        labels: ['Diurno', 'Noturno'],
+        labels: ['Diurno', 'Noturno', 'Intermediário'],
         datasets: [{
           label: '%',
-          data: [63.13, 36.88],
-          backgroundColor: ['#4e79a7', '#f28e2b']
+          data: [63.13, 16.86, 20.01],
+          backgroundColor: ['#4e79a7', '#f28e2b', '#59a14f']
         }]
       },
       options: {
@@ -163,7 +163,7 @@
       data: {
         labels: ['Afastado', 'Ativo'],
         datasets: [{
-          data: [1.25, 98.75],
+          data: [0.63, 99.37],
           backgroundColor: ['#e15759', '#59a14f']
         }]
       },
@@ -173,11 +173,11 @@
     new Chart(document.getElementById('noturnoAtivoChart'), {
       type: 'bar',
       data: {
-        labels: ['Noturno Ativo'],
+        labels: ['Noturno Ativo','Noturno Afastado'],
         datasets: [{
           label: '%',
-          data: [100],
-          backgroundColor: ['#59a14f']
+          data: [95, 5],
+          backgroundColor: ['#59a14f', '#e15759']
         }]
       },
       options: {
