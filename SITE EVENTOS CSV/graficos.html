@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard ECOSAMPA</title>
+  <title>Dashboard GERAL</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -92,22 +92,22 @@
   <button class="pdf-button" onclick="gerarPDF()">Salvar em PDF</button>
 
   <div id="conteudo-pdf">
-    <h1>Dashboard Varredores ECOSAMPA</h1>
+    <h1>Dashboard Varredores</h1>
     <div class="dashboard">
       <div class="card">
         <h2>Varredores por Regional</h2>
         <canvas id="unidadeChart"></canvas>
       </div>
       <div class="card">
-        <h2>Santo Amaro por Turno</h2>
+        <h2>Regional por Turno</h2>
         <canvas id="turnoChart"></canvas>
       </div>
       <div class="card">
-        <h2>Situações em Santo Amaro</h2>
+        <h2>Situações Varredores</h2>
         <canvas id="situacaoChart"></canvas>
       </div>
       <div class="card">
-        <h2>Noturnos Ativos em Santo Amaro</h2>
+        <h2>Noturnos Ativos</h2>
         <canvas id="noturnoAtivoChart"></canvas>
       </div>
     </div>
