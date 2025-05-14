@@ -316,10 +316,10 @@
       new Chart(document.getElementById('baseChart'), {
         type: 'bar',
         data: {
-          labels: ['Base Normal', 'Base Férias', 'Base 13º'],
+          labels: ['Base Normal', 'Base Jovem', 'Base Total'],
           datasets: [{
             label: '%',
-            data: [fgtsnormal, fgtsferias, fgts13],
+            data: [totalbase,totalbasej, totalbase+totalbasej],
             backgroundColor: ['#4e79a7', '#f28e2b', '#59a14f']
           }]
         },
@@ -335,7 +335,7 @@
       new Chart(document.getElementById('valorChart'), {
         type: 'bar',
         data: {
-          labels: ['Valor Normal', 'Valor Menor Aprendiz', 'Valor Total'],
+          labels: ['Valor Normal', 'Valor Jovem', 'Valor Total'],
           datasets: [{
             label: '%',
             data: [total8, total2j, totalarecolher],
