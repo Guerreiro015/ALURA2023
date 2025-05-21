@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FGTS - Cálculo Total</title>
+  <title>INSS - Cálculo Total</title>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
@@ -105,8 +105,43 @@
       padding: 0.4rem 0;
       display: flex;
       justify-content: space-between;
-    }    
-    
+    }
+
+    .cardTotal {
+      background: rgba(255, 255, 255, 0.719);
+      padding: 1rem;
+      border-radius: 10px;
+      color: #141622;
+    }
+
+    .cardTotal ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cardTotal li {
+      border-bottom: 1px solid var(--border);
+      padding: 0.4rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .total{
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: rgb(218, 145, 10);
+    }
+
+    .totalpag{
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: rgb(5, 147, 241);
+    }
+    .subtotal{
+      font-weight: bold;      
+      color: rgb(5, 166, 241);
+    }
+
 
     @media (max-width: 768px) {
       .grid {
@@ -148,179 +183,182 @@
       <!-- Cards -->
       <div class="card">
         <ul>
-           <li><span>BASES INSS GERAL</span>
-          <li><span>Descrição das Verbas</span><span>Valores</span></li>
+          <li><span class="total">BASES INSS GERAL</span>
           <li><span>1001-Base INNS 13º</span><span id="inss13">R$ 0,00</span></li>
           <li><span>1007-Base INSS até o Teto</span><span id="inssteto">R$ 0,00</span></li>
           <li><span>1008-Base INSS Excedente</span><span id="inssexcede">R$ 0,00</span></li>
           <li><span>1031-Base INSS/FGTS Férias mês</span><span id="inssferias">R$ 0,00</span></li>
-          <li><span>Total...:</span><span id="totalbase">R$ 0,00</span></li>
-          
+          <li><span class="total">Total:</span><span id="totalbase" class="total">R$ 0,00</span></li>
+
         </ul>
       </div>
 
       <div class="card">
         <ul>
-          <li><span>INSS EMPREGADOS</span>
-          <li><span>Descrição das Verbas</span><span>Valores</span></li>
+          <li><span class="total">INSS EMPREGADOS AVULSOS</span>
           <li><span>4452-Inss mês Anterior</span><span id="anterior">R$ 0,00</span></li>
           <li><span>2097-Inss 13º Quitação</span><span id="quitacao">R$ 0,00</span></li>
           <li><span>2703-DIF Inss 13º</span><span id="dif13">R$ 0,00</span></li>
           <li><span>2100-Inss Férias Mês</span><span id="feriasmes">R$ 0,00</span></li>
           <li><span>2103-Inss Normal</span><span id="inssnormal">R$ 0,00</span></li>
           <li><span>3728-Dif. Inss no Mês</span><span id="differias">R$ 0,00</span></li>
-          <li><span>Total...:</span><span id="totalempregados">R$ 0,00</span></li>
+          <li><span>3763-Dev. Inss no Mês</span><span id="devferias">R$ 0,00</span></li>
+          <li><span class="total">Total:</span><span id="valorempregados" class="total">R$ 0,00</span></li>
         </ul>
       </div>
       <div class="card">
         <ul>
-          <li><span>INSS Terceiros</span>
-          <li><span>Descrição das Verbas</span><span>Valores</span></li>
-          <li><span>0,00%- Segurados Empregados Avulsos</span><span id="segurados">R$ 0,00</span></li>
-          <li><span>20,0% - Patronal Empregados Avulsos</span><span id="avulso">R$ 0,00</span></li>
+          <li><span class="total">INSS Terceiros</span>
+                    <li><span>20,0% - Patronal Empregados Avulsos</span><span id="avulso">R$ 0,00</span></li>
           <li><span>2,50% - Terceiros Salario Educação</span><span id="educacao">R$ 0,00</span></li>
           <li><span>0,20% - Terceiros Incra</span><span id="incra">R$ 0,00</span></li>
           <li><span>1,00% - Terceiros Senac</span><span id="senac">R$ 0,00</span></li>
           <li><span>1,50% - Terceiros Sesc</span><span id="sesc">R$ 0,00</span></li>
           <li><span>0,60% - Terceiros Sebrae</span><span id="sebrae">R$ 0,00</span></li>
           <li><span>3,8208% - Gilrat Ajustado</span><span id="gilrat">R$ 0,00</span></li>
-          <li><span>Total...:</span><span id="totalterceiros">R$ 0,00</span></li>
+          <li><span class="total">Total:</span><span id="totalterceiros" class="total">R$ 0,00</span></li>
         </ul>
       </div>
-      
-      <div class="card">
+
+      <div class="cardTotal">
         <ul>
-          <li><span>VALORES TOTAIS</span>
-          <li><span>Descrição das Verbas</span><span>Valores</span></li>
+          <li><span class="total">VALORES TOTAIS</span>
           <li><span>Valor do INSS Terceiros</span><span id="valorterceiros">R$ 0,00</span></li>
-          <li><span>Valor do INSS Empregados Avulsos</span><span id="valoravulso">R$ 0,00</span></li>         
-          <li><span>SubTotal</span><span id="subtotal">R$ 0,00</span></li>
+          <li><span>Valor do INSS Empregados Avulsos</span><span id="valorsegurados">R$ 0,00</span></li>
+          <li><span class="subtotal">SubTotal</span><span id="subtotal" class="subtotal">R$ 0,00</span></li>
           <li><span>Sal. Família + Sal. Maternidade</span><span id="familia">R$ 0,00</span></li>
           <li><span>Retenções das Notas</span><span id="retencao">R$ 0,00</span></li>
-          <li><span>Valor para Pagamento INSS: </span><span id="valorinss">R$ 0,00</span></li>
-          
+          <li><span class="total">Valor Guia: </span><span id="valorinss" class="totalpag">R$ 0,00</span></li>
+
         </ul>
-      </div>      
-
-         
-  </div>
-
-  <script>
-  
+      </div>
 
 
-    function toggleDarkMode() {
-      const body = document.body;
-      const button = document.querySelector(".toggle-darkmode");
-      body.classList.toggle("light");
+    </div>
 
-      // Troca ícone do botão
-      button.textContent = body.classList.contains("light") ? "☀️" : "🌙";
-    }
+    <script>
 
-    function formatarValor(valor) {
-      return valor.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL",
-      });
-    }
 
-    function lerCSV() {
-      const input = document.getElementById("csvFile");
-      if (!input.files.length) return;
+      function toggleDarkMode() {
+        const body = document.body;
+        const button = document.querySelector(".toggle-darkmode");
+        body.classList.toggle("light");
 
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const texto = e.target.result;
-        const linhas = texto.trim().split("\n");
-        const cabecalhos = linhas[0].split(";").map(c => c.trim());
+        // Troca ícone do botão
+        button.textContent = body.classList.contains("light") ? "☀️" : "🌙";
+      }
 
-        const dados = linhas.slice(1).map(linha => {
-          const colunas = linha.split(";").map(c => c.trim());
-          const obj = {};
-          cabecalhos.forEach((cab, i) => {
-            obj[cab] = colunas[i];
+      function formatarValor(valor) {
+        return valor.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        });
+      }
+
+      function lerCSV() {
+        const input = document.getElementById("csvFile");
+        if (!input.files.length) return;
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const texto = e.target.result;
+          const linhas = texto.trim().split("\n");
+          const cabecalhos = linhas[0].split(";").map(c => c.trim());
+
+          const dados = linhas.slice(1).map(linha => {
+            const colunas = linha.split(";").map(c => c.trim());
+            const obj = {};
+            cabecalhos.forEach((cab, i) => {
+              obj[cab] = colunas[i];
+            });
+            return obj;
           });
-          return obj;
+
+          processarDados(dados);
+        };
+        reader.readAsText(input.files[0], "UTF-8");
+      }
+
+      function processarDados(dados) {
+        let feriasAnt = 0, decimoQuitacao = 0, difDecimo = 0, feriasMes = 0, normalColaborador = 0, difFerias = 0, devFerias = 0;
+        let base13 = 0, baseNormal = 0, baseExcedente = 0, baseFerias = 0;
+
+        dados.forEach((key) => {
+          const verba = key["Verba"];
+          const valor = parseFloat(key["Valor da Verba"].replace(",", ".")) || 0;
+          const cargo = key["Cargo"];
+
+          if (verba === "INSS Férias Recibo - Mês Ant - Pagto") { feriasAnt += valor };
+          if (verba === "INSS 13º Salário Quitação") { decimoQuitacao += valor };
+          if (verba === "Dif INSS 13º Salário") { difDecimo += valor };
+          if (verba === "INSS Férias Recibo - Mês") { feriasMes += valor };
+          if (verba === "INSS Normal") { normalColaborador += valor };
+          if (verba === "Dif. INSS Férias - Mês") { difFerias += valor };
+          if (verba === "Dev. INSS Férias - Mês") { devFerias += valor };
+
+          if (verba === "Base INSS 13º Salário") { base13 += valor };
+          if (verba === "Base do INSS Normal") { baseNormal += valor };
+          if (verba === "Base do INSS Normal Excedente") { baseExcedente += valor };
+          if (verba === "Base INSS/FGTS Férias do Mês") { baseFerias += valor };
+
+
+
         });
 
-        processarDados(dados);
-      };
-      reader.readAsText(input.files[0], "UTF-8");
-    }
+        const totalEmpregados = (feriasAnt + decimoQuitacao + difDecimo + feriasMes + normalColaborador + difFerias - devFerias)
+        const totalbaseinss = (base13 + baseNormal + baseExcedente + baseFerias)
+        const subtotal = totalbaseinss * 0.296208 + totalEmpregados
+        const familia=11765
+        const retencao=643719.05
+        const deducao = familia+retencao
 
-    function processarDados(dados) {
-      let fgtsnormal = 0, fgts13 = 0, fgtsferias = 0, fgtsdissidio = 0, fgtsrecolhido = 0;
-      let fgtsnormalj = 0, fgts13j = 0, fgtsferiasj = 0, fgtsdissidioj = 0, fgtsrecolhidoj = 0;
+        document.getElementById("inss13").textContent = formatarValor(base13);
+        document.getElementById("inssteto").textContent = formatarValor(baseNormal);
+        document.getElementById("inssexcede").textContent = formatarValor(baseExcedente);
+        document.getElementById("inssferias").textContent = formatarValor(baseFerias);
+        document.getElementById("totalbase").textContent = formatarValor(totalbaseinss);
 
-      dados.forEach((key) => {
-        const verba = key["Verba"];
-        const valor = parseFloat(key["Valor da Verba"].replace(",", ".")) || 0;
-        const cargo = key["Cargo"];
+        document.getElementById("anterior").textContent = formatarValor(feriasAnt);
+        document.getElementById("quitacao").textContent = formatarValor(decimoQuitacao);
+        document.getElementById("dif13").textContent = formatarValor(difDecimo);
+        document.getElementById("feriasmes").textContent = formatarValor(feriasMes);
+        document.getElementById("inssnormal").textContent = formatarValor(normalColaborador);
+        document.getElementById("differias").textContent = formatarValor(difFerias);
+        document.getElementById("devferias").textContent = formatarValor(devFerias);
+        document.getElementById("valorempregados").textContent = formatarValor(totalEmpregados);
+       
+        document.getElementById("avulso").textContent = formatarValor(totalbaseinss * 0.2);
+        document.getElementById("educacao").textContent = formatarValor(totalbaseinss * 0.025);
+        document.getElementById("incra").textContent = formatarValor(totalbaseinss * 0.002);
+        document.getElementById("senac").textContent = formatarValor(totalbaseinss * 0.01);
+        document.getElementById("sesc").textContent = formatarValor(totalbaseinss * 0.015);
+        document.getElementById("sebrae").textContent = formatarValor(totalbaseinss * 0.006);
+        document.getElementById("gilrat").textContent = formatarValor(totalbaseinss * 0.038208);
+        document.getElementById("totalterceiros").textContent = formatarValor(totalbaseinss * 0.296208);
 
-        if (verba === "Base do FGTS Normal") {
-          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsnormalj += valor : fgtsnormal += valor;
-        }
-        if (verba === "Base do FGTS 13º Salário") {
-          cargo === "MENOR/JOVEM APRENDIZ" ? fgts13j += valor : fgts13 += valor;
-        }
-        if (verba === "Base INSS/FGTS Férias do Mês") {
-          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsferiasj += valor : fgtsferias += valor;
-        }
-        if (verba === "Base FGTS Normal Dif Dis") {
-          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsdissidioj += valor : fgtsdissidio += valor;
-        }
-        if (verba === "Valor do FGTS - GRFF") {
-          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsrecolhidoj += valor : fgtsrecolhido += valor;
-        }
-      });
+        document.getElementById("valorterceiros").textContent = formatarValor(totalbaseinss * 0.296208);
+        document.getElementById("valorsegurados").textContent = formatarValor(totalEmpregados);
+        document.getElementById("subtotal").textContent = formatarValor(subtotal);
+        document.getElementById("familia").textContent = formatarValor(familia);
+        document.getElementById("retencao").textContent = formatarValor(retencao);
+        document.getElementById("valorinss").textContent = formatarValor(subtotal-deducao);
 
-      const totalbase = fgtsnormal + fgts13 + fgtsferias + fgtsdissidio;
-      const totalfgts = totalbase * 0.08;
-      const total8 = totalfgts - fgtsrecolhido;
-
-      const totalbasej = fgtsnormalj + fgts13j + fgtsferiasj + fgtsdissidioj;
-      const totalfgtsj = totalbasej * 0.02;
-      const total2j = totalfgtsj - fgtsrecolhidoj;
-
-      document.getElementById("fgtsnormal").textContent = formatarValor(fgtsnormal);
-      document.getElementById("fgts13").textContent = formatarValor(fgts13);
-      document.getElementById("fgtsferias").textContent = formatarValor(fgtsferias);
-      document.getElementById("fgtsdissidio").textContent = formatarValor(fgtsdissidio);
-      document.getElementById("totalbase").textContent = formatarValor(totalbase);
-      document.getElementById("fgts8").textContent = formatarValor(totalfgts);
-      document.getElementById("recolhido").textContent = formatarValor(fgtsrecolhido);
-      document.getElementById("total8").textContent = formatarValor(total8);
-
-      document.getElementById("fgtsnormalj").textContent = formatarValor(fgtsnormalj);
-      document.getElementById("fgts13j").textContent = formatarValor(fgts13j);
-      document.getElementById("fgtsferiasj").textContent = formatarValor(fgtsferiasj);
-      document.getElementById("fgtsdissidioj").textContent = formatarValor(fgtsdissidioj);
-      document.getElementById("totalbasej").textContent = formatarValor(totalbasej);
-      document.getElementById("fgts2j").textContent = formatarValor(totalfgtsj);
-      document.getElementById("recolhidoj").textContent = formatarValor(fgtsrecolhidoj);
-      document.getElementById("total2j").textContent = formatarValor(total2j);
-
-      const totalarecolher = total8 + total2j;
-      document.getElementById("totalarecolher").textContent = formatarValor(totalarecolher);
-
-
-     
-    }
+       
+      }
 
 
 
-  </script>
+    </script>
 
-  <script>
+    <script>
 
-    function Sair() {
-      window.location.href = "index.html"; // Altere para a página de login
-    }
-  </script>
+      function Sair() {
+        window.location.href = "index.html"; // Altere para a página de login
+      }
+    </script>
 
 
-  <script> document.getElementById('csvFile').addEventListener('change', lerCSV);</script>
+    <script> document.getElementById('csvFile').addEventListener('change', lerCSV);</script>
 
 </body>
 
