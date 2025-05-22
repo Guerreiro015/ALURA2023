@@ -47,7 +47,7 @@
       padding: 2rem;
       border-radius: 12px;
       width: 100%;
-      max-width: 1300px;
+      max-width: 90%;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
 
@@ -103,7 +103,7 @@
 
     .card li {
       border-bottom: 1px solid var(--border);
-      padding: 0.4rem 0;
+      padding: 0.4rem 0.1rem;
       display: flex;
       justify-content: space-between;
     }
@@ -127,19 +127,20 @@
       justify-content: space-between;
     }
 
-    .total{
+    .total {
       font-weight: bold;
       font-size: 1.2rem;
       color: rgb(218, 145, 10);
     }
 
-    .totalpag{
+    .totalpag {
       font-weight: bold;
       font-size: 1.3rem;
-      color: #a22020;
+      color: #c40a04a2;
     }
-    .subtotal{
-      font-weight: bold;      
+
+    .subtotal {
+      font-weight: bold;
       color: rgb(8, 90, 148);
     }
 
@@ -177,7 +178,10 @@
       <input type="file" id="csvFile" accept=".csv" />
       <button onclick="Sair()">Sair</button>
     </div>
-
+    <div>
+      <label for="retido" >Informe o valor das retençoes</label>
+      <input type="text" id="retido" placeholder="Valor retencao">
+    </div>
     <h2>💰 Cálculo de INSS Folha</h2>
 
     <div class="grid">
@@ -210,7 +214,7 @@
       <div class="card">
         <ul>
           <li><span class="total">INSS Terceiros</span>
-                    <li><span>20,0% - Patronal Empregados Avulsos</span><span id="avulso">R$ 0,00</span></li>
+          <li><span>20,0% - Patronal Empregados Avulsos</span><span id="avulso">R$ 0,00</span></li>
           <li><span>2,50% - Terceiros Salario Educação</span><span id="educacao">R$ 0,00</span></li>
           <li><span>0,20% - Terceiros Incra</span><span id="incra">R$ 0,00</span></li>
           <li><span>1,00% - Terceiros Senac</span><span id="senac">R$ 0,00</span></li>
@@ -229,7 +233,8 @@
           <li><span class="subtotal">SubTotal</span><span id="subtotal" class="subtotal">R$ 0,00</span></li>
           <li><span>Sal. Família + Sal. Maternidade</span><span id="familia">R$ 0,00</span></li>
           <li><span>Retenções das Notas</span><span id="retencao">R$ 0,00</span></li>
-          <li><span class="totalpag">Valor Guia: </span><span id="valorinss" class="totalpag">R$ 0,00</span></li>
+          <li><span>Total de deduções</span><span id="totaldeducao">R$ 0,00</span></li>
+          <li><span class="totalpag">Valor da Guia: </span><span id="valorinss" class="totalpag">R$ 0,00</span></li>
 
         </ul>
       </div>
@@ -281,6 +286,9 @@
       }
 
       function processarDados(dados) {
+        let retido = document.getElementById("retido").value.trim();
+        let valorRetido = parseFloat(retido.replace(",", "."));
+
         let feriasAnt = 0, decimoQuitacao = 0, difDecimo = 0, feriasMes = 0, normalColaborador = 0, difFerias = 0, devFerias = 0;
         let base13 = 0, baseNormal = 0, baseExcedente = 0, baseFerias = 0;
 
@@ -309,9 +317,9 @@
         const totalEmpregados = (feriasAnt + decimoQuitacao + difDecimo + feriasMes + normalColaborador + difFerias - devFerias)
         const totalbaseinss = (base13 + baseNormal + baseExcedente + baseFerias)
         const subtotal = totalbaseinss * 0.296208 + totalEmpregados
-        const familia=11765
-        const retencao=643719.05
-        const deducao = familia+retencao
+        const familia = 11765
+        // const retencao = 643719.05
+        const deducao = familia + valorRetido
 
         document.getElementById("inss13").textContent = formatarValor(base13);
         document.getElementById("inssteto").textContent = formatarValor(baseNormal);
@@ -327,7 +335,7 @@
         document.getElementById("differias").textContent = formatarValor(difFerias);
         document.getElementById("devferias").textContent = formatarValor(devFerias);
         document.getElementById("valorempregados").textContent = formatarValor(totalEmpregados);
-       
+
         document.getElementById("avulso").textContent = formatarValor(totalbaseinss * 0.2);
         document.getElementById("educacao").textContent = formatarValor(totalbaseinss * 0.025);
         document.getElementById("incra").textContent = formatarValor(totalbaseinss * 0.002);
@@ -341,10 +349,11 @@
         document.getElementById("valorsegurados").textContent = formatarValor(totalEmpregados);
         document.getElementById("subtotal").textContent = formatarValor(subtotal);
         document.getElementById("familia").textContent = formatarValor(familia);
-        document.getElementById("retencao").textContent = formatarValor(retencao);
-        document.getElementById("valorinss").textContent = formatarValor(subtotal-deducao);
+        document.getElementById("retencao").textContent = formatarValor(valorRetido);
+        document.getElementById("totaldeducao").textContent = formatarValor(deducao);
+        document.getElementById("valorinss").textContent = formatarValor(subtotal - deducao);
 
-       
+
       }
 
 
