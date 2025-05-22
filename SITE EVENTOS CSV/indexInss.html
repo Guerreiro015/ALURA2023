@@ -136,7 +136,7 @@
     .totalpag {
       font-weight: bold;
       font-size: 1.3rem;
-      color: #c40a04a2;
+      color: #044d1cef;
     }
 
     .subtotal {
@@ -179,7 +179,7 @@
       <button onclick="Sair()">Sair</button>
     </div>
     <div>
-      <label for="retido" >Informe o valor das retençoes</label>
+      <label for="retido">Informe o valor das retençoes</label>
       <input type="text" id="retido" placeholder="Valor retencao">
     </div>
     <h2>💰 Cálculo de INSS Folha</h2>
@@ -194,7 +194,6 @@
           <li><span>1008-Base INSS Excedente</span><span id="inssexcede">R$ 0,00</span></li>
           <li><span>1031-Base INSS/FGTS Férias mês</span><span id="inssferias">R$ 0,00</span></li>
           <li><span class="total">Total:</span><span id="totalbase" class="total">R$ 0,00</span></li>
-
         </ul>
       </div>
 
@@ -290,6 +289,7 @@
         let valorRetido = parseFloat(retido.replace(",", "."));
 
         let feriasAnt = 0, decimoQuitacao = 0, difDecimo = 0, feriasMes = 0, normalColaborador = 0, difFerias = 0, devFerias = 0;
+        let salFamilia = 0, salMaternidade = 0;
         let base13 = 0, baseNormal = 0, baseExcedente = 0, baseFerias = 0;
 
         dados.forEach((key) => {
@@ -310,6 +310,9 @@
           if (verba === "Base do INSS Normal Excedente") { baseExcedente += valor };
           if (verba === "Base INSS/FGTS Férias do Mês") { baseFerias += valor };
 
+          if (verba === "Salário-Família") { salFamilia += valor };
+          if (verba === "Salário-Maternidade") { salMaternidade += valor };
+
 
 
         });
@@ -317,8 +320,7 @@
         const totalEmpregados = (feriasAnt + decimoQuitacao + difDecimo + feriasMes + normalColaborador + difFerias - devFerias)
         const totalbaseinss = (base13 + baseNormal + baseExcedente + baseFerias)
         const subtotal = totalbaseinss * 0.296208 + totalEmpregados
-        const familia = 11765
-        // const retencao = 643719.05
+        const familia = salFamilia+salMaternidade
         const deducao = familia + valorRetido
 
         document.getElementById("inss13").textContent = formatarValor(base13);
@@ -357,7 +359,6 @@
       }
 
 
-
     </script>
 
     <script>
@@ -369,6 +370,7 @@
 
 
     <script> document.getElementById('csvFile').addEventListener('change', lerCSV);</script>
+    <script> document.getElementById('retido').addEventListener('change', lerCSV);</script>
 
 </body>
 
