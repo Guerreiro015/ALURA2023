@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="dat"></h1>
+        <h1 id="datr"></h1>
+        <label for="dateInput">Escolha uma data:</label>
+        <input type="date" id="dateInput" name="dateInput">
+        <button onclick="Verdata()">Mostrar Data</button>
+
+    </div>
+
+    <script>
+
+        const data = new Date();
+
+        const dia = String(data.getDate()).padStart(2, "0");
+        const mes = String(data.getMonth() + 1).padStart(2, "0");
+        const ano = String(data.getFullYear());
+
+        const dataInteira = `${dia}/${mes}/${ano}`
+
+        dat.innerText = dataInteira
+
+
+        function Verdata() {
+            const datas = document.getElementById("dateInput").value
+
+            const datar = new Date(datas)
+
+            const diar = String(datar.getDate() + 1).padStart(2, "0");
+            const mesr = String(datar.getMonth() + 1).padStart(2, "0");
+            const anor = String(datar.getFullYear());
+
+
+            const dataInteirar = `${diar}/${mesr}/${anor}`
+
+            datr.innerText = dataInteirar
+        }
+
+    </script>
+
+</body>
+
+</html>
