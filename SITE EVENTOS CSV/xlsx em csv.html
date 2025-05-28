@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor XLSX para CSV</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #eee;
+      text-align: center;
+      padding: 50px;
+    }
+
+    input[type="file"] {
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #1e88e5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1565c0;
+    }
+
+    .sair {
+      background-color: mediumseagreen;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Conversor XLSX para CSV (UTF-8)</h1>
+  <input type="file" id="inputFile" accept=".xlsx" />
+  <br>
+  <button onclick="convertToCSV()">Converter e Baixar CSV</button>
+  <br>
+  <br>
+
+  <button class="sair" onclick="sair()">Voltar para Cálculo INSS</button>
+
+  <script>
+
+    function sair() {
+      window.location.href = "indexINSS.html"; // Altere para a página de INSS
+    }
+
+
+    function convertToCSV() {
+      const fileInput = document.getElementById('inputFile');
+      const file = fileInput.files[0];
+
+      if (!file) {
+        alert("Selecione um arquivo .xlsx primeiro.");
+        return;
+      }
+
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+
+        // Pega a primeira aba
+        const firstSheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[firstSheetName];
+
+        // Converte para CSV
+        const csv = XLSX.utils.sheet_to_csv(worksheet, { FS: ";", strip: true });
+
+        // Cria blob UTF-8 e faz download
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'saida.csv';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      };
+
+      reader.readAsArrayBuffer(file);
+    }
+  </script>
+</body>
+
+</html>

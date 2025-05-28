@@ -179,8 +179,9 @@
   <button class="toggle-darkmode" onclick="toggleDarkMode()" title="Alternar tema">🌙</button>
 
   <div class="container">
-    <div class="file-area">
+    <div class="file-area">      
       <input type="file" id="csvFile" accept=".csv" />
+      <button onclick="VirarCSV()">Transformar arquivo em CSV</button>
       <button onclick="Sair()">Sair</button>
     </div>
     <div class="reter">
@@ -248,7 +249,6 @@
 
     <script>
 
-
       function toggleDarkMode() {
         const body = document.body;
         const button = document.querySelector(".toggle-darkmode");
@@ -263,6 +263,10 @@
           style: "currency",
           currency: "BRL",
         });
+      }
+
+      function VirarCSV(){
+        window.location.href = "xlsx em csv.html";
       }
 
       function lerCSV() {
