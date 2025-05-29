@@ -51,12 +51,6 @@
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.8rem;
-    }
-
     .file-area {
       display: flex;
       gap: 1rem;
@@ -168,27 +162,64 @@
       transform: rotate(20deg);
     }
 
-    .reter{
+    .reter {
       display: flex;
       justify-content: center;
+      padding-bottom: 2rem;
     }
+
+    .titulo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      column-gap: 35rem;
+    }
+
+    .espacador {
+      flex: 1;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .botao {
+      background-color: teal;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: auto;
+    }
+
   </style>
 </head>
 
 <body>
   <button class="toggle-darkmode" onclick="toggleDarkMode()" title="Alternar tema">🌙</button>
 
+  <div class="titulo">
+    <div class="espacador"></div>
+    <h2>Cálculo de INSS Folha</h2>
+    <button class="botao" onclick="Sair()">Sair</button>
+  </div>
+
+
   <div class="container">
-    <div class="file-area">      
+    <div class="file-area">
       <input type="file" id="csvFile" accept=".csv" />
-      <button onclick="VirarCSV()">Transformar arquivo em CSV</button>
-      <button onclick="Sair()">Sair</button>
+      <button onclick="VirarCSV()">Transformar um arquivo em CSV</button>
     </div>
     <div class="reter">
-      <label for="retido">Informe o valor das retençoes: </label>
-      <input type="text" id="retido" placeholder="Valor retencao">
+      <label for="retido">Informar o valor das retençoes: </label>
+      <input type="text" id="retido" placeholder="Valor retenção">
     </div>
-    <h2>Cálculo de INSS Folha</h2>
 
     <div class="grid">
       <!-- Cards -->
@@ -265,7 +296,7 @@
         });
       }
 
-      function VirarCSV(){
+      function VirarCSV() {
         window.location.href = "xlsx em csv.html";
       }
 
@@ -329,7 +360,7 @@
         const totalEmpregados = (feriasAnt + decimoQuitacao + difDecimo + feriasMes + normalColaborador + difFerias - devFerias)
         const totalbaseinss = (base13 + baseNormal + baseExcedente + baseFerias)
         const subtotal = totalbaseinss * 0.296208 + totalEmpregados
-        const familia = salFamilia+salMaternidade
+        const familia = salFamilia + salMaternidade
         const deducao = familia + valorRetido
 
         document.getElementById("inss13").textContent = formatarValor(base13);

@@ -7,11 +7,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <style>
     body {
+      display: flex;
+      justify-content: center;
       font-family: Arial, sans-serif;
-      background: #121212;
+      background: #414242;
       color: #eee;
       text-align: center;
       padding: 50px;
+    }
+
+    .container{
+      width: 80%;
+      height: 30rem;
+      background-color: slategrey;
+      border-radius: 1rem;
     }
 
     input[type="file"] {
@@ -35,19 +44,23 @@
     .sair {
       background-color: mediumseagreen;
     }
+
+    .sair:hover {
+      background-color: rgb(31, 219, 116);
+    }
   </style>
 </head>
 
 <body>
-  <h1>Conversor XLSX para CSV (UTF-8)</h1>
-  <input type="file" id="inputFile" accept=".xlsx" />
-  <br>
-  <button onclick="convertToCSV()">Converter e Baixar CSV</button>
-  <br>
-  <br>
-
-  <button class="sair" onclick="sair()">Voltar para Cálculo INSS</button>
-
+  <div class="container">
+    <h1>Conversor XLSX para CSV (UTF-8)</h1>
+    <input type="file" id="inputFile" accept=".xlsx" />
+    <br>
+    <button onclick="convertToCSV()">Converter e Baixar CSV</button>
+    <br>
+    <br>
+    <button class="sair" onclick="sair()">Voltar para Cálculo INSS</button>
+  </div>
   <script>
 
     function sair() {
