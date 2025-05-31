@@ -85,7 +85,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 1.5rem;
     }
 
@@ -183,6 +183,16 @@
       </div>
 
       <div class="card">
+        <ul>
+          <li><span>💸 Total FGTS a Recolher:</span><span id="totalarecolher">R$ 0,00</span></li>
+          <li><span>💸 Total E-Consignado:</span><span id="consignado">R$ 0,00</span></li>
+          <li><span>💸 Total da Guia a Recolher:</span><span id="guia">R$ 0,00</span></li>
+          
+        </ul>
+      </div>
+
+
+      <div class="card">
         <h2>Bases FGTS</h2>
         <canvas id="baseChart"></canvas>
       </div>
@@ -193,182 +203,187 @@
       </div>
     </div>
 
-    <div class="total">💸 Total a Recolher:<br><span id="totalarecolher">R$ 0,00</span></div>
-  </div>
 
-  <script>
+    <script>
 
-    Chart.register(ChartDataLabels);
+      Chart.register(ChartDataLabels);
 
-    const datalabelsOptions = {
-      plugins: {
-        legend: {
-          display: false // Oculta a legenda
-        },
-        datalabels: {
-          color: '#fff',
-          formatter: function (value) {
-            return formatarValor(value);
-            font: { weight: 'bold' }
+      const datalabelsOptions = {
+        plugins: {
+          legend: {
+            display: false // Oculta a legenda
           },
+          datalabels: {
+            color: '#fff',
+            formatter: function (value) {
+              return formatarValor(value);
+              font: { weight: 'bold' }
+            },
 
+          }
         }
+      };
+
+
+      function toggleDarkMode() {
+        const body = document.body;
+        const button = document.querySelector(".toggle-darkmode");
+        body.classList.toggle("light");
+
+        // Troca ícone do botão
+        button.textContent = body.classList.contains("light") ? "☀️" : "🌙";
       }
-    };
 
+      function formatarValor(valor) {
+        return valor.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        });
+      }
 
-    function toggleDarkMode() {
-      const body = document.body;
-      const button = document.querySelector(".toggle-darkmode");
-      body.classList.toggle("light");
+      function lerCSV() {
+        const input = document.getElementById("csvFile");
+        if (!input.files.length) return;
 
-      // Troca ícone do botão
-      button.textContent = body.classList.contains("light") ? "☀️" : "🌙";
-    }
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const texto = e.target.result;
+          const linhas = texto.trim().split("\n");
+          const cabecalhos = linhas[0].split(";").map(c => c.trim());
 
-    function formatarValor(valor) {
-      return valor.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL",
-      });
-    }
-
-    function lerCSV() {
-      const input = document.getElementById("csvFile");
-      if (!input.files.length) return;
-
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const texto = e.target.result;
-        const linhas = texto.trim().split("\n");
-        const cabecalhos = linhas[0].split(";").map(c => c.trim());
-
-        const dados = linhas.slice(1).map(linha => {
-          const colunas = linha.split(";").map(c => c.trim());
-          const obj = {};
-          cabecalhos.forEach((cab, i) => {
-            obj[cab] = colunas[i];
+          const dados = linhas.slice(1).map(linha => {
+            const colunas = linha.split(";").map(c => c.trim());
+            const obj = {};
+            cabecalhos.forEach((cab, i) => {
+              obj[cab] = colunas[i];
+            });
+            return obj;
           });
-          return obj;
+
+          processarDados(dados);
+        };
+        reader.readAsText(input.files[0], "UTF-8");
+      }
+
+      function processarDados(dados) {
+        let fgtsnormal = 0, fgts13 = 0, fgtsferias = 0, fgtsdissidio = 0, fgtsrecolhido = 0, emprestimo = 0;
+        let fgtsnormalj = 0, fgts13j = 0, fgtsferiasj = 0, fgtsdissidioj = 0, fgtsrecolhidoj = 0;
+
+        dados.forEach((key) => {
+          const verba = key["Verba"];
+          const valor = parseFloat(key["Valor da Verba"].replace(",", ".")) || 0;
+          const cargo = key["Cargo"];
+
+          if (verba === "Base do FGTS Normal") {
+            cargo === "MENOR/JOVEM APRENDIZ" ? fgtsnormalj += valor : fgtsnormal += valor;
+          }
+          if (verba === "Base do FGTS 13º Salário") {
+            cargo === "MENOR/JOVEM APRENDIZ" ? fgts13j += valor : fgts13 += valor;
+          }
+          if (verba === "Base INSS/FGTS Férias do Mês") {
+            cargo === "MENOR/JOVEM APRENDIZ" ? fgtsferiasj += valor : fgtsferias += valor;
+          }
+          if (verba === "Base FGTS Normal Dif Dis") {
+            cargo === "MENOR/JOVEM APRENDIZ" ? fgtsdissidioj += valor : fgtsdissidio += valor;
+          }
+          if (verba === "Valor do FGTS - GRFF") {
+            cargo === "MENOR/JOVEM APRENDIZ" ? fgtsrecolhidoj += valor : fgtsrecolhido += valor;
+          }
+
+          if (verba === "Emprestimo") {
+            emprestimo += valor;
+          }
         });
 
-        processarDados(dados);
-      };
-      reader.readAsText(input.files[0], "UTF-8");
-    }
+        const totalbase = fgtsnormal + fgts13 + fgtsferias + fgtsdissidio;
+        const totalfgts = totalbase * 0.08;
+        const total8 = totalfgts - fgtsrecolhido;
 
-    function processarDados(dados) {
-      let fgtsnormal = 0, fgts13 = 0, fgtsferias = 0, fgtsdissidio = 0, fgtsrecolhido = 0;
-      let fgtsnormalj = 0, fgts13j = 0, fgtsferiasj = 0, fgtsdissidioj = 0, fgtsrecolhidoj = 0;
+        const totalbasej = fgtsnormalj + fgts13j + fgtsferiasj + fgtsdissidioj;
+        const totalfgtsj = totalbasej * 0.02;
+        const total2j = totalfgtsj - fgtsrecolhidoj;
 
-      dados.forEach((key) => {
-        const verba = key["Verba"];
-        const valor = parseFloat(key["Valor da Verba"].replace(",", ".")) || 0;
-        const cargo = key["Cargo"];
-
-        if (verba === "Base do FGTS Normal") {
-          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsnormalj += valor : fgtsnormal += valor;
-        }
-        if (verba === "Base do FGTS 13º Salário") {
-          cargo === "MENOR/JOVEM APRENDIZ" ? fgts13j += valor : fgts13 += valor;
-        }
-        if (verba === "Base INSS/FGTS Férias do Mês") {
-          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsferiasj += valor : fgtsferias += valor;
-        }
-        if (verba === "Base FGTS Normal Dif Dis") {
-          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsdissidioj += valor : fgtsdissidio += valor;
-        }
-        if (verba === "Valor do FGTS - GRFF") {
-          cargo === "MENOR/JOVEM APRENDIZ" ? fgtsrecolhidoj += valor : fgtsrecolhido += valor;
-        }
-      });
-
-      const totalbase = fgtsnormal + fgts13 + fgtsferias + fgtsdissidio;
-      const totalfgts = totalbase * 0.08;
-      const total8 = totalfgts - fgtsrecolhido;
-
-      const totalbasej = fgtsnormalj + fgts13j + fgtsferiasj + fgtsdissidioj;
-      const totalfgtsj = totalbasej * 0.02;
-      const total2j = totalfgtsj - fgtsrecolhidoj;
-
-      document.getElementById("fgtsnormal").textContent = formatarValor(fgtsnormal);
-      document.getElementById("fgts13").textContent = formatarValor(fgts13);
-      document.getElementById("fgtsferias").textContent = formatarValor(fgtsferias);
-      document.getElementById("fgtsdissidio").textContent = formatarValor(fgtsdissidio);
-      document.getElementById("totalbase").textContent = formatarValor(totalbase);
-      document.getElementById("fgts8").textContent = formatarValor(totalfgts);
-      document.getElementById("recolhido").textContent = formatarValor(fgtsrecolhido);
-      document.getElementById("total8").textContent = formatarValor(total8);
-
-      document.getElementById("fgtsnormalj").textContent = formatarValor(fgtsnormalj);
-      document.getElementById("fgts13j").textContent = formatarValor(fgts13j);
-      document.getElementById("fgtsferiasj").textContent = formatarValor(fgtsferiasj);
-      document.getElementById("fgtsdissidioj").textContent = formatarValor(fgtsdissidioj);
-      document.getElementById("totalbasej").textContent = formatarValor(totalbasej);
-      document.getElementById("fgts2j").textContent = formatarValor(totalfgtsj);
-      document.getElementById("recolhidoj").textContent = formatarValor(fgtsrecolhidoj);
-      document.getElementById("total2j").textContent = formatarValor(total2j);
-
-      const totalarecolher = total8 + total2j;
-      document.getElementById("totalarecolher").textContent = formatarValor(totalarecolher);
+        document.getElementById("fgtsnormal").textContent = formatarValor(fgtsnormal);
+        document.getElementById("fgts13").textContent = formatarValor(fgts13);
+        document.getElementById("fgtsferias").textContent = formatarValor(fgtsferias);
+        document.getElementById("fgtsdissidio").textContent = formatarValor(fgtsdissidio);
+        document.getElementById("totalbase").textContent = formatarValor(totalbase);
+        document.getElementById("fgts8").textContent = formatarValor(totalfgts);
+        document.getElementById("recolhido").textContent = formatarValor(fgtsrecolhido);
+        document.getElementById("total8").textContent = formatarValor(total8);
+        
+        document.getElementById("fgtsnormalj").textContent = formatarValor(fgtsnormalj);
+        document.getElementById("fgts13j").textContent = formatarValor(fgts13j);
+        document.getElementById("fgtsferiasj").textContent = formatarValor(fgtsferiasj);
+        document.getElementById("fgtsdissidioj").textContent = formatarValor(fgtsdissidioj);
+        document.getElementById("totalbasej").textContent = formatarValor(totalbasej);
+        document.getElementById("fgts2j").textContent = formatarValor(totalfgtsj);
+        document.getElementById("recolhidoj").textContent = formatarValor(fgtsrecolhidoj);
+        document.getElementById("total2j").textContent = formatarValor(total2j);
+        
+        const totalaRecolher = total8 + total2j;
+        const totalGuia= totalaRecolher + emprestimo;
+        document.getElementById("totalarecolher").textContent = formatarValor(totalaRecolher);
+        document.getElementById("consignado").textContent = formatarValor(emprestimo);
+        document.getElementById("guia").textContent = formatarValor(totalGuia);
 
 
-      new Chart(document.getElementById('baseChart'), {
-        type: 'bar',
-        data: {
-          labels: ['Base Normal', 'Base Jovem', 'Base Total'],
-          datasets: [{
-            label: '%',
-            data: [totalbase,totalbasej, totalbase+totalbasej],
-            backgroundColor: ['#4e79a7', '#f28e2b', '#59a14f']
-          }]
-        },
-        options: {
-          ...datalabelsOptions,
-          plugins: {
-            ...datalabelsOptions.plugins,
-            legend: { display: false }
+        new Chart(document.getElementById('baseChart'), {
+          type: 'bar',
+          data: {
+            labels: ['Base Normal', 'Base Jovem', 'Base Total'],
+            datasets: [{
+              label: '%',
+              data: [totalbase, totalbasej, totalbase + totalbasej],
+              backgroundColor: ['#4e79a7', '#f28e2b', '#59a14f']
+            }]
+          },
+          options: {
+            ...datalabelsOptions,
+            plugins: {
+              ...datalabelsOptions.plugins,
+              legend: { display: false }
+            }
           }
-        }
-      });
+        });
 
-      new Chart(document.getElementById('valorChart'), {
-        type: 'bar',
-        data: {
-          labels: ['Valor Normal', 'Valor Jovem', 'Valor Total'],
-          datasets: [{
-            label: '%',
-            data: [total8, total2j, totalarecolher],
-            backgroundColor: ['#4e79a7', '#f28e2b', '#59a14f']
-          }]
-        },
-        options: {
-          ...datalabelsOptions,
-          plugins: {
-            ...datalabelsOptions.plugins,
-            legend: { display: false }
+        new Chart(document.getElementById('valorChart'), {
+          type: 'bar',
+          data: {
+            labels: ['Valor Normal', 'Valor Jovem', 'Valor Total'],
+            datasets: [{
+              label: '%',
+              data: [total8, total2j, totalarecolher],
+              backgroundColor: ['#4e79a7', '#f28e2b', '#59a14f']
+            }]
+          },
+          options: {
+            ...datalabelsOptions,
+            plugins: {
+              ...datalabelsOptions.plugins,
+              legend: { display: false }
+            }
           }
-        }
-      });
+        });
 
 
 
-    }
+      }
 
 
 
 
-  </script>
+    </script>
 
-  <script>
+    <script>
 
-    function Sair() {
-      window.location.href = "index.html"; // Altere para a página de login
-    }
-  </script>
+      function Sair() {
+        window.location.href = "index.html"; // Altere para a página de login
+      }
+    </script>
 
 
-  <script> document.getElementById('csvFile').addEventListener('change', lerCSV);</script>
+    <script> document.getElementById('csvFile').addEventListener('change', lerCSV);</script>
 
 </body>
 
