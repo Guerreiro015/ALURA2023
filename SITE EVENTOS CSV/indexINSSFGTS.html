@@ -124,7 +124,7 @@
     .total {
       font-weight: bold;
       font-size: 1.2rem;
-      color: rgb(218, 145, 10);
+      color: #ff9f1c;
     }
 
     .totalpag {
@@ -144,24 +144,7 @@
         grid-template-columns: 1fr;
       }
     }
-
-    /* Toggle botão */
-    .toggle-darkmode {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 1.5rem;
-      color: var(--text);
-      transition: transform 0.3s;
-    }
-
-    .toggle-darkmode:hover {
-      transform: rotate(20deg);
-    }
-
+    
     .reter {
       display: flex;
       justify-content: center;
@@ -185,6 +168,9 @@
       font-size: 1.8rem;
       text-align: center;
       flex-shrink: 0;
+      background-color: #3e415e;
+      border-radius: 0.7rem;
+      color: #4fd1c5;
     }
 
     .botao {
@@ -197,12 +183,19 @@
       font-weight: bold;
       margin-left: auto;
     }
+
+label{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  color: rgb(236, 62, 62);
+}
+
   </style>
 </head>
 
 <body>
-  <button class="toggle-darkmode" onclick="toggleDarkMode()" title="Alternar tema">🌙</button>
-
+ 
   <div class="titulo">
     <div class="espacador"></div>
     <h2>Cálculo de INSS/FGTS Folha Mensal</h2>
@@ -213,13 +206,11 @@
   <div class="container">
     <div class="file-area">
       <input type="file" id="csvFile" accept=".csv" />
-      <button onclick="VirarCSV()">Transformar um arquivo em CSV</button>
+      <label for="retido">Retençoes: </label>
+      <input type="text" id="retido" placeholder="Valor das Retenções">
+      <button onclick="VirarCSV()">Transformar um arquivo em CSV</button>    
     </div>
-    <div class="reter">
-      <label for="retido">Informar o valor das retençoes: </label>
-      <input type="text" id="retido" placeholder="Valor retenção">
-    </div>
-
+    <h2>Cálculo de INSS Folha Mensal</h2>
     <div class="grid">
       <!-- Cards -->
       <div class="card">
@@ -250,7 +241,7 @@
       <div class="card">
         <ul>
           <li><span class="total">INSS Terceiros</span>
-          <li><span>20,0% - Patronal Empregados Avulsos</span><span id="avulso">R$ 0,00</span></li>
+          <li><span>20,0% - Patronal Empregados</span><span id="avulso">R$ 0,00</span></li>
           <li><span>2,50% - Terceiros Salario Educação</span><span id="educacao">R$ 0,00</span></li>
           <li><span>0,20% - Terceiros Incra</span><span id="incra">R$ 0,00</span></li>
           <li><span>1,00% - Terceiros Senac</span><span id="senac">R$ 0,00</span></li>
@@ -260,22 +251,24 @@
           <li><span class="total">Total:</span><span id="totalterceiros" class="total">R$ 0,00</span></li>
         </ul>
       </div>
-      
+
       <div class="cardTotal">
         <ul>
           <li><span class="total">Total INSS Mensal</span></li>
-          <li><span>Valor do INSS Terceiros</span><span id="valorterceiros">R$ 0,00</span></li>
-          <li><span>Valor do INSS Empregados Avulsos</span><span id="valorsegurados">R$ 0,00</span></li>
+          <li><span>INSS Terceiros</span><span id="valorterceiros">R$ 0,00</span></li>
+          <li><span>INSS Empregados Avulsos</span><span id="valorsegurados">R$ 0,00</span></li>
           <li><span class="subtotal">SubTotal</span><span id="subtotal" class="subtotal">R$ 0,00</span></li>
           <li><span>Sal. Família + Sal. Maternidade</span><span id="familia">R$ 0,00</span></li>
-          <li><span>Retenções das Notas</span><span id="retencao">R$ 0,00</span></li>
+          <li><span>Valor das Retenções</span><span id="retencao">R$ 0,00</span></li>
           <li><span>Total de deduções</span><span id="totaldeducao">R$ 0,00</span></li>
           <li><span class="totalpag">Valor da Guia:</span><span id="valorinss" class="totalpag">R$ 0,00</span></li>
         </ul>
       </div>
-
-      <!-- Parte do FGTS  Abaixo-->
-
+    </div>
+    <!-- Parte do FGTS  Abaixo-->
+    <h2>Cálculo de FGTS Folha Mensal</h2>
+    <div class="grid">
+      <!-- Cards -->
       <div class="card">
         <ul>
           <li><span class="total">FGTS Normal</span>
@@ -369,7 +362,7 @@
 
       function processarDados(dados) {
         let retido = document.getElementById("retido").value.trim();
-        let valorRetido = parseFloat(retido.replace(",", "."));
+        let valorRetido = parseFloat(retido.replace(",", ".")) || 0;
 
         let feriasAnt = 0, decimoQuitacao = 0, difDecimo = 0, feriasMes = 0, normalColaborador = 0, difFerias = 0, devFerias = 0;
         let salFamilia = 0, salMaternidade = 0;
