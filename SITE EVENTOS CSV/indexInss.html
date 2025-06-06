@@ -333,27 +333,25 @@
         let base13 = 0, baseNormal = 0, baseExcedente = 0, baseFerias = 0;
 
         dados.forEach((key) => {
-          const verba = key["Verba"];
+          const verba = key.Verba;
           const valor = parseFloat(key["Valor da Verba"].replace(",", ".")) || 0;
           const cargo = key["Cargo"];
 
-          if (verba === "INSS Férias Recibo - Mês Ant - Pagto") { feriasAnt += valor };
-          if (verba === "INSS 13º Salário Quitação") { decimoQuitacao += valor };
-          if (verba === "Dif INSS 13º Salário") { difDecimo += valor };
-          if (verba === "INSS Férias Recibo - Mês") { feriasMes += valor };
-          if (verba === "INSS Normal") { normalColaborador += valor };
-          if (verba === "Dif. INSS Férias - Mês") { difFerias += valor };
-          if (verba === "Dev. INSS Férias - Mês") { devFerias += valor };
+          if (verba === "4452") { feriasAnt += valor };
+          if (verba === "2097") { decimoQuitacao += valor };
+          if (verba === "2703") { difDecimo += valor };
+          if (verba === "2100") { feriasMes += valor };
+          if (verba === "2103") { normalColaborador += valor };
+          if (verba === "3728") { difFerias += valor };
+          if (verba === "3763") { devFerias += valor };
 
-          if (verba === "Base INSS 13º Salário") { base13 += valor };
-          if (verba === "Base do INSS Normal") { baseNormal += valor };
-          if (verba === "Base do INSS Normal Excedente") { baseExcedente += valor };
-          if (verba === "Base INSS/FGTS Férias do Mês") { baseFerias += valor };
+          if (verba === "1001") { base13 += valor };
+          if (verba === "1007") { baseNormal += valor };
+          if (verba === "1008") { baseExcedente += valor };
+          if (verba === "1031") { baseFerias += valor };
 
-          if (verba === "Salário-Família") { salFamilia += valor };
-          if (verba === "Salário-Maternidade") { salMaternidade += valor };
-
-
+          if (verba === "5") { salFamilia += valor };
+          if (verba === "7") { salMaternidade += valor };
 
         });
 

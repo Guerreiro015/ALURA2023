@@ -270,27 +270,27 @@
         let fgtsnormalj = 0, fgts13j = 0, fgtsferiasj = 0, fgtsdissidioj = 0, fgtsrecolhidoj = 0;
 
         dados.forEach((key) => {
-          const verba = key["Verba"];
+          const verba = key.Verba;
           const valor = parseFloat(key["Valor da Verba"].replace(",", ".")) || 0;
           const cargo = key["Cargo"];
 
-          if (verba === "Base do FGTS Normal") {
+           if (verba === "1005") {
             cargo === "MENOR/JOVEM APRENDIZ" ? fgtsnormalj += valor : fgtsnormal += valor;
           }
-          if (verba === "Base do FGTS 13º Salário") {
+          if (verba === "1010") {
             cargo === "MENOR/JOVEM APRENDIZ" ? fgts13j += valor : fgts13 += valor;
           }
-          if (verba === "Base INSS/FGTS Férias do Mês") {
+          if (verba === "1031") {
             cargo === "MENOR/JOVEM APRENDIZ" ? fgtsferiasj += valor : fgtsferias += valor;
           }
-          if (verba === "Base FGTS Normal Dif Dis") {
+          if (verba === "1058") {
             cargo === "MENOR/JOVEM APRENDIZ" ? fgtsdissidioj += valor : fgtsdissidio += valor;
           }
-          if (verba === "Valor do FGTS - GRFF") {
+          if (verba === "1039") {
             cargo === "MENOR/JOVEM APRENDIZ" ? fgtsrecolhidoj += valor : fgtsrecolhido += valor;
           }
 
-          if (verba === "Empréstimo") {
+          if (verba === "8045") {
             emprestimo += valor;
           }
         });
