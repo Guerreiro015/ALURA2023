@@ -144,7 +144,7 @@
         grid-template-columns: 1fr;
       }
     }
-    
+
     .reter {
       display: flex;
       justify-content: center;
@@ -184,18 +184,17 @@
       margin-left: auto;
     }
 
-label{
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  color: rgb(236, 62, 62);
-}
-
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(236, 62, 62);
+    }
   </style>
 </head>
 
 <body>
- 
+
   <div class="titulo">
     <div class="espacador"></div>
     <h2>Cálculo de Encargos Sobre Folha Mensal</h2>
@@ -208,7 +207,7 @@ label{
       <input type="file" id="csvFile" accept=".csv" />
       <label for="retido">Retençoes: </label>
       <input type="text" id="retido" placeholder="Valor das Retenções">
-      <button onclick="VirarCSV()">Transformar um arquivo em CSV</button>    
+      <button onclick="VirarCSV()">Transformar um arquivo em CSV</button>
     </div>
     <h2>Cálculo de INSS Folha Mensal</h2>
     <div class="grid">
@@ -276,7 +275,7 @@ label{
           <li><span>Base FGTS 13º</span><span id="fgts13">R$ 0,00</span></li>
           <li><span>Base FGTS Férias</span><span id="fgtsferias">R$ 0,00</span></li>
           <li><span>Base FGTS Dissídio</span><span id="fgtsdissidio">R$ 0,00</span></li>
-          <li><span>Total Bases FGTS</span><span id="totalbase">R$ 0,00</span></li>
+          <li><span>Total Bases FGTS</span><span id="totalbaseFGTS">R$ 0,00</span></li>
           <li><span>FGTS 8%</span><span id="fgts8">R$ 0,00</span></li>
           <li><span>Já Recolhido</span><span id="recolhido">R$ 0,00</span></li>
           <li><span class="total">Total 8%</span><span class="total" id="total8">R$ 0,00</span></li>
@@ -426,6 +425,16 @@ label{
         const familia = salFamilia + salMaternidade
         const deducao = familia + valorRetido
 
+        //Parte do FGTS abaixo
+        const totalbaseFGTS = fgtsnormal + fgts13 + fgtsferias + fgtsdissidio;
+        const totalfgts = totalbaseFGTS * 0.08;
+        const total8 = totalfgts - fgtsrecolhido;
+
+        const totalbasej = fgtsnormalj + fgts13j + fgtsferiasj + fgtsdissidioj;
+        const totalfgtsj = totalbasej * 0.02;
+        const total2j = totalfgtsj - fgtsrecolhidoj;
+        //Parte do fgts acima
+
         document.getElementById("inss13").textContent = formatarValor(base13);
         document.getElementById("inssteto").textContent = formatarValor(baseNormal);
         document.getElementById("inssexcede").textContent = formatarValor(baseExcedente);
@@ -458,20 +467,12 @@ label{
         document.getElementById("totaldeducao").textContent = formatarValor(deducao);
         document.getElementById("valorinss").textContent = formatarValor(subtotal - deducao);
 
-        //Parte do FGTS abaixo
-        const totalbase = fgtsnormal + fgts13 + fgtsferias + fgtsdissidio;
-        const totalfgts = totalbase * 0.08;
-        const total8 = totalfgts - fgtsrecolhido;
-
-        const totalbasej = fgtsnormalj + fgts13j + fgtsferiasj + fgtsdissidioj;
-        const totalfgtsj = totalbasej * 0.02;
-        const total2j = totalfgtsj - fgtsrecolhidoj;
-
+        //Parte do fgts Abaixo
         document.getElementById("fgtsnormal").textContent = formatarValor(fgtsnormal);
         document.getElementById("fgts13").textContent = formatarValor(fgts13);
         document.getElementById("fgtsferias").textContent = formatarValor(fgtsferias);
         document.getElementById("fgtsdissidio").textContent = formatarValor(fgtsdissidio);
-        document.getElementById("totalbase").textContent = formatarValor(totalbase);
+        document.getElementById("totalbaseFGTS").textContent = formatarValor(totalbaseFGTS);
         document.getElementById("fgts8").textContent = formatarValor(totalfgts);
         document.getElementById("recolhido").textContent = formatarValor(fgtsrecolhido);
         document.getElementById("total8").textContent = formatarValor(total8);
@@ -490,7 +491,6 @@ label{
         document.getElementById("totalarecolher").textContent = formatarValor(totalaRecolher);
         document.getElementById("consignado").textContent = formatarValor(emprestimo);
         document.getElementById("guia").textContent = formatarValor(totalGuia);
-
         //Parte do FGTS Acima
 
       }
