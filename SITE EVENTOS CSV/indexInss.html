@@ -197,7 +197,6 @@
       font-weight: bold;
       margin-left: auto;
     }
-
   </style>
 </head>
 
@@ -326,7 +325,7 @@
 
       function processarDados(dados) {
         let retido = document.getElementById("retido").value.trim();
-        let valorRetido = parseFloat(retido.replace(",", "."));
+        let valorRetido = parseFloat(retido.replace(",", ".")) || 0;
 
         let feriasAnt = 0, decimoQuitacao = 0, difDecimo = 0, feriasMes = 0, normalColaborador = 0, difFerias = 0, devFerias = 0;
         let salFamilia = 0, salMaternidade = 0;
