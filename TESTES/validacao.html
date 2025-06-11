@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação</title>
+</head>
+
+<body>
+
+    <form>
+        <div>
+            <label for="nome">Nome</label>;
+            <input type="text" id="nome" placeholder="Digite o usuário" required>;
+        </div>
+        <div>
+            <label for="senha">Nome</label>;
+            <input type="text" id="senha" placeholder="Digite a senha" required>;
+        </div>
+
+        <button type="submit">Entrar</button>
+        <p id="envio">Resultado</p>
+    </form>
+
+    <!-- <script>
+        const nome = document.getElementById("nome");
+        const senha = document.getElementById("senha");
+        const form = document.querySelector("form");
+        const envio = document.getElementById("envio");
+
+        form.addEventListener('submit', (e) => {
+            if (!nome.value || !senha.value) {
+                envio.innerHTML = "Não esxiste usuário"
+            } else {
+                envio.innerHTML = nome.value + "-"+ senha.value
+            }
+            e.preventDefault();
+        })
+    </script> -->
+
+</body>
+
+</html>
