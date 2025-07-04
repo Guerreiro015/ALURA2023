@@ -378,6 +378,7 @@
           const verba = key.Verba;
           const valor = parseFloat(key["Valor da Verba"].replace(",", ".")) || 0;
           const cargo = key["Cargo"];
+          const situacao = key["Situação"]
 
           if (verba === "4452") { feriasAnt += valor };
           if (verba === "2097") { decimoQuitacao += valor };
@@ -412,7 +413,7 @@
             cargo === "MENOR/JOVEM APRENDIZ" ? fgtsrecolhidoj += valor : fgtsrecolhido += valor;
           }
 
-          if (verba === "8045") {
+          if (verba === "8045" && situacao !== "3") {
             emprestimo += valor;
           }
           //Parte do fgts acima
