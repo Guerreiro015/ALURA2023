@@ -364,8 +364,8 @@
         let valorRetido = parseFloat(retido.replace(",", ".")) || 0;
 
         let feriasAnt = 0, decimoQuitacao = 0, difDecimo = 0, feriasMes = 0, normalColaborador = 0, difFerias = 0, devFerias = 0;
-        let salFamilia = 0, salMaternidade = 0;
-        let base13 = 0, baseNormal = 0, baseExcedente = 0, baseFerias = 0;
+        let salFamilia = 0, salMaternidade = 0, insMaternidade = 0;
+        let base13 = 0, baseNormal = 0, baseExcedente = 0, baseExcedente13 = 0, baseFerias = 0;
 
         <!-- parte do FGTS Abaixo-->
 
@@ -391,10 +391,12 @@
           if (verba === "1001") { base13 += valor };
           if (verba === "1007") { baseNormal += valor };
           if (verba === "1008") { baseExcedente += valor };
+          if (verba === "1002") { baseExcedente13 += valor };
           if (verba === "1031") { baseFerias += valor };
 
           if (verba === "5") { salFamilia += valor };
           if (verba === "7") { salMaternidade += valor };
+          if (verba === "43") { insMaternidade += valor };
 
           //Parte do fgts abaixo
           if (verba === "1005") {
@@ -421,9 +423,9 @@
         });
 
         const totalEmpregados = (feriasAnt + decimoQuitacao + difDecimo + feriasMes + normalColaborador + difFerias - devFerias)
-        const totalbaseinss = (base13 + baseNormal + baseExcedente + baseFerias)
+        const totalbaseinss = (base13 + baseNormal + baseExcedente + baseExcedente13 + baseFerias) - (salMaternidade + insMaternidade)
         const subtotal = totalbaseinss * 0.296208 + totalEmpregados
-        const familia = salFamilia + salMaternidade
+        const familia = salFamilia + salMaternidade + insMaternidade
         const deducao = familia + valorRetido
 
         //Parte do FGTS abaixo
