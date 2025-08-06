@@ -30,10 +30,10 @@
               window.location.href = "menu_geral.html";
               break;
             case "joao":
-              window.location.href = "menu_Joao.html";
+              window.location.href = "contato.html";
               break;
             case "gustavo":
-              window.location.href = "menu_Gustavo.html";
+              window.location.href = "contato.html";
               break;
             case "encargos":
               window.location.href = "indexEncargos.html";
