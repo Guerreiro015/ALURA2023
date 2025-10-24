@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Relatórios por Gerência</title>
+  <title>Relatórios por Departamentos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg-light: #f9f9f9;
@@ -28,7 +29,8 @@
       color: var(--text-dark);
     }
 
-    h1, h3 {
+    h1,
+    h3 {
       text-align: center;
     }
 
@@ -53,7 +55,8 @@
       margin-top: 10px;
     }
 
-    th, td {
+    th,
+    td {
       border: 1px solid #ccc;
       padding: 6px 8px;
       text-align: left;
@@ -73,7 +76,7 @@
     }
 
     #resumo {
-      margin: 0 0;
+      margin: 30px 0;
     }
 
     /* Estilo compacto e responsivo */
@@ -85,7 +88,8 @@
       word-wrap: break-word;
     }
 
-    .resumo-compacto th, .resumo-compacto td {
+    .resumo-compacto th,
+    .resumo-compacto td {
       padding: 4px;
       border: 1px solid #ccc;
       text-align: center;
@@ -117,59 +121,55 @@
 </head>
 
 <body>
+
   <button class="theme-toggle" onclick="toggleTheme()">🌞🌙 Tema</button>
 
-  <h1>Relatórios por Gerência</h1>
+  <div class="header">
+    <h1>Relatórios Departamentos - RENATO</h1>
+  </div>
+
   <div class="controls">
-    <label for="gerente">Escolha um Gerente:</label>
-    <select id="gerente" name="gerente">
+    <label for="departamento">Escolha um Departamento:</label>
+    <select id="departamento" name="departamento">
       <option value="TODOS">Todos</option>
-      <option value="ALEX">Alex</option>
-      <option value="FABIO">Fabio</option>
-      <option value="RENATO">Renato</option>
-      <option value="VANDECIR">Vandecir</option>
     </select>
   </div>
 
-  <div id="resumo" class="table-container"></div>
+  <div id="resumo"></div>
 
-  <div class="table-container">
-    <table>
-      <thead>
-        <tr>
-          <th>Matrícula</th>
-          <th>Nome</th>
-          <th>Cargo</th>
-          <th>Regional</th>
-          <th>Setor</th>
-          <th>Gerência</th>
-          <th>Evento</th>
-          <th>Período</th>
-          <th>Quantidade</th>
-          <th>Competência</th>
-        </tr>
-      </thead>
-      <tbody id="saida"></tbody>
-    </table>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Matrícula</th>
+        <th>Nome</th>
+        <th>Cargo</th>
+        <th>Regional</th>
+        <th>Setor</th>
+        <th>Gerência</th>
+        <th>Evento</th>
+        <th>Período</th>
+        <th>Quantidade</th>
+        <th>Competência</th>
+      </tr>
+    </thead>
+    <tbody id="saida"></tbody>
+  </table>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
   <script>
     let dados = [];
 
     function exibir_dados() {
-      const gerente = document.getElementById("gerente").value;
+      const departamento = document.getElementById("departamento").value;
       const tbody = document.getElementById("saida");
       tbody.innerHTML = "";
 
-      const resumoEventos = {};
-      const competenciasSet = new Set();
-
       dados.forEach(key => {
-        if (gerente === "TODOS" || key["GERENCIA"] === gerente) {
-          const row = document.createElement('tr');
-          const quant = parseFloat((key["QUANTIDADE"] || "0").replace(",", ".")) || 0;
-          row.innerHTML = `
+        if (key["GERENCIA"] === "RENATO") {
+          if (departamento === "TODOS" || key["DEPARTAMENTO"] === departamento) {
+            const row = document.createElement('tr');
+            const quant = parseFloat((key["QUANTIDADE"] || "0").replace(",", ".")) || 0;
+            row.innerHTML = `
             <td>${key["ID"] || ""}</td>
             <td>${key["NOME"] || ""}</td>
             <td>${key["CARGO"] || ""}</td>
@@ -181,7 +181,18 @@
             <td>${quant}</td>
             <td>${key["COMPETÊNCIA"] || ""}</td>
           `;
-          tbody.appendChild(row);
+            tbody.appendChild(row);
+          }
+        }
+      });
+
+      const resumoEventos = {};
+      const competenciasSet = new Set();
+
+      dados.forEach(key => {
+        if (key["GERENCIA"] === "JOÃO PAULO") {
+          const match = departamento === "TODOS" || key["DEPARTAMENTO"] === departamento;
+          if (!match) return;
 
           const comp = key["COMPETÊNCIA"];
           const evento = key["EVENTO"];
@@ -194,6 +205,7 @@
         }
       });
 
+
       const competencias = Array.from(competenciasSet).sort((a, b) => {
         const [ma, aa] = a.split("/").map(Number);
         const [mb, ab] = b.split("/").map(Number);
@@ -204,7 +216,9 @@
       competencias.forEach(comp => totaisCompetencia[comp] = 0);
 
       let totalGeral = 0;
+
       let resumoHTML = "<h3>Resumo por Competência</h3><table class='resumo-compacto'><tr><th>Evento</th>";
+
       competencias.forEach(c => resumoHTML += `<th>${c}</th>`);
       resumoHTML += `<th>Total por Evento</th></tr>`;
 
@@ -229,10 +243,6 @@
       document.getElementById("resumo").innerHTML = resumoHTML;
     }
 
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-    }
-
     fetch("Base.csv")
       .then(response => response.text())
       .then(csvText => {
@@ -242,13 +252,30 @@
           delimiter: ";",
           complete: function (results) {
             dados = results.data;
+
+            const deps = new Set(dados.map(d => d["DEPARTAMENTO"]).filter(Boolean));
+            const selectDep = document.getElementById("departamento");
+
+            deps.forEach(dep => {
+              const option = document.createElement("option");
+              option.value = dep;
+              option.textContent = dep;
+              selectDep.appendChild(option);
+            });
+
             exibir_dados();
           }
         });
       })
       .catch(error => console.error("Erro ao carregar CSV:", error));
 
-    document.getElementById("gerente").addEventListener("change", exibir_dados);
+    document.getElementById("departamento").addEventListener("change", exibir_dados);
+
+    // Dark mode toggle
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+
   </script>
 </body>
 

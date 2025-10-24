@@ -125,7 +125,7 @@
   <button class="theme-toggle" onclick="toggleTheme()">🌞🌙 Tema</button>
 
   <div class="header">
-    <h1>Relatórios Departamentos - JOÃO PAULO</h1>
+    <h1>Relatórios Departamentos - VANDECIR</h1>
   </div>
 
   <div class="controls">
@@ -165,7 +165,7 @@
       tbody.innerHTML = "";
 
       dados.forEach(key => {
-        if (key["GERENCIA"] === "JOÃO PAULO") {
+        if (key["GERENCIA"] === "VANDECIR") {
           if (departamento === "TODOS" || key["DEPARTAMENTO"] === departamento) {
             const row = document.createElement('tr');
             const quant = parseFloat((key["QUANTIDADE"] || "0").replace(",", ".")) || 0;
@@ -190,7 +190,7 @@
       const competenciasSet = new Set();
 
       dados.forEach(key => {
-        if (key["GERENCIA"] === "JOÃO PAULO") {
+        if (key["GERENCIA"] === "GUSTAVO") {
           const match = departamento === "TODOS" || key["DEPARTAMENTO"] === departamento;
           if (!match) return;
 

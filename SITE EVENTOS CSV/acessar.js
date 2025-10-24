@@ -1,8 +1,9 @@
  const users = {
       admin: "111111111",     
       alex: "ecosampa@alex123",
-      gustavo: "gustavo@ecosampa123",
-      joao: "joao@2024ecosampa",
+      vandecir: "vandecir@123",
+      fabio: "fabio@2025ecosampa",
+      renato: "renato@2025ecosampa",
       fgts: "123",
       inss: "123",
       encargos: "123",
@@ -29,11 +30,14 @@
             case "alex":
               window.location.href = "menu_geral.html";
               break;
-            case "joao":
-              window.location.href = "contato.html";
+            case "vandecir":
+              window.location.href = "menu_vandecir.html";
               break;
-            case "gustavo":
-              window.location.href = "contato.html";
+            case "fabio":
+              window.location.href = "menu_fabio.html";
+              break;
+            case "renato":
+              window.location.href = "menu_renato.html";
               break;
             case "encargos":
               window.location.href = "indexEncargos.html";
