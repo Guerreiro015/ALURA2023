@@ -167,11 +167,10 @@
 
       dados.forEach(key => {
         // Tranformando tudo em minúsculo  
-        const gerenteKey = (key["GERENTE"] || "").toLowerCase();        
+        const gerenteKey = (key["GERENTE"] || "").toLowerCase();             
         const gerenteFiltro = (gerente || "").toLowerCase();
         const quant = parseFloat((key["QUANTIDADE"] || "0").replace(",", ".")) || 0;
-
-        if (gerenteKey === "gustavo"){
+        if (gerenteKey === "vandecir"){
 
         if (
           gerenteFiltro === "todos" ||
