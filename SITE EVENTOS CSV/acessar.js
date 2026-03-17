@@ -1,65 +1,54 @@
  const users = {
-      admin: "111111111",     
-      alex: "ecosampa@alex123",
-      vandecir: "vandecir@123",
-      fabio: "fabio@2025ecosampa",
-      renato: "renato@2025ecosampa",
-      fgts: "123",
-      inss: "123",
-      encargos: "123",
-      grafico: "123"
-    };
+  admin: "111111111",     
+  alex: "ecosampa@alex123",
+  vandecir: "vandecir@123",
+  fabio: "fabio@2025ecosampa",
+  renato: "renato@2025ecosampa",
+  fgts: "123",
+  inss: "123",
+  encargos: "123",
+  grafico: "123"
+};
 
-    document.getElementById("loginForm").addEventListener("submit", function (e) {
-      e.preventDefault();
+// Certifique-se de que o ID 'loginForm' foi adicionado à tag <form> no HTML
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-      const username = document.getElementById("username").value.trim();
-      const password = document.getElementById("password").value.trim();
-      const errorMsg = document.getElementById("error-msg");
-      const loginBox = document.getElementById("loginBox");
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const errorMsg = document.getElementById("error-msg");
+  const loginBox = document.getElementById("loginBox"); // Precisa do ID no HTML
 
-      if (users[username] && users[username] === password) {
-        errorMsg.textContent = "";
-        loginBox.innerHTML = `
-          <h2>Olá Sr. ${username.charAt(0).toUpperCase() + username.slice(1)}!</h2>
-          <p style="margin-top: 1rem;">Preparando acesso...</p>`;
+  if (users[username] && users[username] === password) {
+    errorMsg.textContent = "";
+    loginBox.innerHTML = `
+      <div style="padding: 40px; text-align: center;">
+        <h2>Olá Sr. ${username.charAt(0).toUpperCase() + username.slice(1)}!</h2>
+        <p style="margin-top: 1rem;">Preparando acesso...</p>
+      </div>`;
 
-        setTimeout(() => {
-          switch (username) {
-            case "admin":
-            case "alex":
-              window.location.href = "menu_geral.html";
-              break;
-            case "vandecir":
-              window.location.href = "menu_vandecir.html";
-              break;
-            case "fabio":
-              window.location.href = "menu_fabio.html";
-              break;
-            case "renato":
-              window.location.href = "menu_renato.html";
-              break;
-            case "encargos":
-              window.location.href = "indexEncargos.html";
-              break;
-            case "fgts":
-              window.location.href = "indexFgts.html";
-              break;
-            case "inss":
-              window.location.href = "indexInss.html";
-              break;
-            case "grafico":
-              window.location.href = "graficos.html";
-              break;
-          }
-        }, 2000);
-      } else {
-        errorMsg.textContent = "Usuário ou senha incorretos.";
-        document.getElementById("username").value = "";
-        document.getElementById("password").value = "";
-        return;
-        loginBox.classList.add("shake");
-        setTimeout(() => loginBox.classList.remove("shake"), 400);
-      }
+    setTimeout(() => {
+      const destinos = {
+        admin: "menu_geral.html",
+        alex: "menu_geral.html",
+        vandecir: "menu_vandecir.html",
+        fabio: "menu_fabio.html",
+        renato: "menu_renato.html",
+        encargos: "indexEncargos.html",
+        fgts: "indexFgts.html",
+        inss: "indexInss.html",
+        grafico: "graficos.html"
+      };
+      window.location.href = destinos[username];
+    }, 2000);
+
+  } else {
+    errorMsg.textContent = "Usuário ou senha incorretos.";
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
     
-    });
+    // Removido o 'return' que estava aqui impedindo o shake
+    loginBox.classList.add("shake");
+    setTimeout(() => loginBox.classList.remove("shake"), 400);
+  }
+});
