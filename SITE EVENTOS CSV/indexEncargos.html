@@ -424,7 +424,7 @@
 
         const totalEmpregados = (feriasAnt + decimoQuitacao + difDecimo + feriasMes + normalColaborador + difFerias - devFerias)
         const totalbaseinss = (base13 + baseNormal + baseExcedente + baseExcedente13 + baseFerias) - (salMaternidade + insMaternidade)
-        const subtotal = totalbaseinss * 0.296208 + totalEmpregados
+        const subtotal = totalbaseinss * 0.295950 + totalEmpregados
         const familia = salFamilia + salMaternidade + insMaternidade
         const deducao = familia + valorRetido
 
@@ -459,10 +459,10 @@
         document.getElementById("senac").textContent = formatarValor(totalbaseinss * 0.01);
         document.getElementById("sesc").textContent = formatarValor(totalbaseinss * 0.015);
         document.getElementById("sebrae").textContent = formatarValor(totalbaseinss * 0.006);
-        document.getElementById("gilrat").textContent = formatarValor(totalbaseinss * 0.038208);
-        document.getElementById("totalterceiros").textContent = formatarValor(totalbaseinss * 0.296208);
+        document.getElementById("gilrat").textContent = formatarValor(totalbaseinss * 0.037950);
+        document.getElementById("totalterceiros").textContent = formatarValor(totalbaseinss * 0.295950);
 
-        document.getElementById("valorterceiros").textContent = formatarValor(totalbaseinss * 0.296208);
+        document.getElementById("valorterceiros").textContent = formatarValor(totalbaseinss *0.295950);
         document.getElementById("valorsegurados").textContent = formatarValor(totalEmpregados);
         document.getElementById("subtotal").textContent = formatarValor(subtotal);
         document.getElementById("familia").textContent = formatarValor(familia);
