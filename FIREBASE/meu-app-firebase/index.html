@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso ao Currículo</title>
+    <style>
+        /* Configurações Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Container do Card (Efeito Glassmorphism) */
+        .login-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        p.subtitle {
+            color: #b0bec5;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        /* Grupos de Entrada */
+        .input-group {
+            position: relative;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            color: #cfd8dc;
+            font-size: 13px;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            outline: none;
+            color: #ffffff;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        /* Efeito de Foco no Input */
+        .input-group input:focus {
+            border-color: #00d2ff;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 12px rgba(0, 210, 255, 0.3);
+        }
+
+        /* Botão de Entrar */
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(90deg, #00d2ff, #0081ff);
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 129, 255, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Mensagem de Erro Animada */
+        .error-message {
+            color: #ff5252;
+            font-size: 14px;
+            margin-top: 16px;
+            display: none;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-card">
+    <h2>Seja Bem-vindo</h2>
+    <p class="subtitle">Insira suas credenciais para ver o currículo</p>
+    
+    <form id="loginForm">
+        <div class="input-group">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" placeholder="Digite seu usuário" required autocomplete="off">
+        </div>
+        <div class="input-group">
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha" required>
+        </div>
+        <button type="submit">Entrar no Sistema</button>
+        <div id="errorMessage" class="error-message">Usuário ou senha incorretos!</div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const usuarioDigitado = document.getElementById('username').value;
+        const senhaDigitada = document.getElementById('password').value;
+
+        // Altere aqui suas credenciais se desejar
+        const usuarioCorreto = "admin";
+        const senhaCorreta = "12345";
+
+        if (usuarioDigitado === usuarioCorreto && senhaDigitada === senhaCorreta) {
+            window.location.href = "curriculo.html"; 
+        } else {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.style.display = 'block';
+            
+            // Pisca o botão para dar um feedback visual de erro
+            const btn = document.querySelector('button');
+            btn.style.opacity = '0.8';
+            setTimeout(() => btn.style.opacity = '1', 200);
+        }
+    });
+</script>
+
+</body>
+</html>

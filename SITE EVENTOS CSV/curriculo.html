@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo - Antonio de Sousa Neto</title>
+    <style>
+      /* Configurações Globais */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: #333333;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+      }
+
+      /* Container Principal do Currículo */
+      .resume-container {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 850px;
+        border-radius: 16px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        animation: slideUp 0.5s ease forwards;
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Cabeçalho do Currículo */
+      .header {
+        background: linear-gradient(90deg, #1f4068, #162447);
+        color: #ffffff;
+        padding: 40px;
+        text-align: center;
+        border-bottom: 5px solid #00d2ff;
+      }
+
+      .header h1 {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        font-size: 14px;
+        color: #e0e0e0;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* Corpo do Currículo */
+      .content {
+        padding: 40px;
+      }
+
+      section {
+        margin-bottom: 35px;
+      }
+
+      section:last-child {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        color: #1f4068;
+        font-size: 20px;
+        font-weight: 600;
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: 8px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #4a4a4a;
+        text-align: justify;
+      }
+
+      /* Estilização das Experiências e Listas */
+      .job-card {
+        margin-bottom: 25px;
+      }
+
+      .job-card:last-child {
+        margin-bottom: 0;
+      }
+
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+      }
+
+      .company-name {
+        font-size: 16px;
+        font-weight: 700;
+        color: #111111;
+      }
+
+      .job-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: #0081ff;
+        margin-top: 2px;
+      }
+
+      .job-date {
+        font-size: 13px;
+        color: #757575;
+        font-weight: 500;
+        background: #f0f4f8;
+        padding: 4px 10px;
+        border-radius: 20px;
+        margin-top: 4px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      ul li {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #555555;
+        margin-bottom: 6px;
+        position: relative;
+        padding-left: 18px;
+      }
+
+      ul li::before {
+        content: "•";
+        color: #00d2ff;
+        font-weight: bold;
+        font-size: 18px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+      }
+
+      .skills-list li {
+        display: inline-block;
+        background: #e1f5fe;
+        color: #0288d1;
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        font-weight: 500;
+        padding-left: 14px;
+      }
+
+      .skills-list li::before {
+        content: "";
+      }
+
+      /* Botão de Logout de Acesso */
+      .logout-container {
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .btn-logout {
+        display: inline-block;
+        padding: 12px 30px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        backdrop-filter: blur(5px);
+        transition: all 0.3s ease;
+      }
+
+      .btn-logout:hover {
+        background: #ff5252;
+        border-color: #ff5252;
+        box-shadow: 0 4px 15px rgba(255, 82, 82, 0.4);
+        transform: translateY(-2px);
+      }
+
+      /* Responsividade para Celulares */
+      @media (max-width: 600px) {
+        .header {
+          padding: 30px 20px;
+        }
+        .content {
+          padding: 25px 20px;
+        }
+        .contact-info {
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+        }
+        .job-header {
+          flex-direction: column;
+        }
+        .job-date {
+          margin-top: 8px;
+        }
+      }
+
+      .download-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .btn-download {
+        padding: 12px 30px;
+        border: none;
+        border-radius: 8px;
+        background: #00d2ff;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn-download:hover {
+        background: #008cff;
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-container">
+      <!-- Cabeçalho com Informações de Contato -->
+      <div class="header">
+        <h1>Antonio de Sousa Neto</h1>
+        <div class="contact-info">
+          <span class="contact-item">📍 São Paulo - SP</span>
+          <span class="contact-item">📞 (11) +9 5488 3099</span>
+          <span class="contact-item">📧 antoniolucasluana@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="content">
+        <!-- Objetivo -->
+        <section>
+          <h2>Objetivo Profissional</h2>
+          <p>
+            Atuar como Analista de Departamento Pessoal, contribuindo com minha
+            sólida experiência na área e conhecimentos técnicos para garantir a
+            excelência nos processos de departamento pessoal e na gestão de
+            pessoas.
+          </p>
+        </section>
+
+        <!-- Resumo -->
+        <section>
+          <h2>Resumo Profissional</h2>
+          <p>
+            Profissional com ampla experiência em Departamento Pessoal, tendo
+            evoluído de cargos operacionais até a função de Analista. Vivência
+            em rotinas de admissão, demissão, controle de ponto eletrônico,
+            folha de pagamento, encargos sociais, benefícios, obrigações legais
+            (E-Social, SEFIP) e atendimento ao colaborador. Pós-graduado em
+            Recursos Humanos, com perfil organizado, proativo e conhecimento em
+            ferramentas tecnológicas, incluindo noções de programação (HTML,
+            CSS, Javascript, Python) e ótimo conhecimento em Excel.
+          </p>
+        </section>
+
+        <!-- Experiência -->
+        <section>
+          <h2>Experiência Profissional</h2>
+
+          <!-- Empresa 1 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div>
+                <div class="company-name">ECOSAMPA – CONSORCIO SCK</div>
+                <div class="job-title">
+                  Analista / Assistente / Auxiliar de Departamento Pessoal
+                </div>
+              </div>
+              <span class="job-date">01/06/2019 – 03/06/2026</span>
+            </div>
+            <ul>
+              <li>Fechamento completo da folha de pagamento;</li>
+              <li>Cálculo e conferência de encargos (INSS, FGTS, IRRF);</li>
+              <li>Processos de admissão, rescisão e férias;</li>
+              <li>Controle e apuração de ponto eletrônico;</li>
+              <li>Envio e conferência de dados no E-Social;</li>
+              <li>
+                Atendimento a colaboradores e apoio a auditorias internas.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Empresa 2 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div>
+                <div class="company-name">SUSTENTARE SANEAMENTO S/A</div>
+                <div class="job-title">Auxiliar de Departamento Pessoal</div>
+              </div>
+              <span class="job-date">14/06/2018 A 01/06/2019</span>
+            </div>
+            <ul>
+              <li>
+                Apoio às rotinas de folha, controle de ponto, conferência de
+                admissões, organização de documentos e gestão de benefícios e
+                atendimento aos colaboradores.
+              </li>
+              <li>
+                Auxílio nas rotinas administrativas de DP, lançamentos no
+                sistema, atualização cadastral e conferência de documentos.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Empresa 3 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div>
+                <div class="company-name">CONSORCIO SOMA</div>
+                <div class="job-title">Auxiliar de Departamento Pessoal</div>
+              </div>
+              <span class="job-date">16/12/2011 A 13/06/2018</span>
+            </div>
+            <ul>
+              <li>
+                Apoio às rotinas de folha, controle de ponto, conferência de
+                admissões, organização de documentos e gestão de benefícios e
+                atendimento aos colaboradores.
+              </li>
+              <li>
+                Auxílio nas rotinas administrativas de DP, lançamentos no
+                sistema, atualização cadastral e conferência de documentos.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Empresa 4 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div>
+                <div class="company-name">QUALIX SERVIÇOS AMBIENTAIS</div>
+
+                <div class="job-title">Ajudante de Serviços Diversos</div>
+              </div>
+              <span class="job-date">17/03/2010 A 15/12/2011</span>
+            </div>
+            <ul>
+              <li>Capinação/ Roçada / Coleta / Lavagem de Praças.</li>
+            </ul>
+          </div>
+          <!-- Empresa 5 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div>
+                <div class="company-name">CONSTRUTORA GETEL LTDA</div>
+
+                <div class="job-title">Apontador</div>
+              </div>
+              <span class="job-date">01/08/2007 A 30/08/2009</span>
+            </div>
+            <ul>
+              <li>
+                Apontamento de jornada dos trabalhadores e suporte às rotinas de
+                campo..
+              </li>
+            </ul>
+          </div>
+
+          <!-- Empresa 6 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div>
+                <div class="company-name">BANCO DO BRASIL</div>
+
+                <div class="job-title">Menor Auxiliar de Serviços Gerais</div>
+              </div>
+              <span class="job-date">04/08/1986 A 01/02/1990</span>
+            </div>
+            <ul>
+              <li>Suporte aos departarmentos, arquivo e almoxarifado</li>
+            </ul>
+          </div>
+
+          <!-- Formação Acadêmica -->
+          <div class="job-card">
+            <div class="job-header">
+              <div>
+                <div class="company-name">Formação Acadêmica</div>
+              </div>
+              <span class="job-date">'Março de 2025'</span>
+            </div>
+            <ul>
+              <li>Pós-Graduação em Recursos Humanos</li>
+              <li>Universidade Pitágoras Unopar Anhanguera</li>
+            </ul>
+          </div>
+          <!-- Cursos Complementares -->
+          <div class="job-card">
+            <div class="job-header">
+              <div>
+                <div class="company-name">Cursos Complementares</div>
+              </div>
+              <span class="job-date">''</span>
+            </div>
+            <ul>
+              <li>Programação Web (HTML, CSS, Javascript)</li>
+              <li>Python – Lógica de Programação</li>
+            </ul>
+          </div>
+
+          <!-- Sair do Sistema -->
+          <div class="logout">
+            <a href="index.html" onclick="logout()">Sair do Sistema</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Botão Baixar PDF -->
+    <div class="download-container">
+      <button id="downloadPDF" class="btn-download">
+        📄 Baixar Currículo em PDF
+      </button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("downloadPDF")
+        .addEventListener("click", function () {
+          const element = document.querySelector(".resume-container");
+
+          const options = {
+            margin: 0.5,
+            filename: "Antonio_de_Sousa_Neto_Curriculo.pdf",
+            image: { type: "jpeg", quality: 1 },
+            html2canvas: { scale: 2 },
+            jsPDF: {
+              unit: "in",
+              format: "a4",
+              orientation: "portrait",
+            },
+          };
+
+          html2pdf().set(options).from(element).save();
+        });
+    </script>
+  </body>
+</html>

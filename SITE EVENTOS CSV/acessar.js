@@ -7,7 +7,8 @@
   fgts: "123",
   inss: "123",
   encargos: "123",
-  grafico: "123"
+  grafico: "123",
+  curriculo: "123"
 };
 
 // Certifique-se de que o ID 'loginForm' foi adicionado à tag <form> no HTML
@@ -30,14 +31,15 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     setTimeout(() => {
       const destinos = {
         admin: "menu_geral.html",
-        alex: "menu_geral.html",
-        vandecir: "menu_vandecir.html",
-        fabio: "menu_fabio.html",
-        renato: "menu_renato.html",
+        alex: "curriculo.html",
+        vandecir: "curriculo.html",
+        fabio: "curriculo.html",
+        renato: "curriculo.html",
         encargos: "indexEncargos.html",
         fgts: "indexFgts.html",
         inss: "indexInss.html",
-        grafico: "graficos.html"
+        grafico: "graficos.html",
+        curriculo: "curriculo.html"
       };
       window.location.href = destinos[username];
     }, 2000);
