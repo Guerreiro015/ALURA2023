@@ -194,6 +194,11 @@
         text-align: center;
       }
 
+      .logout{
+        color:#06159e;
+        text-align: center;        
+      }
+
       .btn-logout {
         display: inline-block;
         padding: 12px 30px;
@@ -245,7 +250,7 @@
         padding: 12px 30px;
         border: none;
         border-radius: 8px;
-        background: #00d2ff;
+        background: #036857;
         color: #fff;
         font-size: 15px;
         font-weight: 600;
@@ -256,6 +261,22 @@
       .btn-download:hover {
         background: #008cff;
         transform: translateY(-2px);
+      }
+
+      /* ==========================================
+     REGRAS CRÍTICAS DE IMPRESSÃO (CORREÇÃO DO PDF)
+     ========================================== */
+      @media print {
+        .resume-container {
+          box-shadow: none !important;
+          animation: none !important; /* Desliga animações que quebram o html2pdf */
+          overflow: visible !important; /* Permite que o texto continue nas páginas seguintes */
+          transform: none !important;
+        }
+        .download-container,
+        .logout-container {
+          display: none !important; /* Esconde botões no PDF */
+        }
       }
     </style>
   </head>
@@ -457,26 +478,64 @@
         📄 Baixar Currículo em PDF
       </button>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
       document
         .getElementById("downloadPDF")
         .addEventListener("click", function () {
           const element = document.querySelector(".resume-container");
+          const botao = document.getElementById("downloadPDF");
 
+          // 1. SALVA OS ESTILOS ORIGINAIS DA TELA
+          const originalStyle = element.getAttribute("style") || "";
+
+          // 2. MODIFICA O CONTAINER PARA FORÇAR O HTML2PDF A VER O CONTEÚDO COMPLETO
+          element.style.overflow = "visible";
+          element.style.maxHeight = "none";
+          element.style.height = "auto";
+          element.style.animation = "none";
+          element.style.transform = "none";
+          element.style.boxShadow = "none";
+          element.style.borderRadius = "0px";
+
+          // Oculta o botão temporariamente para não sair no PDF
+          botao.style.display = "none";
+
+          // 3. CONFIGURAÇÕES DO PDF
           const options = {
-            margin: 0.5,
+            margin: [15, 15, 15, 15], // Margem de 15mm para garantir o respiro nas páginas
             filename: "Antonio_de_Sousa_Neto_Curriculo.pdf",
-            image: { type: "jpeg", quality: 1 },
-            html2canvas: { scale: 2 },
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: {
+              scale: 2.5,
+              useCORS: true,
+              logging: false,
+              scrollY: 0, // Evita problemas caso a página esteja com scroll
+              scrollX: 0,
+            },
             jsPDF: {
-              unit: "in",
+              unit: "mm",
               format: "a4",
               orientation: "portrait",
             },
           };
 
-          html2pdf().set(options).from(element).save();
+          // 4. GERA O PDF E RESTAURA A TELA LOGO EM SEGUIDA
+          html2pdf()
+            .set(options)
+            .from(element)
+            .save()
+            .then(() => {
+              // Restaura os estilos visuais originais na página web
+              element.setAttribute("style", originalStyle);
+              botao.style.display = "inline-block";
+            })
+            .catch((error) => {
+              console.error("Erro ao gerar PDF:", error);
+              element.setAttribute("style", originalStyle);
+              botao.style.display = "inline-block";
+            });
         });
     </script>
   </body>

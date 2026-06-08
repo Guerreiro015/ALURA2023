@@ -1,257 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login</title>
-  <style>
-    :root {
-      --bg: #f2f5f5;
-      --card-bg: #2c2c2e;
-      --text: #e0e0e0;
-      --input-bg: #3a3a3c;
-      --button: #5c7cfa;
-      --button-hover: #4c6ef5;
-      --shadow: rgba(0, 0, 0, 0.4);
-    }
-
-    .dark {
-      --bg: #121212;
-      --card-bg: #1e1e1e;
-      --text: #f2f2f2;
-      --input-bg: #2b2b2b;
-      --button: #748ffc;
-      --button-hover: #5c7cfa;
-      --shadow: rgba(255, 255, 255, 0.05);
-    }
-
-    /* Configurações Gerais */
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login</title>
+<style>
+:root {
+  --bg: #f2f5f5;
+  --card-bg: #2c2c2e;
+  --text: #e0e0e0;
+  --input-bg: #3a3a3c;
+  --button: #5c7cfa;
+  --button-hover: #4c6ef5;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+.dark {
+  --bg: #121212;
+  --card-bg: #1e1e1e;
+  --text: #f2f2f2;
+  --input-bg: #2b2b2b;
+  --button: #748ffc;
+  --button-hover: #5c7cfa;
+  --shadow: rgba(255, 255, 255, 0.05);
+}
+/* Configurações Gerais */
 * {
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
 body {
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-
 /* Container Principal */
 .login-container {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 380px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 380px;
 }
-
 /* Cabeçalho Azul */
 .login-header {
-    background-color: #07a79f; /* Azul aproximado */
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
+  background-color: #07a79f; /* Azul aproximado */
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
 }
-
 .icon-box {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    display: inline-block;
-    padding: 10px;
-    margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 15px;
 }
-
 .lock-icon {
-    font-size: 24px;
+  font-size: 24px;
 }
-
 .login-header h1 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
-
 .login-header p {
-    font-size: 13px;
-    opacity: 0.9;
+  font-size: 13px;
+  opacity: 0.9;
 }
-
 /* Formulário de Entrada */
 .login-form {
-    padding: 30px;
+  padding: 30px;
 }
-
 .input-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
 .input-group label {
-    color: #888;
-    display: block;
-    font-size: 11px;
-    font-weight: bold;
-    margin-bottom: 8px;
+  color: #888;
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
-
 .input-group input {
-    background-color: #f0f4f9;
-    border: 1px solid #e0e6ed;
-    border-radius: 6px;
-    color: #333;
-    padding: 12px;
-    width: 100%;
-    outline: none;
+  background-color: #f0f4f9;
+  border: 1px solid #e0e6ed;
+  border-radius: 6px;
+  color: #333;
+  padding: 12px;
+  width: 100%;
+  outline: none;
 }
-
 /* Botão Entrar */
 .btn-entrar {
-    background-color: #07a79f;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 14px;
-    width: 100%;
-    transition: background 0.3s;
+  background-color: #07a79f;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 14px;
+  width: 100%;
+  transition: background 0.3s;
 }
-
 .btn-entrar:hover {
-    background-color: #155cb0;
+  background-color: #155cb0;
 }
-
+/* Botão PDF */
+.btn-pdf {
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  color: #4a5568;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 15px;
+  padding: 8px;
+  width: 100%;
+  transition: background 0.2s;
+}
+.btn-pdf:hover {
+  background-color: #cbd5e1;
+}
 /* Rodapé */
 .login-footer {
-    color: #999;
-    font-size: 11px;
-    padding-bottom: 25px;
-    text-align: center;
+  color: #999;
+  font-size: 11px;
+  padding-bottom: 25px;
+  text-align: center;
 }
-
 .login-footer p {
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
-    #error-msg {
-      color: #ff6b6b;
-      margin-top: 10px;
-      font-size: 0.9rem;
-    }
-
-    .theme-toggle {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      font-size: 1.3rem;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .theme-toggle:hover {
-      transform: rotate(20deg);
-    }
-
-    .shake {
-      animation: shake 0.3s;
-    }
-
-    @keyframes shake {
-      0% {
-        transform: translateX(0);
-      }
-
-      25% {
-        transform: translateX(-6px);
-      }
-
-      50% {
-        transform: translateX(6px);
-      }
-
-      75% {
-        transform: translateX(-6px);
-      }
-
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      background: var(--card-bg);
-      color: var(--text);
-      padding: 8px 0;
-      font-size: 0.9rem;
-      box-shadow: 0 -2px 6px var(--shadow);
-      z-index: 999;
-    }
-  </style>
-
-  <!-- RODAPÉ -->
-  <footer id="rodape-info"></footer>
-
-  <!-- SCRIPT -->
-
-  <script>
-    // Exemplo: isso pode ser dinâmico ou puxado de backend
-    mensagem = "Eventos Atualizados até 20/04/2026  - Banco de Horas Atualizado até 20/04/2026"
-    localStorage.setItem("dataAtualizacao", mensagem);
-
-    document.getElementById("rodape-info").textContent = mensagem;
-  </script>
-
+#error-msg {
+  color: #ff6b6b;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: var(--card-bg);
+  color: var(--text);
+  padding: 8px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 6px var(--shadow);
+  z-index: 999;
+}
+</style>
+<!-- Importação da biblioteca html2pdf.js -->
+<script src="https://cloudflare.com"></script>
 </head>
-
 <body>
-    <div class="login-container" id="loginBox">
-        <!-- Cabeçalho Azul -->
-        <div class="login-header">
-            <div class="icon-box">
-                <span class="lock-icon">🔑</span>
-            </div>
-            <h1>Acesso ao Sistema</h1>
-            <p>Informe suas credenciais para continuar</p>
-        </div>
 
-        <!-- Formulário -->
-       <form class="login-form" id="loginForm">
-
-            <div class="input-group">
-                <label for="usuario">USUÁRIO</label>
-                <input type="text" id="username" name="usuario" placeholder="Nome de Usuário">
-            </div>
-
-            <div class="input-group">
-                <label for="senha">SENHA</label>
-                <input type="password" id="password" name="senha" placeholder="Digite a Senha">
-            </div>
-
-            <button type="submit" class="btn-entrar">Entrar</button>
-        </form>
-
-        <!-- Rodapé -->
-        <div class="login-footer">
-            <p>Departamento de Controle de Eventos Ecosampa</p>
-            <p>© Sistema EcoSampa — Acompanhamento de Eventos</p>
-
-            <p id="error-msg"></p> 
-        </div>
+<div class="login-container" id="loginBox">
+  <!-- Cabeçalho Azul -->
+  <div class="login-header">
+    <div class="icon-box">
+      <span class="lock-icon">🔑</span>
     </div>
-  
+    <h1>Acesso ao Sistema</h1>
+    <p>Informe suas credenciais para continuar</p>
+  </div>
 
-  <script src="/acessar.js"> </script>
+  <!-- Formulário -->
+  <form class="login-form" id="loginForm">
+    <div class="input-group">
+      <label for="usuario">USUÁRIO</label>
+      <input type="text" id="username" name="usuario" placeholder="Nome de Usuário">
+    </div>
+    <div class="input-group">
+      <label for="senha">SENHA</label>
+      <input type="password" id="password" name="senha" placeholder="Digite a Senha">
+    </div>
+    <button type="submit" class="btn-entrar">Entrar</button>
+    
+    <!-- Novo botão adicionado para baixar o PDF do container -->
+    <button type="button" class="btn-pdf" id="downloadPdf">Salvar Tela em PDF</button>
+  </form>
 
- 
+  <!-- Rodapé -->
+  <div class="login-footer">
+    <p>Departamento de Controle de Eventos Ecosampa</p>
+    <p>© Sistema EcoSampa — Acompanhamento de Eventos</p>
+    <p id="error-msg"></p>
+  </div>
+</div>
+
+<!-- RODAPÉ FIXO -->
+<footer id="rodape-info"></footer>
+
+<script>
+  // Script original do rodapé
+  var mensagem = "Eventos Atualizados até 20/04/2026 - Banco de Horas Atualizado até 20/04/2026";
+  localStorage.setItem("dataAtualizacao", mensagem);
+  document.getElementById("rodape-info").textContent = mensagem;
+
+  // Lógica para gerar e baixar o PDF correto
+  document.getElementById("downloadPdf").addEventListener("click", function () {
+    const elemento = document.getElementById("loginBox");
+    
+    // Configurações do PDF gerado
+    const opcoes = {
+      margin: 10,
+      filename: 'tela-acesso-ecosampa.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    // Executa a biblioteca
+    html2pdf().set(opcoes).from(elemento).save();
+  });
+</script>
+
+<script src="/acessar.js"></script>
 </body>
-
 </html>
