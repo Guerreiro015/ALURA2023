@@ -24,22 +24,22 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     errorMsg.textContent = "";
     loginBox.innerHTML = `
       <div style="padding: 40px; text-align: center;">
-        <h2>Olá Sr. ${username.charAt(0).toUpperCase() + username.slice(1)}!</h2>
+        <h2>Preparando acesso para o  ${username.charAt(0).toUpperCase() + username.slice(1)}!</h2>
         <p style="margin-top: 1rem;">Preparando acesso...</p>
       </div>`;
 
     setTimeout(() => {
       const destinos = {
         admin: "menu_geral.html",
-        alex: "curriculo.html",
-        vandecir: "curriculo.html",
-        fabio: "curriculo.html",
-        renato: "curriculo.html",
+        alex: "menu_curriculo.html",
+        vandecir: "menu_curriculo.html",
+        fabio: "menu_curriculo.html",
+        renato: "menu_curriculo.html",
         encargos: "indexEncargos.html",
         fgts: "indexFgts.html",
         inss: "indexInss.html",
         grafico: "graficos.html",
-        curriculo: "curriculo.html"
+        curriculo: "menu_curriculo.html"
       };
       window.location.href = destinos[username];
     }, 2000);
