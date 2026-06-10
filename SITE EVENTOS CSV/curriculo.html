@@ -194,9 +194,9 @@
         text-align: center;
       }
 
-      .logout{
-        color:#06159e;
-        text-align: center;        
+      .logout {
+        color: #06159e;
+        text-align: center;
       }
 
       .btn-logout {
@@ -281,7 +281,63 @@
     </style>
   </head>
   <body>
-    <div class="resume-container">
+    <div
+      id="verificacao"
+      style="
+        background: white;
+        max-width: 600px;
+        width: 100%;
+        padding: 40px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      "
+    >
+      <h2 style="color: #1f4068; margin-bottom: 20px">
+        🤖 Verificação Anti-Robô
+      </h2>
+
+      <p style="margin-bottom: 20px">
+        Antes de visualizar o currículo, informe quem é você:
+      </p>
+
+      <select
+        id="tipo"
+        style="
+          padding: 10px;
+          width: 100%;
+          max-width: 400px;
+          border-radius: 8px;
+          border: 1px solid #ccc;
+          margin-bottom: 20px;
+        "
+      >
+        <option value="">Escolha...</option>
+        <option value="humano">🧑 Humano tentando trabalhar</option>
+        <option value="cansado">☕ Humano movido a café</option>
+        <option value="dp">📊 Profissional de Departamento Pessoal</option>
+        <option value="robo">🤖 Robô dominando o mundo</option>
+      </select>
+
+      <br />
+
+      <button
+        onclick="validarHumano()"
+        style="
+          background: #0081ff;
+          color: white;
+          border: none;
+          padding: 12px 30px;
+          border-radius: 8px;
+          cursor: pointer;
+          font-weight: bold;
+        "
+      >
+        Entrar
+      </button>
+    </div>
+
+    <div class="resume-container" style="display: none">
       <!-- Cabeçalho com Informações de Contato -->
       <div class="header">
         <h1>Antonio de Sousa Neto</h1>
@@ -478,6 +534,35 @@
         📄 Baixar Currículo em PDF
       </button>
     </div>
+
+    <script>
+      function validarHumano() {
+        const tipo = document.getElementById("tipo").value;
+
+        if (!tipo) {
+          alert("😅 Escolha uma opção antes de continuar.");
+          return;
+        }
+
+        if (tipo === "robo") {
+          alert(
+            "🚫 Robôs ainda não podem analisar folhas de pagamento. Tente novamente em 2050.",
+          );
+          return;
+        }
+
+        const mensagens = {
+          humano: "✅ Humano detectado! Bem-vindo ao currículo.",
+          cansado: "☕ Café detectado na corrente sanguínea. Acesso liberado!",
+          dp: "📊 DP reconhecido! Você sabe o que é fechar folha sem chorar.",
+        };
+
+        alert(mensagens[tipo]);
+
+        document.getElementById("verificacao").style.display = "none";
+        document.querySelector(".resume-container").style.display = "block";
+      }
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>

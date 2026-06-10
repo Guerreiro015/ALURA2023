@@ -39,7 +39,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         fgts: "indexFgts.html",
         inss: "indexInss.html",
         grafico: "graficos.html",
-        curriculo: "menu_curriculo.html"
+        curriculo: "curriculo.html"
       };
       window.location.href = destinos[username];
     }, 2000);
