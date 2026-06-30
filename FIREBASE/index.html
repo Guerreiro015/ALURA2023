@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(3, 92, 92);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    span {
+        color: white;
+    }
+
+    #calculadora {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    #num1,
+    #num2 {
+        color: rgb(3, 44, 105);
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    #resultado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(3, 44, 105);
+        color: white;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+        height: 30px;
+    }
+
+    #valorReal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(3, 44, 105);
+        color: white;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+        height: 30px;
+    }
+
+    button {
+        background-color: rgb(3, 44, 105);
+        color: white;
+        border-radius: 5px;
+        border: none;
+        padding: 5px;
+    }
+
+    spam {
+        color: white;
+    }
+</style>
+
+<body>
+    <div id="calculadora">
+        <h1>Calculadora</h1>
+        <p>Calculadora desenvolvida por: <span>Antonio Neto</span></p>
+        <input type="number" id="num1" placeholder="Digite o primeiro número" required>
+        <input type="number" id="num2" placeholder="Digite o segundo número" required>
+        <button onclick="somar()">Somar</button>
+        <p>Resultado em Números: <span id="resultado"></span></p>
+        <p>Resultado em Reais : <span id="valorReal"></span></p>
+    </div>
+    <script>
+        function somar() {
+            try {
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+                if (isNaN(num1) || isNaN(num2)) {
+                    document.getElementById("num1").value = "";
+                    document.getElementById("num2").value = "";
+                    throw new Error("Por favor, insira números válidos.");
+                }
+                var resultado = num1 + num2;
+
+                const moeda = new Intl.NumberFormat('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL'
+                });
+
+                document.getElementById("resultado").innerText = parseFloat(resultado).toFixed(2);
+                document.getElementById("valorReal").innerText = moeda.format(resultado);
+                document.getElementById("num1").value = "";
+                document.getElementById("num2").value = "";
+            } catch (error) {
+                document.getElementById("resultado").innerText = error.message;
+            }
+        } 
+    </script>
+
+</body>
+
+</html>
