@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal RH • Empresa Tonhão Ltda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body>
+  <div id="loader" class="loader-screen">
+    <div class="spinner-border text-primary"></div>
+    <strong>Carregando Portal RH...</strong>
+  </div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon"><i class="fa-solid fa-building"></i></div>
+        <div><h1>Portal RH</h1><span>Empresa Tonhão Ltda</span></div>
+      </div>
+
+      <nav class="nav-menu" id="menuLateral"></nav>
+
+      <div class="sidebar-actions">
+        <button id="btnImportar" class="btn-import">
+          <i class="fa-solid fa-file-excel"></i> Importar Base
+        </button>
+        <input id="arquivoExcel" type="file" accept=".xlsx,.xls,.xlsm" hidden />
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h2 id="tituloTela">Dashboard</h2>
+          <p id="subtituloTela">Central de solicitações do DP/RH</p>
+        </div>
+        <div class="topbar-actions">
+          <button id="btnVoltarDashboard" class="icon-btn d-none" title="Voltar ao dashboard"><i class="fa-solid fa-arrow-left"></i></button>
+          <button id="btnTema" class="icon-btn" title="Alternar tema"><i class="fa-solid fa-moon"></i></button>
+        </div>
+      </header>
+
+      <section id="dashboardView" class="view active">
+        <section class="stats-grid">
+          <article class="stat-card"><i class="fa-solid fa-users"></i><div><span>Funcionários</span><strong id="totalFuncionarios">0</strong></div></article>
+          <article class="stat-card"><i class="fa-solid fa-file-signature"></i><div><span>Solicitações Hoje</span><strong id="totalSolicitacoes">0</strong></div></article>
+          <article class="stat-card"><i class="fa-solid fa-clock"></i><div><span>Hora Atual</span><strong id="horaAtual">--:--:--</strong></div></article>
+          <article class="stat-card"><i class="fa-solid fa-database"></i><div><span>Status da Base</span><strong id="statusBase">Não carregada</strong></div></article>
+        </section>
+
+        <section class="search-panel">
+          <label for="txtPesquisa"><i class="fa-solid fa-magnifying-glass"></i> Pesquisar colaborador</label>
+          <input id="txtPesquisa" type="text" placeholder="Digite matrícula, nome ou CPF" autocomplete="off" />
+          <div id="listaPesquisa" class="result-list"></div>
+        </section>
+
+        <section class="employee-panel" id="employeePanel">
+          <div class="employee-avatar"><i class="fa-solid fa-user"></i></div>
+          <div class="employee-body">
+            <div class="employee-title">
+              <div><h3 id="nomeColaborador">Nenhum colaborador selecionado</h3><span id="statusColaborador" class="pill danger">Base não carregada</span></div>
+            </div>
+            <div class="employee-grid">
+              <div><small>Matrícula</small><strong id="matriculaColaborador">---</strong></div>
+              <div><small>CPF</small><strong id="cpfColaborador">---</strong></div>
+              <div><small>Cargo</small><strong id="cargoColaborador">---</strong></div>
+              <div><small>Empresa</small><strong id="empresaColaborador">Empresa Tonhão Ltda</strong></div>
+              <div><small>Folha / Local</small><strong id="folhaColaborador">---</strong></div>
+              <div><small>Admissão</small><strong id="admissaoColaborador">---</strong></div>
+              <div><small>Horário</small><strong id="horarioColaborador">---</strong></div>
+              <div><small>Situação</small><strong id="situacaoColaborador">---</strong></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-title"><i class="fa-solid fa-star"></i><h3>Favoritos</h3></div>
+          <div id="favoritosGrid" class="module-grid compact"></div>
+        </section>
+
+
+        <section class="section-block collaborator-history-block">
+          <div class="section-title"><i class="fa-solid fa-user-clock"></i><h3>Histórico do Colaborador</h3></div>
+          <div id="historicoColaboradorGrid" class="history-grid"></div>
+        </section>
+
+
+        <section class="section-block">
+          <div class="section-title"><i class="fa-solid fa-layer-group"></i><h3>Solicitações</h3></div>
+          <div id="modulesGrid" class="module-grid"></div>
+        </section>
+      </section>
+
+      <section id="historyView" class="view">
+        <section class="section-block history-screen">
+          <div class="section-title"><i class="fa-solid fa-clock-rotate-left"></i><h3>Últimas Solicitações</h3></div>
+          <div id="historicoGrid" class="history-grid"></div>
+        </section>
+      </section>
+
+      <section id="moduleView" class="view">
+        <div id="workspace"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast-box"><i class="fa-solid fa-circle-check"></i><div><strong id="toastTitulo">Sucesso</strong><span id="toastMensagem">Operação realizada.</span></div></div>
+
+  <script src="assets/libs/xlsx.full.min.js"></script>
+  <script type="module" src="core/app.js"></script>
+</body>
+</html>
