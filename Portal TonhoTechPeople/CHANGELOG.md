@@ -1,11 +1,17 @@
-# CHANGELOG - TONHO TECH People v2.2
+# CHANGELOG
 
-## Ajustes
+## 0.5.1 — Cloud Ready
 
-- Tela de login restaurada para o padrão visual da versão v1.2.
-- Mantido o restante da estrutura e identidade da v2.x.
-- Logo do login ajustado para a versão vertical, com proporção menor e mais equilibrada.
+### Corrigido
+- Removidos arquivos que não devem ir para produção: `node_modules`, `dist`, `.env`, planilhas e arquivos com senha.
+- Adicionado `.gitignore` oficial do projeto.
+- Adicionado `vite.config.js` para build no Cloudflare Pages.
+- Revisado `package.json` com dependências estáveis e Node 20+.
 
-## Observação
-
-Esta versão preserva as melhorias de estrutura da v2.1, alterando apenas a apresentação da tela de login conforme solicitado.
+### Deploy
+- Root directory: `TonhoTechPeople`
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Variáveis necessárias:
+  - `VITE_SUPABASE_URL`
+  - `VITE_SUPABASE_ANON_KEY`

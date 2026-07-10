@@ -1,26 +1,43 @@
-# TONHO TECH People v2.2
+# TONHO TECH People Web — 0.5.1 Cloud Ready
 
-Gestão Inteligente de Pessoas.
+Versão preparada para deploy no Cloudflare Pages.
 
-## Alteração principal
+## Rodar localmente
 
-A tela de login foi ajustada para seguir o mesmo padrão visual da versão v1.2, mantendo o restante da aplicação como estava na linha v2.x.
+```bash
+npm install
+npm run dev
+```
 
-## Acesso padrão
+## Build local
 
-PIN padrão: `1234`.
+```bash
+npm run build
+npm run preview
+```
 
-# TONHO TECH People v2.1
+## Cloudflare Pages
 
-Produto: **TONHO TECH People**  
-Slogan: **Gestão Inteligente de Pessoas**  
-Empresa: **TONHO TECH — Software & Business Solutions**
+Se este projeto estiver dentro da pasta `TonhoTechPeople` no repositório GitHub, configure:
 
-## Novidade desta versão
-Aplicação do logo oficial escolhido para a marca TONHO TECH, com melhor visibilidade no menu lateral, splash screen e login.
+- Framework preset: `None`
+- Root directory: `TonhoTechPeople`
+- Build command: `npm run build`
+- Build output directory: `dist`
 
-## Como executar
-Abra o projeto no VS Code e use o Live Server no arquivo `index.html`.
+Variáveis de ambiente:
 
-## Acesso padrão
-PIN padrão: `1234`
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_ANON_KEY`
+
+## Importante
+
+Não envie para o GitHub:
+
+- `node_modules/`
+- `dist/`
+- `.env`
+- planilhas reais
+- arquivos com senhas ou chaves privadas
+
+Esses itens já estão protegidos pelo `.gitignore` desta versão.
